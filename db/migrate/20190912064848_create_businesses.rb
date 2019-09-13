@@ -8,7 +8,7 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.string :zip_code, null: false
       t.string :website, null: false
       t.string :description, null: false
-      t.integer :phone_number, null: false
+      t.integer :phone_number, null: false 
       t.string :price_range, null: false
       t.string :credit_card, null: false
       t.string :parking, null: false
@@ -18,6 +18,8 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.string :open_time, null: false
       t.string :close_time, null: false
       t.integer :rating, null: false
+      t.integer :lat, null: false
+      t.integer :lng, null: false
 
       t.timestamps
     end
