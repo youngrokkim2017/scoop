@@ -1,6 +1,6 @@
 class Api::BusinessesController < ApplicationController
     def index
-        @businesses = Business.all
+        @businesses = Business.in_bounds(param[:bounds])
     end
 
     def create

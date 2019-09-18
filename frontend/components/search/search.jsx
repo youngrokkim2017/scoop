@@ -2,6 +2,8 @@ import React from 'react';
 import BusinessMap from '../business/business_map';
 import BusinessIndex from '../business/business_index';
 
+// import {updateFilter} from '../../actions/filter_actions';
+
 export default class Search extends React.Component {
     constructor(props) {
         super(props);
@@ -9,7 +11,7 @@ export default class Search extends React.Component {
 
     render() {
         <div>
-            <BusinessMap />
+            <BusinessMap businesses={this.props.businesses} updateFilter={updateFilter} />
             <BusinessIndex businesses={this.props.businesses} fetchBusinesses={this.props.fetchBusinesses} />
         </div>
     }

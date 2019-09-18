@@ -1,9 +1,16 @@
 import React from 'react';
 import { withRouter, Link } from "react-router-dom";
+import MarkerManager from '../../util/marker_manager';
 
 export default class BusinessMap extends React.Component {
     constructor(props) {
         super(props) ;
+
+        this.handleClick = this.handleClick.bind(this);
+        this.mapBounds = {
+            northEast: { lat: , lng: },
+            southWest: { lat: , lng: }
+        };
     }
 
     componentDidMount() {
@@ -14,6 +21,18 @@ export default class BusinessMap extends React.Component {
         }
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
+        // this.map.addListener('idle', this.setMapBounds)
+        google.maps.event.addListener(this.map, "click", this.handleClick);
+        // this.props.updateFilter(this.mapBounds)
+
+        this.MarkerManager = new MarkerManager(this.map);
+    }
+
+    handleClick() {
+        this.props.history.push({
+            pathname: 'businesses/new',
+            search: `lat=${coords.lat}&lng=${coords.lng}`
+        });
     }
 
     render() {
