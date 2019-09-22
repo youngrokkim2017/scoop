@@ -20,7 +20,14 @@ export default class BusinessShow extends React.Component {
     render() {
         return (
             <div className="business-show">
-
+                <div className="business-map">
+                    <Link to="/">Back to Busiesses</Link>
+                    <BusinessMap
+                        businesses={businesses}
+                        businessId={businessId}
+                        fetchBusiness={fetchBusiness}
+                    />
+                </div>
             </div>
         )
     }
