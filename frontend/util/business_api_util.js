@@ -14,3 +14,11 @@ export const fetchBusiness = (id) => {
         // error: (err) => console.log(err)
     })
 }
+
+export const createBusiness = (businessForm) => (
+    $.ajax({
+        method: 'POST',
+        url: '/api/businesses',
+        data: businessForm
+    })
+)

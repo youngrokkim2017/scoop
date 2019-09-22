@@ -22,3 +22,8 @@ export const fetchBusiness = (id) => dispatch => {
     APIUtil.fetchBusiness(id)
     .then(receiveBusiness => dispatch(receiveBusiness(business)))
 }
+
+export const createBusiness = business => dispatch => (
+    APIUtil.createBusiness(business)
+    .then(businesses => (dispatch(receiveBusiness(businesses))))
+)

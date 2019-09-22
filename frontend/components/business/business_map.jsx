@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { withRouter, Link } from "react-router-dom";
 import MarkerManager from '../../util/marker_manager';
 
@@ -28,7 +29,7 @@ export default class BusinessMap extends React.Component {
         this.MarkerManager = new MarkerManager(this.map);
     }
 
-    handleClick() {
+    handleClick(coords) {
         this.props.history.push({
             pathname: 'businesses/new',
             search: `lat=${coords.lat}&lng=${coords.lng}`
@@ -40,6 +41,12 @@ export default class BusinessMap extends React.Component {
             <div ref={map => this.mapNode = map} > 
                 Map
             </div>
+            
+            // <div className="map" ref="map">
+            //     Map
+            // </div>
         )
     }
 }
+
+export default withRouter(BusinessMap);
