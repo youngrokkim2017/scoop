@@ -16,11 +16,11 @@
     }
 
     componentDidMount() {
-        
+        this.props.fetchReviews(this.props.business.id)
     }
 
     render() {
-        // const reviews = this.props.reviews
+        const reviews = this.props.reviews;
 
         return (
             <div>

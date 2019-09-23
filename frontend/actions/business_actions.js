@@ -13,15 +13,15 @@ export const receiveBusiness = business => {
     business
 }
 
-export const fetchBusinesses = () => dispatch => {
+export const fetchBusinesses = () => dispatch => (
     APIUtil.fetchBusinesses()
     .then(receiveBusinesses => dispatch(receiveBusinesses(businesses)))
-}
+)
 
-export const fetchBusiness = (id) => dispatch => {
+export const fetchBusiness = (id) => dispatch => (
     APIUtil.fetchBusiness(id)
     .then(receiveBusiness => dispatch(receiveBusiness(business)))
-}
+)
 
 export const createBusiness = business => dispatch => (
     APIUtil.createBusiness(business)
