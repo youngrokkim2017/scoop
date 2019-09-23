@@ -18,6 +18,6 @@ export const updateBounds = (filter, value) => ({
 export const updateFilter = (filter, value) => {
     return (dispatch, getState) => {
         dispatch(changeFilter(filter, value));
-        return fetchBenches(getState().filters)(dispatch);
+        return fetchBusinesses(getState().filters)(dispatch);
     };
 }
