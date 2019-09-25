@@ -5,10 +5,10 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.string :address, null: false
       t.string :city, null: false
       t.string :state, null: false
-      t.string :zip_code, null: false
+      t.integer :zip_code, null: false
       t.string :website, null: false
       t.string :description, null: false
-      t.integer :phone_number, null: false 
+      t.string :phone_number, null: false 
       t.string :price_range, null: false
       t.string :credit_card, null: false
       t.string :parking, null: false
