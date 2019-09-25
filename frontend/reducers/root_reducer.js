@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import { sessionReducers, sessionReducer } from './session_reducer';
+import { sessionsReducers, sessionReducer } from './session_reducer';
 import { entitiesReducers } from './entities_reducer';
 import { errorsReducers } from './errors_reducer';
+import { filtersReducer } from './filter_reducer';
 
 export const rootReducer = combineReducers({
-    session: sessionReducer,
+    session: sessionsReducer,
     entities: entitiesReducer,
-    errors: errorsReducer
+    errors: errorsReducer,
+    filter: filterReducer
 })

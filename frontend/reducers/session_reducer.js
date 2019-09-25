@@ -8,7 +8,7 @@ export const sessionReducer = (tate = initialState, action) => {
 
     switch(action.type) {
         case RECEIVE_CURRENT_USER:
-            newState.id = action.currentUser.id;
+            newState.id = action.user.id;
             return newState;
         case LOGOUT_CURRENT_USER:
             return initialState;
