@@ -1,8 +1,6 @@
 class Business < ApplicationRecord
-    validates :description, :lat, :lng, presence: true
-    
-    validates :
-    validates :
+    validates :name, :address, :phone_number, presence: true, uniqueness: true
+    validates :city, :state, :zip_code, :website, :description, :price_range, :credit_card, :parking, :wifi, :restroom, :category, :open_time, :close_time, :rating, :lat, :lng, presence: true
 
     has_many :reviews,
     foreign_key: :business_id,
