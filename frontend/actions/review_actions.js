@@ -30,17 +30,17 @@ export const fetchReview = (businessId) => (dispatch) => (
         .then((review) => dispatch(removeReview(review)))
 )
 
-export const createReview = (businessId) => (dispatch) => (
-    ReviewAPIUtil.createReview(businessId)
+export const createReview = (review) => (dispatch) => (
+    ReviewAPIUtil.createReview(review)
         .then((review) => dispatch(receiveReview(review)))
 )
 
-export const updateReview = (businessId) => (dispatch) => (
-    ReviewAPIUtil.updateReview(businessId)
+export const updateReview = (reviewId) => (dispatch) => (
+    ReviewAPIUtil.updateReview(reviewId)
         .then((review) => dispatch(receiveReview(review)))
 )
 
-export const deleteReview = (businessId) => (dispatch) => (
-    ReviewAPIUtil.deleteReview(businessId)
+export const deleteReview = (reviewId) => (dispatch) => (
+    ReviewAPIUtil.deleteReview(reviewId)
         .then((review) => dispatch(receiveReview(review)))
 )
