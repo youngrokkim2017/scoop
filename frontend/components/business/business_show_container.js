@@ -12,6 +12,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-    mapsStateToProps,
+    mapStateToProps,
     mapDispatchToProps
 )(BusinessShow);

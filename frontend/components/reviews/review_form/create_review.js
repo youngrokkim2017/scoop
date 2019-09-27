@@ -4,7 +4,7 @@ import { createReview } from '../../../actions/review_actions';
 import { fetchBusinesses } from '../../../actions/business_actions';
 import ReviewForm from './review_form';
 
-const mapsStateToProps = (sate, ownProps) => { //???
+const mapStateToProps = (sate, ownProps) => { //???
     let businessId = parseInt(ownProps.match.params.businessId);
     let business = state.entities.business[businessId];
 
@@ -22,6 +22,6 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(
-    mapsStateToProps,
+    mapStateToProps,
     mapDispatchToProps
 )(ReviewForm);

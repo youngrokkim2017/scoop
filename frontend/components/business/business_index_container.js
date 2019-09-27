@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
 
-const mapsStateToProps = state => {
+const mapStateToProps = state => {
     let businesses = Object.values(state.entities.businesses);
     
     return ({
