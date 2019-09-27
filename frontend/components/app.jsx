@@ -7,6 +7,7 @@ import BusinessIndexContainer from '../components/business/business_index_contai
 import BusinessShowContainer from '../components/business/business_show_container';
 import CreateReviewContainer from '../components/reviews/review_form/create_review';
 import EditReviewContainer from '../components/reviews/review_form/edit_review';
+import GreetingContainer from '../components/greeting/greeting_container';
 
 export const App = () => (
     <div>
@@ -24,6 +25,7 @@ export const App = () => (
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <Route exact path="/businesses/:businessId/reviews" component={CreateReviewContainer} />
             <Route exact path="/businesses/:businessId/reviews/:id/edit" component={EditReviewContainer} />
+            <Route exact path="/" component={GreetingContainer} />
         </Swtich>
     </div>
 );
