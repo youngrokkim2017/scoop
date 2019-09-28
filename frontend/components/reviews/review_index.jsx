@@ -24,8 +24,9 @@
 
         return (
             <div>
-                {reviews}
+                <span>{reviews.firstName}</span>
+                <span>{reviews.body}</span>
             </div>
-        )
+        );
     }
  }
