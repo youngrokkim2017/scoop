@@ -38,7 +38,7 @@ export default class BusinessMap extends React.Component {
 
     render() {
         return (
-            <div ref={map => this.mapNode = map} > 
+            <div className="busines-map" ref={map => this.mapNode = map}> 
                 Map
             </div>
             

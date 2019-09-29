@@ -10,6 +10,7 @@
 
  import React from 'react';
 
+ 
  export default class ReviewIndex extends React.Component {
     constructor(props) {
         super(props);
@@ -24,9 +25,37 @@
 
         return (
             <div>
-                <span>{reviews.firstName}</span>
-                <span>{reviews.body}</span>
+                <div className="review-profile">
+                    <span>{`${reviews.firstName} ${reviews.lastName}`}</span>
+                </div>
+
+                <div className="review-content">
+                    <span>{review.rating}</span>
+                    <span>{reviews.body}</span>
+                </div>
             </div>
         );
     }
  }
+
+
+// const Review = props => {
+//     const { deleteReview, id, review, business, key, currretUser } = props
+
+//     const checkUser = () => {
+//         if (!currretUser) return;
+
+//         if (furrentUser === review.userId) {
+//             return (
+//                 <i
+//                     onClick={() => { deleteReview(id) }}
+//                 />
+//             );
+//         }
+//         return "";
+//     }
+
+//     const getDate = () => {
+
+//     }
+// }
