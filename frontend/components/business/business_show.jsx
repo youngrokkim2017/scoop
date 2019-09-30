@@ -31,6 +31,7 @@ export default class BusinessShow extends React.Component {
 
                 <div className="business-rating">
                     
+                    
                 </div>
 
                 <div className="business-info">

@@ -35,7 +35,7 @@ export default class BusinessIndexItem extends React.Component {
                     </div>
                     <div className="business-name">
                         <Link className="business-item-link" to={`/businesses/${props.business.id}`} >
-                            {this.props.business.name}
+                            <li>{this.props.business.name}</li>
                         </Link>
                     </div>
                     <div className="business-rating">

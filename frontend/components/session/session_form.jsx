@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
         let { formType } = this.props;
 
         return(
-            <div>
+            <div className="session-form">
                 <h1>{this.props.formType}</h1>
 
                 <p>

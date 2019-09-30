@@ -58,22 +58,24 @@ export default class ReviewForm extends React.Component {
                                 </Link>
                             </div>
 
-                            <div className="rating">
-                                <span>Rating</span>
+                            <div className="rating-contents">
+                                <div className="rating">
+                                    <span>Rating</span>
 
-                                <input type="radio" name="rating" value="1" onChange={this.handleInput('rating')}/>
+                                    <input type="radio" name="rating" value="1" onChange={this.handleInput('rating')}/>
 
-                                <input type="radio" name="rating" value="2" onChange={this.handleInput('rating')} />
+                                    <input type="radio" name="rating" value="2" onChange={this.handleInput('rating')} />
 
-                                <input type="radio" name="rating" value="3" onChange={this.handleInput('rating')} />
+                                    <input type="radio" name="rating" value="3" onChange={this.handleInput('rating')} />
 
-                                <input type="radio" name="rating" value="4" onChange={this.handleInput('rating')} />
+                                    <input type="radio" name="rating" value="4" onChange={this.handleInput('rating')} />
 
-                                <input type="radio" name="rating" value="5" onChange={this.handleInput('rating')} />
+                                    <input type="radio" name="rating" value="5" onChange={this.handleInput('rating')} />
 
+                                </div>
+
+                                <textarea onChange={this.handleInput('body')} value={this.state.body} placeholder="Write your review here" cols="30" rows="10"></textarea>
                             </div>
-
-                            <textarea onChange={this.handleInput('body')} value={this.state.body} placeholder="Write your review here" cols="30" rows="10"></textarea>
                         </div>
 
                         <button onClick={this.handleSubmit}>{this.props.formType === "create" ? "Create Review" : "Edit Review"}</button>

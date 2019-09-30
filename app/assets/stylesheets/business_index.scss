@@ -1,10 +1,36 @@
 .business-index {
     display: flex;
+    justify-content: center:
 }
 
-// .business-list {
+.business-list {
+    display: flex;
+    justify-content: flex-start;
+}
 
-// }
+.business-index-item {
+    display: flex;
+}
+
+.business-item-link li {
+    list-style-position: inside;
+}
+
+.business-rating {
+    display: flex;
+}
+
+.business-price {
+    display: flex;
+}
+
+.business-description {
+    display: flex;
+}
+
+.business-contact-info {
+    display: flex;
+}
 
 // .business-map {
 
