@@ -8,10 +8,10 @@ export default class BusinessMap extends React.Component {
         super(props) ;
 
         this.handleClick = this.handleClick.bind(this);
-        this.mapBounds = {
-            northEast: { lat: , lng: },
-            southWest: { lat: , lng: }
-        };
+        // this.mapBounds = {
+        //     northEast: { lat: , lng: },
+        //     southWest: { lat: , lng: }
+        // };
     }
 
     componentDidMount() {
