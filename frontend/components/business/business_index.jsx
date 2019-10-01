@@ -21,7 +21,9 @@ export default class Business extends React.Component {
                     <div className="businesses-list">
                         <ul>
                             {this.props.businesses.map(business => (
-                                <BusinessIndexItem key={business.id} bussiness={business} />
+                                <BusinessIndexItem 
+                                key={business.id} 
+                                bussiness={business} />
                                 ))}
                         </ul> 
                     </div>
