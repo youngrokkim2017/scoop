@@ -1,6 +1,6 @@
 import { RECEIVE_BUSINESSES, RECEIVE_BUSINESS } from '../actions/business_actions';
 
-export const businessesReducer = (state = {}, action) => {
+const businessesReducer = (state = {}, action) => {
     Object.freeze(state);
 
     
@@ -14,7 +14,9 @@ export const businessesReducer = (state = {}, action) => {
         default:
             return state;
     }
-}
+};
+
+export default businessesReducer;
 
 // switch(action.type) {
         //     case RECEIVE_BUSINESSES:

@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import BusinessIndexItem from './business_index_item';
 import BusinessMap from './business_map';
 import NavBar from '../nav_bar/nav_bar';

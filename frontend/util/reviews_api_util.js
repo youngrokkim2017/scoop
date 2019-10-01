@@ -1,4 +1,4 @@
-export const fetchReview = (businessId) => {
+export const fetchReviews = (businessId) => {
     $.ajax({
         url: `/api/businesses/${businessId}/reviews`,
         method: 'GET'

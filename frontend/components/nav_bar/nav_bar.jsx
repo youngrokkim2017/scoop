@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const NavBar = ({ currentUser, logout }) => {
+const NavBar = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <div className="signup-login">
             <Link to="/signup">Sign Up</Link>
@@ -17,7 +17,9 @@ export const NavBar = ({ currentUser, logout }) => {
     );
 
     return currentUser ? loggedInLinks() : sessionLinks();
-}
+};
+
+export default NavBar;
 
 /*
 export default class Greeting extends React.Component {

@@ -49,4 +49,4 @@ export default class BusinessMap extends React.Component {
     }
 }
 
-export default withRouter(BusinessMap);
+// export default withRouter(BusinessMap);

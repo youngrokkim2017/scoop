@@ -9,7 +9,7 @@ import CreateReviewContainer from '../components/reviews/review_form/create_revi
 import EditReviewContainer from '../components/reviews/review_form/edit_review';
 import GreetingContainer from '../components/greeting/greeting_container';
 
-export const App = () => (
+const App = () => (
     <div>
         {/* <header>
             <h1>Scoop</h1>
@@ -29,3 +29,5 @@ export const App = () => (
         </Switch>
     </div>
 );
+
+export default App;

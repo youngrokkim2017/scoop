@@ -25,10 +25,10 @@ export const fetchReviews = (businessId) => (dispatch) => (
     .then((reviews) => dispatch(receiveReviews(reviews)))
 )
 
-export const fetchReview = (businessId) => (dispatch) => (
-    ReviewAPIUtil.fetchReview(businessId)
-        .then((review) => dispatch(removeReview(review)))
-)
+// export const fetchReview = (businessId) => (dispatch) => (
+//     ReviewAPIUtil.fetchReview(businessId)
+//         .then((review) => dispatch(removeReview(review)))
+// )
 
 export const createReview = (review) => (dispatch) => (
     ReviewAPIUtil.createReview(review)
