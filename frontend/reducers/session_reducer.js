@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_ac
 
 const initialState = { id: null };
 
-export const sessionReducer = (tate = initialState, action) => {
+export const sessionReducer = (state = initialState, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
 

@@ -6,7 +6,7 @@ const defaultFilters = {
     nearby: ""
 }   
 
-const filterReducer = (state = defaultFilters, action) => {
+export const filterReducer = (state = defaultFilters, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
 
@@ -19,4 +19,4 @@ const filterReducer = (state = defaultFilters, action) => {
     }
 }
 
-export default filterReducer
+// export default filterReducer;
