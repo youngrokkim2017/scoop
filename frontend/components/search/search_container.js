@@ -2,7 +2,7 @@ import Search from './search';
 import { selectAllBusinesses } from '../../reducers/selectors';
 import { fetchBusinesses } from '../../action/business_actions';
 import { connect } from 'react-redux';
-import { updateBounds, updateFilter } from '../../actions/filter_actions';
+import { changeFilter, updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = (state) => ({
     businesses: selectAllBusinesses(state),
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = () => ({
     fetchBusinesses: () => dispatch(fetchBusinesses()),
-    updateBounds: (filter, value) => dispatch(updateBounds(filter, value)),
+    changeFilter: (filter, value) => dispatch(changeFilter(filter, value)),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
 })
 

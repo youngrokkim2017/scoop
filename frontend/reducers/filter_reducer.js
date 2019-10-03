@@ -1,4 +1,4 @@
-import { UPDATE_FILTER, UPDATE_BOUNDS } from '../actions/filter_actions';
+import { UPDATE_FILTER, CHANGE_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = {
     bounds: {},
@@ -11,7 +11,7 @@ export const filterReducer = (state = defaultFilters, action) => {
     let newState = Object.assign({}, state);
 
     switch(action.type) {
-        case UPDATE_BOUNDS:
+        case CHANGE_FILTER:
             newState[action.filter] = action.value
             return newState;
         default:
