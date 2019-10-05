@@ -8,6 +8,9 @@ import BusinessShowContainer from '../components/business/business_show_containe
 import CreateReviewContainer from '../components/reviews/review_form/create_review';
 import EditReviewContainer from '../components/reviews/review_form/edit_review';
 import GreetingContainer from '../components/greeting/greeting_container';
+import LoginFormContainer from '../components/session/login_form_container';
+import SignupFormContainer from '../components/session/signup_form_container';
+import { Switch, Route } from 'react-router-dom';
 
 const App = () => (
     <div>

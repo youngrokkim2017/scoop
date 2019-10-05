@@ -1,5 +1,5 @@
 import React from 'react';
-import { wtihRouter, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 export default class BusinessIndexItem extends React.Component {
     constructor(props) {
@@ -25,17 +25,16 @@ export default class BusinessIndexItem extends React.Component {
         // let business = this.props.business;
 
         return (
-            <div 
-                className="business-index-item"    
+            <li className="business-index-item"    
                 //onClick={this.handleClick}
             >
                 <div className="business-item-info">
                     <div className="business-photo">
-                        <img src="`${this.props.business.photos}" alt=""/>
+                        {/* <img src="`${this.props.business.photos}" alt=""/> */}
                     </div>
                     <div className="business-name">
-                        <Link className="business-item-link" to={`/businesses/${props.business.id}`} >
-                            <li>{this.props.business.name}</li>
+                        <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
+                            <div>{this.props.business.name}</div>
                         </Link>
                     </div>
                     <div className="business-rating">
@@ -57,7 +56,7 @@ export default class BusinessIndexItem extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </li>
         )
     }
 }

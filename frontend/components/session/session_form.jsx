@@ -1,9 +1,14 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            username: "",
+            first_name: "",
+            last_name: "",
+            email: "",
             password: ""
         };
 
@@ -38,11 +43,25 @@ class SessionForm extends React.Component {
                 </p>
 
                 <form>
-                    <label>Username
+                    <label>Email
                         <input 
                         type="text"
-                        value={this.state.username}
-                        onChange={this.handleInput('username')}
+                        value={this.state.email}
+                        onChange={this.handleInput('email')}
+                        />
+                    </label>
+                    <label>first_name
+                        <input
+                            type="text"
+                            value={this.state.first_name}
+                            onChange={this.handleInput('first_name')}
+                        />
+                    </label>
+                    <label>last_name
+                        <input
+                            type="text"
+                            value={this.state.last_name}
+                            onChange={this.handleInput('last_name')}
                         />
                     </label>
                     <label>Password
@@ -52,10 +71,12 @@ class SessionForm extends React.Component {
                         onChange={this.handleInput('password')}
                         />
                     </label>
-                    <button onClick="{this.handleSubmit}">{formType}</button>
+                    <button onClick={this.handleSubmit}>{formType}</button>
                 </form>
                 <Link to={formType === 'login' ? "/signup" : "/login"}>{formType}</Link>
             </div>
         )
     }
-}
+};
+
+export default SessionForm;

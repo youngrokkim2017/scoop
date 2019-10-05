@@ -3,24 +3,24 @@ import * as APIUtil from '../util/business_api_util';
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 
-export const receiveBusinesses = businesses => {
+const receiveBusinesses = payload => ({
     type: RECEIVE_BUSINESSES, 
-    businesses
-}
+    payload
+});
 
-export const receiveBusiness = business => {
+const receiveBusiness = payload => ({
     type: RECEIVE_BUSINESS,
-    business
-}
+    payload
+});
 
 export const fetchBusinesses = () => dispatch => (
     APIUtil.fetchBusinesses()
-    .then(receiveBusinesses => dispatch(receiveBusinesses(businesses)))
+    .then(payload => dispatch(receiveBusinesses(payload)))
 )
 
 export const fetchBusiness = (id) => dispatch => (
     APIUtil.fetchBusiness(id)
-    .then(receiveBusiness => dispatch(receiveBusiness(business)))
+    .then(payload => dispatch(receiveBusiness(payload)))
 )
 
 export const createBusiness = business => dispatch => (

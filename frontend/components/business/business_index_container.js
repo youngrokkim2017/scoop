@@ -1,17 +1,14 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
+import { fetchBusinesses } from '../../actions/business_actions';
 
-const mapStateToProps = state => {
-    let businesses = Object.values(state.entities.businesses);
-    
-    return ({
-        businesses
-    })
-}
+const mapStateToProps = state => ({
+    businesses: Object.values(state.entities.businesses)
+})
 
-const mapDispatchToProps = fetchBusinesses => {
+const mapDispatchToProps = dispatch => {
     return ({
-        fetchBusinesses: () => dispatchEvent(fetchBusinesses())
+        fetchBusinesses: () => dispatch(fetchBusinesses())
     })
 }
 

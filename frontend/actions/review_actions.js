@@ -5,24 +5,24 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 
-const receiveReviews = (reviews) => ({
+const receiveReviews = (payload) => ({
     type: RECEIVE_REVIEWS,
-    reviews
+    payload
 })
 
-const receiveReview = (review) => ({
+const receiveReview = (payload) => ({
     type: RECEIVE_REVIEW,
-    review
+    payload
 })
 
-const removeReview = (review) => ({
+const removeReview = (payload) => ({
     type: REMOVE_REVIEW,
-    review
+    payload
 })
 
 export const fetchReviews = (businessId) => (dispatch) => (
     ReviewAPIUtil.fetchReviews(businessId)
-    .then((reviews) => dispatch(receiveReviews(reviews)))
+    .then((payload) => dispatch(receiveReviews(payload)))
 )
 
 // export const fetchReview = (businessId) => (dispatch) => (
@@ -32,7 +32,7 @@ export const fetchReviews = (businessId) => (dispatch) => (
 
 export const createReview = (review) => (dispatch) => (
     ReviewAPIUtil.createReview(review)
-        .then((review) => dispatch(receiveReview(review)))
+        .then((payload) => dispatch(receiveReview(payload)))
 )
 
 export const updateReview = (reviewId) => (dispatch) => (

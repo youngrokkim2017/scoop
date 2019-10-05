@@ -6,7 +6,7 @@ export const reviewsReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_REVIEWS:
-            return action.reviews;
+            return action.payload.reviews;
         case RECEIVE_REVIEW:
             return Object.assign(newState, action.review);
         case REMOVE_REVIEW:

@@ -8,24 +8,28 @@ export default class BusinessShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchBusinesses(this.props.match.params.businessId)
+        this.props.fetchBusiness(this.props.match.params.businessId)
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.location.pathname !== prevProps.location.pathname) {
-            this.props.fetchBusinesses(this.props.match.params.businessId)
+            this.props.fetchBusiness(this.props.match.params.businessId)
         }
     }
 
     render() {
+        console.log(this.props.business);
+        console.log(this.props.businessId);
+        if (this.props.business === undefined) return null;
+        let { business } = this.props;
         return (
             <div className="business-show">
                 <div className="business-map">
-                    <Link to="/">Back to Busiesses</Link>
+                    <Link to="/">Back to Businesses</Link>
                     <BusinessMap
-                        businesses={businesses}
-                        businessId={businessId}
-                        fetchBusiness={fetchBusiness}
+                        business={business}
+                        businessId={business.id}
+                        fetchBusiness={this.props.fetchBusiness}
                     />
                 </div>
 
@@ -52,17 +56,17 @@ export default class BusinessShow extends React.Component {
 
                     <div className="business-phone">
                         <span>Phone Number</span>
-                        <span>{`${business.phone_number}`}</span>
+                        <span>{`${business.phoneNumber}`}</span>
                     </div>
 
                     <div className="business-price">
                         <span>Price</span>
-                        <span>{`${business.price_range}`}</span>                        
+                        <span>{`${business.priceRange}`}</span>                        
                     </div>
 
                     <div className="business-credit-card">
                         <span>Credit Card</span>
-                        <span>{`${business.credit_card}`}</span>
+                        <span>{`${business.creditCard}`}</span>
                     </div>
 
                     <div className="business-parking">
@@ -82,12 +86,12 @@ export default class BusinessShow extends React.Component {
 
                     <div className="business-open">
                         <span>Open</span>
-                        <span>{`${business.open_time}`}</span>
+                        <span>{`${business.openTime}`}</span>
                     </div>
 
                     <div className="business-close">
                         <span>Close</span>
-                        <span>{`${business.close_time}`}</span>
+                        <span>{`${business.closeTime}`}</span>
                     </div>
                 </div>
             </div>

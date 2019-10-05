@@ -3,7 +3,7 @@ import BusinessIndexItem from './business_index_item';
 import BusinessMap from './business_map';
 import NavBar from '../nav_bar/nav_bar';
 
-export default class Business extends React.Component {
+export default class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -14,22 +14,22 @@ export default class Business extends React.Component {
 
     render() {
         const { businesses } = this.props;
+        console.log(this.props.businesses)
+        const businessItems = this.props.businesses.map(business => (
+            <BusinessIndexItem key={business.id} business={business} />)
+        );
 
         return (
             <div>
                 <div className="business-index">
                     <div className="businesses-list">
                         <ul>
-                            {this.props.businesses.map(business => (
-                                <BusinessIndexItem 
-                                key={business.id} 
-                                bussiness={business} />
-                                ))}
+                            {businessItems}
                         </ul> 
                     </div>
                 
                     <div className="business-map">
-                        <BusinessMap business={props.businesses} />
+                        <BusinessMap business={this.props.businesses} />
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@ export default class Business extends React.Component {
                     <NavBar />
                     <div className="navbar-items">
                         <ul className="navbar-businesses">
-                            {businesses}
+                            {/* {businesses} */}
                         </ul>
                     </div>
                 </div>
