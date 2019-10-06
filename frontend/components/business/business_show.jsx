@@ -25,7 +25,7 @@ export default class BusinessShow extends React.Component {
         return (
             <div className="business-show">
                 <div className="business-map">
-                    <Link to="/">Back to Businesses</Link>
+                    <Link to="/businesses">Back to Businesses</Link>
                     <BusinessMap
                         business={business}
                         businessId={business.id}
