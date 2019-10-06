@@ -10,13 +10,14 @@ class Greeting extends React.Component {
         return (
             <div className="home">
                 <div className="session-navbar">
-                    {/* <div>
-                        <a className="github-link" href="https://github.com/youngrokkim2017">Github</a>
-                    </div> */}
+                    <div className="github-link">
+                        <a href="https://github.com/youngrokkim2017">Github</a>
+                    </div>
+                    
 
                     { this.props.loggedIn ? 
                         <div className="signup-login">
-                            <a className="github-link" href="https://github.com/youngrokkim2017">Github</a>                            
+                            {/* <a className="github-link" href="https://github.com/youngrokkim2017">Github</a>                             */}
                             <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
                             {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
                             <a className="logout-link" onClick={this.props.logout}>Log Out</a>
@@ -25,9 +26,9 @@ class Greeting extends React.Component {
                         :
 
                         <nav className="signup-login">
-                            <a className="github-link" href="https://github.com/youngrokkim2017">Github</a>
-                            <Link to="/signup">Sign Up</Link>
-                            <Link to="/login">Log In</Link>
+                            {/* <a className="github-link" href="https://github.com/youngrokkim2017">Github</a> */}
+                            <Link to="/login" className="login">Log In</Link>
+                            <Link to="/signup" className="signup">Sign Up</Link>
                         </nav>
                     }
                 </div>
