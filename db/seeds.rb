@@ -11,6 +11,7 @@ Business.destroy_all
 User.destroy_all
 
 #users
+demo = User.create!(first_name: 'patrick', last_name: 'kim', email: 'patrick@email.com', password: '123456')
 user_1 = User.create!(first_name: 'Mickey', last_name: 'Mouse', email: 'mickey@email.com', password: 'disney')
 user_2 = User.create!(first_name: 'Donald', last_name: 'Duck', email: 'donald@email.com', password: 'disney')
 

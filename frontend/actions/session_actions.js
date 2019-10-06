@@ -27,6 +27,24 @@ export const signup = user => dispatch => (
         )
 )
 
+// logging in demo user ??
+export const demoLogin = () => dispatch => {
+    const demo = {
+        firstName: "patrick",
+        lastName: "kim",
+        email:"patrick@email.com",
+        password: "123456"
+    }
+
+    return (
+        APIUtil.login(demo)
+            .then((user) => (
+                dispatch(receiveCurrentUser(user))),
+                error => (dispatch(receiveErrors(error.responseJSON)))
+            )
+    );
+}
+
 export const receiveCurrentUser = (user) => ({
     type: RECEIVE_CURRENT_USER,
     user

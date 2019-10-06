@@ -29,7 +29,9 @@ class SessionForm extends React.Component {
         }
     }
 
-    handleDemo(e) {
+    // logging in a demo user??
+    handleDemoUser(e) {
+        e.preventDefault();
 
     }
 
@@ -52,6 +54,12 @@ class SessionForm extends React.Component {
                     errors.map((errors) => <li>{error}</li>) : 
                     ""}
                 </p>
+                
+                <div className="demo-login">
+                    <label>
+                        <input type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
+                    </label>
+                </div>
 
                 <form>
                     <p>
