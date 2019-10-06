@@ -7,7 +7,8 @@ import Greeting from './greeting';
 // });
 
 const mapStateToProps = (state) => ({
-    user: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id],
+    loggedIn: Boolean(state.session.id)
 });
 
 const mapDispatchToProps = dispatch => ({
