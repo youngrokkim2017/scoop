@@ -34,6 +34,13 @@ class SessionForm extends React.Component {
 
         return(
             <div className="session-form">
+
+                <header className="session-form-header">
+                    <Link to="/">
+                        <span><h3>scoop</h3></span>
+                    </Link>
+                </header>
+
                 <h1>{this.props.formType}</h1>
 
                 <p>
@@ -43,34 +50,42 @@ class SessionForm extends React.Component {
                 </p>
 
                 <form>
-                    <label>Email
-                        <input 
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.handleInput('email')}
-                        />
-                    </label>
-                    <label>first_name
-                        <input
+                    <p>
+                        <label>First Name: 
+                            <input
+                                type="text"
+                                value={this.state.first_name}
+                                onChange={this.handleInput('first_name')}
+                            />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Last Name:
+                            <input
+                                type="text"
+                                value={this.state.last_name}
+                                onChange={this.handleInput('last_name')}
+                            />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Email:
+                            <input 
                             type="text"
-                            value={this.state.first_name}
-                            onChange={this.handleInput('first_name')}
-                        />
-                    </label>
-                    <label>last_name
-                        <input
+                            value={this.state.email}
+                            onChange={this.handleInput('email')}
+                            />
+                        </label>
+                    </p>
+                    <p>
+                        <label>Password:
+                            <input 
                             type="text"
-                            value={this.state.last_name}
-                            onChange={this.handleInput('last_name')}
-                        />
-                    </label>
-                    <label>Password
-                        <input 
-                        type="text"
-                        value={this.state.password}
-                        onChange={this.handleInput('password')}
-                        />
-                    </label>
+                            value={this.state.password}
+                            onChange={this.handleInput('password')}
+                            />
+                        </label>
+                    </p>
                     <button onClick={this.handleSubmit}>{formType}</button>
                 </form>
                 <Link to={formType === 'login' ? "/signup" : "/login"}>{formType}</Link>

@@ -1,0 +1,56 @@
+// .session-navbar {
+//     display: flex;
+//     justify-content: flex-end;
+//     padding: 10px;
+// }
+
+.signup-login {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgb(201, 29, 29);
+}
+
+.signup-login a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid white;
+    transition: 1.0s;
+    margin: 5px;
+}
+
+.signup-login a:hover {
+    color: black;
+    background-color: white;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.header-title a {
+    text-decoration: none;
+}
+
+.session-form-header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(201, 29, 29);
+}
+
+.session-form-header h3 {
+    font-size: 22px;
+    color: white;
+}
+
+.session-form a {
+    text-decoration: none;
+}
+
+.session-form h1 {
+    text-transform: uppercase;
+}
