@@ -16,17 +16,24 @@ class Greeting extends React.Component {
                     
 
                     { this.props.loggedIn ? 
-                        <div className="signup-login">
-                            {/* <a className="github-link" href="https://github.com/youngrokkim2017">Github</a>                             */}
-                            <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
-                            {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
-                            <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                        // <div className="signup-login">
+                        //     <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
+                        //     {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
+                        //     <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                        // </div>
+
+                        <div className="logout-dropdown">
+                            <button className="dropbtn">{currentUser.firstName}
+                                <i className="fa fa-caret-down"></i>
+                            </button>
+                            <div className="logout-dropdown-content">
+                                <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                            </div>
                         </div>
 
                         :
 
                         <nav className="signup-login">
-                            {/* <a className="github-link" href="https://github.com/youngrokkim2017">Github</a> */}
                             <Link to="/login" className="login">Log In</Link>
                             <Link to="/signup" className="signup">Sign Up</Link>
                         </nav>
