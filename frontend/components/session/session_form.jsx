@@ -29,6 +29,10 @@ class SessionForm extends React.Component {
         }
     }
 
+    handleDemo(e) {
+
+    }
+
     render() {
         let { formType } = this.props;
 
@@ -51,38 +55,42 @@ class SessionForm extends React.Component {
 
                 <form>
                     <p>
-                        <label>First Name: 
+                        <label>
                             <input
                                 type="text"
                                 value={this.state.first_name}
                                 onChange={this.handleInput('first_name')}
+                                placeholder="First Name"
                             />
                         </label>
                     </p>
                     <p>
-                        <label>Last Name:
+                        <label>
                             <input
                                 type="text"
                                 value={this.state.last_name}
                                 onChange={this.handleInput('last_name')}
+                                placeholder="Last Name"
                             />
                         </label>
                     </p>
                     <p>
-                        <label>Email:
+                        <label>
                             <input 
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
+                            placeholder="Email"
                             />
                         </label>
                     </p>
                     <p>
-                        <label>Password:
+                        <label>
                             <input 
                             type="text"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
+                            placeholder="Password"
                             />
                         </label>
                     </p>
