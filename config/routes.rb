@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resource :users, only: [:create]
-    resource :session #, only: [:create, :destroy]
+    resource :session, only: [:create, :destroy]
     resources :businesses do
       resources :reviews
     end
+    get '/search', to: 'businesses#search'
   end
 
   root 'static_pages#root'

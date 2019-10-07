@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from '../search/search_container';
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -47,6 +48,10 @@ class Greeting extends React.Component {
                         </Link>
                     </header>
                 </div>
+
+                {/* <div className="greeting-search">
+                    <SearchContainer />
+                </div> */}
             </div>
         );
     }

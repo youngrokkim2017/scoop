@@ -13,8 +13,8 @@ const receiveBusiness = payload => ({
     payload
 });
 
-export const fetchBusinesses = () => dispatch => (
-    APIUtil.fetchBusinesses()
+export const fetchBusinesses = (filter) => dispatch => (
+    APIUtil.fetchBusinesses(filter)
     .then(payload => dispatch(receiveBusinesses(payload)))
 )
 
