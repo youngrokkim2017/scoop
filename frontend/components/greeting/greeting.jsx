@@ -49,9 +49,9 @@ class Greeting extends React.Component {
                     </header>
                 </div>
 
-                {/* <div className="greeting-search">
+                <div className="greeting-search">
                     <SearchContainer />
-                </div> */}
+                </div>
             </div>
         );
     }

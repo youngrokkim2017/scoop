@@ -26,6 +26,16 @@ class Api::BusinessesController < ApplicationController
         end
     end
 
+    def search
+        @businesses = Business.where('LOWER(name) LIKE ?', "%#{search}%")
+
+        if @businesses.length < 1
+            @businesses = Business.all
+        end
+
+        render :index
+    end
+
     private
     def business_params
         params.require(:business).permit(:description, :lat, :lng)
