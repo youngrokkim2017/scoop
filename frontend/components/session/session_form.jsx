@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
                     
                     <div className="demo-login">
                         <p>
-                            <span className="demo-text">Log In as Demo User</span>
+                            <span className="demo-text">Or log in as Demo User</span>
                         </p>
                         <label>
                             <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Demo Log In" />

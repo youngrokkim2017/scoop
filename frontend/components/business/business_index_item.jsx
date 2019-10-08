@@ -32,28 +32,35 @@ export default class BusinessIndexItem extends React.Component {
                     <div className="business-photo">
                         {/* <img src="`${this.props.business.photos}" alt=""/> */}
                     </div>
-                    <div className="business-name">
-                        <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
-                            <div>{this.props.business.name}</div>
-                        </Link>
+
+                    <div>
+                        <div className="business-name">
+                            <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
+                                <div>{this.props.business.name}</div>
+                            </Link>
+                        </div>
+                        <div className="business-rating">
+                            <span>star ratings go here</span>
+                            <span>{this.props.business.rating}</span>
+                        </div>
+                        <div className="business-price"> 
+                            <span>{this.props.business.price_range}</span>
+                        </div>
                     </div>
-                    <div className="business-rating">
-                        <span>star ratings go here</span>
-                        <span>{this.props.business.rating}</span>
+
+                    <div>
+                        <div className="business-contact-info">
+                            <div className="business-phone-number">
+                                <span>{this.props.business.phone_number}</span>
+                            </div>
+                            <div className="business-address">
+                                <span>{this.props.business.address}</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className="business-price"> 
-                        <span>{this.props.business.price_range}</span>
-                    </div>
+                    
                     <div className="business-description">
                         <span>{this.props.business.description}</span>
-                    </div>
-                    <div className="business-contact-info">
-                        <div className="business-phone-number">
-                            <span>{this.props.business.phone_number}</span>
-                        </div>
-                        <div className="business-address">
-                            <span>{this.props.business.address}</span>
-                        </div>
                     </div>
                 </div>
             </li>

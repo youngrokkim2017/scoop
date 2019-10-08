@@ -24,12 +24,11 @@ const App = () => (
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
             <ProtectedRoute exact path="businesses/new" component="{BusinessFormContainer}" />
-            {/* <Route exact path="/" component={SearchContainer} /> */}
             <Route exact path="/businesses" component={BusinessIndexContainer} />
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <Route exact path="/businesses/:businessId/reviews" component={CreateReviewContainer} />
             <Route exact path="/businesses/:businessId/reviews/:id/edit" component={EditReviewContainer} />
-            <Route exact path="/businesses/search" component={SearchContainer} />
+            <Route exact path="/search" component={SearchContainer} />
             <Route exact path="/" component={GreetingContainer} />
         </Switch>
     </div>

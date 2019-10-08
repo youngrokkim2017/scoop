@@ -19,7 +19,7 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.history.push(`/search?find=${this.state.find}+near=${this.state.near}`);
+        this.props.history.push(`/search/${this.state.find}+${this.state.near}`);
 
         this.setState({
             find: "",
