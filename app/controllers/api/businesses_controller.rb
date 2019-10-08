@@ -32,6 +32,7 @@ class Api::BusinessesController < ApplicationController
     # debugger
     def search
         # debugger
+        search = params[:search]
         @businesses = Business.where('LOWER(name) LIKE ?', "%#{search}%")
 
         if @businesses.length < 1
