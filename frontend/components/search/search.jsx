@@ -63,13 +63,10 @@ class Search extends React.Component {
                             placeholder="address, city, state, or zip..."
                             />
                     </label>
-
                     {/* <input className="search-button" type="submit" onClick={this.handleSubmit}/> */}
                     {/* <Link to="/businesses">Search</Link> */}
                     <button className="search-button" onClick={this.handleSubmit}>Search</button>
-
                 </form>
-
                 <div className="search-shortcuts">
                     <a onClick={this.handleSubmit}>Creamery</a>
                     <a onClick={this.handleSubmit}>Frozen Yogurt</a>
@@ -119,6 +116,10 @@ class Search extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className="to-all-businesses">
+                    <Link to="/businesses">See more businesses</Link>
                 </div>
             </div>
         );

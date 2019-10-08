@@ -24,7 +24,7 @@ class Greeting extends React.Component {
                         // </div>
 
                         <div className="logout-dropdown">
-                            <button className="dropbtn">{currentUser.firstName}
+                            <button className="dropbtn">Welcome, {currentUser.firstName}
                                 <i className="fa fa-caret-down"></i>
                             </button>
                             <div className="logout-dropdown-content">

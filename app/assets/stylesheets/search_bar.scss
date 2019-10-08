@@ -16,17 +16,19 @@
 // }
 
 .find-text {
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px 0px 0px 5px;
     font-weight: bold;
     color: gray;
+    background-color: white;
 }
 
 .near-text {
-    padding: 10px;
+    padding: 15px;
     border-left: solid 1px grey;
     font-weight: bold;
     color: gray;
+    background-color: white;
 }
 
 .find-container {
@@ -90,6 +92,7 @@
 
 .favorites-list a {
     text-decoration: none;
+    color: royalblue;
 }
 
 .favorites-list a:hover {
@@ -101,4 +104,19 @@
     flex-direction: column;
     border: solid 1px gray;
     border-radius: 5px;
+}
+
+.to-all-businesses {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.to-all-businesses a {
+    text-decoration: none;
+    color: royalblue;
+}
+
+.to-all-businesses a:hover {
+    text-decoration: underline;
 }

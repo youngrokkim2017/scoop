@@ -41,33 +41,49 @@ class SessionForm extends React.Component {
         return(
             <div className="session-form">
 
-                <header className="session-form-header">
-                    <Link to="/">
-                        <span><h3>scoop</h3></span>
-                    </Link>
-                </header>
+                    <header className="session-form-header">
+                        <Link to="/">
+                            <span><h3>scoop</h3></span>
+                        </Link>
+                    </header>
 
-                <h1 className="formtype-header">{this.props.formType} to scoop</h1>
-                {/* <h1 className="to-scoop">to Scoop</h1> */}
+                <div className="session-info">
+                    <h1 className="formtype-header">{this.props.formType} to scoop</h1>
+                    {/* <h1 className="to-scoop">to Scoop</h1> */}
 
-                <p>
-                    {this.state.errors ?
-                    errors.map((errors) => <li>{error}</li>) : 
-                    ""}
-                </p>
-                
-                <div className="demo-login">
                     <p>
-                        <span className="demo-text">Log In as Demo User</span>
+                        {this.state.errors ?
+                        errors.map((errors) => <li>{error}</li>) : 
+                        ""}
                     </p>
-                    <label>
-                        <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
-                    </label>
+
+                    <div className="session-intro">
+                        {formType === "sign up" ? "Connect with great local businesses" : "New to scoop? "}
+                        {formType === "log in" ? <Link to="/signup">Sign Up</Link> : ""}
+                    </div>
+                    
+                    <div className="demo-login">
+                        <p>
+                            <span className="demo-text">Log In as Demo User</span>
+                        </p>
+                        <label>
+                            <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
+                        </label>
+                    </div>
+
+                    <div>
+                        <span>By continuing, you agree to indulge in sweets</span>
+                    </div>
                 </div>
+                
+
+                <fieldset className="or-divider">
+                    <legend>OR</legend>
+                </fieldset>
 
                 <form className="session-inputs">
                     <p>
-                        <label>
+                        <label className="session-fn">
                             <input
                                 type="text"
                                 value={this.state.first_name}
@@ -75,9 +91,9 @@ class SessionForm extends React.Component {
                                 placeholder="First Name"
                             />
                         </label>
-                    </p>
-                    <p>
-                        <label>
+                    {/* </p> */}
+                    {/* <p> */}
+                        <label className="session-ln">
                             <input
                                 type="text"
                                 value={this.state.last_name}
@@ -87,7 +103,7 @@ class SessionForm extends React.Component {
                         </label>
                     </p>
                     <p>
-                        <label>
+                        <label className="session-email">
                             <input 
                             type="text"
                             value={this.state.email}
@@ -97,7 +113,7 @@ class SessionForm extends React.Component {
                         </label>
                     </p>
                     <p>
-                        <label>
+                        <label className="session-password">
                             <input 
                             type="text"
                             value={this.state.password}
