@@ -92,6 +92,10 @@
     text-decoration: none;
 }
 
+.favorites-list a:hover {
+    text-decoration: underline;
+}
+
 .favorites-birite .favorites-saltstraw .favorites-fentons {
     display: flex;
     flex-direction: column;
