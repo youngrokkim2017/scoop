@@ -19,7 +19,7 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.history.push(`/search?near=${this.state.find}&find=${this.state.near}`);
+        this.props.history.push(`/search?find=${this.state.find}+near=${this.state.near}`);
 
         this.setState({
             find: "",
@@ -43,21 +43,24 @@ class Search extends React.Component {
                     <label className="search-find">
                         <span className="find-text">Find</span>
                         <input 
-                            className="find-search-bar"
+                            className="find-container"
                             type="text" 
                             onChange={this.handleChange('find')} 
                             value={this.state.find} 
-                            placeholder="ice cream, creamery, frozen yogurt, gelato..."
+                            placeholder="ice cream, frozen yogurt, gelato..."
                             />
                     </label>
+                    {/* <div>
+                        <span className="search-divider">|</span>
+                    </div> */}
                     <label className="search-near">
-                        <span className="near-search-bar">Near</span>
+                        <span className="near-text">Near</span>
                         <input 
-                            className="near-search-bar"
+                            className="near-container"
                             type="text" 
                             onChange={this.handleChange('near')} 
                             value={this.state.near} 
-                            placeholder="address, neighborhood, city, state, or zip"
+                            placeholder="address, city, state, or zip..."
                             />
                     </label>
 

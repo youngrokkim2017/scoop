@@ -1,0 +1,58 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    border: none;
+    // border-radius: 5px 5px 5px 5px;
+}
+
+// .search-find {
+//     // width: 500px;
+// }
+
+// .search-near {
+//     // width: 500px;
+// }
+
+.find-text {
+    padding: 20px;
+    border-radius: 5px 0px 0px 5px;
+    font-weight: bold;
+    color: gray;
+}
+
+.near-text {
+    padding: 20px;
+    border-left: solid 1px grey;
+    font-weight: bold;
+    color: gray;
+}
+
+.find-container {
+    background-color: white;
+    color: lightgray;
+    padding: 15px;
+    font-size: 15px;
+    width: 300px;
+    border: none;
+    outline: none;
+}
+
+.near-container {
+    background-color: white;
+    color: lightgray;
+    padding: 15px;
+    font-size: 15px;
+    width: 250px;
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    background-color: rgb(201, 29, 29);
+    color: white;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: bold;
+}

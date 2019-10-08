@@ -47,7 +47,8 @@ class SessionForm extends React.Component {
                     </Link>
                 </header>
 
-                <h1>{this.props.formType}</h1>
+                <h1 className="formtype-header">{this.props.formType} to scoop</h1>
+                {/* <h1 className="to-scoop">to Scoop</h1> */}
 
                 <p>
                     {this.state.errors ?
@@ -56,12 +57,15 @@ class SessionForm extends React.Component {
                 </p>
                 
                 <div className="demo-login">
-                    <label>Log In as Demo User
-                        <input type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
+                    <p>
+                        <span className="demo-text">Log In as Demo User</span>
+                    </p>
+                    <label>
+                        <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
                     </label>
                 </div>
 
-                <form>
+                <form className="session-inputs">
                     <p>
                         <label>
                             <input
@@ -102,9 +106,10 @@ class SessionForm extends React.Component {
                             />
                         </label>
                     </p>
-                    <button onClick={this.handleSubmit}>{formType}</button>
+                    {/* <Link className="session-button" to={this.handleSubmit}>{formType}</Link> */}
+                    <button className="session-button" onClick={this.handleSubmit}>{formType}</button>
                 </form>
-                <Link to={formType === 'login' ? "/signup" : "/login"}>{formType}</Link>
+                {/* <Link to={formType === 'login' ? "/signup" : "/login"}>{formType}</Link> */}
             </div>
         )
     }
