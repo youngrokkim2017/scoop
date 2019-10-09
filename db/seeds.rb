@@ -6,9 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# ModelName.connection.execute('ALTER SEQUENCE model_name_id_seq RESTART WITH 1')
+
 # Review.destroy_all
 Business.destroy_all
 User.destroy_all
+
+# Review.connection.execute('ALTER SEQUENCE model_name_id_seq RESTART WITH 1')
+Business.connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
+User.connection.execute('ALTER SEQUENCE businesses_id_seq RESTART WITH 1')
 
 #users
 demo = User.create!(first_name: 'patrick', last_name: 'kim', email: 'patrick@email.com', password: '123456')

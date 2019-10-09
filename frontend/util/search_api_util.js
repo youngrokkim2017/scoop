@@ -1,4 +1,4 @@
-export const searchBusinesses = (input) => {
+export const searchBusinesses = (search) => {
     return $.ajax({
         method: "GET",
         url: `/api/search/${search}`

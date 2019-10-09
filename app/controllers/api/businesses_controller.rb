@@ -46,4 +46,54 @@ class Api::BusinessesController < ApplicationController
     def business_params
         params.require(:business).permit(:description, :lat, :lng)
     end
+
+#     def index
+    
+#       bounds = params[:filters][:bounds]
+#       near = params[:filters][:near]
+#       find = params[:filters][:find]
+#     if near.downcase == "sf"
+#       near = "san francisco"
+#     end
+
+#     if find.downcase == "sd"
+#       near = "san diego"
+#     end
+
+#     bound_filter = Business.in_bounds(bounds) if bounds
+  
+#     # debugger
+#     if near != "" && find != ""
+#       @businesses = Business.in_location(near)
+#       @finds = Business.find_business(find)
+#       @businesses = @businesses.select { |business| @finds.include?(business) }
+#       @businesses = @businesses.select { |business| bound_filter.include?(business) } if !bound_filter.nil?
+#     elsif near && find == ""
+#       @businesses = Business.in_location(near) 
+#       @businesses = @businesses.select { |business| bound_filter.include?(business) } if !bound_filter.nil?
+#     elsif find && near == ""
+#       @businesses = Business.find_business(find) 
+#       @businesses = @businesses.select { |business| bound_filter.include?(business) } if !bound_filter.nil?
+#     end
+#       # debugger
+#     render :index
+#   end
+
+#   def show
+#     @business = Business.find_by(id: params[:id])
+#     render :show
+#   end
+
+#   def search 
+#     query = params[:query]
+#     if query.length > 1 
+#       @businesses = Business.where('lower(name) LIKE ?', "%#{query.downcase}%" )
+#       @businesses = @businesses[0..4]
+#       render :index
+#     else
+#       @businesses = Business.none
+#       render :index
+#     end
+  
+#   end
 end

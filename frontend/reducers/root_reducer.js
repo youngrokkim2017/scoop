@@ -3,12 +3,14 @@ import { sessionReducer } from './session_reducer';
 import { entitiesReducer } from './entities_reducer';
 import { errorsReducer } from './errors_reducer';
 import { filterReducer } from './filter_reducer';
+import searchReducer from './search_reducer';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
     entities: entitiesReducer,
     errors: errorsReducer,
-    filter: filterReducer
+    filter: filterReducer,
+    search: searchReducer
 });
 
 export default rootReducer;

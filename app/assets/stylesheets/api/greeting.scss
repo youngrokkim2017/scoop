@@ -28,7 +28,14 @@
     background-color: rgb(201, 29, 29);
     // background-color: #db0e0e;
     justify-content: space-between;
+    // justify-content: center;
+    flex-direction: row;
 }
+
+// .signup-login {
+//     padding-right: 250px;
+//     padding-left: 250px;
+// }
 
 .signup-login a {
     color: white;
@@ -69,6 +76,8 @@
 
 .github-link {
     margin-left: 200px;
+    // padding-right: 200px;
+    // padding-left: 200px;
 }
 
 .github-link a {

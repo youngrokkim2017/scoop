@@ -3,16 +3,23 @@ import { connect } from 'react-redux';
 import { changeFilter, updateFilter } from '../../actions/filter_actions';
 import { getBusinesses } from '../../actions/search_actions';
 
-const mapStateToProps = (state) => ({
-
-});
+// const mapStateToProps = (state) => {
+//     // let search = Object.values(state.search)
+    
+//     // return {
+//     //     search,
+//     //     find: state.filter.find,
+//     //     near: state.filter.near
+//     // }
+// };
 
 const mapDispatchToProps = (dispatch) => ({
-    // updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     getBusinesses: (input) => dispatch(getBusinesses(input))
 });
 
 export default connect(
-    mapStateToProps,
+    // mapStateToProps,
+    null,
     mapDispatchToProps
 )(Search);
