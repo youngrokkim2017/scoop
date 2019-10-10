@@ -39,7 +39,7 @@ class BusinessMap extends React.Component {
     }
 
     mapOptions() {
-        if (this.props.businesses.size === 1) {
+        if (this.props.businesses) { //this.props.businesses.size === 1
             return {
                 center: {
                     lat: this.props.businesses[0].lat,
@@ -68,7 +68,9 @@ class BusinessMap extends React.Component {
         //     zoom: 13
         // }
 
-        this.map = new google.maps.Map(this.mapNode, this.mapOptions());
+        const mapOption = this.mapOptions();
+
+        this.map = new google.maps.Map(this.mapNode, mapOption);
         // this.map.addListener('idle', this.setMapBounds)
         // google.maps.event.addListener(this.map, "click", this.handleClick);
         // this.props.updateFilter(this.mapBounds)

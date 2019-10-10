@@ -15,12 +15,16 @@ class MarkerManager {
         //     .forEach(business => this.createMarkerFromBusiness(newBusiness, this.handleClick))
         //     .then(this.markerCounter += 1)
 
-        businesses.forEach(business => {
-            if (!this.markers[business.id]) {
-                this.createMarkerFromBusiness(business);
-                this.markerCounter += 1;
-            }
-        });
+        // const tempBusinessObj = {};
+
+        // businesses.forEach(business => tempBusinessObj[business.id] = business);
+
+        // businesses.forEach(business => {
+        //     if (!this.markers[business.id]) {
+        //         this.createMarkerFromBusiness(business);
+        //         this.markerCounter += 1;
+        //     }
+        // });
 
 
         // const tempBusinessObj = {};
@@ -41,7 +45,7 @@ class MarkerManager {
         const marker = new google.maps.Marker({
             position, 
             map: this.map,
-            businessId: business.name,
+            businessId: business.id,
             counter: {
                 index: this.markerCounter.toString()
             }
