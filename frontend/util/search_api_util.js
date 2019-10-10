@@ -1,8 +1,9 @@
-export const searchBusinesses = (search) => {
+export const getSearchedBusinesses = (input) => {
+    console.log();
     return $.ajax({
         method: "GET",
-        url: `/api/search/${search}`,
-        data: { search },
-        success: function(response) { console.log(response) }
+        // url: `/api/search/${search}`,
+        url: '/api/search',
+        data: { input },
     })
 }
