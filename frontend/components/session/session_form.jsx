@@ -71,7 +71,7 @@ class SessionForm extends React.Component {
                         </label>
                     </div>
 
-                    <div>
+                    <div className="session-continue-text">
                         <span>By continuing, you agree to indulge in sweets</span>
                     </div>
                 </div>

@@ -10,10 +10,12 @@
 .session-form-header h3 {
     font-size: 22px;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .session-form a {
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 // .session-info {
@@ -25,8 +27,13 @@
     text-transform: capitalize;
 }
 
+.session-intro {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .session-intro a {
     color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .session-intro a:hover {
@@ -54,11 +61,16 @@
     font-size: 16px;
     border-radius: 4px;
     width: 280px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .demo-button:hover {
     cursor: pointer;
     transition: 1.0s;
+}
+
+.demo-text {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .session-info {
@@ -76,6 +88,7 @@
     color: gray;
     padding: 0 15px;
     font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .session-inputs {
@@ -99,9 +112,14 @@
     border-radius: 4px;
     width: 280px;
     text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .session-button:hover {
     cursor: pointer;
     transition: 1.0s;
+}
+
+.session-continue-text {
+    font-family: Arial, Helvetica, sans-serif;
 }
