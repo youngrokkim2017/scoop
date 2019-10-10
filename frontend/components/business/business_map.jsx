@@ -3,42 +3,94 @@ import ReactDOM from 'react-dom';
 import { withRouter, Link } from "react-router-dom";
 import MarkerManager from '../../util/marker_manager';
 
-export default class BusinessMap extends React.Component {
-    constructor(props) {
-        super(props) ;
+// const mapOptions = () => {
+//     if (this.props.businesses.size === 1) {
+//         return {
+//             center: {
+//                 lat: this.props.businesses[0].lat,
+//                 lng: this.props.businesses[0].lng
+//             },
+//             zoomOptions: {
+//                 position: google.maps.ControlPosition.TOP_LEFT
+//             },
+//             zoomFunction: this.props.zoom
+//         };
+//     } else {
+//         return ({
+//             center: {
+//                 lat: 37.773972,
+//                 lng: -122.431297
+//             },
+//             zoom: 13
+//         })
+//     }
+// };
 
-        this.handleClick = this.handleClick.bind(this);
+class BusinessMap extends React.Component {
+    constructor(props) {
+        super(props);
+
+        // this.handleClick = this.handleClick.bind(this);
+
         // this.mapBounds = {
         //     northEast: { lat: , lng: },
         //     southWest: { lat: , lng: }
         // };
     }
 
+    mapOptions() {
+        if (this.props.businesses.size === 1) {
+            return {
+                center: {
+                    lat: this.props.businesses[0].lat,
+                    lng: this.props.businesses[0].lng
+                },
+                zoomOptions: {
+                    position: google.maps.ControlPosition.TOP_LEFT
+                },
+                zoomFunction: this.props.zoom
+            };
+        } else {
+            return ({
+                center: {
+                    lat: 37.773972,
+                    lng: -122.431297
+                },
+                zoom: 13
+            })
+        }
+    };
+
     componentDidMount() {
         //sets the map to show sf
-        const mapOptions = {
-            center: {lat: 37.7758, lng: -122.435},
-            zoom: 13
-        }
+        // const mapOptions = {
+        //     center: {lat: 37.7758, lng: -122.435},
+        //     zoom: 13
+        // }
 
-        this.map = new google.maps.Map(this.mapNode, mapOptions);
+        this.map = new google.maps.Map(this.mapNode, this.mapOptions());
         // this.map.addListener('idle', this.setMapBounds)
-        google.maps.event.addListener(this.map, "click", this.handleClick);
+        // google.maps.event.addListener(this.map, "click", this.handleClick);
         // this.props.updateFilter(this.mapBounds)
 
         this.MarkerManager = new MarkerManager(this.map);
+        this.MarkerManager.updateMarkers(this.props.businesses);
     }
 
-    handleClick(coords) {
-        this.props.history.push({
-            pathname: 'businesses/new',
-            search: `lat=${coords.lat}&lng=${coords.lng}`
-        });
+    componentDidUpdate() {
+        this.MarkerManager.updateMarkers(this.props.businesses);
     }
+
+    // handleClick(coords) {
+    //     this.props.history.push({
+    //         pathname: 'businesses/new',
+    //         search: `lat=${coords.lat}&lng=${coords.lng}`
+    //     });
+    // }
 
     render() {
         return (
-            <div className="busines-map" ref={map => this.mapNode = map}> 
+            <div className="business-map" ref={map => (this.mapNode = map)}> 
                 Map
             </div>
             
@@ -50,3 +102,4 @@ export default class BusinessMap extends React.Component {
 }
 
 // export default withRouter(BusinessMap);
+export default BusinessMap;

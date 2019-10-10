@@ -1,21 +1,39 @@
-export default class MarkerManager {
+class MarkerManager {
     constructor(map) {
         this.map = map;
         this.markers = {};
+        this.markerCounter = 1;
     }
 
     updateMarkers(businesses) { //???
-        const tempBusinessObj = {};
+        if (Object.keys(this.markers).size) {
+            this.markers = {};
+        }
 
-        businesses.forEach(business => tempBusinessObj[business.id] = business);
+        // businesses
+        //     .filter(business => !this.markers[business.id])
+        //     .forEach(business => this.createMarkerFromBusiness(newBusiness, this.handleClick))
+        //     .then(this.markerCounter += 1)
 
-        business
-        .filter(business => !this.markers[business.id])
-        .forEach(business => this.createMarkerFromBusiness(newBusiness, this.handleClick))
+        businesses.forEach(business => {
+            if (!this.markers[business.id]) {
+                this.createMarkerFromBusiness(business);
+                this.markerCounter += 1;
+            }
+        });
 
-        Object.keys(this.markers)
-        .filter(businessId => !tempBusinessObj[businessId])
-        .forEach((businessId) => this.removeMarker(this.markers[businessId]))
+
+        // const tempBusinessObj = {};
+
+        // businesses.forEach(business => tempBusinessObj[business.id] = business);
+
+        // business
+        // .filter(business => !this.markers[business.id])
+        // .forEach(business => this.createMarkerFromBusiness(newBusiness, this.handleClick))
+
+        // Object.keys(this.markers)
+        // .filter(businessId => !tempBusinessObj[businessId])
+        // // .forEach((businessId) => this.removeMarker(this.markers[businessId]))
     }
 
     createMarkerFromBusiness(business) {
@@ -23,15 +41,20 @@ export default class MarkerManager {
         const marker = new google.maps.Marker({
             position, 
             map: this.map,
-            title: business.name
+            businessId: business.name,
+            counter: {
+                index: this.markerCounter.toString()
+            }
         });
 
         this.markers[marker.businessId] = marker;
 
     }
 
-    removeMarker(marker) {
-        delete this.markers[marker.businessId];
-        this.markers[marker.businessId].setMap(null);
-    }
+    // removeMarker(marker) {
+    //     this.markers[marker.businessId].setMap(null);
+    //     delete this.markers[marker.businessId];
+    // }
 }
+
+export default MarkerManager;
