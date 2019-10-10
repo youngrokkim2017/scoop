@@ -1,3 +1,8 @@
+// .business-index-render {
+//     display: flex;
+//     justify-content: center;
+// }
+
 .business-index {
     display: flex;
     justify-content: center;
@@ -16,22 +21,40 @@
     list-style-position: inside;
 }
 
-.business-rating {
+.business-item-rating {
     display: flex;
 }
 
-.business-price {
+.business-item-price {
     display: flex;
 }
 
-.business-description {
+.business-item-description {
     display: flex;
 }
 
-.business-contact-info {
+.business-item-contact-info {
     display: flex;
 }
 
 // .business-map {
+//     position: sticky;
+// }
 
+
+///////////////////////////////////////////////////////////////////////////////
+
+.business-item-link {
+    text-decoration: none;
+    color: royalblue;
+}
+
+// .business-index-item-left {
+//     display: flex;
+//     justify-content: left;
+// }
+
+// .business-index-item-left {
+//     display: flex;
+//     justify-content: right;
 // }

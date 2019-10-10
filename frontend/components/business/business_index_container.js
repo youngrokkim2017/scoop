@@ -3,7 +3,8 @@ import BusinessIndex from './business_index';
 import { fetchBusinesses } from '../../actions/business_actions';
 
 const mapStateToProps = state => ({
-    businesses: Object.values(state.entities.businesses)
+    businesses: Object.values(state.entities.businesses),
+    currentUser: state.session.currentUser
 })
 
 const mapDispatchToProps = dispatch => {

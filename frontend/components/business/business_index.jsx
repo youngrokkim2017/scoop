@@ -20,7 +20,16 @@ export default class BusinessIndex extends React.Component {
         );
 
         return (
-            <div>
+            <div className="business-index-render">
+                <div className="default-navbar">
+                    <NavBar />
+                    <div className="session-navbar-items">
+                        <ul className="navbar-businesses">
+                            {/* {businesses} */}
+                        </ul>
+                    </div>
+                </div>
+
                 <div className="business-index">
                     <div className="businesses-list">
                         <ul>
@@ -30,15 +39,6 @@ export default class BusinessIndex extends React.Component {
                 
                     <div className="business-map">
                         <BusinessMap business={this.props.businesses} />
-                    </div>
-                </div>
-
-                <div className="navbar">
-                    <NavBar />
-                    <div className="navbar-items">
-                        <ul className="navbar-businesses">
-                            {/* {businesses} */}
-                        </ul>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,18 @@
+.business-container {
+    display: flex;
+    // justify-content: flex-start;
+    justify-content: center;
+    // list-style-position: inside;
+}
+
 .business-map {
     display: flex;
+}
+
+.sub-navbar {
+    display: flex;
+    // float: right;
+    justify-content: flex-end;
 }
 
 // .business-info {

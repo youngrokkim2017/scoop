@@ -36,7 +36,7 @@ business_2 = Business.create!(name: 'Fentons', address: '4226 Piedmont Ave',
     phone_number: '510-658-7000', price_range: '$$', credit_card: 'Yes', 
     parking: 'Yes', wifi: 'No', restroom: 'Yes', category: 'ice cream', 
     open_time: '11:00AM', close_time: '11:00PM', rating: '5', lat: 37.828002, lng: -122.250132)
-business_3 = Business.create!(name: 'Bi-Rite Creamery', address: '3692 18th St, San Francisco, CA 94110', 
+business_3 = Business.create!(name: 'Bi-Rite Creamery', address: '3692 18th St', 
     city: 'San Francisco', state: 'CA', zip_code: 94110, website: 'biritemarket.com/creamery', 
     description: 'Iconic ice cream in SF, no visit to SF is complete without a visit to Bi-Rite next to Dolores Park', 
     phone_number: '(415) 626-5600', price_range: '$', credit_card: 'Yes', 

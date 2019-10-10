@@ -33,33 +33,33 @@ export default class BusinessIndexItem extends React.Component {
                         {/* <img src="`${this.props.business.photos}" alt=""/> */}
                     </div>
 
-                    <div>
-                        <div className="business-name">
+                    <div className="business-index-item-left">
+                        <div className="busines-item-name">
                             <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
                                 <div>{this.props.business.name}</div>
                             </Link>
                         </div>
-                        <div className="business-rating">
+                        <div className="business-item-rating">
                             <span>star ratings go here</span>
                             <span>{this.props.business.rating}</span>
                         </div>
-                        <div className="business-price"> 
+                        <div className="business-item-price"> 
                             <span>{this.props.business.price_range}</span>
                         </div>
                     </div>
 
-                    <div>
-                        <div className="business-contact-info">
-                            <div className="business-phone-number">
+                    <div className="business-index-item-right">
+                        <div className="business-item-contact-info">
+                            <div className="business-item-phone-number">
                                 <span>{this.props.business.phone_number}</span>
                             </div>
-                            <div className="business-address">
+                            <div className="business-item-address">
                                 <span>{this.props.business.address}</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div className="business-description">
+                    <div className="business-item-description">
                         <span>{this.props.business.description}</span>
                     </div>
                 </div>

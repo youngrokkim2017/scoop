@@ -126,6 +126,11 @@ class SessionForm extends React.Component {
                     <button className="session-button" onClick={this.handleSubmit}>{formType}</button>
                 </form>
                 {/* <Link to={formType === 'login' ? "/signup" : "/login"}>{formType}</Link> */}
+
+                <div className="session-intro">
+                    {formType === "sign up" ? "Already on Scoop?  " : "New to Scoop?  "}
+                    {formType === "sign up" ? <Link to="/login">Log In</Link> : <Link to="/signup">Sign Up</Link>}
+                </div>
             </div>
         )
     }
