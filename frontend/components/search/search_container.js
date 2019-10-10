@@ -13,6 +13,10 @@ import { getBusinesses } from '../../actions/search_actions';
 //     // }
 // };
 
+// const mapStateToProps = (state, ownProps) => ({
+//     searchTerm: ownProps.match.params.searchTerm
+// });
+
 const mapDispatchToProps = (dispatch) => ({
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     getBusinesses: (input) => dispatch(getBusinesses(input))

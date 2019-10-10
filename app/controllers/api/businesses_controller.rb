@@ -31,7 +31,7 @@ class Api::BusinessesController < ApplicationController
 
     # debugger
     def search
-        # debugger
+        debugger
         search = params[:search]
         @businesses = Business.where('LOWER(name) LIKE ?', "%#{search}%")
 
@@ -46,6 +46,7 @@ class Api::BusinessesController < ApplicationController
     def business_params
         params.require(:business).permit(:description, :lat, :lng)
     end
+end
 
 #     def index
     
@@ -96,4 +97,3 @@ class Api::BusinessesController < ApplicationController
 #     end
   
 #   end
-end

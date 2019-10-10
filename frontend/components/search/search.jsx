@@ -24,18 +24,20 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.history.push(`/search/${this.state.find}+${this.state.near}`);
+        // this.props.history.push(`/search/${this.state.find}+${this.state.near}`);
 
-        // let near = this.state.near.split(' ').join('-');
-        // let find = this.state.find.split(' ').join('-');
+        // // this.props.history.push(`/search/${this.state.near}`);
 
-        // this.props.updateFilter('near', this.state.near)
-        //     .then(() => {
-        //         this.props.updateFilter('find', this.state.find)
-        //             .then(() => {
-        //                 this.props.history.replace('/businesses')
-        //             })
-        //     })
+        let find = this.state.find.toLowerCase().split(' ').join('_');
+        let near = this.state.near.toLowerCase().split(' ').join('_');
+
+        this.props.updateFilter('find', this.state.find)
+            .then(() => {
+                this.props.updateFilter('near', this.state.near)
+                    .then(() => {
+                        this.props.history.push(`/search/${this.state.find}+${this.state.near}`);
+                    })
+            })
 
         // this.setState({
         //     find: "",
