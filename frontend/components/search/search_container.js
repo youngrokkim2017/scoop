@@ -8,13 +8,13 @@ import { getBusinesses } from '../../actions/search_actions';
     
 //     // return {
 //     //     search,
-//     //     find: state.filter.find,
-//     //     near: state.filter.near
+//     //     find: state.updateFilter.find,
+//     //     near: state.updateFilter.near
 //     // }
 // };
 
 // const mapStateToProps = (state, ownProps) => ({
-//     searchTerm: ownProps.match.params.searchTerm
+//     searchTerm: state.searchTerm  // ownProps.match.params.searchTerm
 // });
 
 const mapDispatchToProps = (dispatch) => ({

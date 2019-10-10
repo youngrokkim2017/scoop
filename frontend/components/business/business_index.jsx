@@ -37,9 +37,9 @@ export default class BusinessIndex extends React.Component {
                         </ul> 
                     </div>
                 
-                    <div className="business-map">
+                    {/* <div className="business-map">
                         <BusinessMap business={this.props.businesses} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

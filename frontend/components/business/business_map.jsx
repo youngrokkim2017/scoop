@@ -39,16 +39,32 @@ class BusinessMap extends React.Component {
     }
 
     mapOptions() {
-        if (this.props.businesses) { //this.props.businesses.size === 1
+        if (this.props.businesses.size >= 1) { //this.props.businesses.size === 1
             return {
                 center: {
                     lat: this.props.businesses[0].lat,
                     lng: this.props.businesses[0].lng
                 },
-                zoomOptions: {
-                    position: google.maps.ControlPosition.TOP_LEFT
+                zoom: 13,
+                // zoomControlOptions: {
+                //     position: google.maps.ControlPosition.TOP_LEFT
+                // },
+                // zoomFunction: true //this.props.zoom
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    position: google.maps.ControlPosition.TOP_CENTER
                 },
-                zoomFunction: this.props.zoom
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_CENTER
+                },
+                scaleControl: true,
+                streetViewControl: true,
+                streetViewControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_TOP
+                },
+                fullscreenControl: true
             };
         } else {
             return ({
@@ -68,9 +84,9 @@ class BusinessMap extends React.Component {
         //     zoom: 13
         // }
 
-        const mapOption = this.mapOptions();
+        const mapOptionFunc = this.mapOptions();
 
-        this.map = new google.maps.Map(this.mapNode, mapOption);
+        this.map = new google.maps.Map(this.mapNode, mapOptionFunc);
         // this.map.addListener('idle', this.setMapBounds)
         // google.maps.event.addListener(this.map, "click", this.handleClick);
         // this.props.updateFilter(this.mapBounds)

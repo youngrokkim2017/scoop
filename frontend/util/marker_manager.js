@@ -19,12 +19,12 @@ class MarkerManager {
 
         // businesses.forEach(business => tempBusinessObj[business.id] = business);
 
-        // businesses.forEach(business => {
-        //     if (!this.markers[business.id]) {
-        //         this.createMarkerFromBusiness(business);
-        //         this.markerCounter += 1;
-        //     }
-        // });
+        businesses.forEach(business => {
+            if (!this.markers[business.id]) {
+                this.createMarkerFromBusiness(business);
+                this.markerCounter += 1;
+            }
+        });
 
 
         // const tempBusinessObj = {};

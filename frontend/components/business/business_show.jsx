@@ -56,7 +56,7 @@ export default class BusinessShow extends React.Component {
                 </div>
 
                 <div className="business-map-and-info">
-                    <div className="business-map">
+                    {/* <div className="business-map">
                         <div>
                             <BusinessMap
                                 business={business}
@@ -65,7 +65,7 @@ export default class BusinessShow extends React.Component {
                                 />
                         </div>
 
-                    </div>
+                    </div> */}
 
                     <div className="business-description">
                         <span>Description </span>
