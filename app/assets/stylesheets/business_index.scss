@@ -46,10 +46,19 @@
 .business-item-contact-info {
     display: flex;
 }
+////////////////////////////////////// MAP /////////////@
 
-// .business-map {
+// .business-index-map {
 //     position: sticky;
+//     height: 500px;
+//     width: 500px;
 // }
+
+#business-map {
+    position: sticky;
+    height: 350px;
+    width: 350px;
+}
 
 
 ////////////////////////////business index item/////////////////////////////////

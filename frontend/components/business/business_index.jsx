@@ -3,7 +3,7 @@ import BusinessIndexItem from './business_index_item';
 import BusinessMap from './business_map';
 import NavBar from '../nav_bar/nav_bar';
 
-export default class BusinessIndex extends React.Component {
+class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -37,11 +37,13 @@ export default class BusinessIndex extends React.Component {
                         </ul> 
                     </div>
                 
-                    {/* <div className="business-map">
-                        <BusinessMap business={this.props.businesses} />
-                    </div> */}
+                    <div className="business-index-map">
+                        <BusinessMap businesses={this.props.businesses} />
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+export default BusinessIndex;

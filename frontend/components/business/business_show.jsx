@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import BusinessMap from './business_map';
 import Navbar from '../nav_bar/nav_bar';
 
-export default class BusinessShow extends React.Component {
+class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -73,16 +73,16 @@ export default class BusinessShow extends React.Component {
                     </div>
 
                     <div className="business-map-and-info">
-                        {/* <div className="business-map">
-                            <div>
+                        <div className="business-map">
+                            {/* <div>
                                 <BusinessMap
-                                    business={business}
+                                    businesses={business}
                                     businessId={business.id}
                                     fetchBusiness={this.props.fetchBusiness}
                                     />
-                            </div>
+                            </div> */}
 
-                        </div> */}
+                        </div>
 
                         <div className="business-description">
                             <span>Description </span>
@@ -143,3 +143,5 @@ export default class BusinessShow extends React.Component {
         )
     }
 }
+
+export default BusinessShow;

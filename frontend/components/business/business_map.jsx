@@ -29,27 +29,16 @@ import MarkerManager from '../../util/marker_manager';
 class BusinessMap extends React.Component {
     constructor(props) {
         super(props);
-
-        // this.handleClick = this.handleClick.bind(this);
-
-        // this.mapBounds = {
-        //     northEast: { lat: , lng: },
-        //     southWest: { lat: , lng: }
-        // };
     }
 
     mapOptions() {
-        if (this.props.businesses.size >= 1) { //this.props.businesses.size === 1
+        if (this.props.businesses.size === 1) { 
             return {
                 center: {
                     lat: this.props.businesses[0].lat,
                     lng: this.props.businesses[0].lng
                 },
                 zoom: 13,
-                // zoomControlOptions: {
-                //     position: google.maps.ControlPosition.TOP_LEFT
-                // },
-                // zoomFunction: true //this.props.zoom
                 mapTypeControl: true,
                 mapTypeControlOptions: {
                     style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -86,10 +75,8 @@ class BusinessMap extends React.Component {
 
         const mapOptionFunc = this.mapOptions();
 
-        this.map = new google.maps.Map(this.mapNode, mapOptionFunc);
-        // this.map.addListener('idle', this.setMapBounds)
-        // google.maps.event.addListener(this.map, "click", this.handleClick);
-        // this.props.updateFilter(this.mapBounds)
+        // this.map = new google.maps.Map(this.mapNode, mapOptionFunc);
+        this.map = new google.maps.Map(document.getElementById('business-map'), mapOptionFunc);
 
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.businesses);
@@ -99,25 +86,13 @@ class BusinessMap extends React.Component {
         this.MarkerManager.updateMarkers(this.props.businesses);
     }
 
-    // handleClick(coords) {
-    //     this.props.history.push({
-    //         pathname: 'businesses/new',
-    //         search: `lat=${coords.lat}&lng=${coords.lng}`
-    //     });
-    // }
-
     render() {
         return (
-            <div className="business-map" ref={map => (this.mapNode = map)}> 
+            <div id="business-map" ref={map => this.mapNode = map}> 
                 Map
             </div>
-            
-            // <div className="map" ref="map">
-            //     Map
-            // </div>
         )
     }
 }
 
-// export default withRouter(BusinessMap);
 export default BusinessMap;
