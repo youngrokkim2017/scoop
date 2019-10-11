@@ -24,17 +24,17 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         
-        if (this.state.find.length >= 1 || this.state.near.length >= 1) {
-            this.props.updateFilter('find', this.state.find)
+        // if (this.state.find.length >= 1 || this.state.near.length >= 1) {
+            this.props.getSearchedBusinesses(this.state.find)
             .then(() => {
-                this.props.updateFilter('near', this.state.near)
+                this.props.getSearchedBusinesses(this.state.near)
                 .then(() => {
-                    this.props.history.push(`/search=${this.state.find }+${this.state.near}`)
+                    this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
                 })
             })
-        } else {
-            this.props.history.push('/businesses')
-        }
+        // } else {
+        //     this.props.history.push('/businesses')
+        // }
     }
 
     handleChange(type) {

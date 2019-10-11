@@ -44,14 +44,14 @@ export default class BusinessIndexItem extends React.Component {
                             <span>{this.props.business.rating}</span>
                         </div>
                         <div className="business-item-price"> 
-                            <span>{this.props.business.price_range}</span>
+                            <span>{this.props.business.priceRange}</span>
                         </div>
                     </div>
 
                     <div className="business-index-item-right">
                         <div className="business-item-contact-info">
                             <div className="business-item-phone-number">
-                                <span>{this.props.business.phone_number}</span>
+                                <span>{this.props.business.phoneNumber}</span>
                             </div>
                             <div className="business-item-address">
                                 <span>{this.props.business.address}</span>

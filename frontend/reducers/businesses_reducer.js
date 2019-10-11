@@ -1,4 +1,5 @@
 import { RECEIVE_BUSINESSES, RECEIVE_BUSINESS } from '../actions/business_actions';
+import { RECEIVE_SEARCH_BUSINESSES } from '../actions/search_actions';
 
 const businessesReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -11,6 +12,8 @@ const businessesReducer = (state = {}, action) => {
             return action.payload.businesses;
         case RECEIVE_BUSINESS:
             return Object.assign(newState, action.payload.businesses);
+        case RECEIVE_SEARCH_BUSINESSES:
+            return Object.assign({}, action.payload.businesses)
         default:
             return state;
     }

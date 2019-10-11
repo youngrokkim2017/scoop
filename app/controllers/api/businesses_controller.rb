@@ -29,21 +29,21 @@ class Api::BusinessesController < ApplicationController
         end
     end
 
-    # debugger
     def search
         # debugger
-        search = params[:search]
+        search = params[:input]
+        # search = 'fen'
         @businesses = Business.where('LOWER(name) LIKE ?', "%#{search}%")
 
-        if @businesses.length < 1
-            @businesses = Business.all
-        end
+        # if @businesses.length < 1
+        #     @businesses = Business.all
+        # end
 
         render :index
     end
 
     private
     def business_params
-        params.require(:business).permit(:business, :description, :lat, :lng)
+        params.require(:business).permit(:business, :description, :lat, :lng,)
     end
 end

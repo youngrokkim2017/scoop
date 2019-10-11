@@ -32,7 +32,7 @@ export default class BusinessIndex extends React.Component {
 
                 <div className="business-index">
                     <div className="businesses-list">
-                        <ul>
+                        <ul className="business-list-sections">
                             {businessItems}
                         </ul> 
                     </div>
