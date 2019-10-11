@@ -16,23 +16,25 @@ class Search extends React.Component {
             // input: ""
             find: "",
             near: ""
-            // // near: this.props.near
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleSearch = this.handleSearch.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         
-        this.props.getSearchedBusinesses('find', this.state.find)
-        .then(() => {
-            this.props.getSearchedBusinesses('find', this.state.find)
+        if (this.state.find.length >= 1 || this.state.near.length >= 1) {
+            this.props.updateFilter('find', this.state.find)
             .then(() => {
-                this.props.history.push(`/search?${this.state.find }+${this.state.near}`)
+                this.props.updateFilter('near', this.state.near)
+                .then(() => {
+                    this.props.history.push(`/search=${this.state.find }+${this.state.near}`)
+                })
             })
-        })
+        } else {
+            this.props.history.push('/businesses')
+        }
     }
 
     handleChange(type) {
@@ -57,7 +59,6 @@ class Search extends React.Component {
                             placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                             // value={this.state.find} 
                             />
-
                     </label>
                 
                     <label className="search-near">

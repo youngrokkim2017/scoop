@@ -7,16 +7,14 @@ export const RECEIVE_SEARCH_BUSINESSES = "RECEIVE_SEARCH_BUSINESSES";
 //     businesses
 // });
 
-const receiveSearchBusinesses = (businesses) => ({
+const receiveSearchBusinesses = (payload) => ({
     type: RECEIVE_SEARCH_BUSINESSES,
-    businesses
-    // filter,
-    // value
+    payload
 });
 
 export const getSearchedBusinesses = (input) => dispatch => (
     searchAPIUtil.getSearchedBusinesses(input)
-        .then(businesses => (dispatch(receiveSearchBusinesses(businesses))))
+        .then(payload => (dispatch(receiveSearchBusinesses(payload))))
 )
 
 // export const getSearchedBusinesses = (filter, value) => {
