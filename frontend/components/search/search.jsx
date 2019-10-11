@@ -24,7 +24,7 @@ class Search extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         
-        // if (this.state.find.length >= 1 || this.state.near.length >= 1) {
+        if (this.state.find.length >= 1 || this.state.near.length >= 1) {
             this.props.getSearchedBusinesses(this.state.find)
             .then(() => {
                 this.props.getSearchedBusinesses(this.state.near)
@@ -32,9 +32,9 @@ class Search extends React.Component {
                     this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
                 })
             })
-        // } else {
-        //     this.props.history.push('/businesses')
-        // }
+        } else {
+            this.props.history.push('/businesses')
+        }
     }
 
     handleChange(type) {

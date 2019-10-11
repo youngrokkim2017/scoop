@@ -35,91 +35,108 @@ export default class BusinessShow extends React.Component {
 
                 <div className="business-container">
 
-                <header>
-                    <h1>{this.props.business.name}</h1>
-                </header>
+                    <div className="business-show-intro">
 
-                <div>
-                    <div className="business-rating">
-        
-                        
-                    </div>
+                        <div className="business-show-title">
+                            <header>
+                                <h1>{this.props.business.name}</h1>
+                            </header>
 
-                    <div className="business-price">
-                        <span>Price </span>
-                        <span>{`${business.priceRange}`}</span>                        
-                    </div>
+                            <div className="business-rating">
+                
+                                
+                            </div>
 
-                    <div className="bussines-category">
-                        <span>{`${business.category}`}</span>
-                    </div>
-                </div>
+                            <div className="business-price">
+                                <span>Price </span>
+                                <span>{`${business.priceRange}`}</span>                        
+                            </div>
 
-                <div className="business-map-and-info">
-                    {/* <div className="business-map">
-                        <div>
-                            <BusinessMap
-                                business={business}
-                                businessId={business.id}
-                                fetchBusiness={this.props.fetchBusiness}
-                                />
+                            <div className="bussines-category">
+                                <span>{`${business.category}`}</span>
+                            </div>
                         </div>
 
-                    </div> */}
+                        {/* <div className="business-show-write-review">
+                            { currentUser ? 
+                                <Link to={`/businesses/${business.id}/reviews`}>
+                                    <button>Write a Review</button>
+                                </Link>
+                                
+                                :
 
-                    <div className="business-description">
-                        <span>Description </span>
-                        <span>{`${business.description}`}</span>                        
-                    </div>
-
-                    <div className="business-address">
-                        <span>Address </span>
-                        <span>{`${business.address}`}</span>
-                    </div>
-                    
-                    <div className="business-phone">
-                        <span>Phone Number </span>
-                        <span>{`${business.phoneNumber}`}</span>
+                                <Link to="/login">
+                                    <button>Write a Review</button>
+                                </Link>
+                            }
+                        </div> */}
                     </div>
 
-                    <div className="business-website">
-                        <span>Website </span>
-                        {/* <span>{`${business.website}`}</span> */}
-                        <span><a href={business.website}>{`${business.website}`}</a></span>
-                    </div>
-                </div>
+                    <div className="business-map-and-info">
+                        {/* <div className="business-map">
+                            <div>
+                                <BusinessMap
+                                    business={business}
+                                    businessId={business.id}
+                                    fetchBusiness={this.props.fetchBusiness}
+                                    />
+                            </div>
 
-                <div className="right-column-info">
-                    <div className="business-credit-card">
-                        <span>Credit Card </span>
-                        <span>{`${business.creditCard}`}</span>
+                        </div> */}
+
+                        <div className="business-description">
+                            <span>Description </span>
+                            <span>{`${business.description}`}</span>                        
+                        </div>
+
+                        <div className="business-address">
+                            <span>Address </span>
+                            <span>{`${business.address}`}</span>
+                        </div>
+                        
+                        <div className="business-phone">
+                            <span>Phone Number </span>
+                            <span>{`${business.phoneNumber}`}</span>
+                        </div>
+
+                        <div className="business-website">
+                            <span>Website </span>
+                            {/* <span>{`${business.website}`}</span> */}
+                            <span><a href={business.website}>{`${business.website}`}</a></span>
+                        </div>
                     </div>
 
-                    <div className="business-parking">
-                        <span>Parking </span>
-                        <span>{`${business.parking}`}</span>
-                    </div>
+                    <div className="right-column-info">
+                        <div className="business-credit-card">
+                            <span>Credit Card </span>
+                            <span>{`${business.creditCard}`}</span>
+                        </div>
 
-                    <div className="business-wifi">
-                        <span>Wifi </span>
-                        <span>{`${business.wifi}`}</span>
-                    </div>
+                        <div className="business-parking">
+                            <span>Parking </span>
+                            <span>{`${business.parking}`}</span>
+                        </div>
 
-                    <div className="business-restroom">
-                        <span>Restroom </span>
-                        <span>{`${business.restroom}`}</span>
-                    </div>
+                        <div className="business-wifi">
+                            <span>Wifi </span>
+                            <span>{`${business.wifi}`}</span>
+                        </div>
 
-                    <div className="business-open">
-                        <span>Open </span>
-                        <span>{`${business.openTime}`}</span>
-                    </div>
+                        <div className="business-restroom">
+                            <span>Restroom </span>
+                            <span>{`${business.restroom}`}</span>
+                        </div>
 
-                    <div className="business-close">
-                        <span>Close </span>
-                        <span>{`${business.closeTime}`}</span>
+                        <div className="business-open">
+                            <span>Open </span>
+                            <span>{`${business.openTime}`}</span>
+                        </div>
+
+                        <div className="business-close">
+                            <span>Close </span>
+                            <span>{`${business.closeTime}`}</span>
+                        </div>
                     </div>
-                </div>
 
                 </div>
             </div>

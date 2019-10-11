@@ -60,14 +60,56 @@
     color: royalblue;
 }
 
-.business-index-item-left {
-    // display: flex;
-    // justify-content: left;
-    // float: left;
+.business-item-info {
+    display: flex;
+    justify-content: space-between;
+    // flex-direction: column;
+    // columns: 2;
+    // column-gap: 10px;
+}
+
+.business-photo {
+    display: flex;
+    justify-content: left;
 }
 
 .business-index-item-left {
-    // display: flex;
+    padding: 10px;
+    display: flex;
+    // justify-content: left;
+    // float: left;
+    flex-direction: column;
+    // align-items: flex-start;
+}
+
+// .business-index-item-left > div {
+//     flex-wrap: wrap;
+// }
+
+// .business-item-name {
+//     display: flex;
+// }
+
+// .business-item-rating {
+//     display: flex;
+// }
+
+// .business-item-price {
+//     display: flex;
+// }
+
+.business-item-contact-info {
+    padding: 10px;
+    display: flex;
     // justify-content: right;
     // float: right;
+    // text-align: right;
+    flex-direction: column;
+}
+
+.business-item-description {
+    padding: 10px;
+    display: flex;
+    // flex-wrap: wrap;
+    word-wrap: break-word;
 }

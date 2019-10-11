@@ -1,9 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            // input: ""
+            find: "",
+            near: ""
+        }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        if (this.state.find.length >= 1 || this.state.near.length >= 1) {
+        this.props.getSearchedBusinesses(this.state.find)
+            .then(() => {
+                this.props.getSearchedBusinesses(this.state.near)
+                    .then(() => {
+                        this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                    })
+            })
+        } else {
+            this.props.history.push('/businesses')
+        }
+    }
+
+    handleChange(type) {
+        return (e) => {
+            this.setState({
+                [type]: e.target.value
+            })
+        }
     }
 
     render() {
@@ -17,6 +49,33 @@ class NavBar extends React.Component {
                     <div className="nav-logo">
                             <Link to="/">scoop</Link>
                     </div>
+
+                    <form className="nav-search-bar">
+                        <label className="nav-search-find">
+                            <span className="nav-find-text">Find</span>
+                            <input
+                                className="nav-find-container"
+                                type="text"
+                                onChange={this.handleChange('find')}
+                                placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
+                            // value={this.state.find} 
+                            />
+                        </label>
+
+                        <label className="nav-search-near">
+                            <span className="nav-near-text">Near</span>
+                            <input
+                                className="nav-near-container"
+                                type="text"
+                                onChange={this.handleChange('near')}
+                                placeholder="address, city, state, or zip..."
+                            // value={this.state.near} 
+                            />
+                        </label>
+                        {/* <input className="search-button" type="submit" onClick={this.handleSubmit}/> */}
+                        {/* <Link to="/businesses">Search</Link> */}
+                        <button className="nav-search-button" onClick={this.handleSubmit}>Search</button>
+                    </form>
 
                     <div className="nav-user">
                     {this.props.loggedIn ?
@@ -58,7 +117,8 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+// export default NavBar;
+export default withRouter(NavBar);
 
 ///////////////////////////////////////////////////////////////////////////////
 

@@ -9,8 +9,8 @@
     padding: 12.5px;
     background-color: rgb(201, 29, 29);
     // background-color: #db0e0e;
-    // justify-content: center;
-    justify-content: space-between;
+    justify-content: center;
+    // justify-content: space-between;
     // justify-content: space-around;
     // justify-content: space-evenly;
     flex-direction: row;
@@ -26,9 +26,12 @@
 
 .nav-logo a {
     text-decoration: none;
-    // padding: 10px;
+    // padding: 0px 10px 0px 0px;
+    padding: 10px;
     color: black;
-    text-shadow: stroke(5, white);
+    // text-shadow: stroke(5, white);
+    // text-shadow: 2px white;
+    // outline: 2px solid white;
     font-weight: bold;
     // font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +40,85 @@
 // .navbar-signup-login {
 //     float: right;
 // }
+
+///////////////////////////////////////////////////////////////////////////////
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    border: none;
+    // border-radius: 5px 5px 5px 5px;
+}
+
+.nav-find-text {
+    padding: 11px;
+    border-radius: 5px 0px 0px 5px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-near-text {
+    padding: 11px;
+    border-left: solid 1px grey;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-find-container {
+    background-color: white;
+    // color: lightgray;
+    color: black;
+    padding: 12px;
+    // font-size: 15px;
+    width: 200px;
+    border: none;
+    outline: none;
+    height: 15px;
+}
+
+// .nav-search-find {
+//     padding: 15px;
+// }
+
+// .nav-search-near {
+//     padding: 15px;
+// }
+
+.nav-near-container {
+    background-color: white;
+    // color: lightgray;
+    color: black;
+    // padding: 10px;
+    font-size: 15px;
+    width: 150px;
+    border: none;
+    outline: none;
+    padding: 10.5px;
+}
+
+.nav-search-button {
+    // background-color: rgb(201, 29, 29);
+    background-color: rgb(179, 10, 10);
+    color: white;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    border: none;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+.navbar-signup-login {
+    padding: 12px;
+}
 
 .navbar-signup-login a {
     // color: white;
