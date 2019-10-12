@@ -1,18 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createReview } from '../../../actions/review_actions';
-import { fetchBusinesses } from '../../../actions/business_actions';
+import { fetchBusiness, fetchBusinesses } from '../../../actions/business_actions';
 import ReviewForm from './review_form';
 
-const mapStateToProps = (sate, ownProps) => { //???
-    let businessId = parseInt(ownProps.match.params.businessId);
-    let business = state.entities.business[businessId];
+const mapStateToProps = (state, ownProps) => { //???
+    // let businessId = parseInt(ownProps.match.params.businessId);
+    // let business = state.entities.business[businessId];
+    let business = state.entities.businesses[ownProps.match.params.businessId];
 
     return ({
-        businessId,
+        // businessId,
         business,
-        reviews: business.reviews,
-        formType: 'create'
+        // reviews: business.reviews,
+        formType: 'create',
+        loggedIn: Boolean(state.session.id)
     });
 }
 

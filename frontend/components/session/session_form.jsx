@@ -43,6 +43,7 @@ class SessionForm extends React.Component {
 
                     <header className="session-form-header">
                         <Link to="/">
+                            {/* <span>scoop</span> */}
                             <span><h3>scoop</h3></span>
                         </Link>
                     </header>

@@ -8,7 +8,7 @@ export const reviewsReducer = (state = {}, action) => {
         case RECEIVE_REVIEWS:
             return action.payload.reviews;
         case RECEIVE_REVIEW:
-            return Object.assign(newState, action.review);
+            return Object.assign(newState, action.payload.review);
         case REMOVE_REVIEW:
             delete newState[action.reviewId];
         default: 

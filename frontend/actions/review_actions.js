@@ -35,12 +35,12 @@ export const createReview = (review) => (dispatch) => (
         .then((payload) => dispatch(receiveReview(payload)))
 )
 
-export const updateReview = (reviewId) => (dispatch) => (
-    ReviewAPIUtil.updateReview(reviewId)
+export const editReview = (reviewId) => (dispatch) => (
+    ReviewAPIUtil.editReview(reviewId)
         .then((review) => dispatch(receiveReview(review)))
 )
 
 export const deleteReview = (reviewId) => (dispatch) => (
     ReviewAPIUtil.deleteReview(reviewId)
-        .then((review) => dispatch(receiveReview(review)))
+        .then((review) => dispatch(removeReview(review)))
 )

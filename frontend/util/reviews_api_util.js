@@ -13,7 +13,7 @@ export const createReview = (review) => {
     })
 }
 
-export const updateReview = (review) => {
+export const editReview = (review) => {
     $.ajax({
         url: `/api/businesses/${review.businessId}/reviews/${review.id}`,
         method: 'PATCH',

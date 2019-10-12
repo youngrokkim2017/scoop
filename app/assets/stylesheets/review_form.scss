@@ -12,6 +12,22 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    // border: solid 1px gray;
+}
+
+.review-form-inputs {
+    border: solid 1px lightgray;  
+    margin-left: 30px;  
+    padding: 20px;
+    width: 500px;
+}
+
+.nav-logo span {
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 // .review-form h1 {

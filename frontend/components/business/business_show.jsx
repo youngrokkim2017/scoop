@@ -57,8 +57,13 @@ class BusinessShow extends React.Component {
                             </div>
                         </div>
 
-                        {/* <div className="business-show-write-review">
-                            { currentUser ? 
+                        <div className="business-show-write-review">
+                            <Link to={`/businesses/${business.id}/reviews`}>
+                                {/* <button>Write a Review</button> */}
+                                <input type="submit" value="Write a Review"/>
+                            </Link>
+
+                            {/* { currentUser ? 
                                 <Link to={`/businesses/${business.id}/reviews`}>
                                     <button>Write a Review</button>
                                 </Link>
@@ -68,8 +73,8 @@ class BusinessShow extends React.Component {
                                 <Link to="/login">
                                     <button>Write a Review</button>
                                 </Link>
-                            }
-                        </div> */}
+                            } */}
+                        </div>
                     </div>
 
                     <div className="business-map-and-info">
@@ -139,6 +144,12 @@ class BusinessShow extends React.Component {
                     </div>
 
                 </div>
+
+                {/* <div className="business-show-review">
+                    <p>
+                        {this.props.businesses.reviews !== undefined || this.props.businesses.reviews !== null ? this.props.business.reviews.body : "No reviews for this business yet"}
+                    </p>
+                </div> */}
             </div>
         )
     }

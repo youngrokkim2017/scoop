@@ -1,87 +1,212 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import { withRouter } from 'react-router-dom';
-
-export default class ReviewForm extends React.Component {
+class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: "0",
-            body: ""
+            rating: '',
+            body: ''
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
+    }
 
-        this.handleSubmit = this.handleSubmit.bing(this);
+    navigateToBusinessShow() {
+        const url = `/businesses/${this.props.match.params.businessId}`
+        this.props.history.push(url);
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        const businessId = parseInt(this.props.match.params.businessId);
+        const review = Object.assign({}, this.state, {
+            business_id: businessId
+        });
 
-        this.props.action(this.state)
-        .then(
-            () => this.props.history.push(`/businesses/${this.props.business.id}`)
-        );
+        this.props.action(review);
+        this.navigateToBusinessShow();
     }
 
-    handleInput(type) {
-        return (e) => {
-            this.setState({
-                [type]: e.target.value
-            });
-        }
+    update(property) {
+        return e => this.setState({ [property]: e.currentTarget.value });
     }
 
     render() {
 
-        let { business } = this.props
-
         return (
-            <div className="review-form-header">
-                <header className="review-form-nav">
-                    <div>
-                        <Lnk to="/">
-                            <span><h1>Scoop</h1></span>
-                        </Lnk>
+            <div className="review-form">
+                <div className="session-navbar">
+                    <div className="nav-logo">
+                        <Link to="/">scoop</Link>
+                        <span>Write a Review</span>
                     </div>
-                    
-                    <div>
-                        {this.props.formType === "create" ? "Create a Review" : "Edit Review" }
-                    </div>
-                </header>
 
-                <div className="review-form">
-                    <form>
-                        <div>
-                            <div>
-                                <Link to={`/businesses/${business.id}`}>
-                                    <h1>{business.name}</h1>
-                                </Link>
-                            </div>
+                    {/* <h1>Write a Review</h1> */}
 
-                            <div className="rating-contents">
-                                <div className="rating">
-                                    <span>Rating</span>
+                    {this.props.loggedIn ?
+                        // <div className="signup-login">
+                        //     <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
+                        //     {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
+                        //     <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                        // </div>
 
-                                    <input type="radio" name="rating" value="1" onChange={this.handleInput('rating')}/>
-
-                                    <input type="radio" name="rating" value="2" onChange={this.handleInput('rating')} />
-
-                                    <input type="radio" name="rating" value="3" onChange={this.handleInput('rating')} />
-
-                                    <input type="radio" name="rating" value="4" onChange={this.handleInput('rating')} />
-
-                                    <input type="radio" name="rating" value="5" onChange={this.handleInput('rating')} />
-
-                                </div>
-
-                                <textarea onChange={this.handleInput('body')} value={this.state.body} placeholder="Write your review here" cols="30" rows="10"></textarea>
+                        <div className="logout-dropdown">
+                            <button className="dropbtn">Welcome, {currentUser.firstName}
+                                <i className="fa fa-caret-down"></i>
+                            </button>
+                            <div className="logout-dropdown-content">
+                                <a className="logout-link" onClick={this.props.logout}>Log Out</a>
                             </div>
                         </div>
 
-                        <button onClick={this.handleSubmit}>{this.props.formType === "create" ? "Create Review" : "Edit Review"}</button>
+                        :
+
+                        <nav className="navbar-signup-login">
+                            <Link to="/login" className="navbar-login">Log In</Link>
+                            <Link to="/signup" className="navbar-signup">Sign Up</Link>
+                        </nav>
+                    }
+                </div>
+
+                <div className="sub-navbar">
+                    {/* <Link to={`/businesses/${businessId}`}>Back to Business</Link> */}
+                    {/* <Link to="/businesses">Back to Businesses</Link> */}
+                    <Link to={`/businesses/${this.props.match.params.businessId}`}>Back to Business</Link>
+                </div>
+
+                {/* <header>
+                    <h1>{this.props.business.name}</h1>
+                </header> */}
+
+                <div className="review-form-inputs">
+                    <form onSubmit={this.handleSubmit}>
+                        {/* <br /> */}
+                        <input
+                            type="number"
+                            value={this.state.rating}
+                            onChange={this.update("rating")}
+                            />
+                        <label>Select your rating</label>
+                        <br />
+
+                        {/* <label>Review</label> */}
+                        <br />
+
+                        <textarea
+                            cols="80"
+                            rows="25"
+                            value={this.state.body}
+                            onChange={this.update("body")}
+                            placeholder="Your review helps others learn about great local businesses"
+                        />
+                        <br />
+                        <input type="submit" value="Post Review" />
+                        <button onClick={this.navigateToBusinessShow}>Cancel</button>
                     </form>
+                    {/* <button onClick={this.navigateToBusinessShow}>Cancel</button> */}
                 </div>
             </div>
-        )
+        );
     }
 }
+
+export default withRouter(ReviewForm);
+
+
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// import { withRouter } from 'react-router-dom';
+
+// class ReviewForm extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             rating: "0",
+//             body: ""
+//         };
+
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//     }
+
+//     handleSubmit(e) {
+//         e.preventDefault();
+
+//         this.props.action(this.state)
+//         .then(
+//             () => this.props.history.push(`/businesses/${this.props.business.id}`)
+//             // () => this.props.history.push(`/businesses/${this.props.businessId}`)
+//         );
+//     }
+
+//     handleInput(type) {
+//         return (e) => {
+//             this.setState({
+//                 [type]: e.target.value
+//             });
+//         }
+//     }
+
+//     render() {
+
+//         // console.log(this.props.business);
+//         // console.log(this.props.businessId);
+//         // console.log(this.props.businesses);
+//         // if (this.props.business === undefined) return null;
+//         let { business } = this.props;
+
+//         return (
+//             <div className="review-form-header">
+//                 <header className="review-form-nav">
+//                     <div>
+//                         <Link to="/">
+//                             <span><h1>Scoop</h1></span>
+//                         </Link>
+//                     </div>
+                    
+//                     <div>
+//                         {this.props.formType === "create" ? "Create a Review" : "Edit Review" }
+//                     </div>
+//                 </header>
+
+//                 <div className="review-form">
+//                     <form>
+//                         <div>
+//                             <div>
+//                                 <Link to={`/businesses/${business.id}`}>
+//                                     <h1>{business.name}</h1>
+//                                 </Link>
+//                             </div>
+
+//                             <div className="rating-contents">
+//                                 <div className="rating">
+//                                     <span>Rating</span>
+
+//                                     <input type="radio" name="rating" value="1" onChange={this.handleInput('rating')}/>
+
+//                                     <input type="radio" name="rating" value="2" onChange={this.handleInput('rating')} />
+
+//                                     <input type="radio" name="rating" value="3" onChange={this.handleInput('rating')} />
+
+//                                     <input type="radio" name="rating" value="4" onChange={this.handleInput('rating')} />
+
+//                                     <input type="radio" name="rating" value="5" onChange={this.handleInput('rating')} />
+
+//                                 </div>
+
+//                                 <textarea onChange={this.handleInput('body')} value={this.state.body} placeholder="Write your review here" cols="30" rows="10"></textarea>
+//                             </div>
+//                         </div>
+
+//                         <button onClick={this.handleSubmit}>{this.props.formType === "create" ? "Create Review" : "Edit Review"}</button>
+//                     </form>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
+
+// export default withRouter(ReviewForm);
+
