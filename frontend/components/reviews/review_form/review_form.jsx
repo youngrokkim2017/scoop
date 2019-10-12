@@ -14,8 +14,7 @@ class ReviewForm extends React.Component {
     }
 
     navigateToBusinessShow() {
-        const url = `/businesses/${this.props.match.params.businessId}`
-        this.props.history.push(url);
+        this.props.history.push(`/businesses/${this.props.match.params.businessId}`);
     }
 
     handleSubmit(e) {
@@ -29,8 +28,13 @@ class ReviewForm extends React.Component {
         this.navigateToBusinessShow();
     }
 
-    update(property) {
-        return e => this.setState({ [property]: e.currentTarget.value });
+    handleInput(type) {
+        return (e) => {
+            this.setState({
+                // [type]: e.target.value
+                [type]: e.currentTarget.value
+            });
+        }
     }
 
     render() {
@@ -43,14 +47,7 @@ class ReviewForm extends React.Component {
                         <span>Write a Review</span>
                     </div>
 
-                    {/* <h1>Write a Review</h1> */}
-
                     {this.props.loggedIn ?
-                        // <div className="signup-login">
-                        //     <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
-                        //     {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
-                        //     <a className="logout-link" onClick={this.props.logout}>Log Out</a>
-                        // </div>
 
                         <div className="logout-dropdown">
                             <button className="dropbtn">Welcome, {currentUser.firstName}
@@ -71,8 +68,6 @@ class ReviewForm extends React.Component {
                 </div>
 
                 <div className="sub-navbar">
-                    {/* <Link to={`/businesses/${businessId}`}>Back to Business</Link> */}
-                    {/* <Link to="/businesses">Back to Businesses</Link> */}
                     <Link to={`/businesses/${this.props.match.params.businessId}`}>Back to Business</Link>
                 </div>
 
@@ -82,26 +77,27 @@ class ReviewForm extends React.Component {
 
                 <div className="review-form-inputs">
                     <form onSubmit={this.handleSubmit}>
-                        {/* <br /> */}
                         <input
                             type="number"
                             value={this.state.rating}
-                            onChange={this.update("rating")}
+                            onChange={this.handleInput("rating")}
                             />
                         <label>Select your rating</label>
-                        <br />
+                       
+                        <p>
+                            {/* <label>Review</label> */}   
+                        </p>
 
-                        {/* <label>Review</label> */}
-                        <br />
-
-                        <textarea
-                            cols="80"
-                            rows="25"
-                            value={this.state.body}
-                            onChange={this.update("body")}
-                            placeholder="Your review helps others learn about great local businesses"
-                        />
-                        <br />
+                        <p>
+                            <textarea
+                                cols="80"
+                                rows="25"
+                                value={this.state.body}
+                                onChange={this.handleInput("body")}
+                                placeholder="Your review helps others learn about great local businesses"
+                            />
+                        </p>
+                        
                         <input type="submit" value="Post Review" />
                         <button onClick={this.navigateToBusinessShow}>Cancel</button>
                     </form>

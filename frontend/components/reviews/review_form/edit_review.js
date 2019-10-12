@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { editReview } from '../../../actions/review_actions';
 import { fetchBusiness, fetchBusinesses } from '../../../actions/business_actions';
 import ReviewForm from './review_form';
+// import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => { //???
     // let businessId = parseInt(ownProps.match.params.businessId);
@@ -14,13 +15,15 @@ const mapStateToProps = (state, ownProps) => { //???
         business,
         // reviews: business.reviews,
         formType: 'edit',
-        loggedIn: Boolean(state.session.id)
+        loggedIn: Boolean(state.session.id),
+        // user: state.entities.users[state.session.id],
     });
 }
 
 const mapDispatchToProps = dispatch => ({
     action: (review) => dispatch(createReview(review)),
-    fetchBusiness: (id) => dispatch(fetchBusiness(id))
+    fetchBusiness: (id) => dispatch(fetchBusiness(id)),
+    // logout: () => dispatch(logout())
 })
 
 export default connect(
