@@ -45,6 +45,8 @@ export default class BusinessIndexItem extends React.Component {
                         </div>
                         <div className="business-item-price"> 
                             <span>{this.props.business.priceRange}</span>
+                            <span></span>
+                            <span>{this.props.business.category}</span>
                         </div>
                     </div>
 

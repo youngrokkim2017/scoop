@@ -31,17 +31,25 @@
 //     // justify-content: center;
 // }
 
+.session-form-textbox {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 100px;
+}
+
 .formtype-header {
     text-transform: capitalize;
 }
 
 .session-intro {
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;    
 }
 
 .session-intro a {
     color: royalblue;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .session-intro a:hover {
@@ -52,9 +60,9 @@
 
 // }
 
-// .demo-text {
-
-// }
+.demo-text {
+    font-size: 13px;
+}
 
 .demo-button {
     // background-color: #008CBA;
@@ -82,7 +90,9 @@
 }
 
 .session-info {
+    // display: flex;
     padding-bottom: 25px;
+    // justify-content: center;
 }
 
 .or-divider {
@@ -99,13 +109,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.session-inputs {
-    // border-radius: 5px;
-}
+// .session-inputs {
+//     // border-radius: 5px;
+// }
 
-.session-email .session-password {
-    // border-radius: 5px;
-}
+// .session-email .session-password {
+//     // border-radius: 5px;
+// }
 
 .session-button {
     background-color: rgb(201, 29, 29);
@@ -129,5 +139,19 @@
 }
 
 .session-continue-text {
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.session-intro-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.session-intro-footer a {
+    text-decoration: none;
+    color: royalblue;
     font-family: Arial, Helvetica, sans-serif;
 }

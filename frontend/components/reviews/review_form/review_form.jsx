@@ -39,9 +39,14 @@ class ReviewForm extends React.Component {
 
     render() {
 
+        // session-navbar => review-navbar
         return (
             <div className="review-form">
-                <div className="session-navbar">
+
+                <div className="review-navbar"> 
+
+                    {/* <div> */}
+
                     <div className="nav-logo">
                         <Link to="/">scoop</Link>
                         <span>Write a Review</span>
@@ -65,43 +70,53 @@ class ReviewForm extends React.Component {
                             <Link to="/signup" className="navbar-signup">Sign Up</Link>
                         </nav>
                     }
-                </div>
 
+                    {/* </div> */}
+
+                </div>
                 <div className="sub-navbar">
-                    <Link to={`/businesses/${this.props.match.params.businessId}`}>Back to Business</Link>
+                    <div className="sub-navbar-left">
+                        <Link to={"/"}>Go to Home</Link>
+                    </div>
+                    <div className="sub-navbar-right">
+                        <Link to={`/businesses/${this.props.match.params.businessId}`}>Back to Business</Link>
+                    </div>
                 </div>
 
                 {/* <header>
                     <h1>{this.props.business.name}</h1>
                 </header> */}
 
-                <div className="review-form-inputs">
-                    <form onSubmit={this.handleSubmit}>
-                        <input
-                            type="number"
-                            value={this.state.rating}
-                            onChange={this.handleInput("rating")}
-                            />
-                        <label>Select your rating</label>
-                       
-                        <p>
-                            {/* <label>Review</label> */}   
-                        </p>
-
-                        <p>
-                            <textarea
-                                cols="80"
-                                rows="25"
-                                value={this.state.body}
-                                onChange={this.handleInput("body")}
-                                placeholder="Your review helps others learn about great local businesses"
-                            />
-                        </p>
+                <div className="review-form-contents">
+                    <div className="review-form-inputs">
+                        <form onSubmit={this.handleSubmit}>
+                            <input
+                                type="number"
+                                value={this.state.rating}
+                                onChange={this.handleInput("rating")}
+                                />
+                            <label>Select your rating</label>
                         
-                        <input type="submit" value="Post Review" />
-                        <button onClick={this.navigateToBusinessShow}>Cancel</button>
-                    </form>
-                    {/* <button onClick={this.navigateToBusinessShow}>Cancel</button> */}
+                            <p>
+                                {/* <label>Review</label> */}   
+                            </p>
+
+                            <p>
+                                <textarea
+                                    className="review-input-textarea"
+                                    cols="55"
+                                    rows="15"
+                                    value={this.state.body}
+                                    onChange={this.handleInput("body")}
+                                    placeholder="Your review helps others learn about great local businesses"
+                                />
+                            </p>
+                            
+                            <input className="review-form-button" type="submit" value="Post Review" />
+                            <button className="review-form-cancel" onClick={this.navigateToBusinessShow}>Cancel</button>
+                        </form>
+                        {/* <button onClick={this.navigateToBusinessShow}>Cancel</button> */}
+                    </div>
                 </div>
             </div>
         );

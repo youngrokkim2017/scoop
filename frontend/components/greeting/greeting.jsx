@@ -11,10 +11,12 @@ class Greeting extends React.Component {
         return (
             <div className="home">
                 <div className="session-navbar">
+
+                    {/* <div className="session-navbar-contents"> */}
+
                     <div className="github-link">
                         <a href="https://github.com/youngrokkim2017">Github</a>
                     </div>
-                    
 
                     { this.props.loggedIn ? 
                         // <div className="signup-login">
@@ -39,6 +41,9 @@ class Greeting extends React.Component {
                             <Link to="/signup" className="signup">Sign Up</Link>
                         </nav>
                     }
+
+                    {/* </div> */}
+
                 </div>
 
                 <div className="logo">

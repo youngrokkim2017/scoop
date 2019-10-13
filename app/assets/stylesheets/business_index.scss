@@ -7,6 +7,8 @@
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
     // width: 900px;
     // flex-direction: row;
 }
@@ -60,6 +62,11 @@
     width: 350px;
 }
 
+.business-index-map {
+    position: sticky;
+    padding-top: 16px;
+}
+
 
 ////////////////////////////business index item/////////////////////////////////
 
@@ -67,6 +74,8 @@
     // display: flex;
     text-decoration: none;
     color: royalblue;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .business-item-info {
@@ -75,6 +84,7 @@
     // flex-direction: column;
     // columns: 2;
     // column-gap: 10px;
+    flex-flow: row wrap;
 }
 
 .business-photo {
@@ -89,6 +99,26 @@
     // float: left;
     flex-direction: column;
     // align-items: flex-start;
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+.business-index-item-right {
+    display: flex;
+    flex: 1 1 auto; 
+    flex-direction: row-reverse;
+    // float: right;
+    // justify-content: flex-end;
+    text-align: right;    
+}
+
+// .business-item-phone-number {
+//     float: right;
+// }
+
+.business-item-description {
+    flex: 1 1 auto;
+    // text-align: right;
 }
 
 // .business-index-item-left > div {
