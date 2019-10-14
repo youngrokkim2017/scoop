@@ -112,6 +112,24 @@
     width: 300px;
 }
 
+.business-map-and-info-left > div {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.business-address {
+    font-weight: bold;
+}
+
+.business-address > span {
+    padding-right: 3px;
+}
+
+.business-website a {
+    text-decoration: none;
+    color: royalblue;
+}
+
 .review-index-and-info {
     display: flex;
     width: 100%;
@@ -156,8 +174,19 @@
 
 .right-column-info > div {
     flex-wrap: nowrap;
-    height: 40px;
+    // height: 40px;
+    padding-top: 10px;
 }
+
+.more-business-info-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(201, 29, 29);
+}
+
+// .right-column-info  > span {
+//     font-size: 10px;
+// }
 
 .business-answers {
     font-weight: bold;

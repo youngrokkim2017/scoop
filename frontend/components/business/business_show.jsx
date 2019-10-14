@@ -119,17 +119,23 @@ class BusinessShow extends React.Component {
                             </div> */}
 
                             <div className="business-address">
-                                <span>Address </span>
+                                {/* <span>Address </span> */}
                                 <span>{`${business.address}`}</span>
+                                <br/>
+                                <span>{`${business.city}`}</span>
+                                <span>,</span>
+                                <span>{`${business.state}`}</span>
+                                <span>,</span>
+                                <span>{`${business.zipCode}`}</span>
                             </div>
                             
                             <div className="business-phone">
-                                <span>Phone Number </span>
+                                {/* <span>Phone Number </span> */}
                                 <span>{`${business.phoneNumber}`}</span>
                             </div>
 
                             <div className="business-website">
-                                <span>Website </span>
+                                {/* <span>Website </span> */}
                                 <span><a href={business.website}>{`${business.website}`}</a></span>
                             </div>
                         </div>
@@ -149,6 +155,10 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="right-column-info">
+                            <div className="more-business-info">
+                                <span className="more-business-info-title">More Business Info</span>
+                            </div>
+
                             <div className="business-credit-card">
                                 <span>Credit Card </span>
                                 <span className="business-answers">{`${business.creditCard}`}</span>
