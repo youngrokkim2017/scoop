@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessMap from './business_map';
 import Navbar from '../nav_bar/nav_bar';
+import ReviewIndexContainer from '../reviews/review_index_container';
+import ReviewIndexItem from '../reviews/review_index_item';
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -152,6 +154,14 @@ class BusinessShow extends React.Component {
                                 <span className="review-recommend">Recommended Reviews</span>
                                 <span className="for-business">for {business.name}</span>
                             </div>
+
+                            {/* <div>
+                                <ReviewIndexContainer
+                                    currentUser={this.props.currentUser}
+                                    // businessId={this.props.business.id}
+                                    business={business}
+                                />
+                            </div> */}
                         </div>
 
                         <div className="right-column-info">

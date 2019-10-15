@@ -8,10 +8,10 @@
 //  appropriate API endpoints, actions, reducers, utils, and components.
  
 
- import React from 'react';
-
+import React from 'react';
+import ReviewIndexItem from './review_index_item';
  
- export default class ReviewIndex extends React.Component {
+class ReviewIndex extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -20,23 +20,46 @@
         this.props.fetchReviews(this.props.business.id)
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.review.length !== this.prevProps.review.length) {
+            this.props.fetchReviews(this.props.business.id)
+        }
+    }
+
     render() {
-        const reviews = this.props.reviews;
+        // const reviews = this.props.reviews;
+        const reviews = this.props.reviews.reverse().map(review => {
+            return (
+                <ReviewIndexItem 
+                    key={review.id}
+                    review={review}
+                    fetchReviews={this.props.fetchReviews}
+                    currentUser={this.props.currentUser}
+                    businessId={this.props.business.id}
+                />
+            )
+        })
+
 
         return (
             <div>
-                <div className="review-profile">
+                <div className="reviews-index">
+                    {reviews}
+                </div>
+                {/* <div className="review-profile">
                     <span>{`${reviews.firstName} ${reviews.lastName}`}</span>
                 </div>
 
                 <div className="review-content">
                     <span>{review.rating}</span>
                     <span>{reviews.body}</span>
-                </div>
+                </div> */}
             </div>
         );
     }
- }
+}
+
+export default ReviewIndex;
 
 
 // const Review = props => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-export default class ReviewIndexItem extends React.Component {
+class ReviewIndexItem extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -11,10 +11,29 @@ export default class ReviewIndexItem extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className="review-contents">
+                    <div className="business-review-author">
+                        <div>
+                            <span>{`${review.authorFirstName} ${review.authorFirstName}.`}</span>
+                        </div>
+                    </div>
                     
+                    <div className="business-review-text">
+                        <div>
+                            <div className="rating-and-date">
+                                <span>{`${review.rating}`}</span>
+                                <span style={{ fontSize: '15px', color: 'gray'}}>{`${month}/${day}/${year}`}</span>
+                            </div>
+
+                            <div className="review-body">
+                                <span style={{ fontSize: '15px', color: 'gray' }}>{review.body}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+export default ReviewIndexItem;
