@@ -5,9 +5,9 @@ import { fetchReviews } from '../../actions/review_actions';
 const mapStateToProps = (state) => {
     let reviews = Object.values(state.entities.reviews)
 
-    return {
+    return ({
         reviews
-    }
+    })
 }
 
 const mapDispatchToProps = (dispatch) => ({

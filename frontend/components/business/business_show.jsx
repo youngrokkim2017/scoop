@@ -204,11 +204,13 @@ class BusinessShow extends React.Component {
                 </div>
 
 
-                {/* <div className="business-show-review">
+                <div className="business-show-review">
                     <p>
-                        {this.props.businesses.reviews !== undefined || this.props.businesses.reviews !== null ? this.props.business.reviews.body : "No reviews for this business yet"}
+                        {/* {this.props.businesses.reviews !== undefined || this.props.businesses.reviews !== null ? this.props.business.reviews.body : "No reviews for this business yet"} */}
+                        {business.reviews !== undefined || business.reviews !== null || business.reviews.length !== 0 ? business.reviews : "No reviews for this business yet"}
+                        {/* {business.reviews !== undefined || business.reviews !== null ? business.reviews.body : "No reviews for this business yet"} */}
                     </p>
-                </div> */}
+                </div>
             </div>
         )
     }
