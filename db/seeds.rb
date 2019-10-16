@@ -91,7 +91,7 @@ business_9 = Business.create!(name: 'Ghirardelli Ice Cream', address: '900 North
     phone_number: '(415) 474-3938', price_range: '$$', credit_card: 'Yes', 
     parking: 'Yes', wifi: 'No', restroom: 'No', category: 'ice cream', 
     open_time: '9:00AM', close_time: '11:00PM', rating: '4', lat: 37.805862, lng: -122.422641)
-business_10 = Business.create!(name: 'Almare Gelato Italiano', address: '2170 Shattuck Ave, Berkeley', 
+business_10 = Business.create!(name: 'Almare Gelato Italiano', address: '2170 Shattuck Ave', 
     city: 'Berkeley', state: 'CA', zip_code: 94704, website: 'www.almaregelato.com', 
     description: 'Lively treat spot serving updated old-world Italian gelato & sorbet flavors with vegan options.', 
     phone_number: '(510) 649-1888', price_range: '$', credit_card: 'Yes', 
@@ -115,7 +115,7 @@ business_13 = Business.create!(name: 'Lush Gelato', address: '520 Columbus Ave',
     phone_number: '(415) 590-7081', price_range: '$', credit_card: 'Yes', 
     parking: 'No', wifi: 'No', restroom: 'No', category: 'ice cream', 
     open_time: '2:00PM', close_time: '10:00PM', rating: '5', lat: 37.799860, lng: -122.409261)
-business_14 = Business.create!(name: 'Cookiebar Creamery', address: '517 8th St, Oakland', 
+business_14 = Business.create!(name: 'Cookiebar Creamery', address: '517 8th St', 
     city: 'Oakland', state: 'CA', zip_code: 94607, website: 'cookiebarcreamery.com', 
     description: 'Ice cream parlor & cookie bakery dishing up many flavors in a spare, modern space.', 
     phone_number: '(510) 250-9240', price_range: '$', credit_card: 'Yes', 

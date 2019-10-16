@@ -108,6 +108,11 @@
     text-decoration: none;
     margin-top: 75px;
     // color: black;
+    text-shadow:
+		-1.5px -1.5px 0 #fff,
+		1.5px -1.5px 0 #fff,
+		-1.5px 1.5px 0 #fff,
+		1.5px 1.5px 0 #fff;
 }
 
 .header-title a {
