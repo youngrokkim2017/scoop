@@ -23,6 +23,18 @@ user_1 = User.create!(first_name: 'Mickey', last_name: 'Mouse',
     email: 'mickey@email.com', password: 'disney')
 user_2 = User.create!(first_name: 'Donald', last_name: 'Duck', 
     email: 'donald@email.com', password: 'disney')
+user_3 = User.create!(first_name: 'Bugs', last_name: 'Bunny',
+    email: 'bugs@email.com', password: 'looney')
+user_4 = User.create!(first_name: 'Daffy', last_name: 'Duck',
+    email: 'daffy@email.com', password: 'looney')
+user_5 = User.create!(first_name: 'Rick', last_name: 'Sanchez',
+    email: 'rick@email.com', password: 'wubbalubba')
+user_6 = User.create!(first_name: 'Morty', last_name: 'Smith',
+    email: 'morty@email.com', password: 'dubdub')
+# user_7 = User.create!(first_name: , last_name: ,
+#     email: , password:)
+# user_8 = User.create!(first_name: , last_name: ,
+#     email: , password:)
 
 #businesses
 business_1 = Business.create!(name: 'Salt and Straw', address: '2201 Fillmore Street', 
@@ -109,7 +121,13 @@ business_14 = Business.create!(name: 'Cookiebar Creamery', address: '517 8th St,
     phone_number: '(510) 250-9240', price_range: '$', credit_card: 'Yes', 
     parking: 'Yes', wifi: 'No', restroom: 'No', category: 'ice cream', 
     open_time: '11:00AM', close_time: '9:00PM', rating: '5', lat: 37.800672, lng: -122.275609)
-# business_15 = Business.create!(name: '', address: '', 
+business_15 = Business.create!(name: 'Mr. and Mrs. Miscellaneous', address: '699 22nd St', 
+    city: 'San Francisco', state: 'CA', zip_code: 94107, website: 'n/a', 
+    description: 'Modern & airy sweet shop specializing in creative ice cream flavors, cookies & other confections.', 
+    phone_number: '(415) 970-0750', price_range: '$', credit_card: 'Yes', 
+    parking: 'Yes', wifi: 'No', restroom: 'Yes', category: 'ice cream', 
+    open_time: '11:30AM', close_time: '6:00PM', rating: '5', lat: 37.757835, lng: -122.388144)
+# business_16 = Business.create!(name: '', address: '', 
 #     city: '', state: 'CA', zip_code: , website: '', 
 #     description: '', phone_number: '', price_range: '$', 
 #     credit_card: 'Yes', parking: 'No', wifi: 'No', restroom: 'No', category: 'ice cream', 
@@ -118,5 +136,51 @@ business_14 = Business.create!(name: 'Cookiebar Creamery', address: '517 8th St,
 # #reviews
 review_1 = Review.create!(user_id: user_1.id, business_id: business_1.id, 
     body: "Interesting flavors with local ingredients! I tried the ice cream flight to taste multiple flavors", 
+    rating: 5)
+review_2 = Review.create!(user_id: user_3.id, business_id: business_1.id,
+    body: "Their coffee ice cream was delicious! But the line was too long",
     rating: 4)
-# review_2 = Review.create!()
+review_3 = Review.create!(user_id: user_5.id, business_id: business_1.id,
+    body: "Ice cream was good but the wait was long and there are barely any seatings",
+    rating: 3)
+
+###
+
+review_4 = Review.create!(user_id: user_2.id, business_id: business_2.id,
+    body: "Wide variety of flavors but a little pricy and the wait time was long",
+    rating: 4)
+review_5 = Review.create!(user_id: user_4.id, business_id: business_2.id,
+    body: "Great experience! I tried the black and tan and it the perfect combination
+    of carmel, chocolate, and ice cream",
+    rating: 5)
+review_6 = Review.create!(user_id: user_6.id, business_id: business_2.id,
+    body: "Lots of tasty classic flavors but they wouldn\'t let me attempt the
+    ice cream challenge without a voucher. I also tried their food and it was 
+    just average diner food",
+    rating: 3)
+
+###
+
+review_7 = Review.create!(user_id: user_3.id, business_id: business_3.id,
+    body: "The ice cream was good but the long line of people was not worth the
+    hype",
+    rating: 4)
+review_8 = Review.create!(user_id: user_5.id, business_id: business_3.id,
+    body: "I love their variety of flavors and also the option to get their soft
+    serve right next door",
+    rating: 5)
+review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
+    body: "My go to place to get ice cream in SF!",
+    rating: 5)
+
+###
+
+# review_10 = Review.create!(user_id: user_4.id, business_id: ,
+#     body: ,
+#     rating: )
+# review_11 = Review.create!(user_id: user_6.id, business_id: ,
+#     body: ,
+#     rating: )
+# review_12 = Review.create!(user_id: user_2.id, business_id: ,
+#     body: ,
+#     rating: )

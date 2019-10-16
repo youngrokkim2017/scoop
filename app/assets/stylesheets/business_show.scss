@@ -200,25 +200,27 @@
     display: flex;
     // display: inline;
     // width: 100%;
-    padding-top: 20px;
+    // padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: solid 1px lightgray;   
+    // border-bottom: solid 1px lightgray;   
 }
 
 .business-review-start-review a {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 275px;
     margin: 20px 30px 20px 250px;
     text-decoration: none;   
     color: royalblue;
     padding: 20px 50px;
     border: solid 1px lightgray;
-    background-color: lightgray;
+    background-color: rgb(238, 237, 237);
+    border-radius: 4px;
 }
 
 .business-review-start-review {
     border-bottom: solid 1px lightgray;
+    // overflow-wrap: break-word;
 }
 
 .business-show-review-container {

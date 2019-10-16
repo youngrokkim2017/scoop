@@ -188,6 +188,7 @@ class BusinessShow extends React.Component {
                                     />
                                 </div>
                             </div>
+                            {/* <span>Page 1 of 1</span> */}
                         </div>
 
                         <div className="right-column-info">

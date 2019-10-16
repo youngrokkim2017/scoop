@@ -55,7 +55,10 @@ class BusinessIndex extends React.Component {
                     </div>
                 
                     <div className="business-index-map">
-                        <BusinessMap businesses={this.props.businesses} />
+                        <BusinessMap 
+                            businesses={this.props.businesses} 
+                            // key={business.id}
+                        />
                     </div>
                 </div>
             </div>

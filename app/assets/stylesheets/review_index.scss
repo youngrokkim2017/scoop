@@ -9,6 +9,8 @@
 
 .review-contents {
     display: flex;
+    border-bottom: solid 1px lightgray;
+    padding: 20px 0px;
 }
 
 .business-review-author {
@@ -16,9 +18,11 @@
     display: inline;
     padding-right: 75px;
     white-space: nowrap;
+    width: 70px;
 }
 
 .business-review-text {
     // display: flex;
     display: inline;
+    width: 540px;
 }   
