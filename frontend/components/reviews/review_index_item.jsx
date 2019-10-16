@@ -7,26 +7,28 @@ class ReviewIndexItem extends React.Component {
     }
 
     render() {
-        let { review, currentUser } = this.props
+        // let { review, currentUser } = this.props;
+        let { review } = this.props;
 
         return (
             <div>
                 <div className="review-contents">
                     <div className="business-review-author">
                         <div>
-                            <span>{`${review.authorFirstName} ${review.authorFirstName}.`}</span>
+                            <span style={{ color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>
                         </div>
                     </div>
                     
                     <div className="business-review-text">
                         <div>
                             <div className="rating-and-date">
-                                <span>{`${review.rating}`}</span>
-                                <span style={{ fontSize: '15px', color: 'gray'}}>{`${month}/${day}/${year}`}</span>
+                                <span style={{ color: 'gray'}}>{`${review.rating}`}</span>
+                                {/* <span style={{ fontSize: '15px', color: 'gray'}}>{`${month}/${day}/${year}`}</span> */}
                             </div>
 
                             <div className="review-body">
-                                <span style={{ fontSize: '15px', color: 'gray' }}>{review.body}</span>
+                                {/* <span style={{ fontSize: '15px', color: 'gray' }}>{review.body}</span> */}
+                                <span>{review.body}</span>
                             </div>
                         </div>
                     </div>

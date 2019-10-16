@@ -1,8 +1,24 @@
-.review-profile {
+// .review-profile {
+//     display: flex;
+//     flex-direction: row;
+// }
+
+// .review-content {
+//     display: flex;
+// }
+
+.review-contents {
     display: flex;
-    flex-direction: row;
 }
 
-.review-content {
-    display: flex;
+.business-review-author {
+    // display: flex;
+    display: inline;
+    padding-right: 75px;
+    white-space: nowrap;
 }
+
+.business-review-text {
+    // display: flex;
+    display: inline;
+}   

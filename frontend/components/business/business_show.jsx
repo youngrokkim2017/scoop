@@ -12,6 +12,8 @@ class BusinessShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId)
+
+        // this.props.fetchReviews(this.props.match.params.businessId)
     }
 
     componentDidUpdate(prevProps) {
@@ -25,7 +27,22 @@ class BusinessShow extends React.Component {
         console.log(this.props.businessId);
         if (this.props.business === undefined) return null;
         let { business } = this.props;
+
+        // REVIEWS
+        
+        // const { reviews } = this.props;
+        // const reviewsList = reviews.map(review => {
+        //     return (
+        //         <ReviewIndexItem
+        //             review={review}
+        //             business={business}
+        //             fetchReviews={this.props.fetchReviews}
+        //         />
+        //     )
+        // });
+
         return (
+
             <div className="business-show">
                 <div>
                     <Navbar />
@@ -155,13 +172,22 @@ class BusinessShow extends React.Component {
                                 <span className="for-business">for {business.name}</span>
                             </div>
 
-                            {/* <div>
-                                <ReviewIndexContainer
-                                    currentUser={this.props.currentUser}
-                                    // businessId={this.props.business.id}
-                                    business={business}
-                                />
-                            </div> */}
+                            <div className="business-review-start-review">
+                                <Link to={`/businesses/${business.id}/reviews`}>
+                                    <span style={{ paddingRight: '5px' }}>Start your review of</span>
+                                    <span style={{ fontWeight: 'bold' }}>{business.name}</span>
+                                </Link>
+                            </div>
+
+                            <div className="below-review-header">
+                                <div className="business-show-review-container">
+                                    <ReviewIndexContainer
+                                        currentUser={this.props.currentUser}
+                                        businessId={this.props.business.id}
+                                        business={business}
+                                    />
+                                </div>
+                            </div>
                         </div>
 
                         <div className="right-column-info">
@@ -210,6 +236,17 @@ class BusinessShow extends React.Component {
                         {business.reviews !== undefined || business.reviews !== null || business.reviews.length !== 0 ? business.reviews : "No reviews for this business yet"}
                         {/* {business.reviews !== undefined || business.reviews !== null ? business.reviews.body : "No reviews for this business yet"} */}
                     </p>
+
+                    {/* <div>
+                        <ReviewIndexContainer
+                            // currentUser={this.props.currentUser}
+                            business={business}
+                        />
+                    </div> */}
+
+                    {/* <div>
+                        {reviewsList}
+                    </div> */}
                 </div>
             </div>
         )

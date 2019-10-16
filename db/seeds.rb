@@ -8,11 +8,11 @@
 
 # ModelName.connection.execute('ALTER SEQUENCE model_name_id_seq RESTART WITH 1')
 
-# Review.destroy_all
+Review.destroy_all
 Business.destroy_all
 User.destroy_all
 
-# Review.connection.execute('ALTER SEQUENCE model_name_id_seq RESTART WITH 1')
+Review.connection.execute('ALTER SEQUENCE reviews_id_seq RESTART WITH 1')
 Business.connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
 User.connection.execute('ALTER SEQUENCE businesses_id_seq RESTART WITH 1')
 
@@ -116,5 +116,7 @@ business_14 = Business.create!(name: 'Cookiebar Creamery', address: '517 8th St,
 #     open_time: '', close_time: '', rating: '5', lat: , lng: )
 
 # #reviews
-# review_1 = Review.create!()
+review_1 = Review.create!(user_id: user_1.id, business_id: business_1.id, 
+    body: "Interesting flavors with local ingredients! I tried the ice cream flight to taste multiple flavors", 
+    rating: 4)
 # review_2 = Review.create!()

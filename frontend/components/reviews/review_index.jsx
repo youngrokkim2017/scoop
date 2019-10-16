@@ -20,15 +20,18 @@ class ReviewIndex extends React.Component {
         this.props.fetchReviews(this.props.business.id)
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.review.length !== this.prevProps.review.length) {
-            this.props.fetchReviews(this.props.business.id)
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.reviews.length !== this.prevProps.reviews.length) {
+    //         this.props.fetchReviews(this.props.business.id)
+    //     }
+    // }
 
     render() {
         // const reviews = this.props.reviews;
-        const reviews = this.props.reviews.reverse().map(review => {
+
+        let { reviews } = this.props;
+
+        const allReviews = this.props.reviews.reverse().map(review => {
             return (
                 <ReviewIndexItem 
                     key={review.id}
@@ -44,7 +47,7 @@ class ReviewIndex extends React.Component {
         return (
             <div>
                 <div className="reviews-index">
-                    {reviews}
+                    {allReviews}
                 </div>
                 {/* <div className="review-profile">
                     <span>{`${reviews.firstName} ${reviews.lastName}`}</span>
