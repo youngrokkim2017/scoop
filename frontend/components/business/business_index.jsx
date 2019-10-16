@@ -25,11 +25,11 @@ class BusinessIndex extends React.Component {
             <div className="business-index-render">
                 <div>
                     <NavBar />
-                    <div className="session-navbar-items">
+                    {/* <div className="session-navbar-items">
                         <ul className="navbar-businesses">
-                            {/* {businesses} */}
+                            {businesses}
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 
                 <div className="sub-navbar">
