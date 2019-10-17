@@ -6,7 +6,7 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: '',
+            rating: '0',
             body: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,6 +38,12 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        let { business } = this.props;
+        console.log(business);
+        console.log(this.props.match.params.businessId);
+        console.log(this.props);
+        console.log(this.state.entities);
+        // console.log(this.props.fetchBusiness(this.props.match.params.businessId));
 
         // session-navbar => review-navbar
         return (
@@ -49,7 +55,8 @@ class ReviewForm extends React.Component {
 
                     <div className="nav-logo">
                         <Link to="/">scoop</Link>
-                        <span>Write a Review</span>
+                        {/* <span>Write a Review</span> */}
+                        <span>{this.props.formType === "create" ? "Write a Review" : "Edit Review"}</span>
                     </div>
 
                     {this.props.loggedIn ?
@@ -83,19 +90,30 @@ class ReviewForm extends React.Component {
                     </div>
                 </div>
 
-                {/* <header>
-                    <h1>{this.props.business.name}</h1>
-                </header> */}
+                <header>
+                    <span>{}</span>
+                </header>
 
                 <div className="review-form-contents">
                     <div className="review-form-inputs">
                         <form onSubmit={this.handleSubmit}>
-                            <input
+                            {/* <input
                                 type="number"
                                 value={this.state.rating}
                                 onChange={this.handleInput("rating")}
-                                />
-                            <label>Select your rating</label>
+                                /> */}
+                            <input type="radio" value="1" onChange={this.handleInput("rating")}/>
+                            <label>1</label>
+                            <input type="radio" value="2" onChange={this.handleInput("rating")}/>
+                            <label>2</label>
+                            <input type="radio" value="3" onChange={this.handleInput("rating")}/>
+                            <label>3</label>
+                            <input type="radio" value="4" onChange={this.handleInput("rating")}/>
+                            <label>4</label>
+                            <input type="radio" value="5" onChange={this.handleInput("rating")}/>
+                            <label>5</label>
+
+                            <label style={{ paddingLeft: '10px' }}>Select your rating</label>
                         
                             <p>
                                 {/* <label>Review</label> */}   
@@ -112,7 +130,7 @@ class ReviewForm extends React.Component {
                                 />
                             </p>
                             
-                            <input className="review-form-button" type="submit" value="Post Review" />
+                            <input className="review-form-button" type="submit" value={this.props.formType === "create" ? "Post Review" : "Edit Review"} />
                             <button className="review-form-cancel" onClick={this.navigateToBusinessShow}>Cancel</button>
                         </form>
                         {/* <button onClick={this.navigateToBusinessShow}>Cancel</button> */}

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class ReviewIndexItem extends React.Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class ReviewIndexItem extends React.Component {
 
     render() {
         // let { review, currentUser } = this.props;
-        let { review } = this.props;
+        let { review, currentUser } = this.props;
 
         return (
             <div>
@@ -16,6 +16,21 @@ class ReviewIndexItem extends React.Component {
                     <div className="business-review-author">
                         <div>
                             <span style={{ color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>
+                        </div>
+
+                        <div className="edit-review-link-hover">
+                            { currentUser && currentUser.id === review.authorId ?
+                                <Link
+                                    className="edit-review-link"
+                                    to={`/businesses/${review.businessId}/reviews/${review.id}/edit`}
+                                >
+                                    Edit Review
+                                </Link>
+
+                                :
+
+                                ""
+                            }
                         </div>
                     </div>
                     

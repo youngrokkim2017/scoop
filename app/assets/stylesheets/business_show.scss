@@ -110,11 +110,23 @@
     border: solid 1px gray;
     height: 300px;
     width: 300px;
+    // display: inline;
 }
 
 .business-map-and-info-left > div {
     padding-top: 5px;
     padding-left: 10px;
+}
+
+// .business-map {
+//     width: 100px;
+//     height: 100%;
+// }
+
+.business-map-box {
+    display: flex;
+    width: 280px;
+    height: 100px;
 }
 
 .business-address {

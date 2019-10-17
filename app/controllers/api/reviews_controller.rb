@@ -17,6 +17,7 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update
+        # debugger
         @review = Review.find_by(id: params[:id])
 
         if @review.user_id != current_user.id

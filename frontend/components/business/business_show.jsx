@@ -28,6 +28,9 @@ class BusinessShow extends React.Component {
         if (this.props.business === undefined) return null;
         let { business } = this.props;
 
+        // console.log(business.averageBusinessRating);
+        // let avgBusinessRating = 
+
         // REVIEWS
         
         // const { reviews } = this.props;
@@ -89,36 +92,34 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="business-show-write-review">
-                            <Link to={`/businesses/${business.id}/reviews`}>
-                                {/* <button>Write a Review</button> */}
-                                {/* <input className="business-show-review-button" type="submit" value="Write a Review"/> */}
+                            {/* <Link to={`/businesses/${business.id}/reviews`}>
                                 Write a Review
-                            </Link>
+                            </Link> */}
 
-                            {/* { currentUser ? 
+                            { currentUser ? 
                                 <Link to={`/businesses/${business.id}/reviews`}>
-                                    <button>Write a Review</button>
+                                    Write a Review
                                 </Link>
                                 
                                 :
 
                                 <Link to="/login">
-                                    <button>Write a Review</button>
+                                    Write a Review
                                 </Link>
-                            } */}
+                            }
                         </div>
                     </div>
 
                     <div className="business-map-and-info">
                         <div className="business-map-and-info-left">
                             <div className="business-map">
-                                {/* <div>
+                                <div className="business-map-box">
                                     <BusinessMap
-                                        businesses={business}
+                                        businesses={[business]}
                                         businessId={business.id}
                                         fetchBusiness={this.props.fetchBusiness}
                                         />
-                                </div> */}
+                                </div>
 
                                 {/* <div className="business-show-map">
                                     <BusinessMap businesses={this.props.businesses} />

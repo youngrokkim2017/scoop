@@ -10,14 +10,14 @@ const mapStateToProps = (state, ownProps) => { //???
     // let business = state.entities.business[businessId];
     let business = state.entities.businesses[ownProps.match.params.businessId];
 
-    return ({
+    return {
         // businessId,
         business,
         // reviews: business.reviews,
         formType: 'create',
         loggedIn: Boolean(state.session.id),
         // user: state.entities.users[state.session.id],
-    });
+    }
 }
 
 const mapDispatchToProps = dispatch => ({
