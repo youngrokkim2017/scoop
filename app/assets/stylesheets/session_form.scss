@@ -26,6 +26,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.session-form {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 // .session-info {
 //     // display: flex;
 //     // justify-content: center;
@@ -112,6 +116,27 @@
 // .session-inputs {
 //     // border-radius: 5px;
 // }
+
+.session-name-input {
+    background-color: white;
+    border: solid 1px gray;
+    outline: none;
+    border-radius: 4px;
+    width: 110px;
+    margin-right: 9px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.session-emailpassword-input {
+    background-color: white;
+    border: solid 1px gray;
+    outline: none;
+    border-radius: 4px;
+    width: 250px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
 
 // .session-email .session-password {
 //     // border-radius: 5px;

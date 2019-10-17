@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
 
                 <div className="session-form-textbox">
                     <div className="session-info">
-                        <h1 className="formtype-header">{this.props.formType} to scoop</h1>
+                        <h1 className="formtype-header" style={{ color: 'rgb(201, 29, 29)' }}>{this.props.formType} to scoop</h1>
                         {/* <h1 className="to-scoop">to Scoop</h1> */}
 
                         <p>
@@ -84,26 +84,34 @@ class SessionForm extends React.Component {
                     </fieldset>
 
                     <form className="session-inputs">
-                        <p>
-                            <label className="session-fn">
-                                <input
-                                    type="text"
-                                    value={this.state.first_name}
-                                    onChange={this.handleInput('first_name')}
-                                    placeholder="First Name"
-                                />
-                            </label>
-                        {/* </p> */}
-                        {/* <p> */}
-                            <label className="session-ln">
-                                <input
-                                    type="text"
-                                    value={this.state.last_name}
-                                    onChange={this.handleInput('last_name')}
-                                    placeholder="Last Name"
-                                />
-                            </label>
-                        </p>
+                        {formType === "sign up" ?
+                            <p>
+                                <label className="session-fn">
+                                    <input
+                                        type="text"
+                                        value={this.state.first_name}
+                                        onChange={this.handleInput('first_name')}
+                                        placeholder="First Name"
+                                        className="session-name-input"
+                                    />
+                                </label>
+                            {/* </p> */}
+                            {/* <p> */}
+                                <label className="session-ln">
+                                    <input
+                                        type="text"
+                                        value={this.state.last_name}
+                                        onChange={this.handleInput('last_name')}
+                                        placeholder="Last Name"
+                                        className="session-name-input"
+                                    />
+                                </label>
+                            </p>
+
+                            : 
+
+                            ""
+                        }
                         <p>
                             <label className="session-email">
                                 <input 
@@ -111,16 +119,19 @@ class SessionForm extends React.Component {
                                 value={this.state.email}
                                 onChange={this.handleInput('email')}
                                 placeholder="Email"
+                                className="session-emailpassword-input"
                                 />
                             </label>
                         </p>
                         <p>
                             <label className="session-password">
                                 <input 
-                                type="text"
+                                // type="text"
+                                type="password"
                                 value={this.state.password}
                                 onChange={this.handleInput('password')}
                                 placeholder="Password"
+                                className="session-emailpassword-input"
                                 />
                             </label>
                         </p>
