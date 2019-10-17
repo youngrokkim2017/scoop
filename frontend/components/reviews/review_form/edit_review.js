@@ -9,11 +9,11 @@ const mapStateToProps = (state, ownProps) => { //???
     // let businessId = parseInt(ownProps.match.params.businessId);
     // let business = state.entities.business[businessId];
     let business = state.entities.businesses[ownProps.match.params.businessId];
+    let review = state.entities.reviews[ownProps.match.params.id]
 
     return {
-        // businessId,
-        business,
-        // reviews: business.reviews,   
+        review,
+        business, 
         formType: 'edit',
         loggedIn: Boolean(state.session.id),
         // user: state.entities.users[state.session.id],

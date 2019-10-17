@@ -5,17 +5,27 @@ import { Link } from 'react-router-dom';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
+
+        let body;
+        if (this.props.review === undefined) {
+            body = ''
+        } else {
+            body = this.props.review.body
+        }
+
         this.state = {
             rating: '0',
-            body: ''
-            // business: 
+            body: body,
+            businessId: this.props.match.params.businessId,
+            id: this.props.match.params.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
     }
 
     navigateToBusinessShow() {
-        this.props.history.push(`/businesses/${this.props.match.params.businessId}`);
+        // this.props.history.push(`/businesses/${this.props.match.params.businessId}`);
+        this.props.history.replace(`/businesses/${this.props.match.params.businessId}`);
     }
 
     handleSubmit(e) {
@@ -25,8 +35,14 @@ class ReviewForm extends React.Component {
             business_id: businessId
         });
 
-        this.props.action(review);
-        this.navigateToBusinessShow();
+        // this.props.action(review);
+        this.props.action(this.state) 
+            .then(
+                // () => this.props.history.replace(`/businesses/${this.props.match.params.businessId}`)
+                () => this.navigateToBusinessShow()
+            )
+
+        // this.navigateToBusinessShow();
     }
 
     handleInput(type) {
@@ -41,11 +57,10 @@ class ReviewForm extends React.Component {
     render() {
         let placeholder = "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you\'re connected in any way to the owner or employees."
         let { business } = this.props;
-        console.log(business);
-        console.log(this.props.match.params.businessId);
-        console.log(this.props);
-        console.log(this.state.entities);
-        // console.log(this.props.fetchBusiness(this.props.match.params.businessId));
+        // console.log(business);
+        // console.log(this.props.match.params.businessId);
+        // console.log(this.props);
+        // console.log(this.state.entities);
 
         // session-navbar => review-navbar
         return (

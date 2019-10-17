@@ -22,7 +22,7 @@ class Api::ReviewsController < ApplicationController
 
         if @review.user_id != current_user.id
             render :show
-        elsif @review.update_attribute(review_params)
+        elsif @review.update_attributes(review_params)
             render :show
         else
             render @review.errors.full_messages, status: 422
