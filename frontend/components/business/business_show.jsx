@@ -23,6 +23,8 @@ class BusinessShow extends React.Component {
     }
 
     render() {
+        // console.log(currentUser)
+
         // console.log(this.props.business);
         // console.log(this.props.businessId);
         if (this.props.business === undefined) return null;
@@ -116,11 +118,11 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="business-show-write-review">
-                            {/* <Link to={`/businesses/${business.id}/reviews`}>
+                            <Link to={`/businesses/${business.id}/reviews`}>
                                 Write a Review
-                            </Link> */}
+                            </Link>
 
-                            { currentUser ? 
+                            {/* { currentUser ? 
                                 <Link to={`/businesses/${business.id}/reviews`}>
                                     Write a Review
                                 </Link>
@@ -130,7 +132,7 @@ class BusinessShow extends React.Component {
                                 <Link to="/login">
                                     Write a Review
                                 </Link>
-                            }
+                            } */}
                         </div>
                     </div>
 
