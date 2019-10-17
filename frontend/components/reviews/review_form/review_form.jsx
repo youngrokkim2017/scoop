@@ -8,6 +8,7 @@ class ReviewForm extends React.Component {
         this.state = {
             rating: '0',
             body: ''
+            // business: 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
@@ -38,6 +39,7 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        let placeholder = "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you\'re connected in any way to the owner or employees."
         let { business } = this.props;
         console.log(business);
         console.log(this.props.match.params.businessId);
@@ -126,7 +128,7 @@ class ReviewForm extends React.Component {
                                     rows="15"
                                     value={this.state.body}
                                     onChange={this.handleInput("body")}
-                                    placeholder="Your review helps others learn about great local businesses"
+                                    placeholder={placeholder}
                                 />
                             </p>
                             
