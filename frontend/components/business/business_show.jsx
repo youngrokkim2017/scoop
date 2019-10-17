@@ -23,13 +23,36 @@ class BusinessShow extends React.Component {
     }
 
     render() {
-        console.log(this.props.business);
-        console.log(this.props.businessId);
+        // console.log(this.props.business);
+        // console.log(this.props.businessId);
         if (this.props.business === undefined) return null;
         let { business } = this.props;
 
-        // console.log(business.averageBusinessRating);
-        // let avgBusinessRating = 
+        // console.log(this.props.reviews);
+        // console.log(Object.values(Object.values(this.props.reviews)));
+        let reviews = this.props.reviews;
+        let reviewRatings;
+        let sum = 0;
+        reviewRatings = reviews.map(review => (
+            // Object.values(review)[4]
+            sum += Object.values(review)[4]
+        ))
+
+        let sumRating = reviewRatings[reviewRatings.length-1]
+        console.log(sumRating);
+        let averageRating = sumRating / (reviewRatings.length * 1.0)
+        console.log(averageRating);
+
+        // console.log(reviewRatings.length);
+        // console.log(reviewRatings[2]);
+
+        
+        // let averageBusinessRating = reviewRatings.sum / (reviewRatings.length * 1.0);
+        // let averageBusinessRating = reviewRatings.reduce((prev, curr) => curr += prev);
+        // averageBusinessRating /= (reviewRatings * 1.0);
+        // let reviewSum = reviewRatings.reduce((prev, curr) => curr += prev);
+        // let averageBusinessRating = reviewSum / (reviewRatings.length * 1.0)
+        // console.log(averageBusinessRating);
 
         // REVIEWS
         
@@ -75,7 +98,8 @@ class BusinessShow extends React.Component {
                             </header>
 
                             <div className="business-rating">
-                                <span>{`${business.rating}`}</span>
+                                {/* <span>{`${business.rating}`}</span> */}
+                                <span>{averageRating.toString()}</span>
 
                             </div>
 

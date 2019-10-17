@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
     // businesses: state.entities.businesses[ownProps.match.params.businessId]
     // businessId: ownProps.match.params.businessId
     // currentUser: state.session.currentUser
+    // reviews: state.entities.reviews,
     currentUser: state.entities.users[state.session.id],
     reviews: Object.values(state.entities.reviews)
 });
