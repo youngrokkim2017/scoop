@@ -24,6 +24,19 @@ export default class BusinessIndexItem extends React.Component {
         // const {  } = this.props.business;
         // let business = this.props.business;
 
+        let reviews = this.props.reviews;
+        // let reviewRatings;
+        // let sum = 0;
+        // reviewRatings = reviews.map(review => (
+        //     // Object.values(review)[4]
+        //     sum += Object.values(review)[4]
+        // ))
+
+        // let sumRating = reviewRatings[reviewRatings.length - 1]
+        // console.log(sumRating);
+        // let averageRating = sumRating / (reviewRatings.length * 1.0)
+        // console.log(averageRating);
+
         return (
             <li className="business-index-item"    
                 //onClick={this.handleClick}
@@ -41,7 +54,7 @@ export default class BusinessIndexItem extends React.Component {
                         </div>
                         <div className="business-item-rating">
                             <span>star ratings go here</span>
-                            <span>{this.props.business.rating}</span>
+                            {/* <span>{this.props.business.rating}</span> */}
                         </div>
                         <div className="business-item-price"> 
                             <span>{this.props.business.priceRange}</span>
