@@ -24,18 +24,25 @@ export default class BusinessIndexItem extends React.Component {
         // const {  } = this.props.business;
         // let business = this.props.business;
 
-        let reviews = this.props.reviews;
-        // let reviewRatings;
-        // let sum = 0;
-        // reviewRatings = reviews.map(review => (
-        //     // Object.values(review)[4]
-        //     sum += Object.values(review)[4]
-        // ))
-
-        // let sumRating = reviewRatings[reviewRatings.length - 1]
-        // console.log(sumRating);
-        // let averageRating = sumRating / (reviewRatings.length * 1.0)
+        let businessReviews = this.props.business.reviews;
+        // console.log(this.props.business.reviews);
+        let reviewRatings;
+        let sum = 0;
+        reviewRatings = businessReviews.map(review => (
+            // Object.values(review)[4]
+            sum += Object.values(review)[4]
+        ))
+        // console.log(reviewRatings);
+        let sumRating = reviewRatings[reviewRatings.length - 1]
+        let averageRating = sumRating / (reviewRatings.length * 1.0)
         // console.log(averageRating);
+        let reviewsCount = reviewRatings.length.toString(); 
+
+        // let starRatingsList = ["*", "**", "***", "****", "*****"];
+
+        // let starRating;
+        // starRating = starRatingsList[Math.floor(averageRating) - 1];
+            
 
         return (
             <li className="business-index-item"    
@@ -53,18 +60,19 @@ export default class BusinessIndexItem extends React.Component {
                             </Link>
                         </div>
                         <div className="business-item-rating">
-                            <span>star ratings go here</span>
-                            {/* <span>{this.props.business.rating}</span> */}
+                            <span>{averageRating.toString()}</span>
+                            {/* <span>{starRating}</span> */}
+                            <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount} reviews</span>
                         </div>
                         <div className="business-item-price"> 
                             <span>{this.props.business.priceRange}</span>
                             <span style={{ padding: '0px 5px' }}>-</span>
-                            <span>{this.props.business.category}</span>
+                            <span style={{ color: 'gray' }}>{this.props.business.category}</span>
                         </div>
                     </div>
 
                     <div className="business-index-item-right">
-                        <div className="business-item-contact-info">
+                        <div className="business-item-contact   -info">
                             <div className="business-item-phone-number">
                                 <span>{this.props.business.phoneNumber}</span>
                             </div>

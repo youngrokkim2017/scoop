@@ -30,8 +30,7 @@ class BusinessShow extends React.Component {
         if (this.props.business === undefined) return null;
         let { business } = this.props;
 
-        // console.log(this.props.reviews);
-        // console.log(Object.values(Object.values(this.props.reviews)));
+
         let reviews = this.props.reviews;
         let reviewRatings;
         let sum = 0;
@@ -54,13 +53,6 @@ class BusinessShow extends React.Component {
         let starRating;
         starRating = starRatingsList[Math.floor(averageRating) - 1];
 
-        
-        // let averageBusinessRating = reviewRatings.sum / (reviewRatings.length * 1.0);
-        // let averageBusinessRating = reviewRatings.reduce((prev, curr) => curr += prev);
-        // averageBusinessRating /= (reviewRatings * 1.0);
-        // let reviewSum = reviewRatings.reduce((prev, curr) => curr += prev);
-        // let averageBusinessRating = reviewSum / (reviewRatings.length * 1.0)
-        // console.log(averageBusinessRating);
 
         // REVIEWS
         
@@ -109,7 +101,7 @@ class BusinessShow extends React.Component {
                                 {/* <span>{`${business.rating}`}</span> */}
                                 {/* <span>{averageRating.toString()}</span> */}
                                 <span>{starRating}</span>
-                                <span style={{ paddingLeft: '10px' }}>{reviewsCount.toString()} reviews</span>
+                                <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span>
 
                             </div>
 
@@ -254,7 +246,7 @@ class BusinessShow extends React.Component {
                                     {`${business.openTime} - ${business.closeTime}`}
                                 </div>
                                 <div>
-                                    <span style={{ fontWeight: 'bold', paddingRight: '34px' }}>Sun</span>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '33px' }}>Sun</span>
                                     {`${business.openTime} - ${business.closeTime}`}
                                 </div>
                             </div>
