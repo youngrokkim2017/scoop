@@ -41,12 +41,18 @@ class BusinessShow extends React.Component {
         ))
 
         let sumRating = reviewRatings[reviewRatings.length-1]
-        console.log(sumRating);
+        // console.log(sumRating);
         let averageRating = sumRating / (reviewRatings.length * 1.0)
-        console.log(averageRating);
+        // console.log(averageRating);
 
+        let reviewsCount = reviewRatings.length;
         // console.log(reviewRatings.length);
         // console.log(reviewRatings[2]);
+
+        let starRatingsList = ["*", "**", "***", "****", "*****"];
+
+        let starRating;
+        starRating = starRatingsList[Math.floor(averageRating) - 1];
 
         
         // let averageBusinessRating = reviewRatings.sum / (reviewRatings.length * 1.0);
@@ -101,7 +107,9 @@ class BusinessShow extends React.Component {
 
                             <div className="business-rating">
                                 {/* <span>{`${business.rating}`}</span> */}
-                                <span>{averageRating.toString()}</span>
+                                {/* <span>{averageRating.toString()}</span> */}
+                                <span>{starRating}</span>
+                                <span style={{ paddingLeft: '10px' }}>{reviewsCount.toString()} reviews</span>
 
                             </div>
 
@@ -219,6 +227,37 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="right-column-info">
+                            <div className="business-hours">
+                                <span style={{ fontWeight: 'bold', color: 'rgb(201, 29, 29)' }}>Hours</span>
+                                <div>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '30px' }}>Mon</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                                <div>   
+                                    <span style={{ fontWeight: 'bold', paddingRight: '35px' }}>Tue</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                                <div>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '30px' }}>Wed</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                                <div>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '34px' }}>Thu</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                                <div>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '42px' }}>Fri</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                                <div>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '38px' }}>Sat</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                                <div>
+                                    <span style={{ fontWeight: 'bold', paddingRight: '34px' }}>Sun</span>
+                                    {`${business.openTime} - ${business.closeTime}`}
+                                </div>
+                            </div>
                             <div className="more-business-info">
                                 <span className="more-business-info-title">More Business Info</span>
                             </div>
@@ -241,16 +280,6 @@ class BusinessShow extends React.Component {
                             <div className="business-restroom">
                                 <span>Restroom </span>
                                 <span className="business-answers">{`${business.restroom}`}</span>
-                            </div>
-
-                            <div className="business-open">
-                                <span>Open </span>
-                                <span className="business-answers">{`${business.openTime}`}</span>
-                            </div>
-
-                            <div className="business-close">
-                                <span>Close </span>
-                                <span className="business-answers">{`${business.closeTime}`}</span>
                             </div>
                         </div>
                     </div>

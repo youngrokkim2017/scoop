@@ -5,6 +5,7 @@
     flex-direction: row;
     border: none;
     // border-radius: 5px 5px 5px 5px;
+    white-space: nowrap;
 }
 
 // .search-find {
@@ -39,7 +40,7 @@
     color: black;
     padding: 15px;
     font-size: 15px;
-    width: 300px;
+    width: 400px;
     border: none;
     outline: none;
 }
@@ -50,7 +51,7 @@
     color: black;
     padding: 15px;
     font-size: 15px;
-    width: 250px;
+    width: 350px;
     border: none;
     outline: none;
 }

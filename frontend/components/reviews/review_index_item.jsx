@@ -10,7 +10,28 @@ class ReviewIndexItem extends React.Component {
         // let { review, currentUser } = this.props;
         let { review, currentUser } = this.props;
 
+        // console.log(review.rating);
+
+        let starRatingsList = ["*", "**", "***", "****", "*****"];
+
+        let starRating;
+        starRating = starRatingsList[review.rating - 1];
+        // if (review.rating === 1) {
+        //     starRating = starRatingsList[0]
+        // } else if (review.rating === 2) {
+        //     starRating = starRatingsList[1]
+        // } else if (review.rating === 3) {
+        //     starRating = starRatingsList[2]
+        // } else if (review.rating === 4) {
+        //     starRating = starRatingsList[3]
+        // } else if (review.rating === 5) {
+        //     starRating = starRatingsList[4]
+        // }
+
+        // console.log(starRating);
+
         return (
+
             <div>
                 <div className="review-contents">
                     <div className="business-review-author">
@@ -37,7 +58,8 @@ class ReviewIndexItem extends React.Component {
                     <div className="business-review-text">
                         <div>
                             <div className="rating-and-date">
-                                <span style={{ color: 'gray'}}>{`${review.rating}`}</span>
+                                {/* <span style={{ color: 'gray' }}>{`${review.rating}`}</span> */}
+                                <span style={{ color: 'gray' }}>{starRating}</span>
                                 {/* <span style={{ fontSize: '15px', color: 'gray'}}>{`${month}/${day}/${year}`}</span> */}
                             </div>
 
