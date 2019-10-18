@@ -1,5 +1,5 @@
 export const getSearchedBusinesses = (input) => {
-    console.log();
+    // console.log();
     return $.ajax({
         method: "GET",
         // url: `/api/search/${search}`,
