@@ -38,6 +38,19 @@ class SessionForm extends React.Component {
     render() {
         let { formType } = this.props;
 
+        let invalidFnError = "";
+        let invalidLnError = "";
+        let invalidEmailError = "";
+        let invalidPasswordError = "";
+
+        // console.log(this.props.errors);
+        // this.props.errors.forEach(err => {
+        //     if (err.includes('First')) invalidFnError += err;
+        //     if (err.includes('Last')) invalidLnError += err;
+        //     if (err.includes('Email')) invalidEmailError += err;
+        //     if (err.includes('Password')) invalidPasswordError += err;
+        // })
+
         return(
             <div className="session-form">
 
@@ -53,11 +66,11 @@ class SessionForm extends React.Component {
                         <h1 className="formtype-header" style={{ color: 'rgb(201, 29, 29)' }}>{this.props.formType} to scoop</h1>
                         {/* <h1 className="to-scoop">to Scoop</h1> */}
 
-                        <p>
+                        {/* <p>
                             {this.state.errors ?
-                            errors.map((errors) => <li>{error}</li>) : 
+                            errors.map((error) => <li>{error}</li>) : 
                             ""}
-                        </p>
+                        </p> */}
 
                         <div className="session-intro">
                             {formType === "sign up" ? "Connect with great local businesses" : "New to scoop? "}
@@ -84,8 +97,13 @@ class SessionForm extends React.Component {
                     </fieldset>
 
                     <form className="session-inputs">
+                        <p>
+                            {this.state.errors ?
+                                errors.map((error) => <li>{error}</li>) :
+                                ""}
+                        </p>
                         {formType === "sign up" ?
-                            <p>
+                            <div>
                                 <label className="session-fn">
                                     <input
                                         type="text"
@@ -95,8 +113,8 @@ class SessionForm extends React.Component {
                                         className="session-name-input"
                                     />
                                 </label>
-                            {/* </p> */}
-                            {/* <p> */}
+                            
+                           
                                 <label className="session-ln">
                                     <input
                                         type="text"
@@ -106,7 +124,7 @@ class SessionForm extends React.Component {
                                         className="session-name-input"
                                     />
                                 </label>
-                            </p>
+                            </div>
 
                             : 
 
