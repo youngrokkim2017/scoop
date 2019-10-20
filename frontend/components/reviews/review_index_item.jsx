@@ -30,11 +30,17 @@ class ReviewIndexItem extends React.Component {
 
         // console.log(starRating);
 
+        // console.log(this.props.review.authorId);
+
         return (
 
             <div>
                 <div className="review-contents">
                     <div className="business-review-author">
+                        <div className="author-photo">
+                            {/* <img src={user.photoUrl} alt=""/> */}
+                            {/* <img src={this.props.review.authorId.photoUrl} alt=""/> */}
+                        </div>
                         <div>
                             <span style={{ color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>
                         </div>

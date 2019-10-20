@@ -128,6 +128,12 @@
     border: none;
 }
 
+.nav-search-button:hover {
+    color: white;
+    background-color: darkred;
+    transition: 0.5s;
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 
 .navbar-signup-login {
@@ -164,6 +170,12 @@
     cursor: pointer;
 }
 
+.navbar-login:hover {
+    color: white;
+    background-color: darkred;
+    transition: 0s;
+}
+
 // .navbar-login:hover {
 //     border-bottom: 2px solid white;
 // }
@@ -190,6 +202,8 @@
 
 .sub-navbar a:hover {
     color: royalblue;
+    background-color: white;
+    transition: 0s;
 }
 
 .sub-navbar-right {
@@ -225,4 +239,6 @@
     font-size: 15px;
     border-left: solid 1px gray;
     border-right: solid 1px gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

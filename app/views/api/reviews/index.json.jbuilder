@@ -13,5 +13,6 @@
         json.rating review.rating
         json.authorFirstName review.user.first_name.capitalize
         json.authorLastName review.user.last_name[0].capitalize
+        # json.photoUrl url_for(review.user.photo) if user.photo.attached?
     end
 end

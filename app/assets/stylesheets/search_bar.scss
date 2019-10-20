@@ -66,6 +66,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.search-button:hover {
+    transition: 0.5s;
+    color: white;
+    background-color: darkred;
+}
+
 .search-shortcuts {
     display: flex;
     justify-content: space-evenly;

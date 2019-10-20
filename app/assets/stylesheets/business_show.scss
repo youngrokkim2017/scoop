@@ -60,6 +60,12 @@
     // text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
     height: 20px;
+    opacity: 1;
+}
+
+.business-show-write-review a:hover {
+    transition: 0.5s;
+    opacity: 0.8;    
 }
 
 // .business-show-review-button {
@@ -83,6 +89,7 @@
 .business-show-review-button:hover {
     cursor: pointer;
     transition: 1.0s;
+    // opacity: 1;
 }
 
 .business-map {

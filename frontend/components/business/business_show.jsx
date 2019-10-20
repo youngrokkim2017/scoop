@@ -279,12 +279,12 @@ class BusinessShow extends React.Component {
                 </div>
 
 
-                <div className="business-show-review">
-                    <p>
+                {/* <div className="business-show-review"> */}
+                    {/* <p> */}
                         {/* {this.props.businesses.reviews !== undefined || this.props.businesses.reviews !== null ? this.props.business.reviews.body : "No reviews for this business yet"} */}
-                        {business.reviews !== undefined || business.reviews !== null || business.reviews.length !== 0 ? business.reviews : "No reviews for this business yet"}
+                        {/* {business.reviews !== undefined || business.reviews !== null || business.reviews.length !== 0 ? business.reviews : "No reviews for this business yet"} */}
                         {/* {business.reviews !== undefined || business.reviews !== null ? business.reviews.body : "No reviews for this business yet"} */}
-                    </p>
+                    {/* </p> */}
 
                     {/* <div>
                         <ReviewIndexContainer
@@ -296,7 +296,7 @@ class BusinessShow extends React.Component {
                     {/* <div>
                         {reviewsList}
                     </div> */}
-                </div>
+                {/* </div> */}
             </div>
         )
     }
