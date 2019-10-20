@@ -8,6 +8,8 @@
 
 # ModelName.connection.execute('ALTER SEQUENCE model_name_id_seq RESTART WITH 1')
 
+require 'open-uri'
+
 Review.destroy_all
 Business.destroy_all
 User.destroy_all

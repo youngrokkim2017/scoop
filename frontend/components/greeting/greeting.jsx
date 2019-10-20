@@ -8,8 +8,14 @@ class Greeting extends React.Component {
     }
 
     render() {
+        // let coverPhoto = [window.]
+
         return (
             <div className="home">
+                
+                {/* <img className="home-cover-photo" src={coverPhoto[rand]} alt=""/> */}
+                {/* <img className="home-cover-photo" src={coverPhoto} alt=""/> */}
+                 
                 <div className="session-navbar">
 
                     {/* <div className="session-navbar-contents"> */}
@@ -62,6 +68,8 @@ class Greeting extends React.Component {
     }
 }
 
+export default Greeting;
+
 // const Greeting = ({ currentUser, logout }) => {
 //     const sessionLinks = () => (
 //         <div className="session-navbar">
@@ -94,4 +102,3 @@ class Greeting extends React.Component {
 //     return currentUser ? homeGreeting() : sessionLinks();
 // }
 
-export default Greeting;

@@ -3,9 +3,18 @@
         json.set! business.id do
             json.partial! 'api/businesses/business', business: business
             json.reviews business.reviews
+            # json.photoUrl url_for(business.photo)
         end
     end
 end
+
+# @businesses.map do |business|
+#     json.businesses do
+#         json.set! business.id do
+#             json.photoUrl url_for(business.photo)
+#         end
+#     end
+# end
 
 
 # @businesses.each do |business|

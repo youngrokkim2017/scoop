@@ -2,6 +2,7 @@ json.businesses do
     json.set! @business.id do 
         json.partial! 'api/businesses/business', business: @business
         # json.reviews business.reviews
+        # json.foodPhotoUrls @business.food_photos.map { |file| url_for(file) }
     end 
 end
 
