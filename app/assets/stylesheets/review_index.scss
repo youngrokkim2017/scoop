@@ -46,3 +46,24 @@
 .edit-review-link:hover {
     text-decoration: underline;
 }
+
+
+////////////////////////// REVIEW REACTIONS ///////////////////////
+
+.review-reactions {
+    padding-top: 10px;
+    color: gray;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.review-reaction-question {
+    padding-bottom: 10px;
+}
+
+.review-reaction-options > span {
+    border: solid 1px gray;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+}

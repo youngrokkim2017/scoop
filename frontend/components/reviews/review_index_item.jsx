@@ -73,6 +73,17 @@ class ReviewIndexItem extends React.Component {
                                 {/* <span style={{ fontSize: '15px', color: 'gray' }}>{review.body}</span> */}
                                 <span>{review.body}</span>
                             </div>
+
+                            <div className="review-reactions">
+                                <div className="review-reaction-question">
+                                    <span>Was this review ...?</span>
+                                </div>
+                                <div className="review-reaction-options">
+                                    <span>💡Useful</span>
+                                    <span>😀Funny</span>
+                                    <span>😎Cool</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
