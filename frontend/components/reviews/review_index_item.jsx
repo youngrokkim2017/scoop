@@ -4,7 +4,52 @@ import { Link } from 'react-router-dom';
 class ReviewIndexItem extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            usefulClick: 0,
+            funnyClick: 0,
+            coolClick: 0,
+            showUseful: true,
+            showFunny: true,
+            showCool: true
+        };
     }
+
+    // incrementUseful = () => {
+    //     this.setState(
+    //         { usefulClick: this.state.usefulClick + 1 }
+    //     );
+    // }
+    
+    // incrementFunny = () => {
+    //     this.setState(
+    //         { funnyClick: this.state.funnyClick + 1 }
+    //     );
+    // }
+    
+    // incrementCool = () => {
+    //     this.setState(
+    //         { coolClick: this.state.coolClick + 1 }
+    //     );
+    // }
+
+    // toggleUsefulClick = () => {
+    //     this.setState(
+    //         { showUseful: !this.state.showUseful }
+    //     );
+    // }
+
+    // toggleFunnyClick = () => {
+    //     this.setState(
+    //         { showFunny: !this.state.showFunny }
+    //     );
+    // }
+
+    // toggleCoolClick = () => {
+    //     this.setState(
+    //         { showCool: !this.state.showCool }
+    //     );
+    // }
 
     render() {
         // let { review, currentUser } = this.props;
@@ -79,9 +124,21 @@ class ReviewIndexItem extends React.Component {
                                     <span>Was this review ...?</span>
                                 </div>
                                 <div className="review-reaction-options">
-                                    <span>💡Useful</span>
+                                    {/* <span>💡Useful</span>
                                     <span>😀Funny</span>
-                                    <span>😎Cool</span>
+                                    <span>😎Cool</span> */}
+
+                                    <div className="reaction">
+                                        <button className="reaction-buttons" onClick={this.incrementUseful}>💡Useful {this.state.showUseful ? this.state.usefulClick : "" }</button>
+                                    </div>
+
+                                    <div className="reaction">
+                                        <button className="reaction-buttons" onClick={this.incrementFunny}>😀Funny {this.state.showFunny ? this.state.funnyClick : ""}</button>
+                                    </div>
+
+                                    <div className="reaction">
+                                        <button className="reaction-buttons" onClick={this.incrementCool}>😎Cool {this.state.showCool ? this.state.coolClick : ""}</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
