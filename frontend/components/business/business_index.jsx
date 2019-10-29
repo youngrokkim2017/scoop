@@ -11,7 +11,29 @@ class BusinessIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusinesses();
+
+        // if (this.props.location.search !== "") {
+        //     let searchArr = this.handleSearchInput(this.props.history.location.search)
+        //     let find = searchArr[0];
+        //     let near = searchArr[1];
+
+        //     this.props.getSearchedBusinesses(find)
+        //         // .then(() => {
+        //         //     this.props.getSearchedBusinesses(near)
+        //         // })
+        // } else if (this.props.location.search === "") {
+        //     this.props.fetchBusinesses;
+        // }
     }
+
+    // handleSearchInput(search) {
+    //     let inputs = search.split('=').slice(1);
+    //     let input = inputs.split('+');
+    //     let find = input[0];
+    //     let near = input[1];
+
+    //     return [find, near];
+    // }
 
     render() {
         const { businesses } = this.props;
@@ -21,6 +43,8 @@ class BusinessIndex extends React.Component {
         const businessItems = this.props.businesses.map(business => (
             <BusinessIndexItem key={business.id} business={business} />)
         );
+
+        console.log(this.props);
 
         return (
             <div className="business-index-render">
