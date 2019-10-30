@@ -45,6 +45,7 @@ class BusinessIndex extends React.Component {
         );
 
         console.log(this.props);
+        // console.log(businesses);
 
         return (
             <div className="business-index-render">
