@@ -45,6 +45,11 @@ class SessionForm extends React.Component {
 
         // console.log(this.props.errors);
         // this.props.errors.forEach(err => {
+        //     return err;
+        // })
+
+        // console.log(this.props.errors);
+        // this.props.errors.forEach(err => {
         //     if (err.includes('First')) invalidFnError += err;
         //     if (err.includes('Last')) invalidLnError += err;
         //     if (err.includes('Email')) invalidEmailError += err;
@@ -162,6 +167,9 @@ class SessionForm extends React.Component {
                         {formType === "sign up" ? "Already on Scoop?  " : "New to Scoop?  "}
                         {formType === "sign up" ? <Link to="/login">Log In</Link> : <Link to="/signup">Sign Up</Link>}
                     </div>
+
+                    {/* <div>{this.props.errors}</div> */}
+                    {/* <div>{err}</div> */}
                 </div>
             </div>
         )
