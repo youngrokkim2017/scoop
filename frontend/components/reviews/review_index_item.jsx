@@ -17,27 +17,60 @@ class ReviewIndexItem extends React.Component {
         this.incrementUseful = this.incrementUseful.bind(this);
         this.incrementFunny = this.incrementFunny.bind(this);
         this.incrementCool = this.incrementCool.bind(this);
-        this.toggleUsefulClick = this.toggleUsefulClick.bind(this);
-        this.toggleFunnyClick = this.toggleFunnyClick.bind(this);
-        this.toggleCoolClick = this.toggleCoolClick.bind(this);
+        this.decrementUseful = this.decrementUseful.bind(this);
+        this.decrementFunny = this.decrementFunny.bind(this);
+        this.decrementCool = this.decrementCool.bind(this);
+        // this.toggleUsefulClick = this.toggleUsefulClick.bind(this);
+        // this.toggleFunnyClick = this.toggleFunnyClick.bind(this);
+        // this.toggleCoolClick = this.toggleCoolClick.bind(this);
     }
 
     incrementUseful() {
         this.setState(
             { usefulClick: this.state.usefulClick + 1 }
         );
+
+        this.toggleUsefulClick();
+    }
+
+    decrementUseful() {
+        this.setState(
+            { usefulClick: this.state.usefulClick - 1 }
+        );
+
+        this.toggleUsefulClick();
     }
     
     incrementFunny() {
         this.setState(
             { funnyClick: this.state.funnyClick + 1 }
         );
+
+        this.toggleFunnyClick();
+    }
+
+    decrementFunny() {
+        this.setState(
+            { funnyClick: this.state.funnyClick - 1 }
+        );
+
+        this.toggleFunnyClick();
     }
     
     incrementCool() {
         this.setState(
             { coolClick: this.state.coolClick + 1 }
         );
+
+        this.toggleCoolClick();
+    }
+
+    decrementCool() {
+        this.setState(
+            { coolClick: this.state.coolClick - 1 }
+        );
+
+        this.toggleCoolClick();
     }
 
     toggleUsefulClick() {
@@ -136,15 +169,19 @@ class ReviewIndexItem extends React.Component {
                                     <span>😎Cool</span> */}
 
                                     <div className="reaction">
-                                        <button className="reaction-buttons" onClick={this.incrementUseful}>💡Useful {this.state.showUseful ? this.state.usefulClick : "" }</button>
+                                        {/* <button className="reaction-buttons" onClick={this.incrementUseful}>💡Useful {this.state.showUseful ? this.state.usefulClick : ""}</button> */}
+                                        {/* <button className="reaction-buttons" onClick={this.state.showUseful ? (this.incrementUseful, this.toggleUsefulClick) : this.decrementUseful}>💡Useful {this.state.usefulClick}</button> */}
+                                        <button className="reaction-buttons" onClick={this.state.showUseful ? this.incrementUseful : this.decrementUseful}>💡Useful {this.state.usefulClick}</button>
                                     </div>
 
                                     <div className="reaction">
-                                        <button className="reaction-buttons" onClick={this.incrementFunny}>😀Funny {this.state.showFunny ? this.state.funnyClick : ""}</button>
+                                        {/* <button className="reaction-buttons" onClick={this.incrementFunny}>😀Funny {this.state.showFunny ? this.state.funnyClick : ""}</button> */}
+                                        <button className="reaction-buttons" onClick={this.state.showFunny ? this.incrementFunny : this.decrementFunny}>😀Funny {this.state.funnyClick}</button>
                                     </div>
 
                                     <div className="reaction">
-                                        <button className="reaction-buttons" onClick={this.incrementCool}>😎Cool {this.state.showCool ? this.state.coolClick : ""}</button>
+                                        {/* <button className="reaction-buttons" onClick={this.incrementCool}>😎Cool {this.state.showCool ? this.state.coolClick : ""}</button> */}
+                                        <button className="reaction-buttons" onClick={this.state.showCool ? this.incrementCool : this.decrementCool}>😎Cool {this.state.coolClick}</button>                                        
                                     </div>
                                 </div>
                             </div>
