@@ -6,50 +6,57 @@ class ReviewIndexItem extends React.Component {
         super(props);
 
         this.state = {
-            usefulClick: 0,
-            funnyClick: 0,
-            coolClick: 0,
-            showUseful: true,
-            showFunny: true,
-            showCool: true
+            usefulClick: this.props.usefulClick || 0,
+            funnyClick: this.props.funnyClick || 0,
+            coolClick: this.props.coolClick || 0,
+            showUseful: this.props.showCool || true,
+            showFunny: this.props.showFunny || true,
+            showCool: this.props.showCool || true
         };
+
+        this.incrementUseful = this.incrementUseful.bind(this);
+        this.incrementFunny = this.incrementFunny.bind(this);
+        this.incrementCool = this.incrementCool.bind(this);
+        this.toggleUsefulClick = this.toggleUsefulClick.bind(this);
+        this.toggleFunnyClick = this.toggleFunnyClick.bind(this);
+        this.toggleCoolClick = this.toggleCoolClick.bind(this);
     }
 
-    // incrementUseful = () => {
-    //     this.setState(
-    //         { usefulClick: this.state.usefulClick + 1 }
-    //     );
-    // }
+    incrementUseful() {
+        this.setState(
+            { usefulClick: this.state.usefulClick + 1 }
+        );
+    }
     
-    // incrementFunny = () => {
-    //     this.setState(
-    //         { funnyClick: this.state.funnyClick + 1 }
-    //     );
-    // }
+    incrementFunny() {
+        this.setState(
+            { funnyClick: this.state.funnyClick + 1 }
+        );
+    }
     
-    // incrementCool = () => {
-    //     this.setState(
-    //         { coolClick: this.state.coolClick + 1 }
-    //     );
-    // }
+    incrementCool() {
+        this.setState(
+            { coolClick: this.state.coolClick + 1 }
+        );
+    }
 
-    // toggleUsefulClick = () => {
-    //     this.setState(
-    //         { showUseful: !this.state.showUseful }
-    //     );
-    // }
+    toggleUsefulClick() {
+        this.setState(
+            { showUseful: !this.state.showUseful }
+        );
+    }
 
-    // toggleFunnyClick = () => {
-    //     this.setState(
-    //         { showFunny: !this.state.showFunny }
-    //     );
-    // }
+    toggleFunnyClick() {
+        this.setState(
+            { showFunny: !this.state.showFunny }
+        );
+    }
 
-    // toggleCoolClick = () => {
-    //     this.setState(
-    //         { showCool: !this.state.showCool }
-    //     );
-    // }
+    toggleCoolClick() {
+        this.setState(
+            { showCool: !this.state.showCool }
+        );
+    }
 
     render() {
         // let { review, currentUser } = this.props;
