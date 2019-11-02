@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
     handleSubmit(e) {
@@ -29,11 +30,38 @@ class SessionForm extends React.Component {
         }
     }
 
-    // logging in a demo user??
+    // // logging in a demo user??
     handleDemoUser(e) {
         e.preventDefault();
+        this.setState({
+            email: "",
+            password: ""
+        })
+        let email = "patrick@email.com";
+        let password = "123456";
 
+        setTimeout(() => this.inputEmail, 1000);
+        setTimeout(() => this.inputPassword, 1000);
+
+        this.props.demoLogin(this.state);
     }
+
+    inputEmail(email) {
+        let emailChars = email.split('');
+
+        setInterval(() => {
+            this.setState({email: this.state.email + emailChars.shift()})
+        }, 1000);
+    }
+
+    inputPassword(password) {
+        let passwordChars = password.split('');
+
+        setInterval(() => {
+            this.setState({ password: this.state.password + passwordChars.shift() })
+        }, 1000);
+    }
+    //
 
     render() {
         let { formType } = this.props;
@@ -44,8 +72,9 @@ class SessionForm extends React.Component {
         let invalidPasswordError = "";
 
         // console.log(this.props.errors);
-        // this.props.errors.forEach(err => {
-        //     return err;
+        // let errors = this.props.errors;
+        // errors.forEach(err => {
+            
         // })
 
         // console.log(this.props.errors);
@@ -87,7 +116,8 @@ class SessionForm extends React.Component {
                                 <span className="demo-text">Or log in as Demo User</span>
                             </p>
                             <label>
-                                <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Log In with Demo User" />
+                                {/* <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Log In with Demo User" /> */}
+                                <input className="demo-button" type="submit" onClick={this.handleDemoUser} value="Log In with Demo User" />
                             </label>
                         </div>
 
@@ -102,11 +132,11 @@ class SessionForm extends React.Component {
                     </fieldset>
 
                     <form className="session-inputs">
-                        <p>
+                        {/* <p>
                             {this.state.errors ?
                                 errors.map((error) => <li>{error}</li>) :
                                 ""}
-                        </p>
+                        </p> */}
                         {formType === "sign up" ?
                             <div>
                                 <label className="session-fn">
