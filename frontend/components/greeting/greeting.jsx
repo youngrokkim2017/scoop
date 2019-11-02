@@ -10,6 +10,8 @@ class Greeting extends React.Component {
     render() {
         // let coverPhoto = [window.]
 
+        console.log(this.props);
+
         return (
             <div className="home">
                 

@@ -19,6 +19,7 @@ class Search extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
     }
 
     handleSubmit(e) {
@@ -38,6 +39,7 @@ class Search extends React.Component {
     }
 
     handleChange(type) {
+        // console.log("searching");
         return (e) => {
             this.setState({
                 [type]: e.target.value
@@ -46,6 +48,7 @@ class Search extends React.Component {
     }
 
     render() {
+        // console.log(this.props);
 
         return (
             <div>

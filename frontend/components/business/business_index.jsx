@@ -7,6 +7,11 @@ import { Link } from 'react-router-dom';
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        // this.state = {
+        //     find = "",
+        //     near = ""
+        // };
     }
 
     componentDidMount() {
@@ -38,6 +43,7 @@ class BusinessIndex extends React.Component {
     render() {
         const { businesses } = this.props;
         let { business } = this.props;
+
         // console.log(this.props.businesses)
         // console.log(this.props.business)
         const businessItems = this.props.businesses.map(business => (
@@ -45,7 +51,10 @@ class BusinessIndex extends React.Component {
         );
 
         console.log(this.props);
-        // console.log(businesses);
+        
+        // let filteredBusinesses = this.props.businesses.filter((filteredBusiness) => {
+        //     return filteredBusiness.name.indexOf(this.state.find) !== -1
+        // });
 
         return (
             <div className="business-index-render">
