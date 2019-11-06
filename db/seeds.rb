@@ -186,3 +186,6 @@ review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
 # review_12 = Review.create!(user_id: user_2.id, business_id: ,
 #     body: ,
 #     rating: )
+
+###
+

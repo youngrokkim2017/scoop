@@ -8,7 +8,7 @@ class Business < ApplicationRecord
 
     has_one_attached :photo
 
-    has_many_attached :food_photos
+    # has_many_attached :food_photos
     
     def self.in_bounds(bounds)
         self.where("lat < ?", bounds[:northEast][:lat])

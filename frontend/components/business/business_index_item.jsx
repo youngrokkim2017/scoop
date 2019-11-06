@@ -55,7 +55,7 @@ export default class BusinessIndexItem extends React.Component {
                 <div className="business-item-info">
                     <div className="business-photo">
                         {/* <img src="`${this.props.business.photos}" alt="" /> */}
-                        {/* <img src={business.photoUrl} alt=""/> */}
+                        <img src={this.props.business.photoUrl} alt=""/>
                     </div>
 
                     <div className="business-index-item-left">

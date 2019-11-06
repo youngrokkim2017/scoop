@@ -8,14 +8,14 @@ class Greeting extends React.Component {
     }
 
     render() {
-        // let coverPhoto = [window.]
+        // let coverPhoto = window.
 
         // console.log(this.props);
 
         return (
             <div className="home">
                 
-                {/* <img className="home-cover-photo" src={coverPhoto[rand]} alt=""/> */}
+                
                 {/* <img className="home-cover-photo" src={coverPhoto} alt=""/> */}
                  
                 <div className="session-navbar">

@@ -3,7 +3,7 @@
         json.set! business.id do
             json.partial! 'api/businesses/business', business: business
             json.reviews business.reviews
-            # json.photoUrl url_for(business.photo)
+            json.photoUrl business.photo.attached? ? url_for(business.photo) : ''
         end
     end
 end
