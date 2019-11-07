@@ -124,7 +124,7 @@ class ReviewIndexItem extends React.Component {
                     <div className="business-review-author">
                         <div className="author-photo">
                             {/* <img src={user.photoUrl} alt=""/> */}
-                            {/* <img src={this.props.review.authorId.photoUrl} alt=""/> */}
+                            <img src={this.props.review.authorId.photoUrl} alt=""/>
                         </div>
                         <div>
                             <span style={{ color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>

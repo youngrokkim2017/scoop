@@ -11,6 +11,7 @@ json.set! @review.id do
     json.rating @review.rating
     json.authorFirstName @review.user.first_name.capitalize
     json.authorLastName @review.user.last_name[0].capitalize
+    json.photoUrl @review.photo.attached? ? url_for(@review.photo) : ''
 end
 
 

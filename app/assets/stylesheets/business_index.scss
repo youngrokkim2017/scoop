@@ -91,6 +91,14 @@
 .business-photo {
     display: flex;
     justify-content: left;
+    width: 400px;
+    height: 200px;
+}
+
+.business-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 .business-index-item-left {
@@ -119,6 +127,7 @@
 
 .business-item-description {
     flex: 1 1 auto;
+    // margin-left: 200px;
     // text-align: right;
 }
 

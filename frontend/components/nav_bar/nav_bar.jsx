@@ -39,6 +39,11 @@ class NavBar extends React.Component {
     }
 
     render() {
+
+        if (!this.props.loggedIn) {
+            console.log("LOGGED IN IS FALSE");
+        }
+
         return (
             <div className="navbar-container">
                 <div className="default-navbar">
