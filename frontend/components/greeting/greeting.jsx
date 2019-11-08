@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
+// import SearchShortcuts from '../search/search_shortcuts';
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -8,15 +9,16 @@ class Greeting extends React.Component {
     }
 
     render() {
-        // let coverPhoto = window.
+        // let coverPhotos = [window.splash, window.background_1, window.background_2]
+        // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
 
         // console.log(this.props);
 
         return (
             <div className="home">
                 
-                
-                {/* <img className="home-cover-photo" src={coverPhoto} alt=""/> */}
+                {/* <img src="home-cover-photo" src="window.splash" alt=""/> */}
+                {/* <img className="home-cover-photo" src={coverPhotos[shufflePhotos]} alt=""/> */}
                  
                 <div className="session-navbar">
 
