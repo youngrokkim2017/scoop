@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
 // import SearchShortcuts from '../search/search_shortcuts';
+// import splashLogo from '../../../app/assets/images/splash.jpg';
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -14,9 +15,12 @@ class Greeting extends React.Component {
 
         // console.log(this.props);
 
+        // const splashLogo = require('../../../app/assets/images/splash.jpg');
+
         return (
             <div className="home">
                 
+                {/* <img className="home-cover-photo" src={splashLogo} alt=""/> */}
                 {/* <img src="home-cover-photo" src="window.splash" alt=""/> */}
                 {/* <img className="home-cover-photo" src={coverPhotos[shufflePhotos]} alt=""/> */}
                  
