@@ -76,12 +76,12 @@ class SessionForm extends React.Component {
     render() {
         let { formType } = this.props;
 
-        let invalidFnError = "";
-        let invalidLnError = "";
-        let invalidEmailError = "";
-        let invalidPasswordError = "";
+        // let invalidFnError = "";
+        // let invalidLnError = "";
+        // let invalidEmailError = "";
+        // let invalidPasswordError = "";
 
-        // console.log(this.state.sessionErrors);
+        console.log(this.state.sessionErrors);
         // if (this.props.errors.length > 0) {
         //     for (let i = 0; i < this.props.errors.length; i++) {
         //         let error = this.props.errors[i];
