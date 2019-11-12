@@ -40,9 +40,9 @@ class NavBar extends React.Component {
 
     render() {
 
-        if (!this.props.loggedIn) {
-            console.log("LOGGED IN IS FALSE");
-        }
+        // if (!this.props.loggedIn) {
+        //     console.log("LOGGED IN IS FALSE");
+        // }
 
         return (
             <div className="navbar-container">
@@ -83,37 +83,38 @@ class NavBar extends React.Component {
                     </form>
 
                     <div className="nav-user">
-                    {this.props.loggedIn ?
-                        // <div className="signup-login">
-                        //     <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
-                        //     {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
-                        //     <a className="logout-link" onClick={this.props.logout}>Log Out</a>
-                        // </div>
+                        {this.props.loggedIn ?
+                            // <div className="signup-login">
+                            //     <h3 className="greeting-msg">Welcome, {currentUser.firstName}</h3>
+                            //     {/* <button className="logout-button" onClick={this.props.logout}>Log Out</button> */}
+                            //     <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                            // </div>
 
-                        <div className="logout-dropdown">
-                            <button className="dropbtn">Welcome, {currentUser.firstName}
-                                <i className="fa fa-caret-down"></i>
-                            </button>
-                            <div className="logout-dropdown-content">
-                                <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                            <div className="logout-dropdown">
+                                <button className="dropbtn">Welcome, {currentUser.firstName}
+                                    <i className="fa fa-caret-down"></i>
+                                </button>
+                                <div className="logout-dropdown-content">
+                                    <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                                </div>
                             </div>
-                        </div>
 
-                        :
-                        <div>
-                            {/* <div className="navbar-demo-login">
-                                <label>
-                                    <input className="navbar-demo-button" type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
-                                </label>
-                            </div> */}
+                            :
+                            
+                            <div>
+                                {/* <div className="navbar-demo-login">
+                                    <label>
+                                        <input className="navbar-demo-button" type="submit" onClick={this.props.demoLogin} value="Demo Log In" />
+                                    </label>
+                                </div> */}
 
-                            <nav className="navbar-signup-login">
-                                <Link to="/login" className="navbar-login">Log In</Link>
-                                <Link to="/signup" className="navbar-signup">Sign Up</Link>
-                                {/* <a className="navbar-demo-button" onClick={this.props.demoLogin}>Demo Log In</a> */}
-                            </nav>
-                        </div>
-                    }
+                                <nav className="navbar-signup-login">
+                                    <Link to="/login" className="navbar-login">Log In</Link>
+                                    <Link to="/signup" className="navbar-signup">Sign Up</Link>
+                                    {/* <a className="navbar-demo-button" onClick={this.props.demoLogin}>Demo Log In</a> */}
+                                </nav>
+                            </div>
+                        }
                     </div>
 
                 </div>

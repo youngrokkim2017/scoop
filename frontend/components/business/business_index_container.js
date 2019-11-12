@@ -6,7 +6,8 @@ import { getSearchedBusinesses } from '../../actions/search_actions';
 
 const mapStateToProps = state => ({
     businesses: Object.values(state.entities.businesses),
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    loggedIn: Boolean(state.session.id)
 })
 
 const mapDispatchToProps = dispatch => {

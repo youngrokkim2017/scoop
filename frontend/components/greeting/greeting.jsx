@@ -59,7 +59,8 @@ class Greeting extends React.Component {
                 <div className="logo">
                     <header className="header-title">
                         <Link to="/">
-                            <span><h1>scoop</h1></span>
+                            {/* <span><h1>scoop🍦🍨</h1></span> */}
+                            <span><h1>scoop  🍨</h1></span> 
                         </Link>
                     </header>
                 </div>
@@ -73,6 +74,8 @@ class Greeting extends React.Component {
 }
 
 export default Greeting;
+
+// add emojis: control + cmd + space
 
 // const Greeting = ({ currentUser, logout }) => {
 //     const sessionLinks = () => (

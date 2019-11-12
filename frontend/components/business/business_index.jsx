@@ -51,6 +51,7 @@ class BusinessIndex extends React.Component {
         );
 
         console.log(this.props);
+        console.log(this.props.currentUser);
         
         // let filteredBusinesses = this.props.businesses.filter((filteredBusiness) => {
         //     return filteredBusiness.name.indexOf(this.state.find) !== -1
