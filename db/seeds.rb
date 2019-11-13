@@ -47,7 +47,7 @@ business_1 = Business.create!(name: 'Salt and Straw', address: '2201 Fillmore St
     open_time: '11:00AM', close_time: '11:00PM', rating: '5', lat: 37.789958, lng: -122.434247)
 business_2 = Business.create!(name: 'Fentons', address: '4226 Piedmont Ave', 
     city: 'Oakland', state: 'CA', zip_code: 94611, website: 'fentonscreamery.com', 
-    description: 'Ice cream parlor known for sundaes and variety of flavors, featured in UP', 
+    description: 'Ice cream parlor known for sundaes and variety of flavors, featured in Disney''s UP', 
     phone_number: '(510) 658-7000', price_range: '$$', credit_card: 'Yes', 
     parking: 'Yes', wifi: 'No', restroom: 'Yes', category: 'ice cream', 
     open_time: '11:00AM', close_time: '11:00PM', rating: '5', lat: 37.828002, lng: -122.250132)
@@ -189,3 +189,10 @@ review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
 
 ###
 
+# # Photos
+# post = Post.first
+# file = File.open('app/assets/images/sennacy.jpg')
+# post.photo.attach(io: file, filename: 'sennacy.jpg')
+# post.photo.attached? # => true
+
+business_1.photo.attach(io: File.open(''), filename: '');
