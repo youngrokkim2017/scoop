@@ -106,6 +106,7 @@ class Search extends React.Component {
                                     Salt & Straw
                                     {/* {this.props.businesses.name} */}
                                 </Link>
+                                <div className="saltstraw-splash"></div>
                             </div>
                         </div>
 
@@ -118,6 +119,7 @@ class Search extends React.Component {
                                     Fentons
                                     {/* {this.props.businesses.name} */}
                                 </Link>
+                                <div className="fentons-splash"></div>
                             </div>
                         </div>
 
@@ -130,6 +132,7 @@ class Search extends React.Component {
                                     Bi-Rite Creamery
                                     {/* {this.props.businesses.name} */}
                                 </Link>
+                                <div className="birite-splash"></div>
                             </div>
                         </div>
                         
