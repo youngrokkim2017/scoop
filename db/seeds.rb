@@ -195,4 +195,5 @@ review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
 # post.photo.attach(io: file, filename: 'sennacy.jpg')
 # post.photo.attached? # => true
 
-business_1.photo.attach(io: File.open(''), filename: '');
+# business_1.photo.attach(io: File.open('s3://app-scoop-seed/saltandstraw.png'), filename: 'saltandstraw.png');
+business_1.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw.png'), filename: 'saltandstraw.png');
