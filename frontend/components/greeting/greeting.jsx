@@ -28,8 +28,9 @@ class Greeting extends React.Component {
 
                     {/* <div className="session-navbar-contents"> */}
 
-                    <div className="github-link">
+                    <div className="github-linkedin-link">
                         <a href="https://github.com/youngrokkim2017">Github</a>
+                        <a href="https://www.linkedin.com/in/patrick-kim-youngrok/">LinkedIn</a>
                     </div>
 
                     { this.props.loggedIn ? 
