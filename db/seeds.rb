@@ -197,3 +197,17 @@ review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
 
 # business_1.photo.attach(io: File.open('s3://app-scoop-seed/saltandstraw.png'), filename: 'saltandstraw.png');
 business_1.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw.png'), filename: 'saltandstraw.png');
+business_2.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/fentons_2.jpg'), filename: 'fentons_2.jpg');
+business_3.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/birite.jpeg'), filename: 'birite.jpeg');
+business_4.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/yogurt_park.jpg'), filename: 'yogurt_park.jpg');
+business_5.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/iscream.png'), filename: 'iscream.png');
+business_6.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_dewies.jpeg'), filename: 'mr_dewies.jpeg');
+business_7.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mitchells.jpg'), filename: 'mitchells.jpg');
+business_8.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/garden_creamery.jpeg'), filename: 'garden_creamery.jpeg');
+business_9.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/ghirardelli.jpg'), filename: 'ghirardelli.jpg');
+business_10.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/almare.jpeg'), filename: 'almare.jpeg');
+business_11.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/secret_scoop.jpg'), filename: 'secret_scoop.jpg');
+business_12.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/caravaggio.jpg'), filename: 'caravaggio.jpg');
+business_13.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/lush_gelato.jpg'), filename: 'lush_gelato.jpg');
+business_14.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/cookiebar.png'), filename: 'cookiebar.png');
+business_15.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_mrs_misc.jpg'), filename: 'mr_mrs_misc.jpg');
