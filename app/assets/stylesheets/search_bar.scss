@@ -131,17 +131,22 @@
 }
 
 .saltstraw-splash {
-    // background-image: url("https://s3-media1.fl.yelpcdn.com/bphoto/ruDWjTwA0IlTkqypoT1g9w/ls.jpg")
+    width: 100%;
+    height: 100%;
+    background-image: url("https://s3-media1.fl.yelpcdn.com/bphoto/ruDWjTwA0IlTkqypoT1g9w/ls.jpg");
     // background-image: asset_url('background_1.jpeg');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 }
 
-.fentons-splash {
+// .fentons-splash {
 
-}
+// }
 
-.birite-splash { 
+// .birite-splash { 
 
-}
+// }
 
 .to-all-businesses {
     display: flex;

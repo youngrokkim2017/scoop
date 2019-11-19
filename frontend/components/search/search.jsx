@@ -120,6 +120,7 @@ class Search extends React.Component {
                                     {/* {this.props.businesses.name} */}
                                 </Link>
                                 <div className="fentons-splash"></div>
+                                {/* <img src="" alt=""/> */}
                             </div>
                         </div>
 

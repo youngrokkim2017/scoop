@@ -18,6 +18,10 @@ import { getSearchedBusinesses } from '../../actions/search_actions';
 //     }
 // }
 
+// const mapStateToProps = (state) => ({
+//     businesses: Object.values(state.entities.businesses)
+// });
+
 const mapDispatchToProps = (dispatch) => ({
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     getSearchedBusinesses: (input) => dispatch(getSearchedBusinesses(input))

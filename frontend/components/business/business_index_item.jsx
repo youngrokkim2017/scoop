@@ -78,7 +78,7 @@ export default class BusinessIndexItem extends React.Component {
                     </div>
 
                     <div className="business-index-item-right">
-                        <div className="business-item-contact   -info">
+                        <div className="business-item-contact-info">
                             <div className="business-item-phone-number">
                                 <span>{this.props.business.phoneNumber}</span>
                             </div>

@@ -26,8 +26,9 @@
 
 .business-index-item {
     display: flex;
-    border-top: solid 1px gray;
-    padding: 15px;
+    // border-top: solid 1px gray;
+    border-top: solid 1px rgb(214, 214, 214);
+    padding: 17px;
 }
 
 // .business-item-link li {
@@ -91,13 +92,15 @@
 .business-photo {
     display: flex;
     justify-content: left;
-    width: 400px;
-    height: 200px;
+    // width: 400px;
+    // height: 200px;
 }
 
 .business-photo img {
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
+    width: 200px;
+    height: 200px;
     border-radius: 4px;
 }
 
