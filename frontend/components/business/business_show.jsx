@@ -144,7 +144,7 @@ class BusinessShow extends React.Component {
                                         businesses={[business]}
                                         businessId={business.id}
                                         fetchBusiness={this.props.fetchBusiness}
-                                        />
+                                    />
                                 </div>
 
                                 {/* <div className="business-show-map">
@@ -165,7 +165,12 @@ class BusinessShow extends React.Component {
                             </div> */}
 
                             <div className="business-address">
-                                {/* <span>Address </span> */}
+                                {/* <BusinessMap
+                                    businesses={[business]}
+                                    businessId={business.id}
+                                    fetchBusiness={this.props.fetchBusiness}
+                                /> */}
+
                                 <span>{`${business.address}`}</span>
                                 <br/>
                                 <span>{`${business.city}`}</span>

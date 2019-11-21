@@ -14,8 +14,8 @@
 }
 
 .business-review-author {
-    // display: flex;
-    display: inline;
+    display: flex;
+    // display: inline;
     padding-right: 75px;
     white-space: nowrap;
     width: 70px;
@@ -24,7 +24,8 @@
 .business-review-text {
     // display: flex;
     display: inline;
-    width: 540px;
+    width: 435px;
+    padding-left: 105px;
 }
 
 .rating-and-date {
@@ -45,6 +46,28 @@
 
 .edit-review-link:hover {
     text-decoration: underline;
+}
+
+// .business-review-author {
+//     display: flex;
+// }
+
+.author-photo {
+    display: flex;
+    justify-content: left;
+    padding-right: 10px;
+}
+
+.author-photo img {
+    // display: flex;
+    // justify-content: left;
+    width: 75px;
+    height: 75px;
+    border-radius: 4px;
+}
+
+.author-photo {
+    display: flex;
 }
 
 
