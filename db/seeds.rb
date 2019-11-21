@@ -195,6 +195,14 @@ review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
 # post.photo.attach(io: file, filename: 'sennacy.jpg')
 # post.photo.attached? # => true
 
+demo.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/patrick.png'), filename: 'patrick.png');
+user_1.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mickey.jpeg'), filename: 'mickey.jpeg');
+user_2.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/donald.jpg'), filename: 'donald.jpg');
+user_3.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/bugs.png'), filename: 'bugs.png');
+user_4.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/daffy.png'), filename: 'daffy.png');
+user_5.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/rick.jpeg'), filename: 'rick.jpeg');
+user_6.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/morty.jpg'), filename: 'morty.jpg');
+
 # business_1.photo.attach(io: File.open('s3://app-scoop-seed/saltandstraw.png'), filename: 'saltandstraw.png');
 business_1.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw.png'), filename: 'saltandstraw.png');
 business_2.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/fentons_2.jpg'), filename: 'fentons_2.jpg');
