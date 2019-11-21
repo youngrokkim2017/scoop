@@ -52,7 +52,21 @@ class BusinessShow extends React.Component {
 
         let starRating;
         starRating = starRatingsList[Math.floor(averageRating) - 1];
+        
+        // let ratingSrc;
 
+        // if (averageRating < 1.25) // ratingSrc = 
+        // if (averageRating > 1.25 && averageRating < 1.874) 
+        // if (averageRating > 1.875 && averageRating < 2.24) 
+        // if (averageRating > 2.25 && averageRating < 2.874) 
+        // if (averageRating > 2.875 && averageRating < 3.24) 
+        // if (averageRating > 3.25 && averageRating < 3.874) // ratingSrc = "../../assets/images/splash.jpg";
+        // if (averageRating > 3.875 && averageRating < 4.24) // ratingSrc = "../../assets/images/splash.jpg";
+        // if (averageRating > 4.25 && averageRating < 4.874) // ratingSrc = "../../assets/images/splash.jpg";
+        // if (averageRating > 4.875) 
+        
+        // console.log(averageRating);
+        // console.log(starRating);
 
         // REVIEWS
         
@@ -101,6 +115,7 @@ class BusinessShow extends React.Component {
                                 {/* <span>{`${business.rating}`}</span> */}
                                 {/* <span>{averageRating.toString()}</span> */}
                                 <span>{starRating}</span>
+                                {/* <img src={ratingSrc} alt=""/> */}
                                 <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span>
 
                             </div>

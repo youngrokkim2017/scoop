@@ -117,7 +117,7 @@ class ReviewIndexItem extends React.Component {
 
         // console.log(this.props.review.authorId);
         
-        console.log(this.props);
+        // console.log(this.props);
         // console.log(this.props.review.photoUrl);
 
         return (

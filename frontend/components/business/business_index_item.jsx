@@ -43,7 +43,16 @@ export default class BusinessIndexItem extends React.Component {
         // let starRating;
         // starRating = starRatingsList[Math.floor(averageRating) - 1];
 
-        
+        if (averageRating < 1.25) 
+        if (averageRating > 1.25 && averageRating < 1.874) 
+        if (averageRating > 1.875 && averageRating < 2.24) 
+        if (averageRating > 2.25 && averageRating < 2.874) 
+        if (averageRating > 2.875 && averageRating < 3.24) 
+        if (averageRating > 3.25 && averageRating < 3.874) 
+        if (averageRating > 3.875 && averageRating < 4.24) 
+        if (averageRating > 4.25 && averageRating < 4.874) 
+        if (averageRating > 4.875) 
+
         // console.log(this.props.business);
         // let business = this.props.business;
             
