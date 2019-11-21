@@ -207,7 +207,11 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="business-map-and-info-right">
-
+                            <div className="business-food-photos">
+                                <img src={this.props.business.foodPhotoUrls[0]} alt="" />
+                                <img src={this.props.business.foodPhotoUrls[1]} alt="" />
+                                {/* <img src={this.props.business.foodPhotoUrls[2]} alt=""/> */}
+                            </div>
                         </div>
                     </div>
                     

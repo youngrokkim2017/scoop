@@ -111,6 +111,7 @@
 }
 
 .business-map-and-info-left {
+    // display: flex;
     border: solid 1px gray;
     height: 300px;
     width: 300px;
@@ -152,6 +153,19 @@
 .business-website a {
     text-decoration: none;
     color: royalblue;
+}
+
+.business-map-and-info-right {
+    display: flex;
+}
+
+.business-map-and-info-right img {
+    width: 300px;
+    height: 200px;
+    // line-height: 200px;
+    // padding: 50px 5px 0px 5px;
+    padding-top: 50px;
+    padding-left: 3px;
 }
 
 .review-index-and-info {
