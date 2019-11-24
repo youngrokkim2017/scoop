@@ -6,6 +6,7 @@
 .business-index {
     display: flex;
     justify-content: center;
+    // justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 100px;
     padding-right: 100px;
@@ -17,7 +18,12 @@
 .business-list {
     display: flex;
     justify-content: flex-start;
+    // width: 200px;
 }
+
+// .businesses-list {
+//     width: 700px;
+// }
 
 // .business-list-sections {
 //     display: flex;
@@ -27,12 +33,16 @@
 .business-index-item {
     display: flex;
     // border-top: solid 1px gray;
-    border-top: solid 1px rgb(214, 214, 214);
-    padding: 17px;
+    // border-top: solid 1px rgb(214, 214, 214);
+    border: solid 1px rgb(214, 214, 214);
+    // padding: 17px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
 }
 
 .business-index-item:hover {
-    
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
 // .business-item-link li {
@@ -65,12 +75,14 @@
 #business-map {
     position: sticky;
     height: 350px;
-    width: 350px;
+    width: 300px;
+    // width: 350px;
 }
 
 .business-index-map {
     position: sticky;
     padding-top: 16px;
+    padding-left: 20px;
 }
 
 
@@ -91,6 +103,7 @@
     // columns: 2;
     // column-gap: 10px;
     flex-flow: row wrap;
+    padding-left: 10px;
 }
 
 .business-photo {
