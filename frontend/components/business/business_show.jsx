@@ -4,6 +4,7 @@ import BusinessMap from './business_map';
 import Navbar from '../nav_bar/nav_bar';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import ReviewIndexItem from '../reviews/review_index_item';
+import ScrollImage from './scroll_image';
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -208,9 +209,10 @@ class BusinessShow extends React.Component {
 
                         <div className="business-map-and-info-right">
                             <div className="business-food-photos">
-                                <img src={this.props.business.foodPhotoUrls[0]} alt="" />
-                                <img src={this.props.business.foodPhotoUrls[1]} alt="" />
+                                {/* <img src={this.props.business.foodPhotoUrls[0]} alt="" /> */}
+                                {/* <img src={this.props.business.foodPhotoUrls[1]} alt="" /> */}
                                 {/* <img src={this.props.business.foodPhotoUrls[2]} alt=""/> */}
+                                <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} />
                             </div>
                         </div>
                     </div>
