@@ -43,6 +43,7 @@
 
 .business-index-item:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2);
+    cursor: pointer;
 }
 
 // .business-item-link li {
@@ -97,6 +98,11 @@
     color: royalblue;
     font-weight: bold;
     font-size: 18px;
+}
+
+.business-item-link:hover {
+    text-decoration: underline;
+    // font-weight: bold;
 }
 
 .business-item-info {
