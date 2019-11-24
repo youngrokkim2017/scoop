@@ -59,7 +59,7 @@ export default class BusinessIndexItem extends React.Component {
 
         return (
             <li className="business-index-item"    
-                onClick={this.handleClick}
+                // onClick={this.handleClick}
             >
                     <div className="business-photo">
                         {/* <img src="`${this.props.business.photos}" alt="" /> */}

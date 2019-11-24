@@ -82,6 +82,10 @@ class BusinessShow extends React.Component {
         //     )
         // });
 
+        // const foodImageItems = this.props.business.foodPhotoUrls.map(foodPhoto => (
+        //     <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} />)
+        // );
+
         return (
 
             <div className="business-show">
@@ -213,6 +217,7 @@ class BusinessShow extends React.Component {
                                 {/* <img src={this.props.business.foodPhotoUrls[1]} alt="" /> */}
                                 {/* <img src={this.props.business.foodPhotoUrls[2]} alt=""/> */}
                                 <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} />
+                                {/* {foodImageItems} */}
                             </div>
                         </div>
                     </div>

@@ -42,6 +42,11 @@ class ScrollImage extends React.Component {
     }
 
     render() {
+
+        // const foodImageItems = this.props.foodPhotoUrls.map(foodPhoto => (
+        //     <img key={foodPhoto} src={foodPhoto} alt="" />)
+        // );
+
         return (
             <div className="scroll-container">
                 <div className="scroll-images">
@@ -49,6 +54,10 @@ class ScrollImage extends React.Component {
                         {this.props.foodPhotoUrls.map((foodPhoto) => (
                             <img key={foodPhoto} src={foodPhoto} alt=""/>
                         ))}
+                        
+                        {/* {foodImageItems} */}
+                        
+                        {/* <img src={this.props.foodPhotoUrls} alt=""/> */}
                     </div>
                 </div>
 
