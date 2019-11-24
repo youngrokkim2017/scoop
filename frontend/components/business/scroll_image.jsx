@@ -21,7 +21,8 @@ class ScrollImage extends React.Component {
         const scrollImages = document.querySelector('.scroll-function');
 
         scrollImages.style.transition = 'transform 1s ease-in-out';
-        scrollImages.style.transform = 'translateX(-100%)';
+        scrollImages.style.transform = 'translateX(-67%)';
+        // scrollImages.style.transform = 'translateX(-75%)';
     }
 
     scrollLeft(e) {
@@ -44,8 +45,8 @@ class ScrollImage extends React.Component {
             <div className="scroll-container">
                 <div className="scroll-images">
                     <div className="scroll-function">
-                        {this.props.foodPhotoUrls.map((foodPhotoUrl) => (
-                            <img key={foodPhotoUrl} src={foodPhotoUrl} alt=""/>
+                        {this.props.foodPhotoUrls.map((foodPhoto) => (
+                            <img key={foodPhoto} src={foodPhoto} alt=""/>
                         ))}
                     </div>
                 </div>

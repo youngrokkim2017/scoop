@@ -315,3 +315,30 @@
 .scroll-function {
     display: flex;
 }
+
+#scroll-left, #scroll-right {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    opacity: 0.6;
+    // padding: 20 0;
+    // height: 100px;
+}
+
+#scroll-left:hover, #scroll-right:hover {
+    // background: white;
+    background: rgb(255, 255, 255);
+    opacity: 1;
+    // padding: 20px 0;
+    // height: 20%;
+}
+
+#scroll-right {
+    right: 11.5%;
+    top: 58%;
+}
+
+#scroll-left {
+    top: 58%;
+}
