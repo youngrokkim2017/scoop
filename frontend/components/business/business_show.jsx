@@ -113,8 +113,8 @@ class BusinessShow extends React.Component {
 
                             <div className="business-rating">
                                 {/* <span>{`${business.rating}`}</span> */}
-                                {/* <span>{averageRating.toString()}</span> */}
-                                <span>{starRating}</span>
+                                <span>{averageRating.toString()}</span>
+                                {/* <span>{starRating}</span> */}
                                 {/* <img src={ratingSrc} alt=""/> */}
                                 <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span>
 
