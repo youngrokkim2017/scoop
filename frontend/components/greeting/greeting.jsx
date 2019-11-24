@@ -13,7 +13,7 @@ class Greeting extends React.Component {
         // let coverPhotos = [window.splash, window.background_1, window.background_2]
         // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
 
-        // console.log(this.props);
+        console.log(this.props);
 
         // const splashLogo = require('../../../app/assets/images/splash.jpg');
 
@@ -42,6 +42,7 @@ class Greeting extends React.Component {
 
                         <div className="logout-dropdown">
                             <button className="dropbtn">Welcome, {currentUser.firstName}
+                                <img className="profile-pic" src={this.props.user.photoUrl} alt=""/>
                                 <i className="fa fa-caret-down"></i>
                             </button>
                             <div className="logout-dropdown-content">
@@ -65,7 +66,8 @@ class Greeting extends React.Component {
                     <header className="header-title">
                         <Link to="/">
                             {/* <span><h1>scoop🍦🍨</h1></span> */}
-                            <span><h1>scoop  🍨</h1></span> 
+                            {/* <span><h1>scoop  🍨</h1></span>  */}
+                            <span><h1>scoop</h1></span> 
                         </Link>
                     </header>
                 </div>

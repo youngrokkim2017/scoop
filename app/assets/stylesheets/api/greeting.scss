@@ -149,6 +149,15 @@
     // display: flex;
     float: left;
     overflow: hidden;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropbtn {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Dropdown button */
@@ -197,12 +206,32 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.dropbtn {
+    // margin-left: 20px;
+}
+
+.dropbtn:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
 /* Add a grey background color to dropdown links on hover */
 .logout-dropdown-content a:hover {
-  background-color: #ddd;
+//   background-color: #ddd;
+//   background-color: transparent;
+    // background-color: none;
+    // text-decoration: none;
 }
 
 /* Show the dropdown menu on hover */
 .logout-dropdown:hover .logout-dropdown-content {
   display: block;
+  border-radius: 0 0 4px 4px;
+//   background-color: transparent;
+}
+
+.profile-pic {
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
 }
