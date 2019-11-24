@@ -59,8 +59,9 @@ class BusinessIndex extends React.Component {
 
         return (
             <div className="business-index-render">
-                <div>
+                <div className="business-index-navbar">
                     <NavBar />
+                    {/* <NavBar className="index-navbar"/> */}
                     {/* <div className="session-navbar-items">
                         <ul className="navbar-businesses">
                             {businesses}
