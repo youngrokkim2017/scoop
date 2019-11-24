@@ -50,8 +50,8 @@ class ScrollImage extends React.Component {
                     </div>
                 </div>
 
-                <button className="hide" onClick={this.scrollLeft} id="scroll-left"></button>
-                <button onClick={this.scrollRight} id="scroll-right"></button>
+                <button className="hide" onClick={this.scrollLeft} id="scroll-left">&#10094;</button>
+                <button onClick={this.scrollRight} id="scroll-right">&#10095;</button>
             </div>
         )
     }

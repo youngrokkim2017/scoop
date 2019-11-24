@@ -300,3 +300,18 @@
 
 /////////////////////////////// SCROLL IMAGE ////////////////////////////////
 
+.scroll-container {
+    width: 665px;
+    box-sizing: border-box;
+}
+
+.scroll-images {
+    display: flex;
+    // justify-content: ;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.scroll-function {
+    display: flex;
+}
