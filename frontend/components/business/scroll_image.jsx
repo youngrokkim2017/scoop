@@ -1,5 +1,6 @@
 import React from 'react';
 import { StringDecoder } from 'string_decoder';
+import { withRouter, Link } from 'react-router-dom';
 
 class ScrollImage extends React.Component {
     constructor(props) {
@@ -59,3 +60,4 @@ class ScrollImage extends React.Component {
 }
 
 export default ScrollImage;
+// export default withRouter(ScrollImage);
