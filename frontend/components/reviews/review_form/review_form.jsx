@@ -23,26 +23,104 @@ class ReviewForm extends React.Component {
         this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
     }
 
-    // componentDidUpdate() {
-    //     let oneStar = document.getElementById('one-star');
-    //     let twoStar = document.getElementById('two-star');
-    //     let threeStar = document.getElementById('three-star');
-    //     let fourStar = document.getElementById('four-star');
-    //     let fiveStar = document.getElementById('five-star');
+    componentDidUpdate() {
+        let oneStar = document.getElementById('one-star');
+        let twoStar = document.getElementById('two-star');
+        let threeStar = document.getElementById('three-star');
+        let fourStar = document.getElementById('four-star');
+        let fiveStar = document.getElementById('five-star');
 
-    //     let comment = document.getElementById('rating-comment');
+        let comment = document.getElementById('rating-comment');
 
-    //     let starRatingComment = comment.textContent;
+        let starRatingComment = comment.textContent;
 
-    //     if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
-    //         oneStar.addEventListener('mouseover', () => {
+        if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
+            oneStar.addEventListener('mouseover', () => {
+                oneStar.style.backgroundColor = '#999';
+                twoStar.style.backgroundColor = '#999';
+                threeStar.style.backgroundColor = '#999';
+                fourStar.style.backgroundColor = '#999';
+                fiveStar.style.backgroundColor = '#999';
+                comment.innerText = '';
+            })
+            oneStar.addEventListener('mouseleave', () => {
+                oneStar.style.backgroundColor = '';
+                twoStar.style.backgroundColor = '';
+                threeStar.style.backgroundColor = '';
+                fourStar.style.backgroundColor = '';
+                fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
 
-    //         })
-    //         oneStar.addEventListener('mouseleave', () => {
+            twoStar.addEventListener('mouseover', () => {
+                oneStar.style.backgroundColor = '#999';
+                twoStar.style.backgroundColor = '#999';
+                threeStar.style.backgroundColor = '#999';
+                fourStar.style.backgroundColor = '#999';
+                fiveStar.style.backgroundColor = '#999';
+                comment.innerText = '';
+            })
+            twoStar.addEventListener('mouseleave', () => {
+                oneStar.style.backgroundColor = '';
+                twoStar.style.backgroundColor = '';
+                threeStar.style.backgroundColor = '';
+                fourStar.style.backgroundColor = '';
+                fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
 
-    //         })
-    //     }
-    // }
+            threeStar.addEventListener('mouseleave', () => {
+                oneStar.style.backgroundColor = '';
+                twoStar.style.backgroundColor = '';
+                threeStar.style.backgroundColor = '';
+                fourStar.style.backgroundColor = '';
+                fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
+            threeStar.addEventListener('mouseover', () => {
+                oneStar.style.backgroundColor = '#999';
+                twoStar.style.backgroundColor = '#999';
+                threeStar.style.backgroundColor = '#999';
+                fourStar.style.backgroundColor = '#999';
+                fiveStar.style.backgroundColor = '#999';
+                comment.innerText = '';
+            })
+
+            fourStar.addEventListener('mouseleave', () => {
+                oneStar.style.backgroundColor = '';
+                twoStar.style.backgroundColor = '';
+                threeStar.style.backgroundColor = '';
+                fourStar.style.backgroundColor = '';
+                fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
+            fourStar.addEventListener('mouseover', () => {
+                oneStar.style.backgroundColor = '#999';
+                twoStar.style.backgroundColor = '#999';
+                threeStar.style.backgroundColor = '#999';
+                fourStar.style.backgroundColor = '#999';
+                fiveStar.style.backgroundColor = '#999';
+                comment.innerText = '';
+            })
+
+            fiveStar.addEventListener('mouseleave', () => {
+                oneStar.style.backgroundColor = '';
+                twoStar.style.backgroundColor = '';
+                threeStar.style.backgroundColor = '';
+                fourStar.style.backgroundColor = '';
+                fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
+            fiveStar.addEventListener('mouseleave', () => {
+                oneStar.style.backgroundColor = '';
+                twoStar.style.backgroundColor = '';
+                threeStar.style.backgroundColor = '';
+                fourStar.style.backgroundColor = '';
+                fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
+        }
+    }
 
     navigateToBusinessShow() {
         // this.props.history.push(`/businesses/${this.props.match.params.businessId}`);
