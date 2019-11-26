@@ -23,26 +23,26 @@ class ReviewForm extends React.Component {
         this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
     }
 
-    componentDidUpdate() {
-        let oneStar = document.getElementById('one-star');
-        let twoStar = document.getElementById('two-star');
-        let threeStar = document.getElementById('three-star');
-        let fourStar = document.getElementById('four-star');
-        let fiveStar = document.getElementById('five-star');
+    // componentDidUpdate() {
+    //     let oneStar = document.getElementById('one-star');
+    //     let twoStar = document.getElementById('two-star');
+    //     let threeStar = document.getElementById('three-star');
+    //     let fourStar = document.getElementById('four-star');
+    //     let fiveStar = document.getElementById('five-star');
 
-        let comment = document.getElementById('rating-comment');
+    //     let comment = document.getElementById('rating-comment');
 
-        let starRatingComment = comment.textContent;
+    //     let starRatingComment = comment.textContent;
 
-        if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
-            oneStar.addEventListener('mouseover', () => {
+    //     if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
+    //         oneStar.addEventListener('mouseover', () => {
 
-            })
-            oneStar.addEventListener('mouseleave', () => {
-                
-            })
-        }
-    }
+    //         })
+    //         oneStar.addEventListener('mouseleave', () => {
+
+    //         })
+    //     }
+    // }
 
     navigateToBusinessShow() {
         // this.props.history.push(`/businesses/${this.props.match.params.businessId}`);
@@ -142,16 +142,21 @@ class ReviewForm extends React.Component {
                                 value={this.state.rating}
                                 onChange={this.handleInput("rating")}
                                 /> */}
-                            <input type="radio" value="1" onChange={this.handleInput("rating")}/>
-                            <label>1</label>
-                            <input type="radio" value="2" onChange={this.handleInput("rating")}/>
-                            <label>2</label>
-                            <input type="radio" value="3" onChange={this.handleInput("rating")}/>
-                            <label>3</label>
-                            <input type="radio" value="4" onChange={this.handleInput("rating")}/>
-                            <label>4</label>
-                            <input type="radio" value="5" onChange={this.handleInput("rating")}/>
-                            <label>5</label>
+                            <input className="star-input" type="radio" value="1" onChange={this.handleInput("rating")}/>
+                            {/* <label>1</label> */}
+                            <label className="star-label">&#9733;</label>
+                            <input className="star-input" type="radio" value="2" onChange={this.handleInput("rating")}/>
+                            {/* <label>2</label> */}
+                            <label className="star-label">&#9733;</label>
+                            <input className="star-input" type="radio" value="3" onChange={this.handleInput("rating")}/>
+                            {/* <label>3</label> */}
+                            <label className="star-label">&#9733;</label>
+                            <input className="star-input" type="radio" value="4" onChange={this.handleInput("rating")}/>
+                            {/* <label>4</label> */}
+                            <label className="star-label">&#9733;</label>
+                            <input className="star-input" type="radio" value="5" onChange={this.handleInput("rating")}/>
+                            {/* <label>5</label> */}
+                            <label className="star-label">&#9733;</label>
 
                             <label style={{ paddingLeft: '10px' }}>Select your rating</label>
                         
