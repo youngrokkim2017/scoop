@@ -17,10 +17,31 @@ class ReviewForm extends React.Component {
             rating: '0',
             body: body,
             businessId: this.props.match.params.businessId,
-            id: this.props.match.params.id
+            // id: this.props.match.params.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
+    }
+
+    componentDidUpdate() {
+        let oneStar = document.getElementById('one-star');
+        let twoStar = document.getElementById('two-star');
+        let threeStar = document.getElementById('three-star');
+        let fourStar = document.getElementById('four-star');
+        let fiveStar = document.getElementById('five-star');
+
+        let comment = document.getElementById('rating-comment');
+
+        let starRatingComment = comment.textContent;
+
+        if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
+            oneStar.addEventListener('mouseover', () => {
+
+            })
+            oneStar.addEventListener('mouseleave', () => {
+                
+            })
+        }
     }
 
     navigateToBusinessShow() {
