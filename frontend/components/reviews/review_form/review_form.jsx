@@ -142,23 +142,25 @@ class ReviewForm extends React.Component {
                                 value={this.state.rating}
                                 onChange={this.handleInput("rating")}
                                 /> */}
-                            <input className="star-input" type="radio" value="1" onChange={this.handleInput("rating")}/>
-                            {/* <label>1</label> */}
-                            <label className="star-label">&#9733;</label>
-                            <input className="star-input" type="radio" value="2" onChange={this.handleInput("rating")}/>
-                            {/* <label>2</label> */}
-                            <label className="star-label">&#9733;</label>
-                            <input className="star-input" type="radio" value="3" onChange={this.handleInput("rating")}/>
-                            {/* <label>3</label> */}
-                            <label className="star-label">&#9733;</label>
-                            <input className="star-input" type="radio" value="4" onChange={this.handleInput("rating")}/>
-                            {/* <label>4</label> */}
-                            <label className="star-label">&#9733;</label>
-                            <input className="star-input" type="radio" value="5" onChange={this.handleInput("rating")}/>
-                            {/* <label>5</label> */}
-                            <label className="star-label">&#9733;</label>
 
-                            <label style={{ paddingLeft: '10px' }}>Select your rating</label>
+                            <div className="stars">
+                                <input className="star-input" type="radio" value="1" onChange={this.handleInput("rating")}/>
+                                {/* <label>1</label> */}
+                                <label className="star-label">&#9733;</label>
+                                <input className="star-input" type="radio" value="2" onChange={this.handleInput("rating")}/>
+                                {/* <label>2</label> */}
+                                <label className="star-label">&#9733;</label>
+                                <input className="star-input" type="radio" value="3" onChange={this.handleInput("rating")}/>
+                                {/* <label>3</label> */}
+                                <label className="star-label">&#9733;</label>
+                                <input className="star-input" type="radio" value="4" onChange={this.handleInput("rating")}/>
+                                {/* <label>4</label> */}
+                                <label className="star-label">&#9733;</label>
+                                <input className="star-input" type="radio" value="5" onChange={this.handleInput("rating")}/>
+                                {/* <label>5</label> */}
+                                <label className="star-label">&#9733;</label>
+                            </div>
+                            {/* <label style={{ paddingLeft: '10px' }}>Select your rating</label> */}
                         
                             <p>
                                 {/* <label>Review</label> */}   
