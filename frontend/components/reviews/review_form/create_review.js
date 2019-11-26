@@ -6,12 +6,12 @@ import ReviewForm from './review_form';
 // import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => { //???
-    // let businessId = parseInt(ownProps.match.params.businessId);
+    let businessId = parseInt(ownProps.match.params.businessId);
     // let business = state.entities.business[businessId];
     let business = state.entities.businesses[ownProps.match.params.businessId];
 
     return {
-        // businessId,
+        businessId,
         business,
         // reviews: business.reviews,
         formType: 'create',

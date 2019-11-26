@@ -59,8 +59,10 @@ class ReviewForm extends React.Component {
         let { business } = this.props;
         // console.log(business);
         // console.log(this.props.match.params.businessId);
-        // console.log(this.props);
-        // console.log(this.state.entities);
+        console.log(this.props);
+        // console.log(this.props.businessId);
+
+        // console.log(this.state);
 
         // session-navbar => review-navbar
         return (
