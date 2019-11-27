@@ -22,6 +22,10 @@ class Search extends React.Component {
         // this.handleChange = this.handleChange.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchBusinesses();
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         

@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
     action: (review) => dispatch(editReview(review)),
     delete: (reviewId) => dispatch(deleteReview(reviewId)),
     fetchBusiness: (id) => dispatch(fetchBusiness(id)),
-
+    fetchBusiness: (id) => dispatch(fetchBusiness(id)),    fetchBusinesses: () => dispatch(fetchBusinesses()),
     // logout: () => dispatch(logout())
 })
 

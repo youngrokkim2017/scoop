@@ -17,10 +17,16 @@ class ReviewForm extends React.Component {
             rating: '0',
             body: body,
             businessId: this.props.match.params.businessId,
+            // business: state.entities.businesses[ownProps.match.params.businessId],
             // id: this.props.match.params.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchBusiness(this.props.match.params.businessId);
+        // this.props.fetchBusinesses();
     }
 
     componentDidUpdate() {
@@ -32,7 +38,7 @@ class ReviewForm extends React.Component {
 
         let comment = document.getElementById('rating-comment');
 
-        let starRatingComment = comment.textContent;
+        // let starRatingComment = comment.textContent;
 
         if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
             oneStar.addEventListener('mouseover', () => {
@@ -69,14 +75,6 @@ class ReviewForm extends React.Component {
                 comment.innerText = starRatingComment;
             })
 
-            threeStar.addEventListener('mouseleave', () => {
-                oneStar.style.backgroundColor = '';
-                twoStar.style.backgroundColor = '';
-                threeStar.style.backgroundColor = '';
-                fourStar.style.backgroundColor = '';
-                fiveStar.style.backgroundColor = '';
-                comment.innerText = starRatingComment;
-            })
             threeStar.addEventListener('mouseover', () => {
                 oneStar.style.backgroundColor = '#999';
                 twoStar.style.backgroundColor = '#999';
@@ -85,8 +83,7 @@ class ReviewForm extends React.Component {
                 fiveStar.style.backgroundColor = '#999';
                 comment.innerText = '';
             })
-
-            fourStar.addEventListener('mouseleave', () => {
+            threeStar.addEventListener('mouseleave', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
@@ -94,6 +91,7 @@ class ReviewForm extends React.Component {
                 fiveStar.style.backgroundColor = '';
                 comment.innerText = starRatingComment;
             })
+
             fourStar.addEventListener('mouseover', () => {
                 oneStar.style.backgroundColor = '#999';
                 twoStar.style.backgroundColor = '#999';
@@ -102,13 +100,21 @@ class ReviewForm extends React.Component {
                 fiveStar.style.backgroundColor = '#999';
                 comment.innerText = '';
             })
-
-            fiveStar.addEventListener('mouseleave', () => {
+            fourStar.addEventListener('mouseleave', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
                 fourStar.style.backgroundColor = '';
                 fiveStar.style.backgroundColor = '';
+                comment.innerText = starRatingComment;
+            })
+
+            fiveStar.addEventListener('mouseover', () => {
+                oneStar.style.backgroundColor = '#999';
+                twoStar.style.backgroundColor = '#999';
+                threeStar.style.backgroundColor = '#999';
+                fourStar.style.backgroundColor = '#999';
+                fiveStar.style.backgroundColor = '#999';
                 comment.innerText = starRatingComment;
             })
             fiveStar.addEventListener('mouseleave', () => {
@@ -158,10 +164,12 @@ class ReviewForm extends React.Component {
         let { business } = this.props;
         // console.log(business);
         // console.log(this.props.match.params.businessId);
-        console.log(this.props);
+        // console.log(this.props);
+        // console.log(this.props.businesses);
+        // console.log(this.props.business.name);
         // console.log(this.props.businessId);
 
-        // console.log(this.state);
+        console.log(this.state.entities);
 
         // session-navbar => review-navbar
         return (
@@ -205,6 +213,7 @@ class ReviewForm extends React.Component {
                     </div>
                     <div className="sub-navbar-right">
                         <Link to={`/businesses/${this.props.match.params.businessId}`}>Back to Business</Link>
+                        {/* <Link to={`/businesses/${this.props.match.params.businessId}`}>Back to {this.props.business.name}</Link> */}
                     </div>
                 </div>
 
@@ -266,6 +275,7 @@ class ReviewForm extends React.Component {
     }
 }
 
+// export default ReviewForm;
 export default withRouter(ReviewForm);
 
 

@@ -19,18 +19,18 @@ import { fetchBusinesses } from '../../actions/business_actions';
 //     }
 // }
 
-// const mapStateToProps = (state) => ({
-//     businesses: Object.values(state.entities.businesses)
-// });
+const mapStateToProps = (state) => ({
+    businesses: Object.values(state.entities.businesses)
+});
 
 const mapDispatchToProps = (dispatch) => ({
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     getSearchedBusinesses: (input) => dispatch(getSearchedBusinesses(input)),
-    // fetchBusinesses: () => dispatch(fetchBusinesses()),
+    fetchBusinesses: () => dispatch(fetchBusinesses()),
 });
 
 export default connect(
-    // mapStateToProps,
-    null,
+    mapStateToProps,
+    // null,
     mapDispatchToProps
 )(Search);
