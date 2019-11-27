@@ -160,11 +160,14 @@
 }
 
 .business-map-and-info-right img {
-    width: 300px;
-    height: 200px;
+    // width: 300px;
+    width: auto;
+    height: 250px;
+    // height: 200px;
     // line-height: 200px;
     // padding: 50px 5px 0px 5px;
-    padding-top: 50px;
+    // padding-top: 50px;
+    padding-top: 25px;
     padding-left: 3px;
 }
 
@@ -188,7 +191,7 @@
     // display: inline;
     flex: 1 1 auto;
     width: 100%;
-    border-bottom: solid 1px lightgray;
+    // border-bottom: solid 1px lightgray;
     padding-bottom: 20px;
 }
 
@@ -265,8 +268,16 @@
     border-radius: 4px;
 }
 
+.business-review-start-review a:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    cursor: pointer;
+}
+
 .business-review-start-review {
     border-bottom: solid 1px lightgray;
+    border-top: solid 1px lightgray;
+    // border: solid 1px lightgray;
+    // border-radius: 4px;
     // overflow-wrap: break-word;
 }
 
@@ -301,7 +312,8 @@
 /////////////////////////////// SCROLL IMAGE ////////////////////////////////
 
 .scroll-container {
-    width: 665px;
+    // width: 665px;
+    width: 680px;
     box-sizing: border-box;
 }
 

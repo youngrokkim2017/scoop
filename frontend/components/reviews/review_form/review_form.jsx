@@ -172,6 +172,15 @@ class ReviewForm extends React.Component {
         console.log(this.state.entities);
 
         // session-navbar => review-navbar
+
+        let starText;
+        if (this.state.rating == '0') starText = 'Select your rating'
+        if (this.state.rating == '1') starText = 'Eek'
+        if (this.state.rating == '2') starText = 'Meh'
+        if (this.state.rating == '3') starText = 'A-Ok'
+        if (this.state.rating == '4') starText = 'Yay'
+        if (this.state.rating == '5') starText = 'Woohoo'
+
         return (
             <div className="review-form">
 
@@ -246,6 +255,10 @@ class ReviewForm extends React.Component {
                                 <input className="star-input" type="radio" value="5" onChange={this.handleInput("rating")}/>
                                 {/* <label>5</label> */}
                                 <label className="star-label">&#9733;</label>
+
+                                <p>
+                                    {starText}
+                                </p>
                             </div>
                             {/* <label style={{ paddingLeft: '10px' }}>Select your rating</label> */}
                         
