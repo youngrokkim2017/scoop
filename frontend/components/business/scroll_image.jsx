@@ -47,24 +47,32 @@ class ScrollImage extends React.Component {
         //     <img key={foodPhoto} src={foodPhoto} alt="" />)
         // );
 
-        return (
-            <div className="scroll-container">
-                <div className="scroll-images">
-                    <div className="scroll-function">
-                        {this.props.foodPhotoUrls.map((foodPhoto) => (
-                            <img key={foodPhoto} src={foodPhoto} alt=""/>
-                        ))}
-                        
-                        {/* {foodImageItems} */}
-                        
-                        {/* <img src={this.props.foodPhotoUrls} alt=""/> */}
+        if (this.props.foodPhotoUrls) {
+            return (
+                <div className="scroll-container">
+                    <div className="scroll-images">
+                        <div className="scroll-function">
+                            {this.props.foodPhotoUrls.map((foodPhoto) => (
+                                <img key={foodPhoto} src={foodPhoto} alt=""/>
+                            ))}
+                            
+                            {/* {foodImageItems} */}
+                            
+                            {/* <img src={this.props.foodPhotoUrls} alt=""/> */}
+                        </div>
                     </div>
-                </div>
 
-                <button className="hide" onClick={this.scrollLeft} id="scroll-left">&#10094;</button>
-                <button onClick={this.scrollRight} id="scroll-right">&#10095;</button>
-            </div>
-        )
+                    <button className="hide" onClick={this.scrollLeft} id="scroll-left">&#10094;</button>
+                    <button onClick={this.scrollRight} id="scroll-right">&#10095;</button>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    
+                </div>
+            )
+        }
     }
 }
 

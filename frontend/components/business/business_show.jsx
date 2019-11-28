@@ -86,6 +86,9 @@ class BusinessShow extends React.Component {
         //     <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} />)
         // );
 
+        // console.log(this.props.business.foodPhotoUrls);
+        // console.log(this.state);
+
         return (
 
             <div className="business-show">
@@ -216,7 +219,8 @@ class BusinessShow extends React.Component {
                                 {/* <img src={this.props.business.foodPhotoUrls[0]} alt="" /> */}
                                 {/* <img src={this.props.business.foodPhotoUrls[1]} alt="" /> */}
                                 {/* <img src={this.props.business.foodPhotoUrls[2]} alt=""/> */}
-                                <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} />
+                                {/* <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} /> */}
+                                <ScrollImage foodPhotoUrls={business.foodPhotoUrls} />
                                 {/* {foodImageItems} */}
                             </div>
                         </div>
