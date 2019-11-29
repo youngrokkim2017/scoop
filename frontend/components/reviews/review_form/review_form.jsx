@@ -175,11 +175,11 @@ class ReviewForm extends React.Component {
 
         let starText;
         if (this.state.rating == '0') starText = 'Select your rating'
-        if (this.state.rating == '1') starText = 'Eek'
-        if (this.state.rating == '2') starText = 'Meh'
-        if (this.state.rating == '3') starText = 'A-Ok'
-        if (this.state.rating == '4') starText = 'Yay'
-        if (this.state.rating == '5') starText = 'Woohoo'
+        if (this.state.rating == '1') starText = 'Eek! Methinks not.'
+        if (this.state.rating == '2') starText = 'Meh. I\'ve experienced better'
+        if (this.state.rating == '3') starText = 'A-OK.'
+        if (this.state.rating == '4') starText = 'Yay! I\'m a fan.'
+        if (this.state.rating == '5') starText = 'Woohoo! As good as it gets!'
 
         return (
             <div className="review-form">
