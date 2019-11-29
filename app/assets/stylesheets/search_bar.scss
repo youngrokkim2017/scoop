@@ -123,22 +123,38 @@
     text-decoration: underline;
 }
 
-.favorites-birite .favorites-saltstraw .favorites-fentons {
+.favorites-birite, .favorites-saltstraw, .favorites-fentons {
     display: flex;
     flex-direction: column;
-    border: solid 1px gray;
+    // border: solid 1px gray;
+    border: solid 1px rgb(214, 214, 214);
     border-radius: 5px;
+    // justify-content: center;
 }
 
-.saltstraw-splash {
-    width: 100%;
-    height: 100%;
-    background-image: url("https://s3-media1.fl.yelpcdn.com/bphoto/ruDWjTwA0IlTkqypoT1g9w/ls.jpg");
-    // background-image: asset_url('background_1.jpeg');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
+// .favorites-birite, .favorites-saltstraw, .favorites-fentons > div {
+//     justify-content: center;
+//     width: 100%;
+// }
+
+// .saltstraw-info, .fentons-info, .birite-info {
+//     justify-content: center;
+// }
+
+.favorite-photo img {
+    width: 300px;
+    height: auto;
 }
+
+// .saltstraw-splash {
+//     width: 100%;
+//     height: 100%;
+//     background-image: url("https://s3-media1.fl.yelpcdn.com/bphoto/ruDWjTwA0IlTkqypoT1g9w/ls.jpg");
+//     // background-image: asset_url('background_1.jpeg');
+//     // background-position: center;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+// }
 
 // .fentons-splash {
 

@@ -102,8 +102,8 @@ class Search extends React.Component {
                     <div className="favorites-list">
 
                         <div className="favorites-saltstraw">
-                            <div className="saltstraw-photo">
-                            
+                            <div className="favorite-photo">
+                                <img src={window.oneFav} alt=""/>
                             </div>
                             <div className="saltstraw-info">
                                 <Link to="/businesses/1">
@@ -115,29 +115,29 @@ class Search extends React.Component {
                         </div>
 
                         <div className="favorites-fentons">
-                            <div className="fentons-photo">
-
+                            <div className="favorite-photo">
+                                <img src={window.twoFav} alt="" />
                             </div>
                             <div className="fentons-info">
                                 <Link to="/businesses/2">
                                     Fentons
                                     {/* {this.props.businesses.name} */}
                                 </Link>
-                                <div className="fentons-splash"></div>
+                                {/* <div className="fentons-splash"></div> */}
                                 {/* <img src="" alt=""/> */}
                             </div>
                         </div>
 
                         <div className="favorites-birite">
-                            <div className="birite-photo">
-
+                            <div className="favorite-photo">
+                                    <img src={window.threeFav} alt="" />
                             </div>
                             <div className="birite-info">
                                 <Link to="/businesses/3">
                                     Bi-Rite Creamery
                                     {/* {this.props.businesses.name} */}
                                 </Link>
-                                <div className="birite-splash"></div>
+                                {/* <div className="birite-splash"></div> */}
                             </div>
                         </div>
                         
