@@ -169,7 +169,7 @@ class ReviewForm extends React.Component {
         // console.log(this.props.business.name);
         // console.log(this.props.businessId);
 
-        console.log(this.state.entities);
+        // console.log(this.state.entities);
 
         // session-navbar => review-navbar
 

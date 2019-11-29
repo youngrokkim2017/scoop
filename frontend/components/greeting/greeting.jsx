@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
 // import SearchShortcuts from '../search/search_shortcuts';
-// import splashLogo from '../../../app/assets/images/splash.jpg';
 
 class Greeting extends React.Component {
     constructor(props) {
@@ -13,16 +12,12 @@ class Greeting extends React.Component {
         // let coverPhotos = [window.splash, window.background_1, window.background_2]
         // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
 
-        console.log(this.props);
-
-        // const splashLogo = require('../../../app/assets/images/splash.jpg');
+        // console.log(this.props);
 
         return (
             <div className="home">
                 
-                {/* <img className="home-cover-photo" src={splashLogo} alt=""/> */}
-                {/* <img src="home-cover-photo" src="window.splash" alt=""/> */}
-                {/* <img className="home-cover-photo" src={coverPhotos[shufflePhotos]} alt=""/> */}
+                {/* <img src={window.splashBackground} alt=""/> */}
                  
                 <div className="session-navbar">
 
@@ -83,36 +78,4 @@ class Greeting extends React.Component {
 export default Greeting;
 
 // add emojis: control + cmd + space
-
-// const Greeting = ({ currentUser, logout }) => {
-//     const sessionLinks = () => (
-//         <div className="session-navbar">
-//             <nav className="signup-login">
-//                 <Link to="/signup">Sign Up</Link>
-//                 <Link to="/login">Log In</Link>
-//             </nav>
-//             <header className="header-title">
-//                 <Link to="/">
-//                     <span><h1>scoop</h1></span>
-//                 </Link>
-//             </header>
-//         </div>
-//     );
-
-//     const homeGreeting = () => (
-//         <div className="home-navbar">
-//             <div className="home-greeting">
-//                 <h3 className="greeting-msg">Welcome, {currentUser.useranme}</h3>
-//                 <button className="greeting-button" onClick={logout}>Log Out</button>
-//             </div>
-//             <header className="header-title">
-//             <Link to="/">
-//                 <span><h1>scoop</h1></span>
-//             </Link>
-//             </header>
-//         </div>
-//     );
-
-//     return currentUser ? homeGreeting() : sessionLinks();
-// }
 
