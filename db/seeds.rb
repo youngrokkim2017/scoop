@@ -222,8 +222,8 @@ business_15.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws
 
 
 # BUSINESS FOOD PHOTOS
-business_1.food_photos.attach(io: open(''), filename: '');
-business_1.food_photos.attach(io: open(''), filename: '');
+business_1.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw_food/saltstraw_1.jpg'), filename: 'saltandstraw_food/saltstraw_1.jpg');
+business_1.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw_food/saltstraw_2.jpg'), filename: 'saltandstraw_food/saltstraw_2.jpg');
 business_1.food_photos.attach(io: open(''), filename: '');
 business_1.food_photos.attach(io: open(''), filename: '');
 
