@@ -110,7 +110,16 @@ class Search extends React.Component {
                                     Salt & Straw
                                     {/* {this.props.businesses.name} */}
                                 </Link>
-                                <div className="saltstraw-splash"></div>
+                                {/* <div className="favorite-rating">
+                                    <img src={window.} alt=""/>
+                                </div> */}
+                                <div className="favorite-category">
+                                    <span>$  -  </span>
+                                    <span>Creamery</span>
+                                </div>
+                                <div className="favorite-location">
+                                    <span>San Francisco, CA</span>
+                                </div>
                             </div>
                         </div>
 
@@ -123,8 +132,16 @@ class Search extends React.Component {
                                     Fentons
                                     {/* {this.props.businesses.name} */}
                                 </Link>
-                                {/* <div className="fentons-splash"></div> */}
-                                {/* <img src="" alt=""/> */}
+                                {/* <div className="favorite-rating">
+                                    <img src={window.} alt="" />
+                                </div> */}
+                                <div className="favorite-category">
+                                    <span>$$  -  </span>
+                                    <span>Creamery, Restaurant</span>
+                                </div>
+                                <div className="favorite-location">
+                                    <span>Oakland, CA</span>
+                                </div>
                             </div>
                         </div>
 
@@ -137,7 +154,16 @@ class Search extends React.Component {
                                     Bi-Rite Creamery
                                     {/* {this.props.businesses.name} */}
                                 </Link>
-                                {/* <div className="birite-splash"></div> */}
+                                {/* <div className="favorite-rating">
+                                    <img src={window.} alt="" />
+                                </div> */}
+                                <div className="favorite-category">
+                                    <span>$  -  </span>
+                                    <span>Creamery, Soft Serve</span>
+                                </div>
+                                <div className="favorite-location">
+                                    <span>San Francisco, CA</span>
+                                </div>
                             </div>
                         </div>
                         

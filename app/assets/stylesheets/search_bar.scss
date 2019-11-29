@@ -132,42 +132,45 @@
     // justify-content: center;
 }
 
-// .favorites-birite, .favorites-saltstraw, .favorites-fentons > div {
-//     justify-content: center;
-//     width: 100%;
-// }
+.favorites-birite:hover, .favorites-saltstraw:hover, .favorites-fentons:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    cursor: pointer;
+}
 
-// .saltstraw-info, .fentons-info, .birite-info {
-//     justify-content: center;
-// }
+.saltstraw-info, .fentons-info, .birite-info {
+    padding: 10px;
+}
+
+.saltstraw-info > div, .fentons-info > div, .birite-info > div {
+    padding-top: 10px;
+}
 
 .favorite-photo img {
     width: 300px;
     height: auto;
 }
 
-// .saltstraw-splash {
-//     width: 100%;
-//     height: 100%;
-//     background-image: url("https://s3-media1.fl.yelpcdn.com/bphoto/ruDWjTwA0IlTkqypoT1g9w/ls.jpg");
-//     // background-image: asset_url('background_1.jpeg');
-//     // background-position: center;
-//     // background-repeat: no-repeat;
-//     // background-size: cover;
-// }
-
-// .fentons-splash {
+// .favorite-rating {
 
 // }
 
-// .birite-splash { 
+.favorite-category {
+    text-decoration: none;
+    // color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-// }
+.favorite-location {
+    text-decoration: none;
+    // color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .to-all-businesses {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .to-all-businesses a {
