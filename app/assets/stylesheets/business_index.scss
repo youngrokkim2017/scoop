@@ -100,6 +100,10 @@
     font-size: 18px;
 }
 
+.business-item-link > div {
+    padding-left: 3px;
+}
+
 .business-item-link:hover {
     text-decoration: underline;
     // font-weight: bold;
@@ -139,6 +143,30 @@
     // align-items: flex-start;
     flex: 1 1 auto;
     text-align: left;
+}
+
+// .business-item-name {
+//     padding-left: 3px;
+// }
+
+.business-item-rating {
+    display: flex;
+    // padding-left: -10px;
+}
+
+.business-item-rating > span {
+    padding-left: 3px;
+    padding-top: 7px;
+    color: gray;
+}
+
+.business-item-rating-count {
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+.business-item-price {
+    padding-left: 3px;
 }
 
 .business-index-item-right {

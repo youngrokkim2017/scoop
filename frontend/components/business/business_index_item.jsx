@@ -43,15 +43,16 @@ export default class BusinessIndexItem extends React.Component {
         // let starRating;
         // starRating = starRatingsList[Math.floor(averageRating) - 1];
 
-        // if (averageRating < 1.25) 
-        // if (averageRating > 1.25 && averageRating < 1.874) 
-        // if (averageRating > 1.875 && averageRating < 2.24) 
-        // if (averageRating > 2.25 && averageRating < 2.874) 
-        // if (averageRating > 2.875 && averageRating < 3.24) 
-        // if (averageRating > 3.25 && averageRating < 3.874) 
-        // if (averageRating > 3.875 && averageRating < 4.24) 
-        // if (averageRating > 4.25 && averageRating < 4.874) 
-        // if (averageRating > 4.875) 
+        let ratingSrc;
+        if (averageRating < 1.25) ratingSrc = window.oneStar;
+        if (averageRating > 1.25 && averageRating < 1.874) ratingSrc = window.oneHalfStar;
+        if (averageRating > 1.875 && averageRating < 2.24) ratingSrc = window.twoStar;
+        if (averageRating > 2.25 && averageRating < 2.874) ratingSrc = window.twoHalfStar;
+        if (averageRating > 2.875 && averageRating < 3.24) ratingSrc = window.threeStar;
+        if (averageRating > 3.25 && averageRating < 3.874) ratingSrc = window.threeHalfStar;
+        if (averageRating > 3.875 && averageRating < 4.24) ratingSrc = window.fourStar;
+        if (averageRating > 4.25 && averageRating < 4.874) ratingSrc = window.fourHalfStar;
+        if (averageRating > 4.875) ratingSrc = window.fiveStar;
 
         // console.log(this.props.business);
         // let business = this.props.business;
@@ -75,9 +76,15 @@ export default class BusinessIndexItem extends React.Component {
                             </Link>
                         </div>
                         <div className="business-item-rating">
-                            <span>{averageRating.toString()}</span>
+                            {/* <span>{averageRating.toString()}</span> */}
                             {/* <span>{starRating}</span> */}
-                            <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount} reviews</span>
+                            {averageRating > 0 ?
+                                <img src={ratingSrc} alt="" />
+                                :
+                                <span>N/A</span>
+                            }
+                            {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount} reviews</span> */}
+                            <span className="business-item-rating-count">{reviewsCount} reviews</span>
                         </div>
                         <div className="business-item-price"> 
                             <span>{this.props.business.priceRange}</span>
