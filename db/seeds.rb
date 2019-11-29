@@ -219,3 +219,80 @@ business_12.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws
 business_13.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/lush_gelato.jpg'), filename: 'lush_gelato.jpg');
 business_14.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/cookiebar.png'), filename: 'cookiebar.png');
 business_15.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_mrs_misc.jpg'), filename: 'mr_mrs_misc.jpg');
+
+
+# BUSINESS FOOD PHOTOS
+business_1.food_photos.attach(io: open(''), filename: '');
+business_1.food_photos.attach(io: open(''), filename: '');
+business_1.food_photos.attach(io: open(''), filename: '');
+business_1.food_photos.attach(io: open(''), filename: '');
+
+business_2.food_photos.attach(io: open(''), filename: '');
+business_2.food_photos.attach(io: open(''), filename: '');
+business_2.food_photos.attach(io: open(''), filename: '');
+business_2.food_photos.attach(io: open(''), filename: '');
+
+business_3.food_photos.attach(io: open(''), filename: '');
+business_3.food_photos.attach(io: open(''), filename: '');
+business_3.food_photos.attach(io: open(''), filename: '');
+business_3.food_photos.attach(io: open(''), filename: '');
+
+business_4.food_photos.attach(io: open(''), filename: '');
+business_4.food_photos.attach(io: open(''), filename: '');
+business_4.food_photos.attach(io: open(''), filename: '');
+business_4.food_photos.attach(io: open(''), filename: '');
+
+business_5.food_photos.attach(io: open(''), filename: '');
+business_5.food_photos.attach(io: open(''), filename: '');
+business_5.food_photos.attach(io: open(''), filename: '');
+business_5.food_photos.attach(io: open(''), filename: '');
+
+business_6.food_photos.attach(io: open(''), filename: '');
+business_6.food_photos.attach(io: open(''), filename: '');
+business_6.food_photos.attach(io: open(''), filename: '');
+business_6.food_photos.attach(io: open(''), filename: '');
+
+business_7.food_photos.attach(io: open(''), filename: '');
+business_7.food_photos.attach(io: open(''), filename: '');
+business_7.food_photos.attach(io: open(''), filename: '');
+business_7.food_photos.attach(io: open(''), filename: '');
+
+business_8.food_photos.attach(io: open(''), filename: '');
+business_8.food_photos.attach(io: open(''), filename: '');
+business_8.food_photos.attach(io: open(''), filename: '');
+business_8.food_photos.attach(io: open(''), filename: '');
+
+business_9.food_photos.attach(io: open(''), filename: '');
+business_9.food_photos.attach(io: open(''), filename: '');
+business_9.food_photos.attach(io: open(''), filename: '');
+business_9.food_photos.attach(io: open(''), filename: '');
+
+business_10.food_photos.attach(io: open(''), filename: '');
+business_10.food_photos.attach(io: open(''), filename: '');
+business_10.food_photos.attach(io: open(''), filename: '');
+business_10.food_photos.attach(io: open(''), filename: '');
+
+business_11.food_photos.attach(io: open(''), filename: '');
+business_11.food_photos.attach(io: open(''), filename: '');
+business_11.food_photos.attach(io: open(''), filename: '');
+business_11.food_photos.attach(io: open(''), filename: '');
+
+business_12.food_photos.attach(io: open(''), filename: '');
+business_12.food_photos.attach(io: open(''), filename: '');
+business_12.food_photos.attach(io: open(''), filename: '');
+business_12.food_photos.attach(io: open(''), filename: '');
+
+business_13.food_photos.attach(io: open(''), filename: '');
+business_13.food_photos.attach(io: open(''), filename: '');
+business_13.food_photos.attach(io: open(''), filename: '');
+business_13.food_photos.attach(io: open(''), filename: '');
+
+business_14.food_photos.attach(io: open(''), filename: '');
+business_14.food_photos.attach(io: open(''), filename: '');
+business_14.food_photos.attach(io: open(''), filename: '');
+business_14.food_photos.attach(io: open(''), filename: '');
+
+business_15.food_photos.attach(io: open(''), filename: '');
+business_15.food_photos.attach(io: open(''), filename: '');
+business_15.food_photos.attach(io: open(''), filename: '');
+business_15.food_photos.attach(io: open(''), filename: '');
