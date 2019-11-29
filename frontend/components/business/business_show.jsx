@@ -54,17 +54,16 @@ class BusinessShow extends React.Component {
         let starRating;
         starRating = starRatingsList[Math.floor(averageRating) - 1];
         
-        // let ratingSrc;
-
-        // if (averageRating < 1.25) // ratingSrc = 
-        // if (averageRating > 1.25 && averageRating < 1.874) 
-        // if (averageRating > 1.875 && averageRating < 2.24) 
-        // if (averageRating > 2.25 && averageRating < 2.874) 
-        // if (averageRating > 2.875 && averageRating < 3.24) 
-        // if (averageRating > 3.25 && averageRating < 3.874) // ratingSrc = "../../assets/images/splash.jpg";
-        // if (averageRating > 3.875 && averageRating < 4.24) // ratingSrc = "../../assets/images/splash.jpg";
-        // if (averageRating > 4.25 && averageRating < 4.874) // ratingSrc = "../../assets/images/splash.jpg";
-        // if (averageRating > 4.875) 
+        let ratingSrc;
+        if (averageRating < 1.25) ratingSrc = window.oneStar
+        if (averageRating > 1.25 && averageRating < 1.874) ratingSrc = window.oneHalfStar
+        if (averageRating > 1.875 && averageRating < 2.24) ratingSrc = window.twoStar
+        if (averageRating > 2.25 && averageRating < 2.874) ratingSrc = window.twoHalfStar
+        if (averageRating > 2.875 && averageRating < 3.24) ratingSrc = window.threeStar
+        if (averageRating > 3.25 && averageRating < 3.874) ratingSrc = window.threeHalfStar
+        if (averageRating > 3.875 && averageRating < 4.24) ratingSrc = window.fourStar
+        if (averageRating > 4.25 && averageRating < 4.874) ratingSrc = window.fourHalfStar
+        if (averageRating > 4.875) ratingSrc = window.fiveStar
         
         // console.log(averageRating);
         // console.log(starRating);
@@ -121,10 +120,15 @@ class BusinessShow extends React.Component {
 
                             <div className="business-rating">
                                 {/* <span>{`${business.rating}`}</span> */}
-                                <span>{averageRating.toString()}</span>
+                                {/* <span>{averageRating.toString()}</span> */}
                                 {/* <span>{starRating}</span> */}
-                                {/* <img src={ratingSrc} alt=""/> */}
-                                <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span>
+                                {averageRating > 0 ?
+                                    <img src={ratingSrc} alt=""/>
+                                    :
+                                    <span>N/A</span>
+                                }
+                                {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span> */}
+                                <span className="business-rating-count">{reviewsCount.toString()} reviews</span>
 
                             </div>
 
