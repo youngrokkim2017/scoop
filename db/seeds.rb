@@ -224,75 +224,75 @@ business_15.photo.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws
 # BUSINESS FOOD PHOTOS
 business_1.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw_food/saltstraw_1.jpg'), filename: 'saltandstraw_food/saltstraw_1.jpg');
 business_1.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw_food/saltstraw_2.jpg'), filename: 'saltandstraw_food/saltstraw_2.jpg');
-business_1.food_photos.attach(io: open(''), filename: '');
-business_1.food_photos.attach(io: open(''), filename: '');
+business_1.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw_food/saltstraw_3.jpg'), filename: 'saltandstraw_food/saltstraw_3.jpg');
+business_1.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/saltandstraw_food/saltstraw_4.jpg'), filename: 'saltandstraw_food/saltstraw_4.jpg');
 
-business_2.food_photos.attach(io: open(''), filename: '');
-business_2.food_photos.attach(io: open(''), filename: '');
-business_2.food_photos.attach(io: open(''), filename: '');
-business_2.food_photos.attach(io: open(''), filename: '');
+business_2.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/fentons_food/fentons_image_1.jpg'), filename: 'fentons_food/fentons_image_1.jpg');
+business_2.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/fentons_food/fentons_food_2.png'), filename: 'fentons_food/fentons_food_2.png');
+business_2.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/fentons_food/fentons_image_3.jpg'), filename: 'fentons_food/fentons_image_3.jpg');
+business_2.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/fentons_food/fentons_food_4.jpg'), filename: 'fentons_food/fentons_food_4.jpg');
 
-business_3.food_photos.attach(io: open(''), filename: '');
-business_3.food_photos.attach(io: open(''), filename: '');
-business_3.food_photos.attach(io: open(''), filename: '');
-business_3.food_photos.attach(io: open(''), filename: '');
+business_3.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/birite_food/birite_food_1.jpg'), filename: 'birite_food/birite_food_1.jpg');
+business_3.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/birite_food/birite_food_2.jpg'), filename: 'birite_food/birite_food_2.jpg');
+business_3.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/birite_food/birite_food_3.jpg'), filename: 'birite_food/birite_food_3.jpg');
+business_3.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/birite_food/birite_food_4.jpg'), filename: 'birite_food/birite_food_4.jpg');
 
-business_4.food_photos.attach(io: open(''), filename: '');
-business_4.food_photos.attach(io: open(''), filename: '');
-business_4.food_photos.attach(io: open(''), filename: '');
-business_4.food_photos.attach(io: open(''), filename: '');
+business_4.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/yogurt_park_food/yogurtpark_food_1.jpg'), filename: 'yogurt_park_food/yogurtpark_food_1.jpg');
+business_4.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/yogurt_park_food/yogurtpark_food_2.jpg'), filename: 'yogurt_park_food/yogurtpark_food_2.jpg');
+business_4.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/yogurt_park_food/yogurtpark_food_3.jpg'), filename: 'yogurt_park_food/yogurtpark_food_3.jpg');
+business_4.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/yogurt_park_food/yogurtpark_food_4.JPG'), filename: 'yogurt_park_food/yogurtpark_food_4.JPG');
 
-business_5.food_photos.attach(io: open(''), filename: '');
-business_5.food_photos.attach(io: open(''), filename: '');
-business_5.food_photos.attach(io: open(''), filename: '');
-business_5.food_photos.attach(io: open(''), filename: '');
+business_5.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/iscream_food/iscream_food_1.jpg'), filename: 'iscream_food/iscream_food_1.jpg');
+business_5.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/iscream_food/iscream_food_2.jpg'), filename: 'iscream_food/iscream_food_2.jpg');
+business_5.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/iscream_food/iscream_food_3.jpg'), filename: 'iscream_food/iscream_food_3.jpg');
+business_5.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/iscream_food/iscream_food_4.jpg'), filename: 'iscream_food/iscream_food_4.jpg');
 
-business_6.food_photos.attach(io: open(''), filename: '');
-business_6.food_photos.attach(io: open(''), filename: '');
-business_6.food_photos.attach(io: open(''), filename: '');
-business_6.food_photos.attach(io: open(''), filename: '');
+business_6.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_dewies_food/mrdewies_food_1.jpg'), filename: 'mr_dewies_food/mrdewies_food_1.jpg');
+business_6.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_dewies_food/mrdewies_food_2.jpg'), filename: 'mr_dewies_food/mrdewies_food_2.jpg');
+business_6.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_dewies_food/mrdewies_food_3.jpeg'), filename: 'mr_dewies_food/mrdewies_food_3.jpeg');
+business_6.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_dewies_food/mrdewies_food_4.jpeg'), filename: 'mr_dewies_food/mrdewies_food_4.jpeg');
 
-business_7.food_photos.attach(io: open(''), filename: '');
-business_7.food_photos.attach(io: open(''), filename: '');
-business_7.food_photos.attach(io: open(''), filename: '');
-business_7.food_photos.attach(io: open(''), filename: '');
+business_7.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mitchells_food/mitchells_food_1.jpeg'), filename: 'mitchells_food/mitchells_food_1.jpeg');
+business_7.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mitchells_food/mitchells_food_2.jpg'), filename: 'mitchells_food/mitchells_food_2.jpg');
+business_7.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mitchells_food/mitchells_food_3.jpg'), filename: 'mitchells_food/mitchells_food_3.jpg');
+business_7.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mitchells_food/mitchells_food_4.jpg'), filename: 'mitchells_food/mitchells_food_4.jpg');
 
-business_8.food_photos.attach(io: open(''), filename: '');
-business_8.food_photos.attach(io: open(''), filename: '');
-business_8.food_photos.attach(io: open(''), filename: '');
-business_8.food_photos.attach(io: open(''), filename: '');
+business_8.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/garden_creamery_food/gardencreamery_food_1.jpeg'), filename: 'garden_creamery_food/gardencreamery_food_1.jpeg');
+business_8.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/garden_creamery_food/gardencreamery_food_2.jpg'), filename: 'garden_creamery_food/gardencreamery_food_2.jpg');
+business_8.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/garden_creamery_food/gardencreamery_food_3.jpg'), filename: 'garden_creamery_food/gardencreamery_food_3.jpg');
+business_8.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/garden_creamery_food/gardencreamery_food_4.jpg'), filename: 'garden_creamery_food/gardencreamery_food_4.jpg');
 
-business_9.food_photos.attach(io: open(''), filename: '');
-business_9.food_photos.attach(io: open(''), filename: '');
-business_9.food_photos.attach(io: open(''), filename: '');
-business_9.food_photos.attach(io: open(''), filename: '');
+business_9.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/ghirarhelli_food/ghirardelli_food_1.jpeg'), filename: 'ghirarhelli_food/ghirardelli_food_1.jpeg');
+business_9.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/ghirarhelli_food/ghirardelli_food_2.jpg'), filename: 'ghirarhelli_food/ghirardelli_food_2.jpg');
+business_9.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/ghirarhelli_food/ghirardelli_food_3.jpg'), filename: 'ghirarhelli_food/ghirardelli_food_3.jpg');
+business_9.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/ghirarhelli_food/ghirardelli_food_4.jpg'), filename: 'ghirarhelli_food/ghirardelli_food_4.jpg');
 
-business_10.food_photos.attach(io: open(''), filename: '');
-business_10.food_photos.attach(io: open(''), filename: '');
-business_10.food_photos.attach(io: open(''), filename: '');
-business_10.food_photos.attach(io: open(''), filename: '');
+business_10.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/almare_food/almare_food_1.jpeg'), filename: 'almare_food/almare_food_1.jpeg');
+business_10.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/almare_food/almare_food_2.jpeg'), filename: 'almare_food/almare_food_2.jpeg');
+business_10.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/almare_food/almare_food_3.jpg'), filename: 'almare_food/almare_food_3.jpg');
+business_10.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/almare_food/almare_food_4.jpg'), filename: 'almare_food/almare_food_4.jpg');
 
-business_11.food_photos.attach(io: open(''), filename: '');
-business_11.food_photos.attach(io: open(''), filename: '');
-business_11.food_photos.attach(io: open(''), filename: '');
-business_11.food_photos.attach(io: open(''), filename: '');
+business_11.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/secret_scoop_food/secretscoop_food_1.jpg'), filename: 'secret_scoop_food/secretscoop_food_1.jpg');
+business_11.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/secret_scoop_food/secretscoop_food_2.jpg'), filename: 'secret_scoop_food/secretscoop_food_2.jpg');
+business_11.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/secret_scoop_food/secretscoop_food_3.jpg'), filename: 'secret_scoop_food/secretscoop_food_3.jpg');
+business_11.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/secret_scoop_food/secretscoop_food_4.jpg'), filename: 'secret_scoop_food/secretscoop_food_4.jpg');
 
-business_12.food_photos.attach(io: open(''), filename: '');
-business_12.food_photos.attach(io: open(''), filename: '');
-business_12.food_photos.attach(io: open(''), filename: '');
-business_12.food_photos.attach(io: open(''), filename: '');
+business_12.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/caravaggio_food/caravaggio_food_1.jpeg'), filename: 'caravaggio_food/caravaggio_food_1.jpeg');
+business_12.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/caravaggio_food/caravaggio_food_2.jpg'), filename: 'caravaggio_food/caravaggio_food_2.jpg');
+business_12.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/caravaggio_food/caravaggio_food_3.jpg'), filename: 'caravaggio_food/caravaggio_food_3.jpg');
+business_12.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/caravaggio_food/caravaggio_food_4.jpg'), filename: 'caravaggio_food/caravaggio_food_4.jpg');
 
-business_13.food_photos.attach(io: open(''), filename: '');
-business_13.food_photos.attach(io: open(''), filename: '');
-business_13.food_photos.attach(io: open(''), filename: '');
-business_13.food_photos.attach(io: open(''), filename: '');
+business_13.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/lush_gelato_food/lush_food_1.jpg'), filename: 'lush_gelato_food/lush_food_1.jpg');
+business_13.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/lush_gelato_food/lush_food_2.jpg'), filename: 'lush_gelato_food/lush_food_2.jpg');
+business_13.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/lush_gelato_food/lush_food_3.jpg'), filename: 'lush_gelato_food/lush_food_3.jpg');
+business_13.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/lush_gelato_food/lush_food_4.jpg'), filename: 'lush_gelato_food/lush_food_4.jpg');
 
-business_14.food_photos.attach(io: open(''), filename: '');
-business_14.food_photos.attach(io: open(''), filename: '');
-business_14.food_photos.attach(io: open(''), filename: '');
-business_14.food_photos.attach(io: open(''), filename: '');
+business_14.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/cookiebar_food/cookiebar_food_1.jpg'), filename: 'cookiebar_food/cookiebar_food_1.jpg');
+business_14.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/cookiebar_food/cookiebar_food_2.jpg'), filename: 'cookiebar_food/cookiebar_food_2.jpg');
+business_14.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/cookiebar_food/cookiebar_food_3.jpg'), filename: 'cookiebar_food/cookiebar_food_3.jpg');
+business_14.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/cookiebar_food/cookiebar_food_4.jpg'), filename: 'cookiebar_food/cookiebar_food_4.jpg');
 
-business_15.food_photos.attach(io: open(''), filename: '');
-business_15.food_photos.attach(io: open(''), filename: '');
-business_15.food_photos.attach(io: open(''), filename: '');
-business_15.food_photos.attach(io: open(''), filename: '');
+business_15.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_mrs_misc_food/mrandmrsmisc_food_1.jpg'), filename: 'mr_mrs_misc_food/mrandmrsmisc_food_1.jpg');
+business_15.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_mrs_misc_food/mrandmrsmisc_food_2.jpg'), filename: 'mr_mrs_misc_food/mrandmrsmisc_food_2.jpg');
+business_15.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_mrs_misc_food/mrandmrsmisc_food_3.jpg'), filename: 'mr_mrs_misc_food/mrandmrsmisc_food_3.jpg');
+business_15.food_photos.attach(io: open('https://app-scoop-seed.s3-us-west-1.amazonaws.com/mr_mrs_misc_food/mrandmrsmisc_food_4.jpg'), filename: 'mr_mrs_misc_food/mrandmrsmisc_food_4.jpg');
