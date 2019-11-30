@@ -119,31 +119,31 @@
     display: flex;
 }
 
-.star-input {
-    display: none;
-    // padding: 2px;
-}
-
-.star-label {
-    // size: 10px;
-    color: white;
-    background-color: rgb(201, 199, 199);
-    padding: 7px;
-    margin: 2px;
-    // border: solid 1px black;
-    border: solid 1px rgb(201, 199, 199);
-    border-radius: 4px;
-}
-
-.star-label:hover {
-    cursor: pointer;
-    // background-color: red;
-}
-
-// .stars {
-//     display: inline-block;
-//     position: relative;
+// .star-input {
+//     display: none;
+//     // padding: 2px;
 // }
+
+// .star-label {
+//     // size: 10px;
+//     color: white;
+//     background-color: rgb(201, 199, 199);
+//     padding: 7px;
+//     margin: 2px;
+//     // border: solid 1px black;
+//     border: solid 1px rgb(201, 199, 199);
+//     border-radius: 4px;
+// }
+
+// .star-label:hover {
+//     cursor: pointer;
+//     // background-color: red;
+// }
+
+.stars {
+    display: inline-block;
+    position: relative;
+}
 
 // .stars input {
 //     display: none;
@@ -190,3 +190,106 @@
 // .stars > label:nth-child(4):hover ~ label{background-color: #eb2;}
 // .stars > label:nth-child(5):hover,
 // .stars > label:nth-child(5):hover ~ label{background-color: #d92;}
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+//   padding-bottom: 15px;
+//   margin-bottom: 5px;
+}
+
+.rating > input { 
+    display: none;
+} 
+
+.rating > label {
+    // border: 1px solid rgb(201, 199, 199);
+    border-radius: 4px;
+    padding: 5px 7px;
+    margin: 2px;
+    background-color: rgb(201, 199, 199);
+    color: white;
+    float: right; 
+}
+
+// .rating > label:before { 
+//   margin: 5px;
+//   font-size: 1.25em;
+//   display: inline-block;
+// //   content: "\f005";
+// }
+
+// .rating > .half:before { 
+// //   content: "\f089";
+//   position: absolute;
+// }
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+// .rating > input:checked ~ label, /* show gold star when clicked */
+// .rating:not(:checked) > label:hover, /* hover current star */
+// .rating:not(:checked) > label:hover ~ label { background-color: #FFD700;  } /* hover previous stars in list */
+
+// .rating > input:checked + label:hover, /* hover current star when changing rating */
+// .rating > input:checked ~ label:hover,
+// .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+// .rating > input:checked ~ label:hover ~ label { background-color: #FFED85;  } 
+
+#star5:checked~label {
+  background-color: #dd050b;
+}
+
+#star4:checked~label {
+  background-color: #f26a2c;
+}
+
+#star3:checked~label {
+  background-color: #f0991e;
+}
+
+#star2:checked~label {
+  background-color: #dcb228;
+}
+
+#star1:checked~label {
+  background-color: #cc8b1f;
+}
+
+#star1:hover~label {
+  background-color: #cc8b1f;
+}
+
+#star2:hover~label {
+  background-color: #dcb228;
+}
+
+#star3:hover~label {
+  background-color: #f0991e;
+}
+
+#star4:hover~label {
+  background-color: #f26a2c;
+}
+
+#star5:hover~label {
+  background-color: #dd050b;
+}
+
+#rating-comment {
+    font-family: Arial, Helvetica, sans-serif;
+    // padding: 5px 0px 0px 5px;
+    padding-left: 5px;
+    // padding-top: 50px;
+    // margin-top: 5px;
+    // justify-content: center;
+    // height: 5px; 
+    display: flex;
+    padding-top: 10px;
+}

@@ -6,13 +6,15 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create
+        # debugger
         @review = Review.new(review_params)
         @review.user_id = current_user.id
+        # @review.business_id = 
 
         if @review.save
             render :show
         else
-            render @review.errors.full_messages, status: 422
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
@@ -42,6 +44,7 @@ class Api::ReviewsController < ApplicationController
 
     private
     def review_params
-        params.require(:review).permit(:user_id, :business_id, :body, :rating)
+        # params.require(:review).permit(:user_id, :business_id, :body, :rating)
+        params.require(:review).permit(:user_id, :body, :rating)
     end
 end

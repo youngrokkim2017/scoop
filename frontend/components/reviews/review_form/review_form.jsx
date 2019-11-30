@@ -38,18 +38,18 @@ class ReviewForm extends React.Component {
 
         let comment = document.getElementById('rating-comment');
 
-        // let starRatingComment = comment.textContent;
+        let starRatingComment = comment.textContent;
 
         if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
             oneStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#999';
-                twoStar.style.backgroundColor = '#999';
-                threeStar.style.backgroundColor = '#999';
-                fourStar.style.backgroundColor = '#999';
-                fiveStar.style.backgroundColor = '#999';
-                comment.innerText = '';
+                oneStar.style.backgroundColor = '#cc8b1f';
+                twoStar.style.backgroundColor = '#666';
+                threeStar.style.backgroundColor = '#666';
+                fourStar.style.backgroundColor = '#666';
+                fiveStar.style.backgroundColor = '#666';
+                comment.innerText = 'Eek! Methinks not.';
             })
-            oneStar.addEventListener('mouseleave', () => {
+            oneStar.addEventListener('mouseout', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
@@ -59,14 +59,14 @@ class ReviewForm extends React.Component {
             })
 
             twoStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#999';
-                twoStar.style.backgroundColor = '#999';
-                threeStar.style.backgroundColor = '#999';
-                fourStar.style.backgroundColor = '#999';
-                fiveStar.style.backgroundColor = '#999';
-                comment.innerText = '';
+                oneStar.style.backgroundColor = '#dcb228';
+                twoStar.style.backgroundColor = '#dcb228';
+                threeStar.style.backgroundColor = '#666';
+                fourStar.style.backgroundColor = '#666';
+                fiveStar.style.backgroundColor = '#666';
+                comment.innerText = 'Meh. I\'ve experienced better.';
             })
-            twoStar.addEventListener('mouseleave', () => {
+            twoStar.addEventListener('mouseout', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
@@ -76,14 +76,14 @@ class ReviewForm extends React.Component {
             })
 
             threeStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#999';
-                twoStar.style.backgroundColor = '#999';
-                threeStar.style.backgroundColor = '#999';
-                fourStar.style.backgroundColor = '#999';
-                fiveStar.style.backgroundColor = '#999';
-                comment.innerText = '';
+                oneStar.style.backgroundColor = '#f0991e';
+                twoStar.style.backgroundColor = '#f0991e';
+                threeStar.style.backgroundColor = '#f0991e';
+                fourStar.style.backgroundColor = '#666';
+                fiveStar.style.backgroundColor = '#666';
+                comment.innerText = 'A-OK.';
             })
-            threeStar.addEventListener('mouseleave', () => {
+            threeStar.addEventListener('mouseout', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
@@ -93,14 +93,14 @@ class ReviewForm extends React.Component {
             })
 
             fourStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#999';
-                twoStar.style.backgroundColor = '#999';
-                threeStar.style.backgroundColor = '#999';
-                fourStar.style.backgroundColor = '#999';
-                fiveStar.style.backgroundColor = '#999';
-                comment.innerText = '';
+                oneStar.style.backgroundColor = '#f26a2c';
+                twoStar.style.backgroundColor = '#f26a2c';
+                threeStar.style.backgroundColor = '#f26a2c';
+                fourStar.style.backgroundColor = '#f26a2c';
+                fiveStar.style.backgroundColor = '#666';
+                comment.innerText = 'Yay! I\'m a fan.';
             })
-            fourStar.addEventListener('mouseleave', () => {
+            fourStar.addEventListener('mouseout', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
@@ -110,14 +110,14 @@ class ReviewForm extends React.Component {
             })
 
             fiveStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#999';
-                twoStar.style.backgroundColor = '#999';
-                threeStar.style.backgroundColor = '#999';
-                fourStar.style.backgroundColor = '#999';
-                fiveStar.style.backgroundColor = '#999';
-                comment.innerText = starRatingComment;
+                oneStar.style.backgroundColor = '#dd050b';
+                twoStar.style.backgroundColor = '#dd050b';
+                threeStar.style.backgroundColor = '#dd050b';
+                fourStar.style.backgroundColor = '#dd050b';
+                fiveStar.style.backgroundColor = '#dd050b';
+                comment.innerText = 'Woohoo! As good as it gets!';
             })
-            fiveStar.addEventListener('mouseleave', () => {
+            fiveStar.addEventListener('mouseout', () => {
                 oneStar.style.backgroundColor = '';
                 twoStar.style.backgroundColor = '';
                 threeStar.style.backgroundColor = '';
@@ -176,7 +176,7 @@ class ReviewForm extends React.Component {
         let starText;
         if (this.state.rating == '0') starText = 'Select your rating'
         if (this.state.rating == '1') starText = 'Eek! Methinks not.'
-        if (this.state.rating == '2') starText = 'Meh. I\'ve experienced better'
+        if (this.state.rating == '2') starText = 'Meh. I\'ve experienced better.'
         if (this.state.rating == '3') starText = 'A-OK.'
         if (this.state.rating == '4') starText = 'Yay! I\'m a fan.'
         if (this.state.rating == '5') starText = 'Woohoo! As good as it gets!'
@@ -240,25 +240,46 @@ class ReviewForm extends React.Component {
                                 /> */}
 
                             <div className="stars">
-                                <input className="star-input" type="radio" value="1" onChange={this.handleInput("rating")}/>
-                                {/* <label>1</label> */}
+                                {/* <input className="star-input" type="radio" value="1" onChange={this.handleInput("rating")}/>
                                 <label className="star-label">&#9733;</label>
                                 <input className="star-input" type="radio" value="2" onChange={this.handleInput("rating")}/>
-                                {/* <label>2</label> */}
                                 <label className="star-label">&#9733;</label>
                                 <input className="star-input" type="radio" value="3" onChange={this.handleInput("rating")}/>
-                                {/* <label>3</label> */}
                                 <label className="star-label">&#9733;</label>
                                 <input className="star-input" type="radio" value="4" onChange={this.handleInput("rating")}/>
-                                {/* <label>4</label> */}
                                 <label className="star-label">&#9733;</label>
                                 <input className="star-input" type="radio" value="5" onChange={this.handleInput("rating")}/>
-                                {/* <label>5</label> */}
-                                <label className="star-label">&#9733;</label>
+                                <label className="star-label">&#9733;</label> */}
 
-                                <p>
+                                <fieldset className="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" onChange={this.handleInput("rating")} />
+                                    <label className="full" id="oneStar" htmlFor="star5" title="Awesome - 5 stars">&#9733;</label>
+                                    {/* <input type="radio" id="star4half" name="rating" value="4 and a half" />
+                                    <label className="half" htmlFor="star4half" title="Pretty good - 4.5 stars">&#9733;</label> */}
+                                    <input type="radio" id="star4" name="rating" value="4" onChange={this.handleInput("rating")} />
+                                    <label className="full" id="twoStar" htmlFor="star4" title="Pretty good - 4 stars">&#9733;</label>
+                                    {/* <input type="radio" id="star3half" name="rating" value="3 and a half" />
+                                    <label className="half" htmlFor="star3half" title="Meh - 3.5 stars"></label> */}
+                                    <input type="radio" id="star3" name="rating" value="3" onChange={this.handleInput("rating")} />
+                                    <label className="full" id="threeStar" htmlFor="star3" title="Meh - 3 stars">&#9733;</label>
+                                    {/* <input type="radio" id="star2half" name="rating" value="2 and a half" />
+                                    <label className="half" htmlFor="star2half" title="Kinda bad - 2.5 stars"></label> */}
+                                    <input type="radio" id="star2" name="rating" value="2" onChange={this.handleInput("rating")} />
+                                    <label className="full" id="fourStar" htmlFor="star2" title="Kinda bad - 2 stars">&#9733;</label>
+                                    {/* <input type="radio" id="star1half" name="rating" value="1 and a half" />
+                                    <label className="half" htmlFor="star1half" title="Meh - 1.5 stars"></label> */}
+                                    <input type="radio" id="star1" name="rating" value="1" onChange={this.handleInput("rating")} />
+                                    <label className="full" id="fiveStar" htmlFor="star1" title="Sucks big time - 1 star">&#9733;</label>
+                                    {/* <input type="radio" id="starhalf" name="rating" value="half" />
+                                    <label className="half" htmlFor="starhalf" title="Sucks big time - 0.5 stars"></label> */}
+
+                                </fieldset>
+                                <span id="rating-comment" className="rating-comment">{starText}</span>
+                                {/* <p id="rating-comment">{starText}</p> */}
+                                {/* <p>
                                     {starText}
-                                </p>
+                                </p> */}
+
                             </div>
                             {/* <label style={{ paddingLeft: '10px' }}>Select your rating</label> */}
                         
@@ -277,8 +298,9 @@ class ReviewForm extends React.Component {
                                 />
                             </p>
                             
-                            <input className="review-form-button" type="submit" value={this.props.formType === "create" ? "Post Review" : "Edit Review"} />
+                            <input className="review-form-button" type="submit" value={this.props.formType === "create" ? "Post Review" : "Edit Review"} onClick={this.handleSubmit} />
                             <button className="review-form-cancel" onClick={this.navigateToBusinessShow}>Cancel</button>
+                            {/* <button className="review-form-cancel" onClick={this.handleSubmit}>Cancel</button> */}
                         </form>
                         {/* <button onClick={this.navigateToBusinessShow}>Cancel</button> */}
                     </div>
