@@ -45,6 +45,7 @@ const SearchHook = props => {
                 {/* <input className="search-button" type="submit" onClick={this.handleSubmit}/> */}
                 {/* <Link to="/businesses">Search</Link> */}
                 <button className="search-button" onClick={handleSubmit()}>Search</button>
+                {/* <button className="search-button" onClick={handleSubmit()}>	&#128270;</button> */}
             </form>
         </div>
     );

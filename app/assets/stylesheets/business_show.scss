@@ -136,6 +136,7 @@
     border: solid 1px gray;
     height: 300px;
     width: 300px;
+    // width: 18.5%;
     // display: inline;
 }
 
@@ -333,16 +334,22 @@
 /////////////////////////////// SCROLL IMAGE ////////////////////////////////
 
 .scroll-container {
+    // width: 81.5%;
     width: 665px;
     // width: 680px;
     box-sizing: border-box;
 }
+
+// .scroll-sizing {
+//     width: fit-content;
+// }
 
 .scroll-images {
     display: flex;
     // justify-content: ;
     overflow: hidden;
     box-sizing: border-box;
+    z-index: 0;
 }
 
 .scroll-function {
@@ -376,3 +383,11 @@
     top: 58%;
     left: 35.8%;
 }
+
+// #scroll-left {
+//     z-index: 10;
+// }
+
+// .scroll-sizing button {
+//     justify-content: space-between;
+// }

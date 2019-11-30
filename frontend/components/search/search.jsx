@@ -81,6 +81,9 @@ class Search extends React.Component {
                     {/* <input className="search-button" type="submit" onClick={this.handleSubmit}/> */}
                     {/* <Link to="/businesses">Search</Link> */}
                     <button className="search-button" onClick={this.handleSubmit}>Search</button>
+                    {/* <button className="search-button" onClick={this.handleSubmit}>
+                        <span className="search-icon">&#9906;</span>
+                    </button> */}
                 </form>
 
                 {/* <div>

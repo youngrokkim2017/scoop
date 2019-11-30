@@ -1,6 +1,7 @@
-// .navbar-container {
-//     justify-content: center;
-// }
+.navbar-container {
+    // justify-content: center;
+    width: 100%;
+}
 
 .default-navbar {
     display: flex;
@@ -12,8 +13,8 @@
     // margin-left: 8px;
     background-color: rgb(201, 29, 29);
     // background-color: #db0e0e;
-    justify-content: center;
-    // justify-content: space-between;
+    // justify-content: center;
+    justify-content: space-between;
     // justify-content: space-around;
     // justify-content: space-evenly;
     flex-direction: row;
@@ -32,7 +33,7 @@
 	// 	1.5px -1.5px 0 #fff,
 	// 	-1.5px 1.5px 0 #fff,
     // 	1.5px 1.5px 0 #fff;
-    padding-left: 18px;
+    padding-left: 15px;
     // padding-right: 10px;
     padding-right: 5px;
 }

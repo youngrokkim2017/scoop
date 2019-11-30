@@ -10,10 +10,10 @@
     // background-image: url("https://s3-media4.fl.yelpcdn.com/bphoto/CVHT4G2iGKtkq9dtS6PXpA/ls.jpg");
     // background-image: url("https://cdn.abcotvs.com/dip/images/3270561_72b63dcf-d817-4baf-99f8-62cef0497e95_16x9_ig.jpg?w=1280&r=16%3A9");
     // background-image: asset_url('background_6.jpg');
-    background-image: asset_url('splash.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: asset_url('splash.jpg');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 }
 
 // .home-cover-photo {
@@ -234,4 +234,31 @@
     width: 20px;
     height: 20px;
     padding-top: 10px;
+}
+
+// .splash-background-cover {
+//     top: -20%;
+// }
+
+.splash-background-cover img {
+    // position: absolute;
+    // position: relative;
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    // height: 60%;
+    opacity: 0.9;
+    // -webkit-filter: grayscale(30%);
+    // filter: grayscale(30%);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+
+.splash-contents {
+    z-index: 10;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    width: 100%;
 }
