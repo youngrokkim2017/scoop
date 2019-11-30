@@ -81,7 +81,8 @@ export default class BusinessIndexItem extends React.Component {
                             {averageRating > 0 ?
                                 <img src={ratingSrc} alt="" />
                                 :
-                                <span>N/A</span>
+                                // <span>N/A</span>
+                                <img src={window.zeroStar} alt=""/>
                             }
                             {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount} reviews</span> */}
                             <span className="business-item-rating-count">{reviewsCount} reviews</span>

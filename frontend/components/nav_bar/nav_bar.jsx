@@ -62,7 +62,8 @@ class NavBar extends React.Component {
                                 className="nav-find-container"
                                 type="text"
                                 onChange={this.handleChange('find')}
-                                placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
+                                // placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
+                                placeholder="ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                             // value={this.state.find} 
                             />
                         </label>

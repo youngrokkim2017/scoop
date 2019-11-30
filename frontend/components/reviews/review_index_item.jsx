@@ -97,21 +97,22 @@ class ReviewIndexItem extends React.Component {
 
         // console.log(review.rating);
 
-        let starRatingsList = ["*", "**", "***", "****", "*****"];
+        // let starRatingsList = ["*", "**", "***", "****", "*****"];
+        let starRatingsList = [window.oneStar, window.twoStar, window.threeStar, window.fourStar, window.fiveStar];
 
         let starRating;
         starRating = starRatingsList[review.rating - 1];
-        // if (review.rating === 1) {
-        //     starRating = starRatingsList[0]
-        // } else if (review.rating === 2) {
-        //     starRating = starRatingsList[1]
-        // } else if (review.rating === 3) {
-        //     starRating = starRatingsList[2]
-        // } else if (review.rating === 4) {
-        //     starRating = starRatingsList[3]
-        // } else if (review.rating === 5) {
-        //     starRating = starRatingsList[4]
-        // }
+        if (review.rating === 1) {
+            starRating = starRatingsList[0]
+        } else if (review.rating === 2) {
+            starRating = starRatingsList[1]
+        } else if (review.rating === 3) {
+            starRating = starRatingsList[2]
+        } else if (review.rating === 4) {
+            starRating = starRatingsList[3]
+        } else if (review.rating === 5) {
+            starRating = starRatingsList[4]
+        }
 
         // console.log(starRating);
 
@@ -151,8 +152,8 @@ class ReviewIndexItem extends React.Component {
                     <div className="business-review-text">
                         <div>
                             <div className="rating-and-date">
-                                {/* <span style={{ color: 'gray' }}>{`${review.rating}`}</span> */}
-                                <span style={{ color: 'gray' }}>{starRating}</span>
+                                {/* <span style={{ color: 'gray' }}>{starRating}</span> */}
+                                <img src={starRating} alt=""/>
                                 {/* <span style={{ fontSize: '15px', color: 'gray'}}>{`${month}/${day}/${year}`}</span> */}
                             </div>
 

@@ -55,6 +55,7 @@ class BusinessShow extends React.Component {
         starRating = starRatingsList[Math.floor(averageRating) - 1];
         
         let ratingSrc;
+        if (averageRating === 0 || averageRating === undefined || averageRating === null) ratingSrc = window.zeroStar
         if (averageRating < 1.25) ratingSrc = window.oneStar
         if (averageRating > 1.25 && averageRating < 1.874) ratingSrc = window.oneHalfStar
         if (averageRating > 1.875 && averageRating < 2.24) ratingSrc = window.twoStar
@@ -125,7 +126,8 @@ class BusinessShow extends React.Component {
                                 {averageRating > 0 ?
                                     <img src={ratingSrc} alt=""/>
                                     :
-                                    <span>N/A</span>
+                                    // <span>N/A</span>
+                                    <img src={window.zeroStar} alt=""/>
                                 }
                                 {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span> */}
                                 <span className="business-rating-count">{reviewsCount.toString()} reviews</span>
