@@ -18,11 +18,11 @@ class SessionForm extends React.Component {
     }
 
     componentDidMount() {
-        let errors = document.getElementsByClassName("errors");
-        errors = Array.from(errors);
+        let sessionErrors = document.getElementsByClassName("session-errors");
+        sessionErrors = Array.from(sessionErrors);
 
-        errors.forEach(err => {
-            err.classList.add('hide');
+        sessionErrors.forEach(error => {
+            error.classList.add('hide');
         })
     }
 
@@ -88,10 +88,11 @@ class SessionForm extends React.Component {
         // let invalidEmailError = "";
         // let invalidPasswordError = "";
 
-        console.log(this.state.sessionErrors);
+        // console.log(this.state.sessionErrors);
+
         // if (this.props.errors.length > 0) {
         //     for (let i = 0; i < this.props.errors.length; i++) {
-        //         let error = this.props.errors[i];
+        //         let sessionError = this.props.errors[i];
         //         this.state.sessionErrors << error;
         //     }
         //     console.log(this.state.sessionErrors);
@@ -168,8 +169,8 @@ class SessionForm extends React.Component {
                                         className="session-name-input"
                                     />
 
-                                    {/* <div className="errors">{invalidFnError}</div>
-                                    <div className="erors-div hide"></div> */}
+                                    {/* <div className="session-errors">{invalidFnError}</div>
+                                    <div className="errors-div hide"></div> */}
                                 </label>
                             
                            
@@ -182,8 +183,8 @@ class SessionForm extends React.Component {
                                         className="session-name-input"
                                     />
 
-                                    {/* <div className="errors">{invalidLnError}</div>
-                                    <div className="erors-div hide"></div> */}
+                                    {/* <div className="session-errors">{invalidLnError}</div>
+                                    <div className="errors-div hide"></div> */}
                                 </label>
                             </div>
 
@@ -201,8 +202,8 @@ class SessionForm extends React.Component {
                                 className="session-emailpassword-input"
                                 />
 
-                                {/* <div className="errors">{invalidEmailError}</div>
-                                <div className="erors-div hide"></div> */}
+                                {/* <div className="session-errors">{invalidEmailError}</div>
+                                <div className="errors-div hide"></div> */}
                             </label>
                         </p>
                         {/* <br/> */}
@@ -217,8 +218,8 @@ class SessionForm extends React.Component {
                                 className="session-emailpassword-input"
                                 />
 
-                                {/* <div className="errors">{invalidPasswordError}</div>
-                                <div className="erors-div hide"></div> */}
+                                {/* <div className="session-errors">{invalidPasswordError}</div>
+                                <div className="errors-div hide"></div> */}
                             </label>
                         </p>
                         {/* <br/> */}
