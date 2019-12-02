@@ -17,19 +17,26 @@ class SessionForm extends React.Component {
         this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
-    // componentDidMount() {
-    //     let errors = document.getElementsByClassName("errors");
-    //     errors = Array.from(errors);
+    componentDidMount() {
+        let errors = document.getElementsByClassName("errors");
+        errors = Array.from(errors);
 
-    //     errors.forEach(err => {
-    //         err.classList.add('hide');
-    //     })
-    // }
+        errors.forEach(err => {
+            err.classList.add('hide');
+        })
+    }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.dispatchForm(user);
+
+        let sessionErrors = document.getElementsByClassName("session-errors");
+        sessionErrors = Array.from(sessionErrors);
+        sessionErrors.forEach(error => {
+            error.classList.remove("hide");
+        });
+
     }
 
     handleInput(type) {
