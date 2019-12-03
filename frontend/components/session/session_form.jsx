@@ -97,14 +97,14 @@ class SessionForm extends React.Component {
         // }
 
         // console.log(this.props.errors);
-        if (this.props.errors.length > 0) {
-            this.props.errors.forEach(err => {
-                if (err.includes('First')) invalidFnError += err
-                if (err.includes('Last')) invalidLnError += err
-                if (err.includes('Email')) invalidEmailError += err
-                if (err.includes('Password')) invalidPasswordError += err
-            })
-        }
+        // if (this.props.errors.length > 0) {
+            // this.props.errors.forEach(err => {
+            //     if (err.includes('First')) invalidFnError += err
+            //     if (err.includes('Last')) invalidLnError += err
+            //     if (err.includes('Email')) invalidEmailError += err
+            //     if (err.includes('Password')) invalidPasswordError += err
+            // })
+        // }
 
         return(
             <div className="session-form">
@@ -173,8 +173,8 @@ class SessionForm extends React.Component {
                                     <div className="errors-div hide"></div> */}
                                 </label>
 
-                                <p className="session-errors">{invalidFnError}</p>
-                                <div className="errors-div hide"></div>
+                                {/* <p className="session-errors">{invalidFnError}</p>
+                                <div className="errors-div hide"></div> */}
                             
                            
                                 <label className="session-ln">
@@ -190,14 +190,14 @@ class SessionForm extends React.Component {
                                     <div className="errors-div hide"></div> */}
                                 </label>
 
-                                <p className="session-errors">{invalidLnError}</p>
-                                <div className="errors-div hide"></div>
+                                {/* <p className="session-errors">{invalidLnError}</p>
+                                <div className="errors-div hide"></div> */}
                             </div>
 
                             : 
 
                             ""
-                        }
+                        } 
                         <p>
                             <label className="session-email">
                                 <input 
