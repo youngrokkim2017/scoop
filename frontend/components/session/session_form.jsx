@@ -172,10 +172,6 @@ class SessionForm extends React.Component {
                                     {/* <div className="session-errors">{invalidFnError}</div>
                                     <div className="errors-div hide"></div> */}
                                 </label>
-
-                                {/* <p className="session-errors">{invalidFnError}</p>
-                                <div className="errors-div hide"></div> */}
-                            
                            
                                 <label className="session-ln">
                                     <input
@@ -189,9 +185,6 @@ class SessionForm extends React.Component {
                                     {/* <div className="session-errors">{invalidLnError}</div>
                                     <div className="errors-div hide"></div> */}
                                 </label>
-
-                                {/* <p className="session-errors">{invalidLnError}</p>
-                                <div className="errors-div hide"></div> */}
                             </div>
 
                             : 
@@ -211,10 +204,6 @@ class SessionForm extends React.Component {
                                 {/* <div className="session-errors">{invalidEmailError}</div>
                                 <div className="errors-div hide"></div> */}
                             </label>
-                            {/* <div>
-                                <div className="session-errors">{invalidEmailError}</div>
-                                <div className="errors-div hide"></div>
-                            </div> */}
                         </p>
                         {/* <br/> */}
                         <p>
@@ -231,11 +220,6 @@ class SessionForm extends React.Component {
                                 {/* <div className="session-errors">{invalidPasswordError}</div>
                                 <div className="errors-div hide"></div> */}
                             </label>
-                            
-                            {/* <div>
-                                <div className="session-errors">{invalidPasswordError}</div>
-                                <div className="errors-div hide"></div>
-                            </div> */}
                         </p>
                         {/* <br/> */}
                         {/* <Link className="session-button" to={this.handleSubmit}>{formType}</Link> */}
