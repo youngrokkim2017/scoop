@@ -26,6 +26,12 @@ class SessionForm extends React.Component {
         })
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.errors !== prevProps.errors) {
+            this.props.errors = prevProps.errors
+        }
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -81,7 +87,7 @@ class SessionForm extends React.Component {
     //
 
     render() {
-        let { formType, errors } = this.props;
+        let { formType } = this.props;
 
         let invalidFnError = "";
         let invalidLnError = "";
@@ -96,13 +102,13 @@ class SessionForm extends React.Component {
         //     console.log(this.state.sessionErrors);
         // }
 
-        // console.log(this.props.errors);
+        console.log(this.props.errors);
         // if (this.props.errors.length > 0) {
             // this.props.errors.forEach(err => {
-            //     if (err.includes('First')) invalidFnError += err
-            //     if (err.includes('Last')) invalidLnError += err
-            //     if (err.includes('Email')) invalidEmailError += err
-            //     if (err.includes('Password')) invalidPasswordError += err
+                // if (err.includes('First')) invalidFnError += err
+                // if (err.includes('Last')) invalidLnError += err
+                // if (err.includes('Email')) invalidEmailError += err
+                // if (err.includes('Password')) invalidPasswordError += err
             // })
         // }
 
@@ -169,8 +175,9 @@ class SessionForm extends React.Component {
                                         className="session-name-input"
                                     />
 
-                                    {/* <div className="session-errors">{invalidFnError}</div>
-                                    <div className="errors-div hide"></div> */}
+                                    {/* <div className="session-errors">{invalidFnError}</div> */}
+                                    <p className="session-errors">{invalidFnError}</p>
+                                    {/* <div className="errors-div hide"></div> */}
                                 </label>
                            
                                 <label className="session-ln">
@@ -182,8 +189,9 @@ class SessionForm extends React.Component {
                                         className="session-name-input"
                                     />
 
-                                    {/* <div className="session-errors">{invalidLnError}</div>
-                                    <div className="errors-div hide"></div> */}
+                                    {/* <div className="session-errors">{invalidLnError}</div> */}
+                                    <p className="session-errors">{invalidLnError}</p>
+                                    {/* <div className="errors-div hide"></div> */}
                                 </label>
                             </div>
 
@@ -191,7 +199,8 @@ class SessionForm extends React.Component {
 
                             ""
                         } 
-                        <p>
+                        {/* <p> */}
+                        <br/>
                             <label className="session-email">
                                 <input 
                                 type="text"
@@ -201,12 +210,13 @@ class SessionForm extends React.Component {
                                 className="session-emailpassword-input"
                                 />
 
-                                {/* <div className="session-errors">{invalidEmailError}</div>
-                                <div className="errors-div hide"></div> */}
+                            {/* <div className="session-errors">{invalidEmailError}</div> */}
+                            <pre className="session-errors">{invalidEmailError}</pre>
+                                {/* <div className="errors-div hide"></div> */}
                             </label>
-                        </p>
-                        {/* <br/> */}
-                        <p>
+                        {/* </p> */}
+                        {/* <p> */}
+                        <br/>
                             <label className="session-password">
                                 <input 
                                 // type="text"
@@ -217,11 +227,12 @@ class SessionForm extends React.Component {
                                 className="session-emailpassword-input"
                                 />
 
-                                {/* <div className="session-errors">{invalidPasswordError}</div>
-                                <div className="errors-div hide"></div> */}
+                            {/* <div className="session-errors">{invalidPasswordError}</div> */}
+                            <p className="session-errors">{invalidPasswordError}</p>
+                                {/* <div className="errors-div hide"></div> */}
                             </label>
-                        </p>
-                        {/* <br/> */}
+                        {/* </p> */}
+                        <br/>
                         {/* <Link className="session-button" to={this.handleSubmit}>{formType}</Link> */}
                         <button className="session-button" onClick={this.handleSubmit}>{formType}</button>
                     </form>
@@ -232,7 +243,7 @@ class SessionForm extends React.Component {
                         {formType === "sign up" ? <Link to="/login">Log In</Link> : <Link to="/signup">Sign Up</Link>}
                     </div>
 
-                    {/* <div>{this.props.errors}</div> */}
+                    {/* <div style={{ color: 'red' }}>{this.props.errors}</div> */}
                     {/* <div>{err}</div> */}
                 </div>
 
