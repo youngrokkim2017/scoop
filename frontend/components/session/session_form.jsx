@@ -172,7 +172,7 @@ class SessionForm extends React.Component {
                                         value={this.state.first_name}
                                         onChange={this.handleInput('first_name')}
                                         placeholder="First Name"
-                                        className="session-name-input"
+                                        className="session-fname-input"
                                     />
 
                                     {/* <div className="session-errors">{invalidFnError}</div> */}
@@ -186,7 +186,7 @@ class SessionForm extends React.Component {
                                         value={this.state.last_name}
                                         onChange={this.handleInput('last_name')}
                                         placeholder="Last Name"
-                                        className="session-name-input"
+                                        className="session-lname-input"
                                     />
 
                                     {/* <div className="session-errors">{invalidLnError}</div> */}
@@ -200,7 +200,7 @@ class SessionForm extends React.Component {
                             ""
                         } 
                         {/* <p> */}
-                        <br/>
+                        {/* <br/> */}
                             <label className="session-email">
                                 <input 
                                 type="text"
@@ -211,12 +211,12 @@ class SessionForm extends React.Component {
                                 />
 
                             {/* <div className="session-errors">{invalidEmailError}</div> */}
-                            <pre className="session-errors">{invalidEmailError}</pre>
+                            <p className="session-errors">{invalidEmailError}</p>
                                 {/* <div className="errors-div hide"></div> */}
                             </label>
                         {/* </p> */}
                         {/* <p> */}
-                        <br/>
+                        {/* <br/> */}
                             <label className="session-password">
                                 <input 
                                 // type="text"
@@ -232,7 +232,7 @@ class SessionForm extends React.Component {
                                 {/* <div className="errors-div hide"></div> */}
                             </label>
                         {/* </p> */}
-                        <br/>
+                        {/* <br/> */}
                         {/* <Link className="session-button" to={this.handleSubmit}>{formType}</Link> */}
                         <button className="session-button" onClick={this.handleSubmit}>{formType}</button>
                     </form>
