@@ -63,27 +63,27 @@ class SessionForm extends React.Component {
         let email = "patrick@email.com";
         let password = "123456";
 
-        setTimeout(() => this.inputEmail, 1000);
-        setTimeout(() => this.inputPassword, 1000);
+        // setTimeout(() => this.inputEmail, 1000);
+        // setTimeout(() => this.inputPassword, 1000);
 
         this.props.demoLogin(this.state);
     }
 
-    inputEmail(email) {
-        let emailChars = email.split('');
+    // inputEmail(email) {
+    //     let emailChars = email.split('');
 
-        setInterval(() => {
-            this.setState({email: this.state.email + emailChars.shift()})
-        }, 1000);
-    }
+    //     setInterval(() => {
+    //         this.setState({email: this.state.email + emailChars.shift()})
+    //     }, 1000);
+    // }
 
-    inputPassword(password) {
-        let passwordChars = password.split('');
+    // inputPassword(password) {
+    //     let passwordChars = password.split('');
 
-        setInterval(() => {
-            this.setState({ password: this.state.password + passwordChars.shift() })
-        }, 1000);
-    }
+    //     setInterval(() => {
+    //         this.setState({ password: this.state.password + passwordChars.shift() })
+    //     }, 1000);
+    // }
     //
 
     render() {
