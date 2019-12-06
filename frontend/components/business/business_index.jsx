@@ -130,13 +130,14 @@ class BusinessIndex extends React.Component {
                                 {this.props.loggedIn ?
 
                                     <div>
-                                        <nav className="logout-dropdown">
-                                            <button className="dropbtn">Welcome, {currentUser.firstName}
-                                                <img className="profile-pic" src={this.props.user.photoUrl} alt=""/>
-                                                <i className="fa fa-caret-down"></i>
+                                        <nav className="navbar-logout-dropdown">
+                                            {/* <button className="navbar-dropbtn">Welcome, <span className="navbar-drop-user">{currentUser.firstName}</span> */}
+                                            <button className="navbar-dropbtn">Welcome, {currentUser.firstName}
+                                                {/* <img className="profile-pic" src={this.props.currentUser.photoUrl} alt=""/> */}
+                                                <i className="navbar-fa fa-caret-down"></i>
                                             </button>
-                                            <div className="logout-dropdown-content">
-                                                <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                                            <div className="navbar-logout-dropdown-content">
+                                                <a className="navbar-logout-link" onClick={this.props.logout}>Log Out</a>
                                             </div>
                                         </nav>
                                     </div>

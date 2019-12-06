@@ -4,6 +4,7 @@
             json.partial! 'api/businesses/business', business: business
             json.reviews business.reviews
             json.photoUrl business.photo.attached? ? url_for(business.photo) : ''
+            # json.currentUserPhoto business.user.photo.attached? ? url_for(business.user.photo) : ''
         end
     end
 end

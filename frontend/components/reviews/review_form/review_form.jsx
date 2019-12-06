@@ -196,12 +196,12 @@ class ReviewForm extends React.Component {
 
                     {this.props.loggedIn ?
 
-                        <div className="logout-dropdown">
-                            <button className="dropbtn">Welcome, {currentUser.firstName}
-                                <i className="fa fa-caret-down"></i>
+                        <div className="review-navbar-logout-dropdown">
+                            <button className="navbar-dropbtn">Welcome, {currentUser.firstName}
+                                <i className="navbar-fa fa-caret-down"></i>
                             </button>
-                            <div className="logout-dropdown-content">
-                                <a className="logout-link" onClick={this.props.logout}>Log Out</a>
+                            <div className="navbar-logout-dropdown-content">
+                                <a className="navbar-logout-link" onClick={this.props.logout}>Log Out</a>
                             </div>
                         </div>
 

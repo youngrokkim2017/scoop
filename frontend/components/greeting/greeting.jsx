@@ -29,7 +29,8 @@ class Greeting extends React.Component {
                             {/* <div className="session-navbar-contents"> */}
 
                             <div className="github-linkedin-link">
-                                <a href="https://github.com/youngrokkim2017">Github</a>
+                                {/* <a href="https://github.com/youngrokkim2017">Github</a> */}
+                                <a href="https://github.com/youngrokkim2017/scoop">GitHub</a>
                                 <a href="https://www.linkedin.com/in/patrick-kim-youngrok/">LinkedIn</a>
                             </div>
 
@@ -40,14 +41,17 @@ class Greeting extends React.Component {
                                 //     <a className="logout-link" onClick={this.props.logout}>Log Out</a>
                                 // </div>
 
+                                <div>
                                 <div className="logout-dropdown">
                                     <button className="dropbtn">Welcome, {currentUser.firstName}
-                                        <img className="profile-pic" src={this.props.user.photoUrl} alt=""/>
+                                        {/* <img className="splash-profile-pic" src={this.props.user.photoUrl} alt=""/> */}
                                         <i className="fa fa-caret-down"></i>
                                     </button>
                                     <div className="logout-dropdown-content">
                                         <a className="logout-link" onClick={this.props.logout}>Log Out</a>
                                     </div>
+                                </div>
+                                    <img className="splash-profile-pic" src={this.props.user.photoUrl} alt=""/>
                                 </div>
 
                                 :
