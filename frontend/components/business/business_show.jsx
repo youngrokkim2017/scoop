@@ -164,6 +164,7 @@ class BusinessShow extends React.Component {
 
                                     <div className="logout-dropdown">
                                         <button className="dropbtn">Welcome, {currentUser.firstName}
+                                            <img className="profile-pic" src={this.props.user.photoUrl} alt=""/>
                                             <i className="fa fa-caret-down"></i>
                                         </button>
                                         <div className="logout-dropdown-content">
