@@ -17,7 +17,9 @@
 .business-show-intro {
     display: flex;
     justify-content: space-between;
+    // justify-content: stretch;
     width: 100%;
+    // width: 150%;
     height: 150px;
 }
 
@@ -29,6 +31,10 @@
 
 .business-rating {
     display: flex;
+}
+
+.business-rating img {
+    margin-left: 9px;
 }
 
 // .business-rating img {
@@ -48,6 +54,10 @@
     padding-left: 10px;
 }
 
+.business-price-category {
+    margin-left: 14px;
+}
+
 .business-price-category > span {
     padding-right: 5px;
 }
@@ -61,6 +71,8 @@
     flex: 1 1 auto;
     justify-content: flex-end;
     padding-top: 40px;
+    // padding-right: 5px;
+    // margin-left: 550px;
 }
 
 .business-show-write-review a {
@@ -126,8 +138,8 @@
     // width: 200px;
     display: flex;
     flex: 1 1 auto;
-    flex-flow: row wrap;
-    width: 100%;
+    // flex-flow: row wrap;
+    // width: 100%;
     padding-bottom: 30px;
 }
 
@@ -179,6 +191,7 @@
 
 .business-map-and-info-right {
     display: flex;
+    // width: 100%;
 }
 
 .business-map-and-info-right img {
@@ -336,6 +349,7 @@
 .scroll-container {
     // width: 81.5%;
     width: 665px;
+    // width: 500px;
     // width: 680px;
     box-sizing: border-box;
 }
@@ -376,11 +390,13 @@
 
 #scroll-right {
     right: 11.5%;
-    top: 58%;
+    // top: 58%;
+    top: 60%;
 }
 
 #scroll-left {
-    top: 58%;
+    // top: 58%;
+    top: 60%;
     left: 35.8%;
 }
 
