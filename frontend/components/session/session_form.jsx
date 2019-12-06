@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
         //     console.log(this.state.sessionErrors);
         // }
 
-        console.log(this.props.errors);
+        // console.log(this.props.errors);
         // if (this.props.errors.length > 0) {
             // this.props.errors.forEach(err => {
                 // if (err.includes('First')) invalidFnError += err
