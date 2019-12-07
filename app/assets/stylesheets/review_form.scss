@@ -243,43 +243,53 @@ h1 { font-size: 1.5em; margin: 10px; }
 // .rating > input:checked ~ label:hover ~ label { background-color: #FFED85;  } 
 
 #star5:checked~label {
-  background-color: #dd050b;
+  // background-color: #dd050b;
+  background-color: red;
 }
 
 #star4:checked~label {
-  background-color: #f26a2c;
+  // background-color: #f26a2c;
+  background-color: #f73;
 }
 
 #star3:checked~label {
-  background-color: #f0991e;
+  // background-color: #f0991e;
+  background-color: #fa2;
 }
 
 #star2:checked~label {
-  background-color: #dcb228;
+  // background-color: #dcb228;
+  background-color: #eb2;
 }
 
 #star1:checked~label {
-  background-color: #cc8b1f;
+  // background-color: #cc8b1f;
+  background-color: #d92;
 }
 
 #star1:hover~label {
-  background-color: #cc8b1f;
+  // background-color: #cc8b1f;
+  background-color: #d92;
 }
 
 #star2:hover~label {
-  background-color: #dcb228;
+  // background-color: #dcb228;
+  background-color: #eb2;
 }
 
 #star3:hover~label {
-  background-color: #f0991e;
+  // background-color: #f0991e;
+  background-color: #fa2;
 }
 
 #star4:hover~label {
-  background-color: #f26a2c;
+  // background-color: #f26a2c;
+  background-color: #f73;
 }
 
 #star5:hover~label {
-  background-color: #dd050b;
+  // background-color: #dd050b;
+  background-color: red;
 }
 
 #rating-comment {
