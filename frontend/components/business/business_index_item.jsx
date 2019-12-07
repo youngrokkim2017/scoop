@@ -25,7 +25,7 @@ export default class BusinessIndexItem extends React.Component {
         // let business = this.props.business;
 
         let businessReviews = this.props.business.reviews;
-        // console.log(this.props.business.reviews);
+    
         let reviewRatings;
         let sum = 0;
         reviewRatings = businessReviews.map(review => (

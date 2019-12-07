@@ -12,8 +12,6 @@ class Greeting extends React.Component {
         // let coverPhotos = [window.splash, window.background_1, window.background_2]
         // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
 
-        // console.log(this.props);
-
         return (
             <div className="home">
                 

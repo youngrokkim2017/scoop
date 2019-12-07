@@ -76,14 +76,9 @@ class BusinessIndex extends React.Component {
         const { businesses } = this.props;
         let { business } = this.props;
 
-        // console.log(this.props.businesses)
-        // console.log(this.props.business)
         const businessItems = this.props.businesses.map(business => (
             <BusinessIndexItem key={business.id} business={business} />)
         );
-
-        // console.log(this.props);
-        // console.log(this.props.currentUser);
         
         // let filteredBusinesses = this.props.businesses.filter((filteredBusiness) => {
         //     return filteredBusiness.name.indexOf(this.state.find) !== -1

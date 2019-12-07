@@ -56,10 +56,6 @@ class BusinessShow extends React.Component {
     }
 
     render() {
-        // console.log(currentUser)
-
-        // console.log(this.props.business);
-        // console.log(this.props.businessId);
         if (this.props.business === undefined) return null;
         let { business } = this.props;
 
@@ -98,9 +94,6 @@ class BusinessShow extends React.Component {
         if (averageRating > 4.25 && averageRating < 4.874) ratingSrc = window.fourHalfStar
         if (averageRating > 4.875) ratingSrc = window.fiveStar
         
-        // console.log(averageRating);
-        // console.log(starRating);
-
         // REVIEWS
         
         // const { reviews } = this.props;
@@ -113,13 +106,6 @@ class BusinessShow extends React.Component {
         //         />
         //     )
         // });
-
-        // const foodImageItems = this.props.business.foodPhotoUrls.map(foodPhoto => (
-        //     <ScrollImage foodPhotoUrls={this.props.business.foodPhotoUrls} />)
-        // );
-
-        // console.log(this.props.business.foodPhotoUrls);
-        // console.log(this.state);
 
         return (
 

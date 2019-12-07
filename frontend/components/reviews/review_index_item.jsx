@@ -95,8 +95,6 @@ class ReviewIndexItem extends React.Component {
         // let { review, currentUser } = this.props;
         let { review, currentUser } = this.props;
 
-        // console.log(review.rating);
-
         // let starRatingsList = ["*", "**", "***", "****", "*****"];
         let starRatingsList = [window.oneStar, window.twoStar, window.threeStar, window.fourStar, window.fiveStar];
 
@@ -113,13 +111,6 @@ class ReviewIndexItem extends React.Component {
         } else if (review.rating === 5) {
             starRating = starRatingsList[4]
         }
-
-        // console.log(starRating);
-
-        // console.log(this.props.review.authorId);
-        
-        // console.log(this.props);
-        // console.log(this.props.review.photoUrl);
 
         return (
 

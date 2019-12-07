@@ -52,8 +52,6 @@ class Search extends React.Component {
     }
 
     render() {
-        // console.log(this.props);
-
         return (
             <div>
                 <form className="search-bar">

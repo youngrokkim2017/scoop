@@ -30,104 +30,104 @@ class ReviewForm extends React.Component {
         // this.props.fetchBusinesses();
     }
 
-    componentDidUpdate() {
-        let oneStar = document.getElementById('one-star');
-        let twoStar = document.getElementById('two-star');
-        let threeStar = document.getElementById('three-star');
-        let fourStar = document.getElementById('four-star');
-        let fiveStar = document.getElementById('five-star');
+    // componentDidUpdate() {
+    //     let oneStar = document.getElementById('one-star');
+    //     let twoStar = document.getElementById('two-star');
+    //     let threeStar = document.getElementById('three-star');
+    //     let fourStar = document.getElementById('four-star');
+    //     let fiveStar = document.getElementById('five-star');
 
-        let comment = document.getElementById('rating-comment');
+    //     let comment = document.getElementById('rating-comment');
 
-        let starRatingComment = comment.textContent;
+    //     let starRatingComment = comment.textContent;
 
-        if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
-            oneStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#cc8b1f';
-                twoStar.style.backgroundColor = '#666';
-                threeStar.style.backgroundColor = '#666';
-                fourStar.style.backgroundColor = '#666';
-                fiveStar.style.backgroundColor = '#666';
-                comment.innerText = 'Eek! Methinks not.';
-            })
-            oneStar.addEventListener('mouseout', () => {
-                oneStar.style.backgroundColor = '';
-                twoStar.style.backgroundColor = '';
-                threeStar.style.backgroundColor = '';
-                fourStar.style.backgroundColor = '';
-                fiveStar.style.backgroundColor = '';
-                comment.innerText = starRatingComment;
-            })
+    //     if (oneStar && twoStar && threeStar && fourStar && fiveStar) {
+    //         oneStar.addEventListener('mouseover', () => {
+    //             oneStar.style.backgroundColor = '#cc8b1f';
+    //             twoStar.style.backgroundColor = '#666';
+    //             threeStar.style.backgroundColor = '#666';
+    //             fourStar.style.backgroundColor = '#666';
+    //             fiveStar.style.backgroundColor = '#666';
+    //             comment.innerText = 'Eek! Methinks not.';
+    //         })
+    //         oneStar.addEventListener('mouseout', () => {
+    //             oneStar.style.backgroundColor = '';
+    //             twoStar.style.backgroundColor = '';
+    //             threeStar.style.backgroundColor = '';
+    //             fourStar.style.backgroundColor = '';
+    //             fiveStar.style.backgroundColor = '';
+    //             comment.innerText = starRatingComment;
+    //         })
 
-            twoStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#dcb228';
-                twoStar.style.backgroundColor = '#dcb228';
-                threeStar.style.backgroundColor = '#666';
-                fourStar.style.backgroundColor = '#666';
-                fiveStar.style.backgroundColor = '#666';
-                comment.innerText = 'Meh. I\'ve experienced better.';
-            })
-            twoStar.addEventListener('mouseout', () => {
-                oneStar.style.backgroundColor = '';
-                twoStar.style.backgroundColor = '';
-                threeStar.style.backgroundColor = '';
-                fourStar.style.backgroundColor = '';
-                fiveStar.style.backgroundColor = '';
-                comment.innerText = starRatingComment;
-            })
+    //         twoStar.addEventListener('mouseover', () => {
+    //             oneStar.style.backgroundColor = '#dcb228';
+    //             twoStar.style.backgroundColor = '#dcb228';
+    //             threeStar.style.backgroundColor = '#666';
+    //             fourStar.style.backgroundColor = '#666';
+    //             fiveStar.style.backgroundColor = '#666';
+    //             comment.innerText = 'Meh. I\'ve experienced better.';
+    //         })
+    //         twoStar.addEventListener('mouseout', () => {
+    //             oneStar.style.backgroundColor = '';
+    //             twoStar.style.backgroundColor = '';
+    //             threeStar.style.backgroundColor = '';
+    //             fourStar.style.backgroundColor = '';
+    //             fiveStar.style.backgroundColor = '';
+    //             comment.innerText = starRatingComment;
+    //         })
 
-            threeStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#f0991e';
-                twoStar.style.backgroundColor = '#f0991e';
-                threeStar.style.backgroundColor = '#f0991e';
-                fourStar.style.backgroundColor = '#666';
-                fiveStar.style.backgroundColor = '#666';
-                comment.innerText = 'A-OK.';
-            })
-            threeStar.addEventListener('mouseout', () => {
-                oneStar.style.backgroundColor = '';
-                twoStar.style.backgroundColor = '';
-                threeStar.style.backgroundColor = '';
-                fourStar.style.backgroundColor = '';
-                fiveStar.style.backgroundColor = '';
-                comment.innerText = starRatingComment;
-            })
+    //         threeStar.addEventListener('mouseover', () => {
+    //             oneStar.style.backgroundColor = '#f0991e';
+    //             twoStar.style.backgroundColor = '#f0991e';
+    //             threeStar.style.backgroundColor = '#f0991e';
+    //             fourStar.style.backgroundColor = '#666';
+    //             fiveStar.style.backgroundColor = '#666';
+    //             comment.innerText = 'A-OK.';
+    //         })
+    //         threeStar.addEventListener('mouseout', () => {
+    //             oneStar.style.backgroundColor = '';
+    //             twoStar.style.backgroundColor = '';
+    //             threeStar.style.backgroundColor = '';
+    //             fourStar.style.backgroundColor = '';
+    //             fiveStar.style.backgroundColor = '';
+    //             comment.innerText = starRatingComment;
+    //         })
 
-            fourStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#f26a2c';
-                twoStar.style.backgroundColor = '#f26a2c';
-                threeStar.style.backgroundColor = '#f26a2c';
-                fourStar.style.backgroundColor = '#f26a2c';
-                fiveStar.style.backgroundColor = '#666';
-                comment.innerText = 'Yay! I\'m a fan.';
-            })
-            fourStar.addEventListener('mouseout', () => {
-                oneStar.style.backgroundColor = '';
-                twoStar.style.backgroundColor = '';
-                threeStar.style.backgroundColor = '';
-                fourStar.style.backgroundColor = '';
-                fiveStar.style.backgroundColor = '';
-                comment.innerText = starRatingComment;
-            })
+    //         fourStar.addEventListener('mouseover', () => {
+    //             oneStar.style.backgroundColor = '#f26a2c';
+    //             twoStar.style.backgroundColor = '#f26a2c';
+    //             threeStar.style.backgroundColor = '#f26a2c';
+    //             fourStar.style.backgroundColor = '#f26a2c';
+    //             fiveStar.style.backgroundColor = '#666';
+    //             comment.innerText = 'Yay! I\'m a fan.';
+    //         })
+    //         fourStar.addEventListener('mouseout', () => {
+    //             oneStar.style.backgroundColor = '';
+    //             twoStar.style.backgroundColor = '';
+    //             threeStar.style.backgroundColor = '';
+    //             fourStar.style.backgroundColor = '';
+    //             fiveStar.style.backgroundColor = '';
+    //             comment.innerText = starRatingComment;
+    //         })
 
-            fiveStar.addEventListener('mouseover', () => {
-                oneStar.style.backgroundColor = '#dd050b';
-                twoStar.style.backgroundColor = '#dd050b';
-                threeStar.style.backgroundColor = '#dd050b';
-                fourStar.style.backgroundColor = '#dd050b';
-                fiveStar.style.backgroundColor = '#dd050b';
-                comment.innerText = 'Woohoo! As good as it gets!';
-            })
-            fiveStar.addEventListener('mouseout', () => {
-                oneStar.style.backgroundColor = '';
-                twoStar.style.backgroundColor = '';
-                threeStar.style.backgroundColor = '';
-                fourStar.style.backgroundColor = '';
-                fiveStar.style.backgroundColor = '';
-                comment.innerText = starRatingComment;
-            })
-        }
-    }
+    //         fiveStar.addEventListener('mouseover', () => {
+    //             oneStar.style.backgroundColor = '#dd050b';
+    //             twoStar.style.backgroundColor = '#dd050b';
+    //             threeStar.style.backgroundColor = '#dd050b';
+    //             fourStar.style.backgroundColor = '#dd050b';
+    //             fiveStar.style.backgroundColor = '#dd050b';
+    //             comment.innerText = 'Woohoo! As good as it gets!';
+    //         })
+    //         fiveStar.addEventListener('mouseout', () => {
+    //             oneStar.style.backgroundColor = '';
+    //             twoStar.style.backgroundColor = '';
+    //             threeStar.style.backgroundColor = '';
+    //             fourStar.style.backgroundColor = '';
+    //             fiveStar.style.backgroundColor = '';
+    //             comment.innerText = starRatingComment;
+    //         })
+    //     }
+    // }
 
     navigateToBusinessShow() {
         // this.props.history.push(`/businesses/${this.props.match.params.businessId}`);
@@ -163,16 +163,6 @@ class ReviewForm extends React.Component {
     render() {
         let placeholder = "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you\'re connected in any way to the owner or employees."
         let { business } = this.props;
-        // console.log(business);
-        // console.log(this.props.match.params.businessId);
-        // console.log(this.props);
-        // console.log(this.props.businesses);
-        // console.log(this.props.business.name);
-        // console.log(this.props.businessId);
-
-        // console.log(this.state.entities);
-
-        // session-navbar => review-navbar
 
         let starText;
         if (this.state.rating == '0') starText = 'Select your rating'
@@ -344,10 +334,6 @@ export default withRouter(ReviewForm);
 //     }
 
 //     render() {
-
-//         // console.log(this.props.business);
-//         // console.log(this.props.businessId);
-//         // console.log(this.props.businesses);
 //         // if (this.props.business === undefined) return null;
 //         let { business } = this.props;
 
