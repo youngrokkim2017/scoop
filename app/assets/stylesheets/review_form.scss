@@ -34,6 +34,8 @@
     display: flex;
     padding-left: 110px;
     padding-right: 110px;
+    // justify-content: space-between;
+    justify-content: center;
 }
 
 .review-form-inputs {
@@ -42,6 +44,7 @@
     margin-right: 30px;  
     padding: 20px;
     width: 500px;
+    padding-right: 90px;
 }
 
 .review-input-textarea {

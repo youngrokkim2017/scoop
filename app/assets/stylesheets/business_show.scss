@@ -217,7 +217,8 @@
     display: inline;
     flex: 1 1 auto;
     float: left;
-    width: 500px;
+    // width: 500px;
+    width: 50%;
     margin-right: 30px;
 }
 
@@ -301,7 +302,7 @@
 .below-review-header {
     display: flex;
     // display: inline;
-    // width: 100%;
+    width: 100%;
     // padding-top: 20px;
     padding-bottom: 20px;
     // border-bottom: solid 1px lightgray;   
@@ -318,6 +319,7 @@
     border: solid 1px lightgray;
     background-color: rgb(238, 237, 237);
     border-radius: 4px;
+    flex-flow: row wrap;
 }
 
 .business-review-start-review a:hover {
@@ -338,6 +340,7 @@
     // display: inline;
     flex: 1 1 auto;
     // flex-flow: row wrap;
+    // width: 100%;
 }
 
 // .sub-navbar {
@@ -405,21 +408,38 @@
     // height: 20%;
 }
 
-#scroll-right {
-    right: 11.5%;
-    // top: 58%;
-    top: 60%;
+// #scroll-right {
+//     right: 11.5%;
+//     // top: 58%;
+//     top: 60%;
+// }
+
+// #scroll-left {
+//     // top: 58%;
+//     top: 60%;
+//     left: 35.8%;
+// }
+
+.scroll-buttons {
+    z-index: 10;
+    position: absolute;
+    // position: relative;
+    // // display: flex;
+    // justify-content: space-between;
+    // width: 100%;
 }
 
 #scroll-left {
-    // top: 58%;
-    top: 60%;
-    left: 35.8%;
+    z-index: 10;
+    position: relative;
+    // position: absolute;
+    // margin-right: 585px;
+    margin-right: 535px;
 }
 
-// #scroll-left {
-//     z-index: 10;
-// }
+#scroll-right {
+    z-index: 10;
+}
 
 // .scroll-sizing button {
 //     justify-content: space-between;

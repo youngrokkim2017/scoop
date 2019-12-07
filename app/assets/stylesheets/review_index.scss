@@ -11,6 +11,7 @@
     display: flex;
     border-bottom: solid 1px lightgray;
     padding: 20px 0px;
+    width: 100%;
 }
 
 .business-review-author {
@@ -24,7 +25,8 @@
 .business-review-text {
     // display: flex;
     display: inline;
-    width: 435px;
+    // width: 435px;
+    width: 100%;
     padding-left: 105px;
 }
 

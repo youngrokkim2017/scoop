@@ -141,7 +141,7 @@ class ReviewIndexItem extends React.Component {
                     </div>
                     
                     <div className="business-review-text">
-                        <div>
+                        <div className="review-text-content">
                             <div className="rating-and-date">
                                 {/* <span style={{ color: 'gray' }}>{starRating}</span> */}
                                 <img src={starRating} alt=""/>

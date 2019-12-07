@@ -69,42 +69,46 @@ export default class BusinessIndexItem extends React.Component {
                     
                 <div className="business-item-info">
 
-                    <div className="business-index-item-left">
-                        <div className="busines-item-name">
-                            <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
-                                <div>{this.props.business.name}</div>
-                            </Link>
+                    <div className="index-item-top-half">
+
+                        <div className="business-index-item-left">
+                            <div className="busines-item-name">
+                                <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
+                                    <div>{this.props.business.name}</div>
+                                </Link>
+                            </div>
+                            <div className="business-item-rating">
+                                {/* <span>{averageRating.toString()}</span> */}
+                                {/* <span>{starRating}</span> */}
+                                {averageRating > 0 ?
+                                    <img src={ratingSrc} alt="" />
+                                    :
+                                    // <span>N/A</span>
+                                    <img src={window.zeroStar} alt=""/>
+                                }
+                                {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount} reviews</span> */}
+                                <span className="business-item-rating-count">{reviewsCount} reviews</span>
+                            </div>
+                            <div className="business-item-price"> 
+                                <span>{this.props.business.priceRange}</span>
+                                <span style={{ padding: '0px 5px' }}>-</span>
+                                <span style={{ color: 'gray' }}>{this.props.business.category}</span>
+                            </div>
                         </div>
-                        <div className="business-item-rating">
-                            {/* <span>{averageRating.toString()}</span> */}
-                            {/* <span>{starRating}</span> */}
-                            {averageRating > 0 ?
-                                <img src={ratingSrc} alt="" />
-                                :
-                                // <span>N/A</span>
-                                <img src={window.zeroStar} alt=""/>
-                            }
-                            {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount} reviews</span> */}
-                            <span className="business-item-rating-count">{reviewsCount} reviews</span>
+
+                        <div className="business-index-item-right">
+                            <div className="business-item-contact-info">
+                                <div className="business-item-phone-number">
+                                    <span>{this.props.business.phoneNumber}</span>
+                                </div>
+                                <div className="business-item-address">
+                                    <span>{this.props.business.address}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="business-item-price"> 
-                            <span>{this.props.business.priceRange}</span>
-                            <span style={{ padding: '0px 5px' }}>-</span>
-                            <span style={{ color: 'gray' }}>{this.props.business.category}</span>
-                        </div>
+
                     </div>
 
-                    <div className="business-index-item-right">
-                        <div className="business-item-contact-info">
-                            <div className="business-item-phone-number">
-                                <span>{this.props.business.phoneNumber}</span>
-                            </div>
-                            <div className="business-item-address">
-                                <span>{this.props.business.address}</span>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div className="business-item-description">
                         <span>{this.props.business.description}</span>
                     </div>

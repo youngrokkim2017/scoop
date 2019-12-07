@@ -37,11 +37,13 @@
 
 .session-form-content {
     display: flex;
+    justify-content: center;
 }
 
 .session-form-textbox {
     padding-left: 200px;
-    padding-right: 200px;
+    // padding-right: 200px;
+    padding-right: 290px;
     padding-top: 100px;
 }
 
@@ -55,7 +57,9 @@
 
 .session-intro {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;    
+    font-weight: bold;   
+    border-top: 1px solid lightgray; 
+    padding-top: 15px;
 }
 
 .session-intro a {
@@ -213,4 +217,5 @@
 
 .session-form-img {
     padding-top: 100px;
+    padding-right: 100px;
 }
