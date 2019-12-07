@@ -174,6 +174,10 @@ class Search extends React.Component {
                 <div className="to-all-businesses">
                     <Link to="/businesses">See more businesses</Link>
                 </div>
+                
+                <footer className="footer-img">
+                    <img src={window.footer} alt=""/>
+                </footer>
             </div>
         );
     }
