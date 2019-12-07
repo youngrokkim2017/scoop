@@ -136,6 +136,7 @@ business_15 = Business.create!(name: 'Mr. and Mrs. Miscellaneous', address: '699
 #     open_time: '', close_time: '', rating: '5', lat: , lng: )
 
 # #reviews
+# business_1 = salt and straw
 review_1 = Review.create!(user_id: user_1.id, business_id: business_1.id, 
     body: "Interesting flavors with local ingredients! I tried the ice cream flight to taste multiple flavors", 
     rating: 5)
@@ -147,6 +148,7 @@ review_3 = Review.create!(user_id: user_5.id, business_id: business_1.id,
     rating: 3)
 
 ###
+#business_2 = fentons
 
 review_4 = Review.create!(user_id: user_2.id, business_id: business_2.id,
     body: "Wide variety of flavors but a little pricy and the wait time was long",
@@ -162,6 +164,7 @@ review_6 = Review.create!(user_id: user_6.id, business_id: business_2.id,
     rating: 3)
 
 ###
+#business_3 = birite
 
 review_7 = Review.create!(user_id: user_3.id, business_id: business_3.id,
     body: "The ice cream was good but the long line of people was not worth the
@@ -176,18 +179,191 @@ review_9 = Review.create!(user_id: user_1.id, business_id: business_3.id,
     rating: 5)
 
 ###
+#business_4 = yogurt park
 
-# review_10 = Review.create!(user_id: user_4.id, business_id: ,
-#     body: ,
-#     rating: )
-# review_11 = Review.create!(user_id: user_6.id, business_id: ,
-#     body: ,
-#     rating: )
-# review_12 = Review.create!(user_id: user_2.id, business_id: ,
-#     body: ,
-#     rating: )
+review_10 = Review.create!(user_id: user_4.id, business_id: business_4.id,
+    body: "There are always a wide selection of flavors, from classic chocolate 
+    and vanilla to seasonal flavors",
+    rating: 5)
+review_11 = Review.create!(user_id: user_6.id, business_id: business_4.id,
+    body: "Great hours for a late night snack, and very generous with toppings, 
+    they add toppings in the middle and on the top of the cup",
+    rating: 5)
+review_12 = Review.create!(user_id: user_2.id, business_id: business_4.id,
+    body: "Tasty flavors and plenty of toppings! But the size of their servings
+    are a bit too large to finish sometimes and seems like a waste",
+    rating: 4)
 
 ###
+#business_5 = iscream
+
+review_13 = Review.create!(user_id: user_5.id, business_id: business_5.id,
+    body: "Variety of unique flavors, last time I visited I got had to get a 
+    second serving. They also give you a little biscuit with the ice cream",
+    rating: 5)
+review_14 = Review.create!(user_id: user_1.id, business_id: business_5.id,
+    body: "The ice cream was good but it was very difficult to find parking 
+    and there were not seats inside",
+    rating: 4)
+review_15 = Review.create!(user_id: user_3.id, business_id: business_5.id,
+    body: "I scream, you scream, we all scream for ice cream!",
+    rating: 5)
+
+###
+#business_6 = mr. dewies
+
+review_16 = Review.create!(user_id: user_6.id, business_id: business_6.id,
+    body: "Visited this parlor after going bowling and it was a nice business to 
+    go with friends",
+    rating: 5)
+review_17 = Review.create!(user_id: user_2.id, business_id: business_6.id,
+    body: "First time trying a cashew based ice cream creamery and it was delicious!",
+    rating: 5)
+review_18 = Review.create!(user_id: user_4.id, business_id: business_6.id,
+    body: "The ice cream was good and the store was neat, had a bench along the 
+    wall to sit and water for customers",
+    rating: 5)
+
+###
+#business_7 = mitchells
+
+review_19 = Review.create!(user_id: user_1.id, business_id: business_7.id,
+    body: "They have a wide variety of not just flavors, but options for sundaes, 
+    floats, milkshakes, etc.",
+    rating: 5)
+review_20 = Review.create!(user_id: user_2.id, business_id: business_7.id,
+    body: "The wait was not worth it. There were no seatings outside to wait, 
+    and it was crowded inside as well. But the customer service was still good",
+    rating: 3)
+review_21 = Review.create!(user_id: user_3.id, business_id: business_7.id,
+    body: "They had different flavors of ice cream and pints available, but there 
+    was too much selection that it was hard to come to a decision",
+    rating: 4)
+
+###
+#business_8 = garden creamery
+
+review_22 = Review.create!(user_id: user_4.id, business_id: business_8.id,
+    body: "Aestheticall pleasing store and ice cream! It is a must try",
+    rating: 5)
+review_23 = Review.create!(user_id: user_5.id, business_id: business_8.id,
+    body: "The ice cream was very smooth and tasty",
+    rating: 5)
+review_24 = Review.create!(user_id: user_6.id, business_id: business_8.id,
+    body: "Different than other ice cream shops! They have unique Asian dessert 
+    flavors like ube, black sesame, and mango sticky rice.",
+    rating: 5)
+
+
+###
+#business_9 = ghirardelli
+
+review_25 = Review.create!(user_id: user_2.id, business_id: business_9.id,
+    body: "The vibes are unbeatable with it being right near the pier. Can take 
+    a break and have a seat and order a sundae",
+    rating: 5)
+review_26 = Review.create!(user_id: user_3.id, business_id: business_9.id,
+    body: "Their service was excellent with providing good recommendations and 
+    free samples of their chocolates and ice cream flavors",
+    rating: 5)
+review_27 = Review.create!(user_id: user_4.id, business_id: business_9.id,
+    body: "It's Ghirardelli ice cream, can't go wrong with the quality and taste",
+    rating: 5)
+
+###
+#business_10 = almare
+
+review_28 = Review.create!(user_id: user_5.id, business_id: business_10.id,
+    body: "Their gelato tastes amazing! Only downside to their store is a minimum 
+    amount needed to use credit cards",
+    rating: 4)
+review_29 = Review.create!(user_id: user_6.id, business_id: business_10.id,
+    body: "Their toasted almond with caramalized fig can't be beat!",
+    rating: 5)
+review_30 = Review.create!(user_id: user_1.id, business_id: business_10.id,
+    body: "The options here are hard to choose because they were all good, and 
+    they also give the option to get half a scoop of each flavor",
+    rating: 5)
+
+###
+#business_11 = secret scoop
+
+review_31 = Review.create!(user_id: user_3.id, business_id: business_11.id,
+    body: "Their desserts tasted great! But their odd hours and lack of seating 
+    and parking are inconvenient",
+    rating: 3)
+review_32 = Review.create!(user_id: user_4.id, business_id: business_11.id,
+    body: "I like the different theme of the gelato because the flavors are thai 
+    dessert based",
+    rating: 5)
+review_33 = Review.create!(user_id: user_5.id, business_id: business_11.id,
+    body: "They have choices besides just a scoop on a cone or cup and there 
+    isn't a flavor you can go wrong with",
+    rating: 5)
+
+###
+#business_12 = caravaggio
+
+review_34 = Review.create!(user_id: user_6.id, business_id: business_12.id,
+    body: "Lovely environment with lots of indoor seating to enjoy your dessert",
+    rating: 5)
+review_35 = Review.create!(user_id: user_1.id, business_id: business_12.id,
+    body: "Their variety of gelato is unqiue and they have an option to eat the 
+    ice cream there where they serve in a re-useable cup",
+    rating: 5)
+review_36 = Review.create!(user_id: user_2.id, business_id: business_12.id,
+    body: "Love the ice cream and service! Available street parking is difficult 
+    to find",
+    rating: 4)
+
+###
+#business_13 = lush
+
+review_37 = Review.create!(user_id: user_6.id, business_id: business_13.id,
+    body: "They have a good variety of flavors and they have seating in the back 
+    of the plaza to sit and relax",
+    rating: 5)
+review_38 = Review.create!(user_id: user_5.id, business_id: business_13.id,
+    body: "Unique flavors I haven't seen elsewhere like bourbon butterfinger, 
+    strawberry sorbetto, and cowgirl fromage blanc",
+    rating: 5)
+review_39 = Review.create!(user_id: user_4.id, business_id: business_13.id,
+    body: "The gelato tastes good but parking is hard to find and if the plaza 
+    is closed so if the gelato shop",
+    rating: 4)
+
+###
+#business_14 = cookiebar
+
+review_40 = Review.create!(user_id: user_3.id, business_id: business_14.id,
+    body: "One of my go to choices for ice cream in Oakland! Highly recommend",
+    rating: 5)
+review_41 = Review.create!(user_id: user_2.id, business_id: business_14.id,
+    body: "They serve a variety of fun flavors like fruity pebbles, banana oreo, 
+    and ube blueberry pancake",
+    rating: 5)
+review_42 = Review.create!(user_id: user_1.id, business_id: business_14.id,
+    body: "The ice cream shop gives a very modern vibe with plenty of seating 
+    inside to enjoy a scoop of ice cream or a ice cream cookie sandwich",
+    rating: 5)
+
+###
+#business_15 = mr and mrs misc
+
+review_43 = Review.create!(user_id: user_demo.id, business_id: business_15.id,
+    body: "I have heard Mr. and Mrs. Miscellaneous is a strong competitor with 
+    Bi-Rite creamery as the iconic SF ice cream and I would agree they are both 
+    must tries",
+    rating: 5)
+review_44 = Review.create!(user_id: user_3.id, business_id: business_15.id,
+    body: "I enjoyed the available flavors like frosted flakes, white rabbit 
+    candy, pink squirrel, and pineapple rum",
+    rating: 5)
+review_45 = Review.create!(user_id: user_6.id, business_id: business_15.id,
+    body: "I enjoyed the ice cream and their interesting flavors, but the seating 
+    was limited and indoor spacing was a bit awkward",
+    rating: 4)
+
 
 # # Photos
 # post = Post.first

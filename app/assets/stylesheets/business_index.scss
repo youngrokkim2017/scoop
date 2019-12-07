@@ -74,17 +74,18 @@
 // }
 
 #business-map {
-    position: sticky;
+    // position: -webkit-sticky; /* Safari */
+    // position: sticky;
+    // top: 0;
     height: 350px;
     width: 300px;
     // width: 350px;
 }
 
 .business-index-map {
-    // position: sticky;
     // position: -webkit-sticky; /* Safari */
     // position: sticky;
-    // // top: 0;
+    // top: 0;
     padding-top: 16px;
     padding-left: 20px;
 }

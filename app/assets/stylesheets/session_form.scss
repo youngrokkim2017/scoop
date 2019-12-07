@@ -35,6 +35,10 @@
 //     // justify-content: center;
 // }
 
+.session-form-content {
+    display: flex;
+}
+
 .session-form-textbox {
     padding-left: 200px;
     padding-right: 200px;
@@ -42,9 +46,11 @@
 }
 
 .formtype-header {
+    color: rgb(201, 29, 29);
     text-transform: capitalize;
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
+    // float: left;
 }
 
 .session-intro {
@@ -203,4 +209,8 @@
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.session-form-img {
+    padding-top: 100px;
 }

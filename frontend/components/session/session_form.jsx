@@ -122,9 +122,11 @@ class SessionForm extends React.Component {
                         </Link>
                     </header>
 
+                <div className="session-form-content">
+
                 <div className="session-form-textbox">
                     <div className="session-info">
-                        <h1 className="formtype-header" style={{ color: 'rgb(201, 29, 29)' }}>{this.props.formType} to scoop</h1>
+                        <h1 className="formtype-header">{this.props.formType} to scoop</h1>
                         {/* <h1 className="to-scoop">to Scoop</h1> */}
 
                         {/* <p>
@@ -134,13 +136,15 @@ class SessionForm extends React.Component {
                         </p> */}
 
                         <div className="session-intro">
-                            {formType === "sign up" ? "Connect with great local businesses" : "New to scoop? "}
-                            {formType === "log in" ? <Link to="/signup">Sign Up</Link> : ""}
+                            {formType === "sign up" ? "Connect With Great Local Businesses" : "New to scoop? "}
+                            {/* {formType === "log in" ? <Link to="/signup">Sign Up</Link> : ""} */}
+                            {formType === "log in" ? <Link to="/signup">Sign Up</Link> : <p><Link to="/login">Log In</Link></p>}
                         </div>
                         
                         <div className="demo-login">
                             <p>
-                                <span className="demo-text">Or log in as Demo User</span>
+                                    <span className="demo-text">Or log in as Demo User</span>
+                                    {/* <span className="demo-text"><span><Link to="/login">Log In</Link></span>Or log in as Demo User</span> */}
                             </p>
                             <label>
                                 {/* <input className="demo-button" type="submit" onClick={this.props.demoLogin} value="Log In with Demo User" /> */}
@@ -253,6 +257,15 @@ class SessionForm extends React.Component {
                     {/* <div>{err}</div> */}
                 </div>
 
+                <div className="session-form-img">
+                    <img src={window.signup} alt=""/>
+                </div>
+
+                </div>
+
+                <footer className="footer-img">
+                    <img src={window.footer} alt="" />
+                </footer>
             </div>
         )
     }

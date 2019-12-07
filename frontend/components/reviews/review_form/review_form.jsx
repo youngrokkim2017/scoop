@@ -289,7 +289,15 @@ class ReviewForm extends React.Component {
                         </form>
                         {/* <button onClick={this.navigateToBusinessShow}>Cancel</button> */}
                     </div>
+
+                    <div className="review-form-img">
+                        <img src={window.review} alt=""/>
+                    </div>
                 </div>
+
+                <footer className="footer-img">
+                    <img src={window.footer} alt="" />
+                </footer>
             </div>
         );
     }

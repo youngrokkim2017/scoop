@@ -189,6 +189,9 @@ class BusinessIndex extends React.Component {
                         />
                     </div>
                 </div>
+                <footer className="footer-img">
+                    <img src={window.footer} alt=""/>
+                </footer>
             </div>
         )
     }

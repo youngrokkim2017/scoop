@@ -338,6 +338,7 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="right-column-info">
+                            <div className="right-column-sticky">
                             <div className="business-hours">
                                 <span style={{ fontWeight: 'bold', color: 'rgb(201, 29, 29)' }}>Hours</span>
                                 <div>
@@ -392,6 +393,7 @@ class BusinessShow extends React.Component {
                                 <span>Restroom </span>
                                 <span className="business-answers">{`${business.restroom}`}</span>
                             </div>
+                            </div>
                         </div>
                     </div>
 
@@ -416,6 +418,10 @@ class BusinessShow extends React.Component {
                         {reviewsList}
                     </div> */}
                 {/* </div> */}
+
+                <footer className="footer-img">
+                    <img src={window.footer} alt="" />
+                </footer>
             </div>
         )
     }

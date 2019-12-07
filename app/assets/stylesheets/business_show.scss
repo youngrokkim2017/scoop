@@ -255,10 +255,27 @@
     padding-left: 30px;
 }
 
-.right-column-info > div {
+// .right-column-info > div {
+//     flex-wrap: nowrap;
+//     // height: 40px;
+//     padding-top: 10px;
+// }
+
+.right-column-sticky > div {
     flex-wrap: nowrap;
     // height: 40px;
     padding-top: 10px;
+}
+
+.right-column-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    padding: 10px;
+    // box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
 .business-hours > div {

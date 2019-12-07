@@ -79,6 +79,10 @@ class Greeting extends React.Component {
                         </div>
                     </div>
                 </div>
+
+                <footer className="footer-img">
+                    <img src={window.footer} alt="" />
+                </footer>
             </div>
         );
     }
