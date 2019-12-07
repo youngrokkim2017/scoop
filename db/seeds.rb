@@ -350,7 +350,7 @@ review_42 = Review.create!(user_id: user_1.id, business_id: business_14.id,
 ###
 #business_15 = mr and mrs misc
 
-review_43 = Review.create!(user_id: demo, business_id: business_15.id,
+review_43 = Review.create!(user_id: demo.id, business_id: business_15.id,
     body: "I have heard Mr. and Mrs. Miscellaneous is a strong competitor with 
     Bi-Rite creamery as the iconic SF ice cream and I would agree they are both 
     must tries",
