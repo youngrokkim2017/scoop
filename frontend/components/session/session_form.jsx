@@ -26,11 +26,11 @@ class SessionForm extends React.Component {
         })
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.errors !== prevProps.errors) {
-            this.props.errors = prevProps.errors
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.errors !== prevProps.errors) {
+    //         this.props.errors = prevProps.errors
+    //     }
+    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -103,14 +103,14 @@ class SessionForm extends React.Component {
         // }
 
         // console.log(this.props.errors);
-        // if (this.props.errors.length > 0) {
-            // this.props.errors.forEach(err => {
-                // if (err.includes('First')) invalidFnError += err
-                // if (err.includes('Last')) invalidLnError += err
-                // if (err.includes('Email')) invalidEmailError += err
-                // if (err.includes('Password')) invalidPasswordError += err
-            // })
-        // }
+        if (this.props.errors.length > 0) {
+            this.props.errors.forEach(err => {
+                if (err.includes('First')) invalidFnError += err
+                if (err.includes('Last')) invalidLnError += err
+                if (err.includes('Email')) invalidEmailError += err
+                if (err.includes('Password')) invalidPasswordError += err
+            })
+        }
 
         return(
             <div className="session-form">
@@ -179,7 +179,13 @@ class SessionForm extends React.Component {
                                     <p className="session-errors">{invalidFnError}</p>
                                     {/* <div className="errors-div hide"></div> */}
                                 </label>
-                           
+                            </div>
+                        :
+
+                        ""
+                        }
+                        {formType === "sign up" ?
+                            <div>
                                 <label className="session-ln">
                                     <input
                                         type="text"
