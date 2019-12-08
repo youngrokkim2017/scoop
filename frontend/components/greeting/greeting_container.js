@@ -11,6 +11,7 @@ const mapStateToProps = (state) => ({
     user: state.entities.users[state.session.id],
     loggedIn: Boolean(state.session.id),
     // businesses: Object.values(state.entities.businesses)
+    searchResults: Object.values(state.search)
 });
 
 const mapDispatchToProps = dispatch => ({

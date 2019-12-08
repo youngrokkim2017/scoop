@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
+import SearchItems from '../search/search_items';
 // import SearchShortcuts from '../search/search_shortcuts';
 
 class Greeting extends React.Component {
@@ -11,6 +12,12 @@ class Greeting extends React.Component {
     render() {
         // let coverPhotos = [window.splash, window.background_1, window.background_2]
         // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
+
+        let searchResults = this.props.searchResults.map((items) => {
+            return <SearchItems key={items.id} items={items} />
+        });
+
+        // console.log(searchResults)
 
         return (
             <div className="home">
@@ -83,6 +90,7 @@ class Greeting extends React.Component {
                 {/* <footer className="footer-img">
                     <img src={window.footer} alt="" />
                 </footer> */}
+
             </div>
         );
     }

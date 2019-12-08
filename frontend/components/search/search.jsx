@@ -21,6 +21,7 @@ class Search extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleChange = this.handleChange.bind(this);
+        // this.handleSearchInputs = this.handleSearchInputs.bind(this);
     }
 
     componentDidMount() {
@@ -55,21 +56,21 @@ class Search extends React.Component {
         //     })
     }
 
-    handleSearchResults() {
-        let searchInputs = document.getElementsByClassName('search-results');
-        searchInputs = searchInputs[0]
-        let searchResults = document.getElementsByClassName('search-items');
-        searchResults = Array.from(searchResults)
+    // handleSearchInputs() {
+    //     let searchInputs = document.getElementsByClassName('search-results');
+    //     searchInputs = searchInputs[0]
+    //     let searchResults = document.getElementsByClassName('search-items');
+    //     searchResults = Array.from(searchResults)
 
-        if (searchInputs !== null || searchInputs !== undefined) {
-            searchInputs.classList.remove('hide')
-            searchResults.forEach((result) => {
-                result.classList.remove('hide')
-            })
-        }
+    //     if (searchInputs !== null || searchInputs !== undefined) {
+    //         searchInputs.classList.remove('hide')
+    //         searchResults.forEach((result) => {
+    //             result.classList.remove('hide')
+    //         })
+    //     }
 
-        this.props.getSearchedBusinesses(this.state.find);
-    }
+    //     this.props.getSearchedBusinesses(this.state.find);
+    // }
 
     handleChange(type) {
         // console.log("searching");
@@ -84,12 +85,13 @@ class Search extends React.Component {
         // let searchResults = this.props.searchResults;
         // console.log(searchResults);
 
-        let searchResults = this.props.searchResults.map((search) => {
-            // return <SearchItems key={search} />
-            return search;
-        })
+        // console.log(searchResults = this.props.searchResults.map((search) => {
+        //     Object.keys(cream)
+        // }))
 
-        console.log(searchResults);
+        let searchResults = this.props.searchResults.map((items) => {
+            return <SearchItems key={items.id} items={items} />
+        });
 
         return (
             <div>
@@ -102,6 +104,7 @@ class Search extends React.Component {
                             onChange={this.handleChange('find')} 
                             placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                             // value={this.state.find} 
+                            // onInput={this.handleSearchInputs}
                             />
                         
                         {/* <div className="search-results">
