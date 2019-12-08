@@ -33,8 +33,10 @@ class Api::BusinessesController < ApplicationController
     def search
         # debugger
         search = params[:input]
+        # query = params[:query]
         # search = 'fen'
         @businesses = Business.where('LOWER(name) LIKE ?', "%#{search}%")
+        # @businesses = Business.where('LOWER(name) LIKE ?', "%#{query}%")
 
         # if @businesses.length < 1
         #     @businesses = Business.all

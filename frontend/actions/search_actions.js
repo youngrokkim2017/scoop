@@ -2,15 +2,20 @@ import * as searchAPIUtil from '../util/search_api_util';
 
 export const RECEIVE_SEARCH_BUSINESSES = "RECEIVE_SEARCH_BUSINESSES";
 
-// const receiveSearchBusinesses = (businesses) => ({
+// const receiveSearchBusinesses = (businessesRes) => ({
 //     type: RECEIVE_SEARCH_BUSINESSES,
-//     businesses
+//     businessesRes
 // });
 
 const receiveSearchBusinesses = (payload) => ({
     type: RECEIVE_SEARCH_BUSINESSES,
     payload
 });
+
+// export const getSearchedBusinesses = (query) => dispatch => (
+//     searchAPIUtil.getSearchedBusinesses(query)
+//         .then(businessesRes => (dispatch(receiveSearchBusinesses(businessesRes))))
+// )
 
 export const getSearchedBusinesses = (input) => dispatch => (
     searchAPIUtil.getSearchedBusinesses(input)

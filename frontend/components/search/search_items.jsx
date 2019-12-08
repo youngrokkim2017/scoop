@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SearchItems = ({items}) => (
+const SearchItems = ({key}) => (
     <div className="search-items">
-        {/* <img src={items.profPic} alt="" /> */}
+        {/* <img src={key.profPic} alt="" /> */}
         <div>
-            <Link id="search-links" to={`/businesses/${items.id}`}>
-                <li>{items.name}</li>
+            <Link id="search-links" to={`/businesses/${key.id}`}>
+                <li>{key.name}</li>
             </Link>
         </div>
     </div>

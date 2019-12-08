@@ -11,6 +11,7 @@ const rootReducer = combineReducers({
     errors: errorsReducer,
     filter: filterReducer,
     search: searchReducer
+    // searchRes: searchReducer
 });
 
 export default rootReducer;

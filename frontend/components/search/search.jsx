@@ -16,6 +16,7 @@ class Search extends React.Component {
             // input: ""
             find: "",
             near: ""
+            // near: this.props.near
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,14 +33,42 @@ class Search extends React.Component {
         if (this.state.find.length >= 1 || this.state.near.length >= 1) {
             this.props.getSearchedBusinesses(this.state.find)
             .then(() => {
-                this.props.getSearchedBusinesses(this.state.near)
-                .then(() => {
-                    this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
-                })
+                // this.props.getSearchedBusinesses(this.state.near)
+                // .then(() => {
+                // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                this.props.history.push(`/search?${this.state.find}`)
+                // })
             })
         } else {
             this.props.history.push('/businesses')
         }
+
+        // let find = this.state.find.split(' ').join('-');
+        // let near = this.state.near.split(' ').join('-');
+
+        // this.props.updateFilter('near', this.state.near)
+        //     .then(() => {
+        //         this.props.updateFilter('find', this.state.find)
+        //             .then(() => {
+        //                 this.props.history.push(`/businesses=${find}`);
+        //             })
+        //     })
+    }
+
+    handleSearchResults() {
+        let searchInputs = document.getElementsByClassName('search-results');
+        searchInputs = searchInputs[0]
+        let searchResults = document.getElementsByClassName('search-items');
+        searchResults = Array.from(searchResults)
+
+        if (searchInputs !== null || searchInputs !== undefined) {
+            searchInputs.classList.remove('hide')
+            searchResults.forEach((result) => {
+                result.classList.remove('hide')
+            })
+        }
+
+        this.props.getSearchedBusinesses(this.state.find);
     }
 
     handleChange(type) {
@@ -52,6 +81,16 @@ class Search extends React.Component {
     }
 
     render() {
+        // let searchResults = this.props.searchResults;
+        // console.log(searchResults);
+
+        let searchResults = this.props.searchResults.map((search) => {
+            // return <SearchItems key={search} />
+            return search;
+        })
+
+        console.log(searchResults);
+
         return (
             <div>
                 <form className="search-bar">
@@ -64,6 +103,11 @@ class Search extends React.Component {
                             placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                             // value={this.state.find} 
                             />
+                        
+                        {/* <div className="search-results">
+                            {searchResults}
+                        </div> */}
+
                     </label>
                 
                     <label className="search-near">

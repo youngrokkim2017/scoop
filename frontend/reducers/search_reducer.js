@@ -8,7 +8,8 @@ const searchReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_SEARCH_BUSINESSES:
-            return Object.assign({}, action.payload.businesses)
+            return Object.assign({}, action.payload.businesses);
+            // return action.businessRes;
         default:
             return state;
     }

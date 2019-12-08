@@ -10,17 +10,20 @@ import { fetchBusinesses } from '../../actions/business_actions';
 // });
 
 // const mapStateToProps = (state) => {
-//     let searchedBusinesses = Object.value(state.searchedBusinesses)
+//     // let searchedBusinesses = Object.values(state.searchedBusinesses)
+//     let searchRes = Object.values(state.searchRes)
 
 //     return {
-//         searchedBusinesses,
+//         // searchedBusinesses,
+//         searchRes,
 //         find: state.filter.find,
 //         near: state.filter.near
 //     }
 // }
 
 const mapStateToProps = (state) => ({
-    businesses: Object.values(state.entities.businesses)
+    businesses: Object.values(state.entities.businesses),
+    searchResults: Object.values(state.search)
 });
 
 const mapDispatchToProps = (dispatch) => ({
