@@ -1,20 +1,12 @@
 import React from 'react';
-import BusinessIndexItem from './business_index_item';
-import BusinessMap from './business_map';
-import NavBar from '../nav_bar/nav_bar';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+import SearchIndexItem from './search_index_item';
 
-class BusinessIndex extends React.Component {
+class SearchIndex extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     find = "",
-        //     near = ""
-        // };
-
         this.state = {
-            // input: ""
             find: "",
             near: ""
         }
@@ -22,31 +14,9 @@ class BusinessIndex extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchBusinesses();
-
-        // if (this.props.location.search !== "") {
-        //     let searchArr = this.handleSearchInput(this.props.history.location.search)
-        //     let find = searchArr[0];
-        //     let near = searchArr[1];
-
-        //     this.props.getSearchedBusinesses(find)
-        //         // .then(() => {
-        //         //     this.props.getSearchedBusinesses(near)
-        //         // })
-        // } else if (this.props.location.search === "") {
-        //     this.props.fetchBusinesses;
-        // }
+    componentDidMount(input) {
+        this.props.getSearchedBusinesses(input)
     }
-
-    // handleSearchInput(search) {
-    //     let inputs = search.split('=').slice(1);
-    //     let input = inputs.split('+');
-    //     let find = input[0];
-    //     let near = input[1];
-
-    //     return [find, near];
-    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -56,7 +26,7 @@ class BusinessIndex extends React.Component {
                 .then(() => {
                     // this.props.getSearchedBusinesses(this.state.near)
                     //     .then(() => {
-                            this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                            this.props.history.push(`/search`)
                         // })
                 })
         } else {
@@ -76,10 +46,14 @@ class BusinessIndex extends React.Component {
         const { businesses } = this.props;
         let { business } = this.props;
 
-        const businessItems = this.props.businesses.map(business => (
-            <BusinessIndexItem key={business.id} business={business} />)
+        const businessItems = this.props.searchResults.map(business => (
+            <SearchIndexItem key={business.id} business={business} />)
         );
-        
+
+        // let searchResults = this.props.searchResults.map((items) => {
+        //     return <SearchItems key={items.id} items={items} />
+        // });
+
         // let filteredBusinesses = this.props.businesses.filter((filteredBusiness) => {
         //     return filteredBusiness.name.indexOf(this.state.find) !== -1
         // });
@@ -159,7 +133,7 @@ class BusinessIndex extends React.Component {
                         </ul>
                     </div> */}
                 </div>
-                
+
                 <div className="sub-navbar">
                     <div className="sub-navbar-left">
                         <Link to="/businesses">Creamery</Link>
@@ -170,8 +144,8 @@ class BusinessIndex extends React.Component {
                     </div>
                     {/* <div className="sub-navbar-right">
                         <Link to={`/businesses/${business.id}/reviews`}>Write a Review</Link> */}
-                        {/* <Link to="/">Home</Link> */}
-                        {/* <Link to="/businesses">Back to Businesses</Link>
+                    {/* <Link to="/">Home</Link> */}
+                    {/* <Link to="/businesses">Back to Businesses</Link>
                     </div> */}
                 </div>
 
@@ -179,22 +153,22 @@ class BusinessIndex extends React.Component {
                     <div className="businesses-list">
                         <ul className="business-list-sections">
                             {businessItems}
-                        </ul> 
+                        </ul>
                     </div>
-                
+
                     <div className="business-index-map">
-                        <BusinessMap 
-                            businesses={this.props.businesses} 
-                            // key={business.id}
+                        <BusinessMap
+                            businesses={this.props.businesses}
+                        // key={business.id}
                         />
                     </div>
                 </div>
                 <footer className="footer-img">
-                    <img src={window.footer} alt=""/>
+                    <img src={window.footer} alt="" />
                 </footer>
             </div>
         )
     }
 }
 
-export default BusinessIndex;
+export default SearchIndex;

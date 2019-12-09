@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     resources :businesses do
       resources :reviews
     end
-    get '/search', to: 'businesses#search'
+    # get '/search', to: 'businesses#search'
+    get '/businesses/search/:input', to: 'businesses#search'
   end
 
   root 'static_pages#root'

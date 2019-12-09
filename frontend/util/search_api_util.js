@@ -3,7 +3,8 @@ export const getSearchedBusinesses = (input) => {
     return $.ajax({
         method: "GET",
         // url: `/api/search/${search}`,
-        url: '/api/search',
+        // url: '/api/search',
+        url: `/api/businesses/search/${input}`,
         data: { input },
     })
 }

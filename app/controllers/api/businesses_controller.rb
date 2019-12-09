@@ -21,6 +21,9 @@ class Api::BusinessesController < ApplicationController
         @business = Business.find_by(id: params[:id])
         # @business = Business.find(params[:id])
 
+        # if Business.find_by(search: params[:input])
+        #     render :index
+        # elsif @business
         if @business
             # render "api/businesses/show"
             render :show

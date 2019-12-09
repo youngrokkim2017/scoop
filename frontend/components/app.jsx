@@ -12,6 +12,7 @@ import LoginFormContainer from '../components/session/login_form_container';
 import SignupFormContainer from '../components/session/signup_form_container';
 import { Switch, Route } from 'react-router-dom';
 import SearchContainer from '../components/search/search_container';
+import SearchIndexContainer from '../components/search/search_slice/search_index_container';
 
 const App = () => (
     <div>
@@ -28,7 +29,8 @@ const App = () => (
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <Route exact path="/businesses/:businessId/reviews" component={CreateReviewContainer} />
             <Route exact path="/businesses/:businessId/reviews/:id/edit" component={EditReviewContainer} />
-            <Route exact path="/search" component={SearchContainer} />
+            {/* <Route exact path="/search" component={SearchContainer} /> */}
+            {/* <Route exact path="/businesses/search" component={SearchContainer} /> */}
             {/* <Route exact path="/businesses/search" component={BusinessIndexContainer} /> */}
             {/* <Route path="/search/:searchTerm" component={SearchContainer} /> */}
             <Route exact path="/" component={GreetingContainer} />
