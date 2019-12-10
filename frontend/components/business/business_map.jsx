@@ -53,7 +53,7 @@ class BusinessMap extends React.Component {
                 streetViewControlOptions: {
                     position: google.maps.ControlPosition.LEFT_TOP
                 },
-                fullscreenControl: true
+                fullscreenControl: false
             };
         } else {
             return ({
@@ -76,6 +76,7 @@ class BusinessMap extends React.Component {
         const mapOptionFunc = this.mapOptions();
 
         // this.map = new google.maps.Map(this.mapNode, mapOptionFunc);
+        // this.map = new google.maps.Map(document.getElementsByClassName('business-map'), mapOptionFunc);
         this.map = new google.maps.Map(document.getElementById('business-map'), mapOptionFunc);
 
         this.MarkerManager = new MarkerManager(this.map);
@@ -88,6 +89,7 @@ class BusinessMap extends React.Component {
 
     render() {
         return (
+            // <div id="business-map" ref={map => this.mapNode = map}>
             <div id="business-map" ref={map => this.mapNode = map}> 
                 Map
             </div>

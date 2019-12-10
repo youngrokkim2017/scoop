@@ -65,30 +65,33 @@
 .business-item-contact-info {
     display: flex;
 }
-////////////////////////////////////// MAP /////////////@
-
-// .business-index-map {
-//     position: sticky;
-//     height: 500px;
-//     width: 500px;
-// }
+////////////////////////////////////// MAP ///////////////////////////
 
 #business-map {
-    // position: -webkit-sticky; /* Safari */
-    // position: sticky;
-    // top: 0;
-    height: 350px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    // height: 350px;
+    height: 300px;
     width: 300px;
     // width: 350px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 
+
 .business-index-map {
-    // position: -webkit-sticky; /* Safari */
-    // position: sticky;
-    // top: 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
     padding-top: 16px;
     padding-left: 20px;
 }
+
+// .business-map-box {
+//     height: 200px;
+//     width: 300px;
+// }
 
 
 ////////////////////////////business index item/////////////////////////////////

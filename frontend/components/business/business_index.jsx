@@ -222,10 +222,13 @@ class BusinessIndex extends React.Component {
                     </div>
                 
                     <div className="business-index-map">
-                        <BusinessMap 
-                            businesses={this.props.businesses} 
+                        <BusinessMap
+                            businesses={this.props.businesses}
+                            // businesses={Object.values(this.props.businesses)} 
                             // key={business.id}
                         />
+
+                        {/* <img src={window.googleAPIkey} alt=""/> */}
                     </div>
                 </div>
                 <footer className="footer-img">

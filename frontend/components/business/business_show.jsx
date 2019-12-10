@@ -284,7 +284,7 @@ class BusinessShow extends React.Component {
 
                     <div className="business-map-and-info">
                         <div className="business-map-and-info-left">
-                            <div className="business-map">
+                            <div className="business-show-map">
                                 <div className="business-map-box">
                                     <BusinessMap
                                         businesses={[business]}
@@ -294,12 +294,7 @@ class BusinessShow extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="business-address">
-                                {/* <BusinessMap
-                                    businesses={[business]}
-                                    businessId={business.id}
-                                    fetchBusiness={this.props.fetchBusiness}
-                                /> */}
+                            {/* <div className="business-address">
 
                                 <span>{`${business.address}`}</span>
                                 <br/>
@@ -311,14 +306,12 @@ class BusinessShow extends React.Component {
                             </div>
                             
                             <div className="business-phone">
-                                {/* <span>Phone Number </span> */}
                                 <span>{`${business.phoneNumber}`}</span>
                             </div>
 
                             <div className="business-website">
-                                {/* <span>Website </span> */}
                                 <span><a href={business.website}>{`${business.website}`}</a></span>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="business-map-and-info-right">
@@ -364,6 +357,7 @@ class BusinessShow extends React.Component {
                             <div className="right-column-sticky">
 
                                 {/* <div> */}
+                                    <span style={{ fontWeight: 'bold', color: 'rgb(201, 29, 29)' }}>Location & Contact</span>
                                     <div className="business-address">
                                         <span>{`${business.address}`}</span>
                                         <br />
