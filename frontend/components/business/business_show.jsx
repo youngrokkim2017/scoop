@@ -37,10 +37,11 @@ class BusinessShow extends React.Component {
         if (this.state.find.length >= 1 || this.state.near.length >= 1) {
             this.props.getSearchedBusinesses(this.state.find)
                 .then(() => {
-                    this.props.getSearchedBusinesses(this.state.near)
-                        .then(() => {
-                            this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
-                        })
+                    // this.props.getSearchedBusinesses(this.state.near)
+                        // .then(() => {
+                            // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                            this.props.history.push(`/search=${this.state.find}`)
+                        // })
                 })
         } else {
             this.props.history.push('/businesses')
@@ -53,6 +54,13 @@ class BusinessShow extends React.Component {
                 [type]: e.target.value
             })
         }
+    }
+
+    handleLogout() {
+        this.props.logout()
+            .then(() => {
+                this.props.history.push(`/`)
+            });
     }
 
     render() {
@@ -204,7 +212,6 @@ class BusinessShow extends React.Component {
                                 {averageRating > 0 ?
                                     <img src={ratingSrc} alt=""/>
                                     :
-                                    // <span>N/A</span>
                                     <img src={window.zeroStar} alt=""/>
                                 }
                                 {/* <span style={{ paddingLeft: '10px', color: 'gray' }}>{reviewsCount.toString()} reviews</span> */}
@@ -225,11 +232,11 @@ class BusinessShow extends React.Component {
                         </div>
 
                         <div className="business-show-write-review">
-                            <Link to={`/businesses/${business.id}/reviews`}>
+                            {/* <Link to={`/businesses/${business.id}/reviews`}>
                                 Write a Review
-                            </Link>
+                            </Link> */}
 
-                            {/* { currentUser ? 
+                            { this.props.loggedIn ? 
                                 <Link to={`/businesses/${business.id}/reviews`}>
                                     Write a Review
                                 </Link>
@@ -239,7 +246,7 @@ class BusinessShow extends React.Component {
                                 <Link to="/login">
                                     Write a Review
                                 </Link>
-                            } */}
+                            }
                         </div>
                     </div>
 
@@ -253,23 +260,7 @@ class BusinessShow extends React.Component {
                                         fetchBusiness={this.props.fetchBusiness}
                                     />
                                 </div>
-
-                                {/* <div className="business-show-map">
-                                    <BusinessMap businesses={this.props.businesses} />
-                                </div> */}
-
                             </div>
-
-                            {/* <div className="business-description">
-                                <span>Description </span>
-                                <span>{`${business.description}`}</span>                        
-                            </div> */}
-                            
-                            {/* <div className="business-info-box">
-                                <span>{`${business.address}`}</span>
-                                <span>{`${business.phoneNumber}`}</span>
-                                <span><a href={business.website}>{`${business.website}`}</a></span>
-                            </div> */}
 
                             <div className="business-address">
                                 {/* <BusinessMap
@@ -339,6 +330,29 @@ class BusinessShow extends React.Component {
 
                         <div className="right-column-info">
                             <div className="right-column-sticky">
+
+                                {/* <div> */}
+                                    <div className="business-address">
+                                        <span>{`${business.address}`}</span>
+                                        <br />
+                                        <span>{`${business.city}`}</span>
+                                        <span>,</span>
+                                        <span>{`${business.state}`}</span>
+                                        <span>,</span>
+                                        <span>{`${business.zipCode}`}</span>
+                                    </div>
+
+                                    <div className="business-phone">
+                                        {/* <span>Phone Number </span> */}
+                                        <span>{`${business.phoneNumber}`}</span>
+                                    </div>
+
+                                    <div className="business-website">
+                                        {/* <span>Website </span> */}
+                                        <span><a href={business.website}>{`${business.website}`}</a></span>
+                                    </div>
+                                {/* </div> */}
+
                             <div className="business-hours">
                                 <span style={{ fontWeight: 'bold', color: 'rgb(201, 29, 29)' }}>Hours</span>
                                 <div>

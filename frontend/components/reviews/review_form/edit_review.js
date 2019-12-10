@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { editReview, deleteReview } from '../../../actions/review_actions';
 import { fetchBusiness, fetchBusinesses } from '../../../actions/business_actions';
 import ReviewForm from './review_form';
-// import { logout } from '../../actions/session_actions';
+import { logout } from '../../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => { //???
     // let businessId = parseInt(ownProps.match.params.businessId);
@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => ({
     delete: (reviewId) => dispatch(deleteReview(reviewId)),
     fetchBusiness: (id) => dispatch(fetchBusiness(id)),
     fetchBusiness: (id) => dispatch(fetchBusiness(id)),    fetchBusinesses: () => dispatch(fetchBusinesses()),
-    // logout: () => dispatch(logout())
+    logout: () => dispatch(logout())
 })
 
 export default connect(

@@ -9,6 +9,13 @@ class Greeting extends React.Component {
         super(props);
     }
 
+    handleLogout() {
+        this.props.logout()
+            .then(() => {
+                this.props.history.push(`/`)
+            });
+    }
+
     render() {
         // let coverPhotos = [window.splash, window.background_1, window.background_2]
         // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
@@ -35,8 +42,14 @@ class Greeting extends React.Component {
 
                             <div className="github-linkedin-link">
                                 {/* <a href="https://github.com/youngrokkim2017">Github</a> */}
-                                <a href="https://github.com/youngrokkim2017/scoop">GitHub</a>
-                                <a href="https://www.linkedin.com/in/patrick-kim-youngrok/">LinkedIn</a>
+                                {/* <a href="https://github.com/youngrokkim2017/scoop">GitHub</a> */}
+                                <a href="https://github.com/youngrokkim2017/scoop">
+                                    <img src={window.github} alt=""/>
+                                </a>
+                                {/* <a href="https://www.linkedin.com/in/patrick-kim-youngrok/">LinkedIn</a> */}
+                                <a href="https://www.linkedin.com/in/patrick-kim-youngrok/">
+                                    <img src={window.linkedin} alt=""/>
+                                </a>
                             </div>
 
                             { this.props.loggedIn ? 

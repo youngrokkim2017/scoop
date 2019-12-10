@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchBusiness } from '../../actions/business_actions';
 import BusinessShow from './business_show';
 import { fetchReviews } from '../../actions/review_actions';
+import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     business: state.entities.businesses[ownProps.match.params.businessId],
@@ -17,6 +18,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
     fetchBusiness: id => dispatch(fetchBusiness(id)),
     fetchReviews: (businessId) => dispatch(fetchReviews(businessId)),
+    logout: () => dispatch(logout())
 });
 
 export default connect(

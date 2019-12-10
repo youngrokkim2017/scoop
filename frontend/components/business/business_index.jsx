@@ -56,7 +56,8 @@ class BusinessIndex extends React.Component {
                 .then(() => {
                     // this.props.getSearchedBusinesses(this.state.near)
                     //     .then(() => {
-                            this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                            // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                            this.props.history.push(`/search=${this.state.find}`)
                         // })
                 })
         } else {
@@ -70,6 +71,13 @@ class BusinessIndex extends React.Component {
                 [type]: e.target.value
             })
         }
+    }
+
+    handleLogout() {
+        this.props.logout()
+            .then(() => {
+                this.props.history.push(`/`)
+            });
     }
 
     render() {
@@ -133,6 +141,7 @@ class BusinessIndex extends React.Component {
                                             </button>
                                             <div className="navbar-logout-dropdown-content">
                                                 <a className="navbar-logout-link" onClick={this.props.logout}>Log Out</a>
+                                                {/* <a className="navbar-logout-link" onClick={this.handleLogout}>Log Out</a> */}
                                             </div>
                                         </nav>
                                     </div>
