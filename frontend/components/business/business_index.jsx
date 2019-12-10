@@ -93,7 +93,7 @@ class BusinessIndex extends React.Component {
             searchResults.forEach((result) => {
                 result.classList.remove('hide')
             })
-        }
+        } 
 
         this.props.getSearchedBusinesses(this.state.find);
     }
@@ -138,9 +138,17 @@ class BusinessIndex extends React.Component {
                                         onInput={this.handleSearchInputs}
                                     />
 
-                                    <div className="search-results-business">
-                                        {searchResults}
-                                    </div>
+                                    {this.state.find.length ?
+                                        <div className="search-results-business">
+                                            {searchResults}
+                                        </div>
+
+                                        :
+
+                                        // <div className="search-results"></div>
+                                        // <div></div>
+                                        ""
+                                    }
 
                                 </label>
 
@@ -154,7 +162,8 @@ class BusinessIndex extends React.Component {
                                     // value={this.state.near} 
                                     />
 
-                                    <div className="search-results-business"></div>
+                                    {/* <div className="search-results-business"></div> */}
+
                                 </label>
                                 <button className="nav-search-button" onClick={this.handleSubmit}>Search</button>
                             </form>

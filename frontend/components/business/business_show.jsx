@@ -31,6 +31,10 @@ class BusinessShow extends React.Component {
         if (this.props.location.pathname !== prevProps.location.pathname) {
             this.props.fetchBusiness(this.props.match.params.businessId)
         }
+
+        // if (this.props.find !== this.prevProps.find) {
+        //     this.props.find = ""
+        // }
     }
 
     handleSubmit(e) {
@@ -76,7 +80,7 @@ class BusinessShow extends React.Component {
             searchResults.forEach((result) => {
                 result.classList.remove('hide')
             })
-        }
+        } 
 
         this.props.getSearchedBusinesses(this.state.find);
     }
@@ -161,9 +165,16 @@ class BusinessShow extends React.Component {
                                     // value={this.state.find} 
                                     />
 
-                                    <div className="search-results-business">
-                                        {searchResults}
-                                    </div>
+                                    {this.state.find ?
+                                        <div className="search-results-business">
+                                            {searchResults}
+                                        </div>
+
+                                        :
+
+                                        // <div className="search-results"></div>
+                                        ""
+                                    }
 
                                 </label>
 
@@ -179,7 +190,7 @@ class BusinessShow extends React.Component {
                                         // style={{borderBottom: '1px solid black'}}
                                     />
 
-                                    <div className="search-results-business"></div>
+                                    {/* <div className="search-results-business"></div> */}
 
                                 </label>
                                 <button className="nav-search-button" onClick={this.handleSubmit}>Search</button>

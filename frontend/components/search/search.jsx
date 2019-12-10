@@ -26,6 +26,15 @@ class Search extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusinesses();
+
+        // let searchInputs = document.getElementsByClassName('search-results');
+        // searchInputs[0]
+
+        // if (this.props.location.search || this.props.location.pathname === "/" === "businesses") {
+        //     if (searchInputs !== null) {
+        //         searchInputs.classList.add('hide')
+        //     }
+        // }
     }
 
     handleSubmit(e) {
@@ -68,6 +77,11 @@ class Search extends React.Component {
             searchResults.forEach((result) => {
                 result.classList.remove('hide')
             })
+        } else if (this.state.find.length < 2) {
+            searchInputs.classList.add('hide')
+            searchResults.forEach((result) => {
+                result.classList.add('hide')
+            })
         }
 
         this.props.getSearchedBusinesses(this.state.find);
@@ -83,6 +97,8 @@ class Search extends React.Component {
     }
 
     render() {
+        console.log(this.props)
+
         // let searchResults = this.props.searchResults;
         // console.log(searchResults);
 
@@ -93,6 +109,42 @@ class Search extends React.Component {
         let searchResults = this.props.searchResults.map((items) => {
             return <SearchItems key={items.id} items={items} />
         });
+        
+        // console.log(this.props.businesses)
+
+        // const businesses = [];
+
+        // fetch(this.props.businesses)
+        //     .then(blob => blob.json())
+        //     .then(data => businesses.push(...data))
+
+        // function findMatches(wordToMatch, businesses) {
+        //     return businesses.filter(business => {
+        //         const regex = new RegExp(wordToMatch, 'gi')
+        //         return business.name.match(regex)
+        //     })
+        // }
+
+        // function displayMatches() {
+        //     const matchArray = findMatches(this.value, businesses);
+        //     const html = matchArray.map(business => {
+        //         const regex = new RegExp(this.value, 'gi')
+        //         const businessName = business.name.replace(regex, `<span className="h1">${this.value}</span>`);
+
+        //         return `
+        //             <li>
+        //                 <span className="name">${businessName}</span>
+        //             </li>
+        //         `
+        //     })
+            
+        // }
+
+        // const searchInput = document.querySelector('.search');
+        // const suggestions = document.querySelector('.suggestions');
+
+        // searchInput.addEventListener('change', displayMatches);
+        // searchInput.addEventListener('keyup', displayMatches);
 
         return (
             <div>
@@ -108,10 +160,17 @@ class Search extends React.Component {
                             onInput={this.handleSearchInputs}
                             // style={{ borderBottom: '1px solid black' }}
                             />
-                        
-                        <div className="search-results">
-                            {searchResults}
-                        </div>
+
+                        {this.state.find.length ?
+                            <div className="search-results">
+                                {searchResults}
+                            </div>
+
+                            :
+
+                            // <div className="search-results"></div>
+                            ""
+                        }
 
                     </label>
                 
@@ -125,7 +184,8 @@ class Search extends React.Component {
                             // value={this.state.near} 
                             />
 
-                        <div className="search-results"></div>
+                        {/* <div className="search-results"></div> */}
+
                     </label>
                     {/* <input className="search-button" type="submit" onClick={this.handleSubmit}/> */}
                     {/* <Link to="/businesses">Search</Link> */}
@@ -220,11 +280,20 @@ class Search extends React.Component {
                         </div>
                         
                     </div>
+                    
                 </div>
 
                 <div className="to-all-businesses">
                     <Link to="/businesses">See more businesses</Link>
                 </div>
+
+                {/* <form class="search-form">
+                    <input type="text" className="search" placeholder="City or State" />
+                    <ul className="suggestions">
+                        <li>Filter for a city</li>
+                        <li>or a state</li>
+                    </ul>
+                </form> */}
                 
                 <footer className="footer-img">
                     <img src={window.footer} alt=""/>

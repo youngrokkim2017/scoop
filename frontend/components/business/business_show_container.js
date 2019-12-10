@@ -13,14 +13,16 @@ const mapStateToProps = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
     reviews: Object.values(state.entities.reviews),
     loggedIn: Boolean(state.session.id),
-    searchResults: Object.values(state.search)
+    searchResults: Object.values(state.search),
+    find: state.filter.find
 });
 
 const mapDispatchToProps = dispatch => ({
     fetchBusiness: id => dispatch(fetchBusiness(id)),
     fetchReviews: (businessId) => dispatch(fetchReviews(businessId)),
     getSearchedBusinesses: (input) => dispatch(getSearchedBusinesses(input)),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
 });
 
 export default connect(
