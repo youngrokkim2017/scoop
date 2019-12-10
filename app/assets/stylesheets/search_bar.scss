@@ -90,6 +90,66 @@
     background-color: darkred;
 }
 
+//////////////////////// search inputs dropdown ////////////////////
+
+.search-results {
+    // z-index: 10;
+    position: absolute;
+    // background-color: black;
+    // background-color: rgb(214, 214, 214);
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 493px;
+}
+.search-items {
+    background-color: black;
+    // color: white;
+}
+
+.search-items-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search-items div {
+    padding: 5px 5px;
+}
+
+.search-items-results {
+    // color: black;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    // padding-left: 50px;
+    display: flex;
+    padding: 5px 0;
+}
+
+.search-items-results li {
+    list-style-type: none;
+    padding: 10px 5px;
+}
+
+.search-items-results li:hover {
+    text-decoration: underline;
+}
+
+.search-items:hover .search-items-results:hover {
+    background-color: white;
+    color: black;
+}
+
+.search-results-business {
+    position: absolute;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 352px;
+}
+
+////////////////////////////////////////////////////////////////////
+
 .search-shortcuts {
     display: flex;
     justify-content: space-evenly;

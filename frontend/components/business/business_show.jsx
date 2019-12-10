@@ -5,6 +5,7 @@ import Navbar from '../nav_bar/nav_bar';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import ReviewIndexItem from '../reviews/review_index_item';
 import ScrollImage from './scroll_image';
+import SearchItems from '../search/search_items';
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class BusinessShow extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSearchInputs = this.handleSearchInputs.bind(this);
     }
 
     componentDidMount() {
@@ -61,6 +63,22 @@ class BusinessShow extends React.Component {
             .then(() => {
                 this.props.history.push(`/`)
             });
+    }
+
+    handleSearchInputs() {
+        let searchInputs = document.getElementsByClassName('search-results-business');
+        searchInputs = searchInputs[0]
+        let searchResults = document.getElementsByClassName('search-items');
+        searchResults = Array.from(searchResults)
+
+        if (searchInputs !== null || searchInputs !== undefined) {
+            searchInputs.classList.remove('hide')
+            searchResults.forEach((result) => {
+                result.classList.remove('hide')
+            })
+        }
+
+        this.props.getSearchedBusinesses(this.state.find);
     }
 
     render() {
@@ -115,6 +133,10 @@ class BusinessShow extends React.Component {
         //     )
         // });
 
+        let searchResults = this.props.searchResults.map((items) => {
+            return <SearchItems key={items.id} items={items} />
+        });
+
         return (
 
             <div className="business-show">
@@ -138,6 +160,11 @@ class BusinessShow extends React.Component {
                                         placeholder="ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                                     // value={this.state.find} 
                                     />
+
+                                    <div className="search-results-business">
+                                        {searchResults}
+                                    </div>
+
                                 </label>
 
                                 <label className="nav-search-near">
@@ -148,7 +175,12 @@ class BusinessShow extends React.Component {
                                         onChange={this.handleChange('near')}
                                         placeholder="address, city, state, or zip..."
                                     // value={this.state.near} 
+                                        onInput={this.handleSearchInputs}
+                                        // style={{borderBottom: '1px solid black'}}
                                     />
+
+                                    <div className="search-results-business"></div>
+
                                 </label>
                                 <button className="nav-search-button" onClick={this.handleSubmit}>Search</button>
                             </form>

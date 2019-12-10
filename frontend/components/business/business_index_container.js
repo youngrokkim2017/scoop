@@ -8,7 +8,8 @@ import { logout } from '../../actions/session_actions';
 const mapStateToProps = state => ({
     businesses: Object.values(state.entities.businesses),
     currentUser: state.session.currentUser,
-    loggedIn: Boolean(state.session.id)
+    loggedIn: Boolean(state.session.id),
+    searchResults: Object.values(state.search)
 })
 
 const mapDispatchToProps = dispatch => {

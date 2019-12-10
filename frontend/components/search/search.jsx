@@ -21,7 +21,7 @@ class Search extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.handleChange = this.handleChange.bind(this);
-        // this.handleSearchInputs = this.handleSearchInputs.bind(this);
+        this.handleSearchInputs = this.handleSearchInputs.bind(this);
     }
 
     componentDidMount() {
@@ -57,21 +57,21 @@ class Search extends React.Component {
         //     })
     }
 
-    // handleSearchInputs() {
-    //     let searchInputs = document.getElementsByClassName('search-results');
-    //     searchInputs = searchInputs[0]
-    //     let searchResults = document.getElementsByClassName('search-items');
-    //     searchResults = Array.from(searchResults)
+    handleSearchInputs() {
+        let searchInputs = document.getElementsByClassName('search-results');
+        searchInputs = searchInputs[0]
+        let searchResults = document.getElementsByClassName('search-items');
+        searchResults = Array.from(searchResults)
 
-    //     if (searchInputs !== null || searchInputs !== undefined) {
-    //         searchInputs.classList.remove('hide')
-    //         searchResults.forEach((result) => {
-    //             result.classList.remove('hide')
-    //         })
-    //     }
+        if (searchInputs !== null || searchInputs !== undefined) {
+            searchInputs.classList.remove('hide')
+            searchResults.forEach((result) => {
+                result.classList.remove('hide')
+            })
+        }
 
-    //     this.props.getSearchedBusinesses(this.state.find);
-    // }
+        this.props.getSearchedBusinesses(this.state.find);
+    }
 
     handleChange(type) {
         // console.log("searching");
@@ -105,12 +105,13 @@ class Search extends React.Component {
                             onChange={this.handleChange('find')} 
                             placeholder="desserts, ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                             // value={this.state.find} 
-                            // onInput={this.handleSearchInputs}
+                            onInput={this.handleSearchInputs}
+                            // style={{ borderBottom: '1px solid black' }}
                             />
                         
-                        {/* <div className="search-results">
+                        <div className="search-results">
                             {searchResults}
-                        </div> */}
+                        </div>
 
                     </label>
                 
@@ -123,6 +124,8 @@ class Search extends React.Component {
                             placeholder="address, city, state, or zip..."
                             // value={this.state.near} 
                             />
+
+                        <div className="search-results"></div>
                     </label>
                     {/* <input className="search-button" type="submit" onClick={this.handleSubmit}/> */}
                     {/* <Link to="/businesses">Search</Link> */}

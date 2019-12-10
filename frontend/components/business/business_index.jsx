@@ -3,6 +3,7 @@ import BusinessIndexItem from './business_index_item';
 import BusinessMap from './business_map';
 import NavBar from '../nav_bar/nav_bar';
 import { Link } from 'react-router-dom';
+import SearchItems from '../search/search_items';
 
 class BusinessIndex extends React.Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class BusinessIndex extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSearchInputs = this.handleSearchInputs.bind(this);
     }
 
     componentDidMount() {
@@ -80,6 +82,22 @@ class BusinessIndex extends React.Component {
             });
     }
 
+    handleSearchInputs() {
+        let searchInputs = document.getElementsByClassName('search-results-business');
+        searchInputs = searchInputs[0]
+        let searchResults = document.getElementsByClassName('search-items');
+        searchResults = Array.from(searchResults)
+
+        if (searchInputs !== null || searchInputs !== undefined) {
+            searchInputs.classList.remove('hide')
+            searchResults.forEach((result) => {
+                result.classList.remove('hide')
+            })
+        }
+
+        this.props.getSearchedBusinesses(this.state.find);
+    }
+
     render() {
         const { businesses } = this.props;
         let { business } = this.props;
@@ -91,6 +109,10 @@ class BusinessIndex extends React.Component {
         // let filteredBusinesses = this.props.businesses.filter((filteredBusiness) => {
         //     return filteredBusiness.name.indexOf(this.state.find) !== -1
         // });
+
+        let searchResults = this.props.searchResults.map((items) => {
+            return <SearchItems key={items.id} items={items} />
+        });
 
         return (
             <div className="business-index-render">
@@ -113,7 +135,13 @@ class BusinessIndex extends React.Component {
                                         onChange={this.handleChange('find')}
                                         placeholder="ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
                                     // value={this.state.find} 
+                                        onInput={this.handleSearchInputs}
                                     />
+
+                                    <div className="search-results-business">
+                                        {searchResults}
+                                    </div>
+
                                 </label>
 
                                 <label className="nav-search-near">
@@ -125,6 +153,8 @@ class BusinessIndex extends React.Component {
                                         placeholder="address, city, state, or zip..."
                                     // value={this.state.near} 
                                     />
+
+                                    <div className="search-results-business"></div>
                                 </label>
                                 <button className="nav-search-button" onClick={this.handleSubmit}>Search</button>
                             </form>
