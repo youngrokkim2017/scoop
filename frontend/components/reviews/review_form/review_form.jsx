@@ -217,9 +217,9 @@ class ReviewForm extends React.Component {
                     </div>
                 </div>
 
-                <header>
-                    <span>{}</span>
-                </header>
+                {/* <div>
+                    <span>{business.name}</span>
+                </div> */}
 
                 <div className="review-form-contents">
                     <div className="review-form-inputs">

@@ -346,10 +346,24 @@ class BusinessShow extends React.Component {
                             </div>
 
                             <div className="business-review-start-review">
-                                <Link to={`/businesses/${business.id}/reviews`}>
+                                {/* <Link to={`/businesses/${business.id}/reviews`}>
+                                    <span style={{ paddingRight: '5px' }}>Start your review of</span>
+                                    <span style={{ fontWeight: 'bold' }}>{business.name}</span>
+                                </Link> */}
+
+                                {this.props.loggedIn ?
+                                    <Link to={`/businesses/${business.id}/reviews`}>
+                                        <span style={{ paddingRight: '5px' }}>Start your review of</span>
+                                        <span style={{ fontWeight: 'bold' }}>{business.name}</span>
+                                    </Link>
+
+                                    :
+
+                                    <Link to="/login">
                                     <span style={{ paddingRight: '5px' }}>Start your review of</span>
                                     <span style={{ fontWeight: 'bold' }}>{business.name}</span>
                                 </Link>
+                                }
                             </div>
 
                             <div className="below-review-header">
