@@ -384,22 +384,26 @@ class BusinessShow extends React.Component {
                                 {/* <div> */}
                                     <span style={{ fontWeight: 'bold', color: 'rgb(201, 29, 29)' }}>Location & Contact</span>
                                     <div className="business-address">
+                                        <img src={window.address} alt="" />
                                         <span>{`${business.address}`}</span>
                                         <br />
-                                        <span>{`${business.city}`}</span>
+                                        <span style={{paddingLeft: '30px'}}>{`${business.city}`}</span>
                                         <span>,</span>
                                         <span>{`${business.state}`}</span>
-                                        <span>,</span>
-                                        <span>{`${business.zipCode}`}</span>
+                                        {/* <span>,</span> */}
+                                        <br/>
+                                        <span style={{paddingLeft: '30px'}}>{`${business.zipCode}`}</span>
                                     </div>
 
                                     <div className="business-phone">
                                         {/* <span>Phone Number </span> */}
+                                        <img src={window.contact} alt=""/>
                                         <span>{`${business.phoneNumber}`}</span>
                                     </div>
 
                                     <div className="business-website">
                                         {/* <span>Website </span> */}
+                                        <img src={window.website} alt=""/>
                                         <span><a href={business.website}>{`${business.website}`}</a></span>
                                     </div>
                                 {/* </div> */}
