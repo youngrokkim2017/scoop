@@ -1,21 +1,11 @@
 import React from 'react';
-import BusinessIndexItem from './business_index_item';
-import BusinessMap from './business_map';
-import NavBar from '../nav_bar/nav_bar';
 import { Link } from 'react-router-dom';
-import SearchItems from '../search/search_items';
 
-class BusinessIndex extends React.Component {
+class UserProfile extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     find = "",
-        //     near = ""
-        // };
-
         this.state = {
-            // input: ""
             find: "",
             near: ""
         }
@@ -25,30 +15,14 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchBusinesses();
-
-        // if (this.props.location.search !== "") {
-        //     let searchArr = this.handleSearchInput(this.props.history.location.search)
-        //     let find = searchArr[0];
-        //     let near = searchArr[1];
-
-        //     this.props.getSearchedBusinesses(find)
-        //         // .then(() => {
-        //         //     this.props.getSearchedBusinesses(near)
-        //         // })
-        // } else if (this.props.location.search === "") {
-        //     this.props.fetchBusinesses;
-        // }
+        this.props.fetchUser(this.props.match.params.id)
     }
 
-    // handleSearchInput(search) {
-    //     let inputs = search.split('=').slice(1);
-    //     let input = inputs.split('+');
-    //     let find = input[0];
-    //     let near = input[1];
-
-    //     return [find, near];
-    // }
+    componentDidUpdate(prevProps) {
+        if (this.props.location.pathname !== prevProps.location.pathname) {
+            this.props.fetchUser(this.props.match.params.id)
+        }
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -58,9 +32,9 @@ class BusinessIndex extends React.Component {
                 .then(() => {
                     // this.props.getSearchedBusinesses(this.state.near)
                     //     .then(() => {
-                            // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
-                            this.props.history.push(`/search=${this.state.find}`)
-                        // })
+                    // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
+                    this.props.history.push(`/search=${this.state.find}`)
+                    // })
                 })
         } else {
             this.props.history.push('/businesses')
@@ -93,31 +67,20 @@ class BusinessIndex extends React.Component {
             searchResults.forEach((result) => {
                 result.classList.remove('hide')
             })
-        } 
+        }
 
         this.props.getSearchedBusinesses(this.state.find);
     }
 
     render() {
-        const { businesses } = this.props;
-        let { business } = this.props;
-
-        const businessItems = this.props.businesses.map(business => (
-            <BusinessIndexItem key={business.id} business={business} />)
-        );
-        
-        // let filteredBusinesses = this.props.businesses.filter((filteredBusiness) => {
-        //     return filteredBusiness.name.indexOf(this.state.find) !== -1
-        // });
 
         let searchResults = this.props.searchResults.map((items) => {
             return <SearchItems key={items.id} items={items} />
         });
 
         return (
-            <div className="business-index-render">
-                <div className="business-index-navbar">
-                    {/* <NavBar /> */}
+            <div>
+                <div>
 
                     <div className="navbar-container">
                         <div className="default-navbar">
@@ -134,7 +97,7 @@ class BusinessIndex extends React.Component {
                                         type="text"
                                         onChange={this.handleChange('find')}
                                         placeholder="ice cream, frozen yogurt, gelato..." //shaved ice, soft serve, ..etc
-                                    // value={this.state.find} 
+                                        // value={this.state.find} 
                                         onInput={this.handleSearchInputs}
                                     />
 
@@ -200,55 +163,14 @@ class BusinessIndex extends React.Component {
                         </div>
                     </div>
 
-                    {/* <NavBar className="index-navbar"/> */}
-                    {/* <div className="session-navbar-items">
-                        <ul className="navbar-businesses">
-                            {businesses}
-                        </ul>
-                    </div> */}
-                </div>
-                
-                <div className="sub-navbar">
-                    <div className="sub-navbar-left">
-                        <Link to="/businesses">Creamery</Link>
-                        <Link to="/businesses">Frozen Yogurt</Link>
-                        <Link to="/businesses">Gelato</Link>
-                        <Link to="/businesses">Soft Serve</Link>
-                        <Link to="/businesses">Other</Link>
-                    </div>
-                    {/* <div className="sub-navbar-right">
-                        <Link to={`/businesses/${business.id}/reviews`}>Write a Review</Link> */}
-                        {/* <Link to="/">Home</Link> */}
-                        {/* <Link to="/businesses">Back to Businesses</Link>
-                    </div> */}
-                    <div className="business-index-sub-navbar-right">
-                        <span>Showing  {this.props.businesses.length}  of 15</span>
-                    </div>
                 </div>
 
-                <div className="business-index">
-                    <div className="businesses-list">
-                        <ul className="business-list-sections">
-                            {businessItems}
-                        </ul> 
-                    </div>
-                
-                    <div className="business-index-map">
-                        <BusinessMap
-                            businesses={this.props.businesses}
-                            // businesses={Object.values(this.props.businesses)} 
-                            // key={business.id}
-                        />
+                <div className="profile-contents">
 
-                        {/* <img src={window.googleAPIkey} alt=""/> */}
-                    </div>
                 </div>
-                <footer className="footer-img">
-                    <img src={window.footer} alt=""/>
-                </footer>
             </div>
-        )
+        );
     }
 }
 
-export default BusinessIndex;
+export default UserProfile;

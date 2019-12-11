@@ -13,6 +13,7 @@ import SignupFormContainer from '../components/session/signup_form_container';
 import { Switch, Route } from 'react-router-dom';
 import SearchContainer from '../components/search/search_container';
 import SearchIndexContainer from '../components/search/search_slice/search_index_container';
+import UserProfileContainer from '../components/user/user_profile_container';
 
 const App = () => (
     <div>
@@ -34,6 +35,7 @@ const App = () => (
             {/* <Route exact path="/businesses/search" component={BusinessIndexContainer} /> */}
             {/* <Route path="/search/:searchTerm" component={SearchContainer} /> */}
             <Route exact path="/" component={GreetingContainer} />
+            <Route exact path="/user/:id" component={UserProfileContainer} />
         </Switch>
     </div>
 );

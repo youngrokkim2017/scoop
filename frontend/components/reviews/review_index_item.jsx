@@ -112,6 +112,11 @@ class ReviewIndexItem extends React.Component {
             starRating = starRatingsList[4]
         }
 
+        let date = new Date(review.createdAt)
+        let day = date.getDate();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+
         return (
 
             <div>
@@ -120,23 +125,27 @@ class ReviewIndexItem extends React.Component {
                         <div className="author-photo">
                             <img src={this.props.review.authorPhotoUrl} alt="" />
                         </div>
-                        <div>
-                            <span style={{ color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>
-                        </div>
+                        <div className="review-user-info">
+                            <div>
+                                <span style={{ fontWeight: 'bold', color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>
+                                {/* <span style={{ paddingBottom: '5px', borderBottom: '1px solid black', fontWeight: 'bold', color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span> */}
+                            </div>
 
-                        <div className="edit-review-link-hover">
-                            { currentUser && currentUser.id === review.authorId ?
-                                <Link
-                                    className="edit-review-link"
-                                    to={`/businesses/${review.businessId}/reviews/${review.id}/edit`}
-                                >
-                                    Edit Review
-                                </Link>
+                            <div className="edit-review-link-hover">
+                                { currentUser && currentUser.id === review.authorId ?
+                                    <Link
+                                        className="edit-review-link"
+                                        to={`/businesses/${review.businessId}/reviews/${review.id}/edit`}
+                                    >
+                                        <img src={window.edit} alt=""/>
+                                        <span>Edit Review</span> 
+                                    </Link>
 
-                                :
+                                    :
 
-                                ""
-                            }
+                                    ""
+                                }
+                            </div>
                         </div>
                     </div>
                     
@@ -144,8 +153,12 @@ class ReviewIndexItem extends React.Component {
                         <div className="review-text-content">
                             <div className="rating-and-date">
                                 {/* <span style={{ color: 'gray' }}>{starRating}</span> */}
-                                <img src={starRating} alt=""/>
-                                {/* <span style={{ fontSize: '15px', color: 'gray'}}>{`${month}/${day}/${year}`}</span> */}
+                                <div>
+                                    <img src={starRating} alt=""/>
+                                </div>
+                                <div style={{ paddingTop: '5px', paddingLeft: '5px' }}>
+                                    <span style={{ color: 'gray'}}>{`${month}/${day}/${year}`}</span>
+                                </div>
                             </div>
 
                             <div className="review-body">

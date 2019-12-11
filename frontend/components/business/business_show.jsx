@@ -281,12 +281,14 @@ class BusinessShow extends React.Component {
 
                             { this.props.loggedIn ? 
                                 <Link to={`/businesses/${business.id}/reviews`}>
+                                    <span style={{ paddingRight: '10px' }}>&#9733;</span>
                                     Write a Review
                                 </Link>
                                 
                                 :
 
                                 <Link to="/login">
+                                    <span style={{ paddingRight: '10px' }}>&#9733;</span>
                                     Write a Review
                                 </Link>
                             }

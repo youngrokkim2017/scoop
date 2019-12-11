@@ -75,6 +75,7 @@ export default class BusinessIndexItem extends React.Component {
                             <div className="busines-item-name">
                                 <Link className="business-item-link" to={`/businesses/${this.props.business.id}`} >
                                     <div>{this.props.business.name}</div>
+                                    {/* <div><ol>{this.props.business.name}</ol></div> */}
                                 </Link>
                             </div>
                             <div className="business-item-rating">
@@ -103,6 +104,14 @@ export default class BusinessIndexItem extends React.Component {
                                 </div>
                                 <div className="business-item-address">
                                     <span>{this.props.business.address}</span>
+                                </div>
+                                <div>
+                                    <span>{this.props.business.city}</span>
+                                    <span>,  </span>
+                                    <span>{this.props.business.state}</span>
+                                    {/* <span>,</span> */}
+                                    {/* <br />
+                                    <span >{this.props.business.zipCode}</span> */}
                                 </div>
                             </div>
                         </div>

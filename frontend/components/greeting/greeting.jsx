@@ -17,8 +17,9 @@ class Greeting extends React.Component {
     }
 
     render() {
-        // let coverPhotos = [window.splash, window.background_1, window.background_2]
-        // let shufflePhotos = Math.floor(Math.random() * Math.floor(3))
+        let coverPhotos = [window.splashBackground_2, window.splashBackground, window.splash3, window.splash4, window.splash5, window.splash6]
+        // let shufflePhotos = Math.floor(Math.random() * Math.floor(6))
+        let shufflePhotos = Math.floor(Math.random() * coverPhotos.length)
 
         let searchResults = this.props.searchResults.map((items) => {
             return <SearchItems key={items.id} items={items} />
@@ -32,7 +33,9 @@ class Greeting extends React.Component {
                 {/* <img src={window.splashBackground} alt=""/> */}
                 <div className="splash-background-contents">
                     <div className="splash-background-cover">
-                        <img src={window.splashBackground} alt="" />
+                        {/* <img src={window.splashBackground} alt="" /> */}
+                        {/* <img src={coverPhotos[shufflePhotos]} alt="" /> */}
+                        <img src={window.splash3} alt="" />
                     </div>
                  
                     <div className="splash-contents">

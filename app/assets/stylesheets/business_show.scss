@@ -20,7 +20,8 @@
     // justify-content: stretch;
     width: 100%;
     // width: 150%;
-    height: 150px;
+    // height: 150px;
+    height: 125px;
 }
 
 .business-show-title {
@@ -250,7 +251,7 @@
     flex: 1 1 auto;
     justify-content: flex-end;
     float: right;
-    border-left: solid 1px lightgray;
+    // border-left: solid 1px lightgray;
     padding-left: 30px;
 }
 
@@ -409,6 +410,19 @@
 .scroll-function {
     display: flex;
 }
+
+// .scroll-function img {
+//     -webkit-transform: scale(1);
+// 	transform: scale(1);
+// 	-webkit-transition: .3s ease-in-out;
+// 	transition: .3s ease-in-out;
+// }
+
+// .scroll-function img:hover {
+//     -webkit-transform: scale(1.1);
+//     transform: scale(1.1);
+//     // box-shadow: 0 0 11px rgba(33,33,33,.2);
+// }
 
 #scroll-left, #scroll-right {
     position: absolute;
