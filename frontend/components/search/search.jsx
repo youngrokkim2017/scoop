@@ -47,7 +47,8 @@ class Search extends React.Component {
                 // .then(() => {
                 // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
                 // this.props.history.push(`/businesses/search`)
-                this.props.history.push(`/search?${this.state.find}`)
+                // this.props.history.push(`/search?${this.state.find}`)
+                this.props.history.push('/businesses')
                 // })
             })
         } else {
