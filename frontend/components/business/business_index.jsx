@@ -240,6 +240,8 @@ class BusinessIndex extends React.Component {
                             businesses={this.props.businesses}
                             // businesses={Object.values(this.props.businesses)} 
                             // key={business.id}
+                            filter={this.props.updateFilter}
+                            
                         />
 
                         {/* <img src={window.googleAPIkey} alt=""/> */}
