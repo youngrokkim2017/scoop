@@ -1,24 +1,46 @@
-# README
+# Scoop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Scoop**, inspired by *Yelp*, is an online platform that allows users to discover dessert parlors, view business information, and read and write reviews about a business.
 
-Things you may want to cover:
+[Live Demo](https://app-scoop.herokuapp.com/#/)
 
-* Ruby version
+## Table of Content
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Features](#features)
 
-* System dependencies
+## Technologies
+* Database: PostgreSQL
+* Backend: Ruby on Rails
+* Frontend: React.js, Redux.js, JavaScript, jQuery
+* Goodle Map API
 
-* Configuration
+## Installation
 
-* Database creation
+### Prerequisites
+Postgres Database is required to operate correctly.
 
-* Database initialization
+### Setup
+```
+bundle install
+npm install
+bundle exec rails db:create
+bundle exec rails db:migrate
+bundle exec rails db:seed
+```
 
-* How to run the test suite
+### Running the App
+```
+rails s
+npm start
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Features
+* Users can browse through the available businesses on the site
+* Search for businesses by name, category, or location
+* Create, Read, Update, or Destory a review which is dynamically rendered in real time in the frontend
+* Can react to reviews
 
-* Deployment instructions
-
-* ...
+### User Authentication
+* Frontend to backend user authentication using BCrypt
+* Demo user option available for those who want to check out features of the site without having to make an account
