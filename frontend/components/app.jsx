@@ -7,6 +7,7 @@ import BusinessIndexContainer from '../components/business/business_index_contai
 import BusinessShowContainer from '../components/business/business_show_container';
 import CreateReviewContainer from '../components/reviews/review_form/create_review';
 import EditReviewContainer from '../components/reviews/review_form/edit_review';
+import DeleteReviewContainer from '../components/reviews/review_form/delete_review';
 import GreetingContainer from '../components/greeting/greeting_container';
 import LoginFormContainer from '../components/session/login_form_container';
 import SignupFormContainer from '../components/session/signup_form_container';
@@ -30,6 +31,7 @@ const App = () => (
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <Route exact path="/businesses/:businessId/reviews" component={CreateReviewContainer} />
             <Route exact path="/businesses/:businessId/reviews/:id/edit" component={EditReviewContainer} />
+            <Route exact path="/businesses/:businessId/reviews/:id/delete" component={DeleteReviewContainer} />
             {/* <Route exact path="/search" component={SearchContainer} /> */}
             {/* <Route exact path="/businesses/search" component={SearchContainer} /> */}
             {/* <Route exact path="/businesses/search" component={BusinessIndexContainer} /> */}

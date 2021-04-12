@@ -283,7 +283,7 @@ class ReviewForm extends React.Component {
                                 />
                             </p>
                             
-                            <input className="review-form-button" type="submit" value={this.props.formType === "create" ? "Post Review" : "Edit Review"} onClick={this.handleSubmit} />
+                            <input className="review-form-button" type="submit" value={this.props.formType === "create" ? "Post Review" : this.props.formType === "edit" ? "Edit Review" : "Delete Review"} onClick={this.handleSubmit} />
                             <button className="review-form-cancel" onClick={this.navigateToBusinessShow}>Cancel</button>
                             {/* <button className="review-form-cancel" onClick={this.handleSubmit}>Cancel</button> */}
                         </form>

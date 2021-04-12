@@ -12,7 +12,13 @@ export const reviewsReducer = (state = {}, action) => {
             // return Object.assign(newState, action.payload.review);
             return Object.assign(newState, action.review);
         case REMOVE_REVIEW:
-            delete newState[action.reviewId];
+            // delete newState[action.reviewId];
+
+            let review = Object.values(action.review)
+
+            delete newState[review[0].id]
+
+            return newState;
         default: 
             return state;
     }
