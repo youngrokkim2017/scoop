@@ -133,6 +133,7 @@ class ReviewIndexItem extends React.Component {
 
                             <div className="edit-review-link-hover">
                                 { currentUser && currentUser.id === review.authorId ?
+                                    <>
                                     <Link
                                         className="edit-review-link"
                                         to={`/businesses/${review.businessId}/reviews/${review.id}/edit`}
@@ -140,7 +141,15 @@ class ReviewIndexItem extends React.Component {
                                         <img src={window.edit} alt=""/>
                                         <span>Edit Review</span> 
                                     </Link>
-
+                                    <br />
+                                    <Link
+                                        className="edit-review-link"
+                                        to={`/businesses/${review.businessId}/reviews/${review.id}/delete`}
+                                    >
+                                        <img src={window.delete} alt=""/>
+                                        <span>Delete Review</span> 
+                                    </Link>
+                                    </>
                                     :
 
                                     ""
