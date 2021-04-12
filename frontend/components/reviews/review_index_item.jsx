@@ -31,6 +31,7 @@ class ReviewIndexItem extends React.Component {
         );
 
         this.toggleUsefulClick();
+        document.getElementById('useful').classList.add('reacted');
     }
 
     decrementUseful() {
@@ -39,6 +40,7 @@ class ReviewIndexItem extends React.Component {
         );
 
         this.toggleUsefulClick();
+        document.getElementById('useful').classList.remove('reacted');
     }
     
     incrementFunny() {
@@ -47,6 +49,7 @@ class ReviewIndexItem extends React.Component {
         );
 
         this.toggleFunnyClick();
+        document.getElementById('funny').classList.add('reacted');
     }
 
     decrementFunny() {
@@ -55,6 +58,7 @@ class ReviewIndexItem extends React.Component {
         );
 
         this.toggleFunnyClick();
+        document.getElementById('funny').classList.remove('reacted');
     }
     
     incrementCool() {
@@ -63,6 +67,7 @@ class ReviewIndexItem extends React.Component {
         );
 
         this.toggleCoolClick();
+        document.getElementById('cool').classList.add('reacted');
     }
 
     decrementCool() {
@@ -71,6 +76,7 @@ class ReviewIndexItem extends React.Component {
         );
 
         this.toggleCoolClick();
+        document.getElementById('cool').classList.remove('reacted');
     }
 
     toggleUsefulClick() {
@@ -121,7 +127,7 @@ class ReviewIndexItem extends React.Component {
 
             <div>
                 <div className="review-contents">
-                    <div className="business-review-author">
+                    <div className="business-review-author" >
                         <div className="author-photo">
                             <img src={this.props.review.authorPhotoUrl} alt="" />
                         </div>
@@ -187,17 +193,17 @@ class ReviewIndexItem extends React.Component {
                                     <div className="reaction">
                                         {/* <button className="reaction-buttons" onClick={this.incrementUseful}>💡Useful {this.state.showUseful ? this.state.usefulClick : ""}</button> */}
                                         {/* <button className="reaction-buttons" onClick={this.state.showUseful ? (this.incrementUseful, this.toggleUsefulClick) : this.decrementUseful}>💡Useful {this.state.usefulClick}</button> */}
-                                        <button className="reaction-buttons" onClick={this.state.showUseful ? this.incrementUseful : this.decrementUseful}>💡Useful {this.state.usefulClick}</button>
+                                        <button id="useful" className="reaction-buttons" onClick={this.state.showUseful ? this.incrementUseful : this.decrementUseful}>💡Useful {this.state.usefulClick}</button>
                                     </div>
 
                                     <div className="reaction">
                                         {/* <button className="reaction-buttons" onClick={this.incrementFunny}>😀Funny {this.state.showFunny ? this.state.funnyClick : ""}</button> */}
-                                        <button className="reaction-buttons" onClick={this.state.showFunny ? this.incrementFunny : this.decrementFunny}>😀Funny {this.state.funnyClick}</button>
+                                        <button id="funny" className="reaction-buttons" onClick={this.state.showFunny ? this.incrementFunny : this.decrementFunny}>😀Funny {this.state.funnyClick}</button>
                                     </div>
 
                                     <div className="reaction">
                                         {/* <button className="reaction-buttons" onClick={this.incrementCool}>😎Cool {this.state.showCool ? this.state.coolClick : ""}</button> */}
-                                        <button className="reaction-buttons" onClick={this.state.showCool ? this.incrementCool : this.decrementCool}>😎Cool {this.state.coolClick}</button>                                        
+                                        <button id="cool" className="reaction-buttons" onClick={this.state.showCool ? this.incrementCool : this.decrementCool}>😎Cool {this.state.coolClick}</button>                                        
                                     </div>
                                 </div>
                             </div>
