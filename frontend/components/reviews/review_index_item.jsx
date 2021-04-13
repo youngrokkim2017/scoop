@@ -97,6 +97,22 @@ class ReviewIndexItem extends React.Component {
         );
     }
 
+    showEdit(e) {
+        let editLink = document.getElementById(`edit-review-link-${e.currentTarget.dataset.reviewId}`)
+        let deleteLink = document.getElementById(`delete-review-link-${e.currentTarget.dataset.reviewId}`)
+
+        if (editLink) editLink.classList.remove('hide')
+        if (deleteLink) deleteLink.classList.remove('hide')
+    }
+
+    hideEdit(e) {
+        let editLink = document.getElementById(`edit-review-link-${e.currentTarget.dataset.reviewId}`)
+        let deleteLink = document.getElementById(`delete-review-link-${e.currentTarget.dataset.reviewId}`)
+
+        if (editLink) editLink.classList.add('hide')
+        if (deleteLink) deleteLink.classList.add('hide')
+    }
+
     render() {
         // let { review, currentUser } = this.props;
         let { review, currentUser } = this.props;
@@ -127,7 +143,12 @@ class ReviewIndexItem extends React.Component {
 
             <div>
                 <div className="review-contents">
-                    <div className="business-review-author" >
+                    <div 
+                        className="business-review-author" 
+                        data-review-id={review.id}
+                        onMouseOver={this.showEdit}
+                        onMouseOut={this.hideEdit}
+                    >
                         <div className="author-photo">
                             <img src={this.props.review.authorPhotoUrl} alt="" />
                         </div>
@@ -137,24 +158,30 @@ class ReviewIndexItem extends React.Component {
                                 {/* <span style={{ paddingBottom: '5px', borderBottom: '1px solid black', fontWeight: 'bold', color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span> */}
                             </div>
 
-                            <div className="edit-review-link-hover">
+                            {/* <div className="edit-review-link-hover"> */}
+                            <div id="edit-review-link-hover">
                                 { currentUser && currentUser.id === review.authorId ?
                                     <>
+                                    <p>
                                     <Link
-                                        className="edit-review-link"
+                                        className="hide edit-review-link"
+                                        id={`edit-review-link-${review.id}`}
                                         to={`/businesses/${review.businessId}/reviews/${review.id}/edit`}
                                     >
                                         <img src={window.edit} alt=""/>
                                         <span>Edit Review</span> 
                                     </Link>
-                                    <br />
+                                    </p>
+                                    <p>
                                     <Link
-                                        className="edit-review-link"
+                                        className="hide edit-review-link"
+                                        id={`delete-review-link-${review.id}`}
                                         to={`/businesses/${review.businessId}/reviews/${review.id}/delete`}
                                     >
                                         <img src={window.delete} alt=""/>
                                         <span>Delete Review</span> 
                                     </Link>
+                                    </p>
                                     </>
                                     :
 
