@@ -114,6 +114,8 @@ class ReviewIndexItem extends React.Component {
     }
 
     render() {
+        console.log(this.props);
+
         // let { review, currentUser } = this.props;
         let { review, currentUser } = this.props;
 
