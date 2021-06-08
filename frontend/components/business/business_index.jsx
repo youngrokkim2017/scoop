@@ -228,6 +228,16 @@ class BusinessIndex extends React.Component {
                     </div>
                 </div>
 
+                <div className="business-filter-price">
+                    FILTER
+                    <div className="filter-price-buttons">
+                        <button>$</button>
+                        <button>$$</button>
+                        <button>$$$</button>
+                        <button>$$$$</button>
+                    </div>
+                </div>
+
                 <div className="business-index">
                     <div className="businesses-list">
                         <ul className="business-list-sections">
