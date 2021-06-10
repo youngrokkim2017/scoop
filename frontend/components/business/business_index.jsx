@@ -17,11 +17,20 @@ class BusinessIndex extends React.Component {
         this.state = {
             // input: ""
             find: "",
-            near: ""
+            near: "",
+            filtered: [],
+            priceOne: "inactive",
+            priceTwo: "inactive",
+            priceThree: "inactive",
+            priceFour: "inactive",
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSearchInputs = this.handleSearchInputs.bind(this);
+        this.handleFilterPriceOne = this.handleFilterPriceOne.bind(this);
+        this.handleFilterPriceTwo = this.handleFilterPriceTwo.bind(this);
+        this.handleFilterPriceThree = this.handleFilterPriceThree.bind(this);
+        this.handleFilterPriceFour = this.handleFilterPriceFour.bind(this);
     }
 
     componentDidMount() {
@@ -100,9 +109,131 @@ class BusinessIndex extends React.Component {
         this.props.getSearchedBusinesses(this.state.find);
     }
 
+    handleFilterPriceOne(e) {
+        e.preventDefault();
+
+        const buttonPriceOne = document.getElementById('priceOne');
+
+        let arr = this.props.businesses.updateFilter((business) => (
+            business.priceRange === '$'
+        ))
+
+        let newArr = this.state.filtered.updateFilter((business) => (
+            !arr.includes(business)
+        ))
+
+        if (this.state.priceOne === 'inactive') {
+            buttonPriceOne.style.color = 'lightgreen';
+
+            this.setState({
+                filtered: this.state.filtered.concat(arr),
+                priceOne: 'active',
+            })
+        } else {
+            buttonPriceOne.style.color = ''
+
+            this.setState({
+                priceOne: 'inactive',
+                filtered: newArr,
+            })
+        }
+    }
+
+    handleFilterPriceTwo(e) {
+        e.preventDefault();
+
+        const buttonPriceTwo = document.getElementById('priceTwo');
+
+        let arr = this.props.businesses.updateFilter((business) => (
+            business.priceRange === '$'
+        ))
+
+        let newArr = this.state.filtered.updateFilter((business) => (
+            !arr.includes(business)
+        ))
+
+        if (this.state.priceTwo === 'inactive') {
+            buttonPriceTwo.style.color = 'lightgreen';
+
+            this.setState({
+                filtered: this.state.filtered.concat(arr),
+                priceTwo: 'active',
+            })
+        } else {
+            buttonPriceTwo.style.color = ''
+
+            this.setState({
+                priceTwo: 'inactive',
+                filtered: newArr,
+            })
+        }
+    }
+
+    handleFilterPriceThree(e) {
+        e.preventDefault();
+
+        const buttonPriceThree = document.getElementById('priceThree');
+
+        let arr = this.props.businesses.updateFilter((business) => (
+            business.priceRange === '$'
+        ))
+
+        let newArr = this.state.filtered.updateFilter((business) => (
+            !arr.includes(business)
+        ))
+
+        if (this.state.priceThree === 'inactive') {
+            buttonPriceThree.style.color = 'lightgreen';
+
+            this.setState({
+                filtered: this.state.filtered.concat(arr),
+                priceThree: 'active',
+            })
+        } else {
+            buttonPriceThree.style.color = ''
+
+            this.setState({
+                priceThree: 'inactive',
+                filtered: newArr,
+            })
+        }
+    }
+
+    handleFilterPriceFour(e) {
+        e.preventDefault();
+
+        const buttonPriceFour = document.getElementById('priceFour');
+
+        let arr = this.props.businesses.updateFilter((business) => (
+            business.priceRange === '$'
+        ))
+
+        let newArr = this.state.filtered.updateFilter((business) => (
+            !arr.includes(business)
+        ))
+
+        if (this.state.priceFour === 'inactive') {
+            buttonPriceFour.style.color = 'lightgreen';
+
+            this.setState({
+                filtered: this.state.filtered.concat(arr),
+                priceFour: 'active',
+            })
+        } else {
+            buttonPriceFour.style.color = ''
+
+            this.setState({
+                priceFour: 'inactive',
+                filtered: newArr,
+            })
+        }
+    }
+
     render() {
-        const { businesses } = this.props;
-        let { business } = this.props;
+        // const { businesses } = this.props;
+        // let { business } = this.props;
+
+        // console.log(this.props)
 
         const businessItems = this.props.businesses.map(business => (
             <BusinessIndexItem key={business.id} business={business} />)
@@ -231,10 +362,18 @@ class BusinessIndex extends React.Component {
                 <div className="business-filter-price">
                     FILTER
                     <div className="filter-price-buttons">
-                        <button>$</button>
-                        <button>$$</button>
-                        <button>$$$</button>
-                        <button>$$$$</button>
+                        <button id="priceOne" onClick={this.handleFilterPriceOne}>
+                            $
+                        </button>
+                        <button id="priceTwo" onClick={this.handleFilterPriceTwo}>
+                            $$
+                        </button>
+                        <button id="priceThree" onClick={this.handleFilterPriceThree}>
+                            $$$
+                        </button>
+                        <button id="priceFour" onClick={this.handleFilterPriceFour}>
+                            $$$$
+                        </button>
                     </div>
                 </div>
 

@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
 import { fetchBusinesses } from '../../actions/business_actions';
-import { changeFilter, updateFilter } from '../../actions/filter_actions';
+// import { changeFilter, updateFilter } from '../../actions/filter_actions';
+import { updateFilter } from '../../actions/filter_actions';
 import { getSearchedBusinesses } from '../../actions/search_actions';
 import { logout } from '../../actions/session_actions';
 
