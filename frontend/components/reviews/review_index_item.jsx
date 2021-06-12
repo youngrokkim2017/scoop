@@ -156,7 +156,12 @@ class ReviewIndexItem extends React.Component {
                         </div>
                         <div className="review-user-info">
                             <div>
-                                <span style={{ fontWeight: 'bold', color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span>
+                                <span style={{ fontWeight: 'bold', color: 'royalblue' }}>
+                                    {/* {`${review.authorFirstName} ${review.authorLastName[0]}.`} */}
+                                    <Link to={`/user/${review.authorFirstName}_${review.authorLastName}`}>
+                                        {`${review.authorFirstName} ${review.authorLastName[0]}.`}
+                                    </Link>
+                                </span>
                                 {/* <span style={{ paddingBottom: '5px', borderBottom: '1px solid black', fontWeight: 'bold', color: 'royalblue' }}>{`${review.authorFirstName} ${review.authorLastName[0]}.`}</span> */}
                             </div>
 
