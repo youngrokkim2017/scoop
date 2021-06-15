@@ -115,6 +115,7 @@ class ReviewIndexItem extends React.Component {
 
     render() {
         console.log(this.props);
+        console.log(review)
 
         // let { review, currentUser } = this.props;
         let { review, currentUser } = this.props;
@@ -142,7 +143,6 @@ class ReviewIndexItem extends React.Component {
         let year = date.getFullYear();
 
         return (
-
             <div>
                 <div className="review-contents">
                     <div 
@@ -158,7 +158,8 @@ class ReviewIndexItem extends React.Component {
                             <div>
                                 <span style={{ fontWeight: 'bold', color: 'royalblue' }}>
                                     {/* {`${review.authorFirstName} ${review.authorLastName[0]}.`} */}
-                                    <Link to={`/user/${review.authorFirstName}_${review.authorLastName}`}>
+                                    {/* <Link to={`/user/${review.authorFirstName}-${review.authorLastName}`}> */}
+                                    <Link to={`/user/${review.authorId}`}>
                                         {`${review.authorFirstName} ${review.authorLastName[0]}.`}
                                     </Link>
                                 </span>
