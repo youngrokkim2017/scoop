@@ -145,6 +145,7 @@ class UserProfile extends React.Component {
     }
 
     render() {
+        // console.log(this.props)
 
         let searchResults = this.props.searchResults.map((items) => {
             return <SearchItems key={items.id} items={items} />

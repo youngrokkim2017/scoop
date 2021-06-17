@@ -1,6 +1,6 @@
 import { RECEIVE_USER } from '../actions/user_actions';
 
-const userProfileReducer = (state ={}, action) => {
+const userProfileReducer = (state = {}, action) => {
     Object.freeze(state);
 
     let newState = Object.assign({}, state);
