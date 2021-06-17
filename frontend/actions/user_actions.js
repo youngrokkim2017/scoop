@@ -6,7 +6,13 @@ export const receiveUser = (user) => ({
     user
 })
 
-export const fetchUser = (id) => (
+// export const fetchUser = (id) => (
+//     UserAPIUtil.fetchUser(id)
+//         .then(user => (dispatch(receiveUser(user))))
+// )
+
+
+export const fetchUser = (id) => dispatch => (
     UserAPIUtil.fetchUser(id)
         .then(user => (dispatch(receiveUser(user))))
 )
