@@ -5,11 +5,11 @@ const userProfileReducer = (state = {}, action) => {
 
     let newState = Object.assign({}, state);
 
-    switch (action.type) {
+    switch(action.type) {
         case RECEIVE_USER:
-            newState[action.user.id] = action.user;
-            // return Object.assign(newState, action.user);
-            return newState;
+            // newState[action.user.id] = action.user;
+            return Object.assign(newState, action.user);
+            // return newState;
         default:
             return state;
     }

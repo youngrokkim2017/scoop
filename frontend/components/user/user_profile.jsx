@@ -1,75 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// class UserProfile extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             find: "",
-//             near: ""
-//         }
-
-//         this.handleSubmit = this.handleSubmit.bind(this);
-//         this.handleSearchInputs = this.handleSearchInputs.bind(this);
-//     } 
-
-//     componentDidMount() {
-//         this.props.fetchUser(this.props.match.params.id)
-//     }
-
-//     // componentDidUpdate(prevProps) {
-//     //     if (this.props.location.pathname !== prevProps.location.pathname) {
-//     //         this.props.fetchUser(this.props.match.params.id)
-//     //     }
-//     // }
-
-//     handleSubmit(e) {
-//         e.preventDefault();
-
-//         if (this.state.find.length >= 1 || this.state.near.length >= 1) {
-//             this.props.getSearchedBusinesses(this.state.find)
-//                 .then(() => {
-//                     // this.props.getSearchedBusinesses(this.state.near)
-//                     //     .then(() => {
-//                     // this.props.history.push(`/search=${this.state.find}+${this.state.near}`)
-//                     this.props.history.push(`/search=${this.state.find}`)
-//                     // })
-//                 })
-//         } else {
-//             this.props.history.push('/businesses')
-//         }
-//     }
-
-//     handleSearchInputs() {
-//         let searchInputs = document.getElementsByClassName('search-results-business');
-//         searchInputs = searchInputs[0]
-//         let searchResults = document.getElementsByClassName('search-items');
-//         searchResults = Array.from(searchResults)
-
-//         if (searchInputs !== null || searchInputs !== undefined) {
-//             searchInputs.classList.remove('hide')
-//             searchResults.forEach((result) => {
-//                 result.classList.remove('hide')
-//             })
-//         }
-
-//         this.props.getSearchedBusinesses(this.state.find);
-//     }
-
-//     render() {
-
-//         console.log(this.props)
-//         return (
-//             <div>
-//                 hello
-//             </div>
-//         )
-//     }
-// }
-
-// export default UserProfile;
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -90,11 +18,11 @@ class UserProfile extends React.Component {
         this.props.fetchUser(this.props.match.params.id)
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.location.pathname !== prevProps.location.pathname) {
-            this.props.fetchUser(this.props.match.params.id)
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.location.pathname !== prevProps.location.pathname) {
+    //         this.props.fetchUser(this.props.match.params.id)
+    //     }
+    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -145,7 +73,7 @@ class UserProfile extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
+        console.log(this.props)
 
         let searchResults = this.props.searchResults.map((items) => {
             return <SearchItems key={items.id} items={items} />
