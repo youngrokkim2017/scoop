@@ -7,6 +7,7 @@ import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     user: state.entities.users[ownProps.match.params.id],
+    // user: state.entities.profile[ownProps.match.params.id],
     currentUserId: state.session.id,
     loggedIn: Boolean(state.session.id),
     searchResults: Object.values(state.search)
